@@ -1,0 +1,278 @@
+extends ../layouts/2col.pug
+
+block append config
+  - var pageTitle = "Data Lists";
+
+block content
+  div.card
+    div.card-body
+      h3 #{pageTitle}
+      p This is an example of a page with a data table.
+
+      .table-responsive
+        table.table.table-striped.table-hover.align-middle
+          thead.table-light
+            tr
+              th(scope='col') #
+              th(scope='col') Heading
+              th(scope='col') Heading
+              th(scope='col') Heading
+              th(scope='col') Heading
+              th(scope='col') Heading
+              th(scope='col') Heading
+              th(scope='col') Heading
+              th.text-end(scope='col') Actions
+          tbody
+            tr
+              th(scope='row') 1
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td.text-end
+                .btn-group.btn-group-action-xl(role='group', aria-label='Actions')
+                  a.btn.btn-info(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Show')
+                    i.bi.bi-eye(aria-hidden='true')
+                    span.label Show
+                  a.btn.btn-warning(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Edit')
+                    i.bi.bi-pencil(aria-hidden='true')
+                    span.label Edit
+                  a.btn.btn-danger(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Delete')
+                    i.bi.bi-trash(aria-hidden='true')
+                    span.label Delete
+            tr
+              th(scope='row') 2
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td.text-end
+                .btn-group.btn-group-action-xl(role='group', aria-label='Actions')
+                  a.btn.btn-info(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Show')
+                    i.bi.bi-eye(aria-hidden='true')
+                    span.label Show
+                  a.btn.btn-warning(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Edit')
+                    i.bi.bi-pencil(aria-hidden='true')
+                    span.label Edit
+                  a.btn.btn-danger(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Delete')
+                    i.bi.bi-trash(aria-hidden='true')
+                    span.label Delete
+            tr
+              th(scope='row') 3
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td.text-end
+                .btn-group.btn-group-action-xl(role='group', aria-label='Actions')
+                  a.btn.btn-info(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Show')
+                    i.bi.bi-eye(aria-hidden='true')
+                    span.label Show
+                  a.btn.btn-warning(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Edit')
+                    i.bi.bi-pencil(aria-hidden='true')
+                    span.label Edit
+                  a.btn.btn-danger(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Delete')
+                    i.bi.bi-trash(aria-hidden='true')
+                    span.label Delete
+            tr
+              th(scope='row') 4
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td.text-end
+                .btn-group.btn-group-action-xl(role='group', aria-label='Actions')
+                  a.btn.btn-info(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Show')
+                    i.bi.bi-eye(aria-hidden='true')
+                    span.label Show
+                  a.btn.btn-warning(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Edit')
+                    i.bi.bi-pencil(aria-hidden='true')
+                    span.label Edit
+                  a.btn.btn-danger(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Delete')
+                    i.bi.bi-trash(aria-hidden='true')
+                    span.label Delete
+            tr.table-primary
+              th(scope='row') 5
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td.text-end
+                .btn-group.btn-group-action-xl(role='group', aria-label='Actions')
+                  a.btn.btn-info(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Show')
+                    i.bi.bi-eye(aria-hidden='true')
+                    span.label Show
+                  a.btn.btn-warning(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Edit')
+                    i.bi.bi-pencil(aria-hidden='true')
+                    span.label Edit
+                  a.btn.btn-danger(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Delete')
+                    i.bi.bi-trash(aria-hidden='true')
+                    span.label Delete
+            tr.table-secondary
+              th(scope='row') 6
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td.text-end
+                .btn-group.btn-group-action-xl(role='group', aria-label='Actions')
+                  a.btn.btn-info(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Show')
+                    i.bi.bi-eye(aria-hidden='true')
+                    span.label Show
+                  a.btn.btn-warning(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Edit')
+                    i.bi.bi-pencil(aria-hidden='true')
+                    span.label Edit
+                  a.btn.btn-danger(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Delete')
+                    i.bi.bi-trash(aria-hidden='true')
+                    span.label Delete
+            tr.table-success
+              th(scope='row') 7
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td.text-end
+                .btn-group.btn-group-action-xl(role='group', aria-label='Actions')
+                  a.btn.btn-info(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Show')
+                    i.bi.bi-eye(aria-hidden='true')
+                    span.label Show
+                  a.btn.btn-warning(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Edit')
+                    i.bi.bi-pencil(aria-hidden='true')
+                    span.label Edit
+                  a.btn.btn-danger(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Delete')
+                    i.bi.bi-trash(aria-hidden='true')
+                    span.label Delete
+            tr.table-danger
+              th(scope='row') 8
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td.text-end
+                .btn-group.btn-group-action-xl(role='group', aria-label='Actions')
+                  a.btn.btn-info(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Show')
+                    i.bi.bi-eye(aria-hidden='true')
+                    span.label Show
+                  a.btn.btn-warning(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Edit')
+                    i.bi.bi-pencil(aria-hidden='true')
+                    span.label Edit
+                  a.btn.btn-danger(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Delete')
+                    i.bi.bi-trash(aria-hidden='true')
+                    span.label Delete
+            tr.table-warning
+              th(scope='row') 9
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td.text-end
+                .btn-group.btn-group-action-xl(role='group', aria-label='Actions')
+                  a.btn.btn-info(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Show')
+                    i.bi.bi-eye(aria-hidden='true')
+                    span.label Show
+                  a.btn.btn-warning(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Edit')
+                    i.bi.bi-pencil(aria-hidden='true')
+                    span.label Edit
+                  a.btn.btn-danger(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Delete')
+                    i.bi.bi-trash(aria-hidden='true')
+                    span.label Delete
+            tr.table-info
+              th(scope='row') 10
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td.text-end
+                .btn-group.btn-group-action-xl(role='group', aria-label='Actions')
+                  a.btn.btn-info(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Show')
+                    i.bi.bi-eye(aria-hidden='true')
+                    span.label Show
+                  a.btn.btn-warning(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Edit')
+                    i.bi.bi-pencil(aria-hidden='true')
+                    span.label Edit
+                  a.btn.btn-danger(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Delete')
+                    i.bi.bi-trash(aria-hidden='true')
+                    span.label Delete
+            tr.table-light
+              th(scope='row') 11
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td.text-end
+                .btn-group.btn-group-action-xl(role='group', aria-label='Actions')
+                  a.btn.btn-info(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Show')
+                    i.bi.bi-eye(aria-hidden='true')
+                    span.label Show
+                  a.btn.btn-warning(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Edit')
+                    i.bi.bi-pencil(aria-hidden='true')
+                    span.label Edit
+                  a.btn.btn-danger(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Delete')
+                    i.bi.bi-trash(aria-hidden='true')
+                    span.label Delete
+            tr.table-dark
+              th(scope='row') 12
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td Cell
+              td.text-end
+                .btn-group.btn-group-action-xl(role='group', aria-label='Actions')
+                  a.btn.btn-info(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Show')
+                    i.bi.bi-eye(aria-hidden='true')
+                    span.label Show
+                  a.btn.btn-warning(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Edit')
+                    i.bi.bi-pencil(aria-hidden='true')
+                    span.label Edit
+                  a.btn.btn-danger(href='#', role='button', data-bs-toggle='tooltip', data-bs-title='Delete')
+                    i.bi.bi-trash(aria-hidden='true')
+                    span.label Delete
+
+      nav(aria-label='Page navigation')
+        ul.pagination.justify-content-center
+          li.page-item.disabled
+            a.page-link Previous
+          li.page-item.active(aria-current="page")
+            a.page-link(href='#') 1
+          li.page-item
+            a.page-link(href='#') 2
+          li.page-item
+            a.page-link(href='#') 3
+          li.page-item
+            a.page-link(href='#') Next

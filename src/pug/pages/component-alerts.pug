@@ -1,0 +1,290 @@
+extends ../layouts/2col.pug
+
+block append config
+  - var pageTitle = "Alerts";
+
+append scripts
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js", crossorigin="anonymous")
+  script.
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+    const appendAlert = (message, type) => {
+      const wrapper = document.createElement('div')
+      wrapper.innerHTML = [
+        `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+        `   <div>${message}</div>`,
+        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+        '</div>'
+      ].join('')
+
+      alertPlaceholder.append(wrapper)
+    }
+    const alertTrigger = document.getElementById('liveAlertBtn')
+    if (alertTrigger) {
+      alertTrigger.addEventListener('click', () => {
+        appendAlert('Nice, you triggered this alert message!', 'success')
+      })
+    }
+
+block content
+  div.card
+    div.card-body
+      h3 #{pageTitle}
+      p Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
+
+      h4 Examples
+      p Alerts are available for any length of text, as well as an optional close button. For proper styling, use one of the eight <strong>required</strong> contextual classes (e.g., <code>.alert-success</code>). For inline dismissal, use the alerts JavaScript plugin.
+
+      .bd-example
+        .alert.alert-primary(role='alert')
+          | A simple primary alert - check it out!
+        .alert.alert-secondary(role='alert')
+          | A simple secondary alert - check it out!
+        .alert.alert-success(role='alert')
+          | A simple success alert - check it out!
+        .alert.alert-danger(role='alert')
+          | A simple danger alert - check it out!
+        .alert.alert-warning(role='alert')
+          | A simple warning alert - check it out!
+        .alert.alert-info(role='alert')
+          | A simple info alert - check it out!
+        .alert.alert-light(role='alert')
+          | A simple light alert - check it out!
+        .alert.alert-dark(role='alert')
+          | A simple dark alert - check it out!
+
+      pre
+        code.language-html
+          | &lt;div class="alert alert-primary" role="alert"&gt;
+          |   A simple primary alert - check it out!
+          | &lt;/div&gt;
+          | &lt;div class="alert alert-secondary" role="alert"&gt;
+          |   A simple secondary alert - check it out!
+          | &lt;/div&gt;
+          | &lt;div class="alert alert-success" role="alert"&gt;
+          |   A simple success alert - check it out!
+          | &lt;/div&gt;
+          | &lt;div class="alert alert-danger" role="alert"&gt;
+          |   A simple danger alert - check it out!
+          | &lt;/div&gt;
+          | &lt;div class="alert alert-warning" role="alert"&gt;
+          |   A simple warning alert - check it out!
+          | &lt;/div&gt;
+          | &lt;div class="alert alert-info" role="alert"&gt;
+          |   A simple info alert - check it out!
+          | &lt;/div&gt;
+          | &lt;div class="alert alert-light" role="alert"&gt;
+          |   A simple light alert - check it out!
+          | &lt;/div&gt;
+          | &lt;div class="alert alert-dark" role="alert"&gt;
+          |   A simple dark alert - check it out!
+          | &lt;/div&gt;
+
+      h4 Live example
+      p Click the button below to show an alert (hidden with inline styles to start), then dismiss (and destroy) it with the built-in close button.
+
+      .bd-example
+        #liveAlertPlaceholder
+        button#liveAlertBtn.btn.btn-primary(type='button') Show live alert
+
+      pre
+        code.language-html
+          | &lt;div id="liveAlertPlaceholder"&gt;&lt;/div&gt;
+          | &lt;button type="button" class="btn btn-primary" id="liveAlertBtn"&gt;Show live alert&lt;/button&gt;
+
+      p We use the following JavaScript to trigger our live alert demo:
+
+      pre
+        code.language-javascript
+          | const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+          | const appendAlert = (message, type) =&gt; {
+          |   const wrapper = document.createElement('div')
+          |   wrapper.innerHTML = [
+          |     `&lt;div class="alert alert-${type} alert-dismissible" role="alert"&gt;`,
+          |     `   &lt;div&gt;${message}&lt;/div&gt;`,
+          |     '   &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;',
+          |     '&lt;/div&gt;'
+          |   ].join('')
+          |
+          |   alertPlaceholder.append(wrapper)
+          | }
+          |
+          | const alertTrigger = document.getElementById('liveAlertBtn')
+          | if (alertTrigger) {
+          |   alertTrigger.addEventListener('click', () =&gt; {
+          |     appendAlert('Nice, you triggered this alert message!', 'success')
+          |   })
+          | }
+
+      h4 Link color
+      p Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.
+
+      .bd-example
+        .alert.alert-primary(role='alert')
+          | A simple primary alert with
+          a.alert-link(href='#') an example link
+          | . Give it a click if you like.
+        .alert.alert-secondary(role='alert')
+          | A simple secondary alert with
+          a.alert-link(href='#') an example link
+          | . Give it a click if you like.
+        .alert.alert-success(role='alert')
+          | A simple success alert with
+          a.alert-link(href='#') an example link
+          | . Give it a click if you like.
+        .alert.alert-danger(role='alert')
+          | A simple danger alert with
+          a.alert-link(href='#') an example link
+          | . Give it a click if you like.
+        .alert.alert-warning(role='alert')
+          | A simple warning alert with
+          a.alert-link(href='#') an example link
+          | . Give it a click if you like.
+        .alert.alert-info(role='alert')
+          | A simple info alert with
+          a.alert-link(href='#') an example link
+          | . Give it a click if you like.
+        .alert.alert-light(role='alert')
+          | A simple light alert with
+          a.alert-link(href='#') an example link
+          | . Give it a click if you like.
+        .alert.alert-dark(role='alert')
+          | A simple dark alert with
+          a.alert-link(href='#') an example link
+          | . Give it a click if you like.
+
+      pre
+        code.language-html
+          | &lt;div class="alert alert-primary" role="alert"&gt;
+          |   A simple primary alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
+          | &lt;/div&gt;
+          | &lt;div class="alert alert-secondary" role="alert"&gt;
+          |   A simple secondary alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
+          | &lt;/div&gt;
+          | &lt;div class="alert alert-success" role="alert"&gt;
+          |   A simple success alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
+          | &lt;/div&gt;
+          | &lt;div class="alert alert-danger" role="alert"&gt;
+          |   A simple danger alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
+          | &lt;/div&gt;
+          | &lt;div class="alert alert-warning" role="alert"&gt;
+          |   A simple warning alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
+          | &lt;/div&gt;
+          | &lt;div class="alert alert-info" role="alert"&gt;
+          |   A simple info alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
+          | &lt;/div&gt;
+          | &lt;div class="alert alert-light" role="alert"&gt;
+          |   A simple light alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
+          | &lt;/div&gt;
+          | &lt;div class="alert alert-dark" role="alert"&gt;
+          |   A simple dark alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
+          | &lt;/div&gt;
+
+      h4 Additional content
+      p Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
+
+      .bd-example
+        .alert.alert-success(role='alert')
+          h4.alert-heading Well done!
+          p
+            | Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+          hr
+          p.mb-0
+            | Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+
+      pre
+        code.language-html
+          | &lt;div class="alert alert-success" role="alert"&gt;
+          |   &lt;h4 class="alert-heading"&gt;Well done!&lt;/h4&gt;
+          |   &lt;p&gt;Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.&lt;/p&gt;
+          |   &lt;hr&gt;
+          |   &lt;p class="mb-0"&gt;Whenever you need to, be sure to use margin utilities to keep things nice and tidy.&lt;/p&gt;
+          | &lt;/div&gt;
+
+      h4 Icons
+      p Similarly, you can use flexbox utilities and Bootstrap Icons to create alerts with icons. Depending on your icons and content, you may want to add more utilities or custom styles.
+
+      .bd-example
+        .alert.alert-primary.d-flex.align-items-center(role='alert')
+          i.bi.bi-exclamation-triangle-fill.flex-shrink-0.me-2(aria-label='Warning:')
+          div
+            | An example alert with an icon
+
+      pre
+        code.language-html
+          | &lt;div class="alert alert-primary d-flex align-items-center" role="alert"&gt;
+          |   &lt;i class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" aria-label="Warning:"&gt;&lt;/i&gt;
+          |   &lt;div&gt;
+          |     An example alert with an icon
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+
+      p Need more than one icon for your alerts? Consider using more Bootstrap Icons and making a local SVG sprite like so to easily reference the same icons repeatedly.
+
+      .bd-example
+        .alert.alert-primary.d-flex.align-items-center(role='alert')
+          i.bi.bi-info-circle-fill.flex-shrink-0.me-2(aria-label='Info:')
+          div
+            | An example alert with an icon
+        .alert.alert-success.d-flex.align-items-center(role='alert')
+          i.bi.bi-check-circle-fill.flex-shrink-0.me-2(aria-label='Success:')
+          div
+            | An example success alert with an icon
+        .alert.alert-warning.d-flex.align-items-center(role='alert')
+          i.bi.bi-exclamation-triangle-fill.flex-shrink-0.me-2(aria-label='Warning:')
+          div
+            | An example warning alert with an icon
+        .alert.alert-danger.d-flex.align-items-center(role='alert')
+          i.bi.bi-exclamation-triangle-fill.flex-shrink-0.me-2(aria-label='Danger:')
+          div
+            | An example danger alert with an icon
+
+      pre
+        code.language-html
+          | &lt;div class="alert alert-primary d-flex align-items-center" role="alert"&gt;
+          |   &lt;i class="bi bi-info-circle-fill flex-shrink-0 me-2" aria-label="Info:"&gt;&lt;/i&gt;
+          |   &lt;div&gt;
+          |     An example alert with an icon
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+          | &lt;div class="alert alert-success d-flex align-items-center" role="alert"&gt;
+          |   &lt;i class="bi bi-check-circle-fill flex-shrink-0 me-2" aria-label="Success:"&gt;&lt;/i&gt;
+          |   &lt;div&gt;
+          |     An example success alert with an icon
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+          | &lt;div class="alert alert-warning d-flex align-items-center" role="alert"&gt;
+          |   &lt;i class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" aria-label="Warning:"&gt;&lt;/i&gt;
+          |   &lt;div&gt;
+          |     An example warning alert with an icon
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+          | &lt;div class="alert alert-danger d-flex align-items-center" role="alert"&gt;
+          |   &lt;i class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" aria-label="Danger:"&gt;&lt;/i&gt;
+          |   &lt;div&gt;
+          |     An example danger alert with an icon
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+
+      h4 Dismissing
+      p Using the alert JavaScript plugin, it's possible to dismiss any alert inline. Here's how:
+
+      ul
+        li Be sure you've loaded the alert plugin, or the compiled Bootstrap JavaScript.
+        li Add a close button and the <code>.alert-dismissible</code> class, which adds extra padding to the right of the alert and positions the close button.
+        li On the close button, add the <code>data-bs-dismiss="alert"</code> attribute, which triggers the JavaScript functionality. Be sure to use the <code>&lt;button&gt;</code> element with it for proper behavior across all devices.
+        li To animate alerts when dismissing them, be sure to add the <code>.fade</code> and <code>.show</code> classes.
+
+      p You can see this in action with a live demo:
+
+      .bd-example
+        .alert.alert-warning.alert-dismissible.fade.show(role='alert')
+          strong Holy guacamole!
+          |  You should check in on some of those fields below.
+          button.btn-close(type='button', data-bs-dismiss='alert', aria-label='Close')
+
+      pre
+        code.language-html
+          | &lt;div class="alert alert-warning alert-dismissible fade show" role="alert"&gt;
+          |   &lt;strong&gt;Holy guacamole!&lt;/strong&gt; You should check in on some of those fields below.
+          |   &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+          | &lt;/div&gt;

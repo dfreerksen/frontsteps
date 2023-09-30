@@ -1,0 +1,9 @@
+/node_modules
+.DS_Store
+/dist/**/*.html
+/dist/assets
+/dist/css/doc.css
+/dist/css/doc.css
+/dist/css/doc.min.css
+/dist/js/doc.js
+/dist/js/doc.min.js

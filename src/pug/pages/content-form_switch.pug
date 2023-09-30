@@ -1,0 +1,118 @@
+extends ../layouts/2col.pug
+
+block append config
+  - var pageTitle = "Form Switch";
+
+block content
+  div.card
+    div.card-body
+      h3 #{pageTitle}
+      p Extension to Bootstrap <code>.form-switch</code>
+
+      h4 Small
+      p Use <code>.form-switch-sm</code>. Same as <code>.form-switch</code> with modifications for alignment.
+
+      .bd-example
+        .form-check.form-switch.form-switch-sm
+          input#switchCheckSmDefault.form-check-input(type='checkbox', role='switch')
+          label.form-check-label(for='switchCheckSmDefault') Default small switch checkbox input
+        .form-check.form-switch.form-switch-sm
+          input#switchCheckSmChecked.form-check-input(type='checkbox', role='switch', checked='')
+          label.form-check-label(for='switchCheckSmChecked') Checked small switch checkbox input
+        .form-check.form-switch.form-switch-sm
+          input#switchCheckSmDisabled.form-check-input(type='checkbox', role='switch', disabled='')
+          label.form-check-label(for='switchCheckSmDisabled') Disabled small switch checkbox input
+        .form-check.form-switch.form-switch-sm
+          input#switchCheckSmCheckedDisabled.form-check-input(type='checkbox', role='switch', checked='', disabled='')
+          label.form-check-label(for='switchCheckSmCheckedDisabled') Disabled small checked switch checkbox input
+
+      pre
+        code.language-html
+          | &lt;div class="form-check form-switch form-switch-sm"&gt;
+          |   &lt;input class="form-check-input" id="switchCheckSmDefault" type="checkbox" role="switch"&gt;
+          |   &lt;label class="form-check-label" for="switchCheckSmDefault"&gt;Default small switch checkbox input&lt;/label&gt;
+          | &lt;/div&gt;
+          | &lt;div class="form-check form-switch form-switch-sm"&gt;
+          |   &lt;input class="form-check-input" id="switchCheckSmChecked" type="checkbox" role="switch" checked=""&gt;
+          |   &lt;label class="form-check-label" for="switchCheckSmChecked"&gt;Checked small switch checkbox input&lt;/label&gt;
+          | &lt;/div&gt;
+          | &lt;div class="form-check form-switch form-switch-sm"&gt;
+          |   &lt;input class="form-check-input" id="switchCheckSmDisabled" type="checkbox" role="switch" disabled=""&gt;
+          |   &lt;label class="form-check-label" for="switchCheckSmDisabled"&gt;Disabled small switch checkbox input&lt;/label&gt;
+          | &lt;/div&gt;
+          | &lt;div class="form-check form-switch form-switch-sm"&gt;
+          |   &lt;input class="form-check-input" id="switchCheckSmCheckedDisabled" type="checkbox" role="switch" checked="" disabled=""&gt;
+          |   &lt;label class="form-check-label" for="switchCheckSmCheckedDisabled"&gt;Disabled small checked switch checkbox input&lt;/label&gt;
+          | &lt;/div&gt;
+
+      h4 Medium
+      p Use <code>.form-switch-md</code>.
+
+      .bd-example
+        .form-check.form-switch.form-switch-md
+          input#switchCheckMdDefault.form-check-input(type='checkbox', role='switch')
+          label.form-check-label(for='switchCheckMdDefault') Default medium switch checkbox input
+        .form-check.form-switch.form-switch-md
+          input#switchCheckMdChecked.form-check-input(type='checkbox', role='switch', checked='')
+          label.form-check-label(for='switchCheckMdChecked') Checked medium switch checkbox input
+        .form-check.form-switch.form-switch-md
+          input#switchCheckMdDisabled.form-check-input(type='checkbox', role='switch', disabled='')
+          label.form-check-label(for='switchCheckMdDisabled') Disabled medium switch checkbox input
+        .form-check.form-switch.form-switch-md
+          input#switchCheckMdCheckedDisabled.form-check-input(type='checkbox', role='switch', checked='', disabled='')
+          label.form-check-label(for='switchCheckMdCheckedDisabled') Disabled medium checked switch checkbox input
+
+      pre
+        code.language-html
+          | &lt;div class="form-check form-switch form-switch-md"&gt;
+          |   &lt;input class="form-check-input" id="switchCheckMdDefault" type="checkbox" role="switch"&gt;
+          |   &lt;label class="form-check-label" for="switchCheckMdDefault"&gt;Default medium switch checkbox input&lt;/label&gt;
+          | &lt;/div&gt;
+          | &lt;div class="form-check form-switch form-switch-md"&gt;
+          |   &lt;input class="form-check-input" id="switchCheckMdChecked" type="checkbox" role="switch" checked=""&gt;
+          |   &lt;label class="form-check-label" for="switchCheckMdChecked"&gt;Checked medium switch checkbox input&lt;/label&gt;
+          | &lt;/div&gt;
+          | &lt;div class="form-check form-switch form-switch-md"&gt;
+          |   &lt;input class="form-check-input" id="switchCheckMdDisabled" type="checkbox" role="switch" disabled=""&gt;
+          |   &lt;label class="form-check-label" for="switchCheckMdDisabled"&gt;Disabled medium switch checkbox input&lt;/label&gt;
+          | &lt;/div&gt;
+          | &lt;div class="form-check form-switch form-switch-md"&gt;
+          |   &lt;input class="form-check-input" id="switchCheckMdCheckedDisabled" type="checkbox" role="switch" checked="" disabled=""&gt;
+          |   &lt;label class="form-check-label" for="switchCheckMdCheckedDisabled"&gt;Disabled medium checked switch checkbox input&lt;/label&gt;
+          | &lt;/div&gt;
+
+      h4 Large
+      p Use <code>.form-switch-lg</code>.
+
+      .bd-example
+        .form-check.form-switch.form-switch-lg
+          input#switchCheckLgDefault.form-check-input(type='checkbox', role='switch')
+          label.form-check-label(for='switchCheckLgDefault') Default large switch checkbox input
+        .form-check.form-switch.form-switch-lg
+          input#switchCheckLgChecked.form-check-input(type='checkbox', role='switch', checked='')
+          label.form-check-label(for='switchCheckLgChecked') Checked large switch checkbox input
+        .form-check.form-switch.form-switch-lg
+          input#switchCheckLgDisabled.form-check-input(type='checkbox', role='switch', disabled='')
+          label.form-check-label(for='switchCheckLgDisabled') Disabled large switch checkbox input
+        .form-check.form-switch.form-switch-lg
+          input#switchCheckLgCheckedDisabled.form-check-input(type='checkbox', role='switch', checked='', disabled='')
+          label.form-check-label(for='switchCheckLgCheckedDisabled') Disabled large checked switch checkbox input
+
+      pre
+        code.language-html
+          | &lt;div class="form-check form-switch form-switch-lg"&gt;
+          |   &lt;input class="form-check-input" id="switchCheckLgDefault" type="checkbox" role="switch"&gt;
+          |   &lt;label class="form-check-label" for="switchCheckLgDefault"&gt;Default large switch checkbox input&lt;/label&gt;
+          | &lt;/div&gt;
+          | &lt;div class="form-check form-switch form-switch-lg"&gt;
+          |   &lt;input class="form-check-input" id="switchCheckLgChecked" type="checkbox" role="switch" checked=""&gt;
+          |   &lt;label class="form-check-label" for="switchCheckLgChecked"&gt;Checked large switch checkbox input&lt;/label&gt;
+          | &lt;/div&gt;
+          | &lt;div class="form-check form-switch form-switch-lg"&gt;
+          |   &lt;input class="form-check-input" id="switchCheckLgDisabled" type="checkbox" role="switch" disabled=""&gt;
+          |   &lt;label class="form-check-label" for="switchCheckLgDisabled"&gt;Disabled large switch checkbox input&lt;/label&gt;
+          | &lt;/div&gt;
+          | &lt;div class="form-check form-switch form-switch-lg"&gt;
+          |   &lt;input class="form-check-input" id="switchCheckLgCheckedDisabled" type="checkbox" role="switch" checked="" disabled=""&gt;
+          |   &lt;label class="form-check-label" for="switchCheckLgCheckedDisabled"&gt;Disabled large checked switch checkbox input&lt;/label&gt;
+          | &lt;/div&gt;

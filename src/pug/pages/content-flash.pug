@@ -1,0 +1,71 @@
+extends ../layouts/2col.pug
+
+block append config
+  - var pageTitle = "Flash";
+
+append scripts
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js", crossorigin="anonymous")
+  script(src="js/flash.min.js")
+  script.
+    flash('This is an example of a flash message sent when the page loads', 'success')
+  script.
+    const flashForm = document.querySelector("form#exampleFlash")
+    flashForm.addEventListener('submit', (evt) => {
+      evt.preventDefault()
+      const data = new FormData(evt.target)
+      const messageValue = data.get('message')
+      const typeValue = data.get('type')
+      const capitalizedType = typeValue[0].toUpperCase() + typeValue.slice(1)
+
+      window[`flash${capitalizedType}`](messageValue)
+    }, false);
+
+block content
+  div.card
+    div.card-body
+      h3 #{pageTitle}
+      p Extension of Bootstrap <code>.alert</code> to add inline alerts with Javascript.
+
+      p Include the Javascript
+
+      pre
+        code.language-html
+          | &lt;script src="flash.min.js"&gt;&lt;/script&gt;
+
+      p Usage
+
+      pre
+        code.language-javascript
+          | flashPrimary('Primary') // Sends message with icon
+          | flashSecondary('Secondary') // Sends message with icon
+          | flashSuccess('Success') // Sends message with icon
+          | flashDanger('Danger') // Sends message with icon
+          | flashError('Error') // Sends message with icon
+          | flashWarning('Warning') // Sends message with icon
+          | flashInfo('Info') // Sends message with icon
+          | flashLight('Light') // Sends message with icon
+          | flashDark('Dark') // Sends message with icon
+          | flash('Generic flash') // Sends message with info icon styled as info message
+          | flash('Things are broken', 'error') // Sends message with info icon styled as error message
+          | flash('Things are broken', 'error', { icon: 'bi-check-circle-fill' }) // Sends message with defined icon styled as error message
+
+      h4 Example
+
+      form#exampleFlash.row.align-items-end
+        .col-md-7
+          label.form-label(for='message') Message
+          input#message.form-control(type='text', name='message', value='Send this message')
+        .col-md-4
+          label.form-label(for='type') Type
+          select#type.form-select(name='type')
+            option(value='primary') Primary
+            option(value='secondary') Secondary
+            option(value='success', selected='') Success
+            option(value='error') Error
+            option(value='danger') Danger
+            option(value='warning') Warning
+            option(value='info') Info
+            option(value='light') Light
+            option(value='dark') Dark
+        .col-md-1
+          button.btn.btn-primary(type='submit') Send

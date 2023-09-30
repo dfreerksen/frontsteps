@@ -1,0 +1,176 @@
+$fs-primary: #003462;
+$fs-secondary: #8c8e90;
+$fs-tertiary: #92c83e;
+
+// Shared
+$fs-transition: all 0.2s;
+$fs-theme-background-color: #253042;
+$fs-theme-text-color: #F5F5F5;
+$fs-theme-link-color: #7d94b9;
+$fs-theme-link-hover-color: #b7c0cd;
+$fs-theme-link-hover-background-color: #46546d;
+
+// Body
+$fs-body-background-color-light: #f6f9ff;
+$fs-body-background-color-dark: #303b4d;
+$fs-body-text-color-light: #333;
+$fs-body-text-color-dark: #f6f9ff;
+$fs-body-font-family: "Open Sans", var(--bs-body-font-family);
+
+// Heading
+$fs-heading-font-family: "Nunito", var(--bs-body-font-family);
+
+// Links
+$fs-link-text-color-light: #08c;
+$fs-link-text-color-dark: #005580;
+$fs-link-hover-text-color-light: #84a0af;
+$fs-link-hover-text-color-dark: #c2d5df;
+$fs-link-text-decoration: none;
+$fs-link-hover-text-decoration: none;
+$fs-link-transition: $fs-transition;
+
+// Header
+$fs-header-background-color-light: $fs-theme-background-color;
+$fs-header-background-color-dark: $fs-theme-background-color;
+$fs-header-shadow: 0 3px 5px rgb(0 0 0 / 20%);
+$fs-header-text-color-light: $fs-theme-text-color;
+$fs-header-text-color-dark: $fs-theme-text-color;
+$fs-header-text-size: 18px;
+$fs-header-link-color-light: #7d94b9;
+$fs-header-link-color-dark: #7d94b9;
+$fs-header-link-hover-color-light: $fs-theme-link-hover-color;
+$fs-header-link-hover-color-dark: $fs-theme-link-hover-color;
+$fs-header-link-background-color-light: transparent;
+$fs-header-link-background-color-dark: transparent;
+$fs-header-link-background-hover-color-light: #46546d;
+$fs-header-link-background-hover-color-dark: #46546d;
+$fs-header-badge-text-size: 0.55em;
+$fs-header-transition: $fs-transition;
+$fs-header-dropdown-text-size: 16px;
+$fs-header-dropdown-width: 20rem;
+$fs-header-height: 80px;
+$fs-header-z-index: 998;
+
+// Sidebar
+$fs-sidebar-background-color-light: $fs-theme-background-color;
+$fs-sidebar-background-color-dark: $fs-theme-background-color;
+$fs-sidebar-shadow: 3px 0 5px rgb(0 0 0 / 20%);
+$fs-sidebar-text-color-light: $fs-theme-text-color;
+$fs-sidebar-text-color-dark: $fs-theme-text-color;
+$fs-sidebar-text-size: 14px;
+$fs-sidebar-link-color-light: $fs-theme-link-color;
+$fs-sidebar-link-color-dark: $fs-theme-link-color;
+$fs-sidebar-link-hover-color-light: $fs-theme-link-hover-color;
+$fs-sidebar-link-hover-color-dark: $fs-theme-link-hover-color;
+$fs-sidebar-link-hover-background-color-light: $fs-theme-link-hover-background-color;
+$fs-sidebar-link-hover-background-color-dark: $fs-theme-link-hover-background-color;
+$fs-sidebar-transition: $fs-transition;
+$fs-sidebar-width: 270px;
+$fs-sidebar-min-width: 70px;
+$fs-sidebar-z-index: 997;
+$fs-sidebar-scrollbar-color: var(--sidebar-link-hover-color) transparent;
+$fs-sidebar-icon-color-light: $fs-theme-link-color;
+$fs-sidebar-icon-color-dark: $fs-theme-link-color;
+$fs-sidebar-icon-hover-color-light: $fs-tertiary;
+$fs-sidebar-icon-hover-color-dark: $fs-tertiary;
+$fs-sidebar-icon-text-size: 17px;
+$fs-sidebar-icon-size: 34px;
+$fs-sidebar-icon-margin-right: 14px;
+$fs-sidebar-chevron-transition: $fs-transition;
+
+// Main
+$fs-main-transition: $fs-transition;
+
+// Footer
+$fs-footer-transition: $fs-transition;
+
+// Flash messages
+$fs-flash-width: 380px;
+$fs-flash-right: $spacer;
+$fs-flash-top: $spacer;
+$fs-flash-z-index: 999;
+
+// Auth
+$fs-page-auth-width: 20rem;
+
+:root,
+[data-bs-theme="light"] {
+  // Shared
+  --theme-background-color: #{$fs-theme-background-color};
+  --theme-text-color: #{$fs-theme-text-color};
+  --theme-link-color: #{$fs-theme-link-color};
+  --theme-link-hover-color: #{$fs-theme-link-hover-color};
+
+  // Body
+  --body-background-color: #{$fs-body-background-color-light};
+  --body-text-color: #{$fs-body-text-color-light};
+  --body-font-family: #{$fs-body-font-family};
+
+  // Heading
+  --heading-font-family: #{$fs-heading-font-family};
+
+  // Links
+  --link-color: #{$fs-link-text-color-light};
+  --link-hover-color: #{$fs-link-hover-text-color-light};
+  --link-text-decoration: #{$fs-link-text-decoration};
+  --link-hover-text-decoration: #{$fs-link-hover-text-decoration};
+
+  // Header
+  --header-background-color: var(--theme-background-color, $fs-header-background-color-light);
+  --header-text-color: var(--theme-text-color, $fs-header-text-color-light);
+  --header-link-color: var(--theme-link-color, $fs-header-link-color-light);
+  --header-link-hover-color: var(--theme-link-hover-color, $fs-header-link-hover-color-light);
+  --header-link-background-color: #{$fs-header-link-background-color-light};
+  --header-link-background-hover-color: #{$fs-header-link-background-hover-color-light};
+
+  // Sidebar
+  --sidebar-background-color: var(--theme-background-color, $fs-sidebar-background-color-light);
+  --sidebar-text-color: var(--theme-text-color, $fs-sidebar-text-color-light);
+  --sidebar-link-color: var(--theme-link-color, $fs-sidebar-link-color-light);
+  --sidebar-link-hover-color: var(--theme-link-hover-color, $fs-sidebar-link-hover-color-light);
+  --sidebar-link-hover-background-color: #{$fs-sidebar-link-hover-background-color-light};
+  --sidebar-icon-color: #{$fs-sidebar-icon-color-light};
+  --sidebar-icon-hover-color: #{$fs-sidebar-icon-hover-color-light};
+  --sidebar-scrollbar-color: $fs-sidebar-scrollbar-color;
+}
+
+[data-bs-theme="dark"] {
+  color-scheme: dark;
+
+  // Shared
+  --theme-background-color: #{$fs-theme-background-color};
+  --theme-text-color: #{$fs-theme-text-color};
+  --theme-link-color: #{$fs-theme-link-color};
+
+  // Body
+  --body-background-color: #{$fs-body-background-color-dark};
+  --body-text-color: #{$fs-body-text-color-dark};
+  --body-font-family: #{$fs-body-font-family};
+
+  // Heading
+  --heading-font-family: #{$fs-heading-font-family};
+
+  // Links
+  --link-color: #{$fs-link-text-color-dark};
+  --link-hover-color: #{$fs-link-hover-text-color-dark};
+  --link-text-decoration: #{$fs-link-text-decoration};
+  --link-hover-text-decoration: #{$fs-link-hover-text-decoration};
+
+  // Header
+  --header-background-color: var(--theme-background-color, $fs-header-background-color-dark);
+  --header-text-color: var(--theme-text-color, $fs-header-text-color-dark);
+  --header-link-color: var(--theme-link-color, $fs-header-link-color-dark);
+  --header-link-hover-color: var(--theme-link-hover-color, $fs-header-link-hover-color-dark);
+  --header-link-background-color: #{$fs-header-link-background-color-dark};
+  --header-link-background-hover-color: #{$fs-header-link-background-hover-color-dark};
+
+  // Sidebar
+  --sidebar-background-color: var(--theme-background-color, $fs-sidebar-background-color-dark);
+  --sidebar-text-color: var(--theme-text-color, $fs-sidebar-text-color-dark);
+  --sidebar-link-color: var(--theme-link-color, $fs-sidebar-link-color-dark);
+  --sidebar-link-hover-color: var(--theme-link-hover-color, $fs-sidebar-link-hover-color-dark);
+  --sidebar-link-hover-background-color: #{$fs-sidebar-link-hover-background-color-dark};
+  --sidebar-icon-color: #{$fs-sidebar-icon-color-dark};
+  --sidebar-icon-hover-color: #{$fs-sidebar-icon-hover-color-dark};
+  --sidebar-scrollbar-color: $fs-sidebar-scrollbar-color;
+}

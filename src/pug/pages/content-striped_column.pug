@@ -1,0 +1,110 @@
+extends ../layouts/2col.pug
+
+block append config
+  - var pageTitle = "Striped Column";
+
+block content
+  div.card
+    div.card-body
+      h3 #{pageTitle}
+      p Extension to Bootstrap <code>.table</code>
+
+      h4 Striped first column
+      p Stripe the first column of a table.
+
+      .bd-example
+        table.table.table-striped-first-column
+          thead
+            tr
+              th(scope='col') #
+              th(scope='col') Header 1
+              th(scope='col') Header 2
+              th(scope='col') Header 3
+          tbody
+            tr
+              th(scope='row') 1
+              td Record 1
+              td Record 1
+              td Record 1
+            tr
+              th(scope='row') 2
+              td Record 2
+              td Record 2
+              td Record 2
+            tr
+              th(scope='row') 3
+              td Record 3
+              td Record 3
+              td Record 3
+            tr
+              th(scope='row') 4
+              td Record 4
+              td Record 4
+              td Record 4
+
+      pre
+        code.language-html
+          | &lt;table class="table table-striped-first-column"&gt;
+          |   &lt;thead&gt;
+          |     &lt;tr&gt;
+          |       &lt;th scope="col"&gt;Header&lt;/th&gt;
+          |       ...
+          |     &lt;/tr&gt;
+          |   &lt;/thead&gt;
+          |   &lt;tbody&gt;
+          |     &lt;tr&gt;
+          |       &lt;th scope="row"&gt;Data&lt;/th&gt;
+          |       ...
+          |     &lt;/tr&gt;
+          |   &lt;/tbody&gt;
+          | &lt;/table&gt;
+
+      h4 Striped last column
+      p Stripe the last column of a table. Typically used for the table actions.
+
+      .bd-example
+        table.table.table-striped-last-column
+          thead
+            tr
+              th(scope='col') #
+              th(scope='col') Header 1
+              th(scope='col') Header 2
+              th(scope='col') Header 3
+          tbody
+            tr
+              th(scope='row') 1
+              td Record 1
+              td Record 1
+              td Record 1
+            tr
+              th(scope='row') 2
+              td Record 2
+              td Record 2
+              td Record 2
+            tr
+              th(scope='row') 3
+              td Record 3
+              td Record 3
+              td Record 3
+            tr
+              th(scope='row') 4
+              td Record 4
+              td Record 4
+              td Record 4
+
+      pre
+        code.language-html
+          | &lt;table class="table table-striped-last-column"&gt;
+          |   &lt;thead&gt;
+          |     &lt;tr&gt;
+          |       &lt;th scope="col"&gt;Header&lt;/th&gt;
+          |       ...
+          |     &lt;/tr&gt;
+          |   &lt;/thead&gt;
+          |   &lt;tbody&gt;
+          |     &lt;tr&gt;
+          |       &lt;th scope="row"&gt;Data&lt;/th&gt;
+          |       ...
+          |     &lt;/tr&gt;
+          |   &lt;/tbody&gt;
+          | &lt;/table&gt;

@@ -1,0 +1,594 @@
+extends ../layouts/2col.pug
+
+block append config
+  - var pageTitle = "Carousel";
+
+block content
+  div.card
+    div.card-body
+      h3 #{pageTitle}
+      p A slideshow component for cycling through elements—images or slides of text—like a carousel.
+
+      h4 How it works
+      ul
+        li The carousel is a slideshow for cycling through a series of content, built with CSS 3D transforms and a bit of JavaScript. It works with a series of images, text, or custom markup. It also includes support for previous/next controls and indicators.
+        li For performance reasons, <strong>carousels must be manually initialized</strong> using the carousel constructor method. Without initialization, some of the event listeners (specifically, the events needed touch/swipe support) will not be registered until a user has explicitly activated a control or indicator.
+        li The only exception are autoplaying carousels with the <code>data-bs-ride="carousel"</code> attribute as these are initialized automatically on page load. If you're using autoplaying carousels with the data attribute, <strong>don't explicitly initialize the same carousels with the constructor method.</strong>
+        li Nested carousels are not supported. You should also be aware that carousels in general can often cause usability and accessibility challenges.
+
+      h4 Basic examples
+      p Here is a basic example of a carousel with three slides. Note the previous/next controls. We recommend using <code>&lt;button&gt;</code> elements, but you can also use <code>&lt;a&gt;</code> elements with <code>role="button"</code>.
+
+      .bd-example
+        #carouselExample.carousel.slide
+          .carousel-inner
+            .carousel-item.active
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#777')
+                text(x='50%', y='50%', fill='#555', dy='.3em') First slide
+            .carousel-item
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#666')
+                text(x='50%', y='50%', fill='#444', dy='.3em') Second slide
+            .carousel-item
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#555')
+                text(x='50%', y='50%', fill='#333', dy='.3em') Third slide
+          button.carousel-control-prev(type='button', data-bs-target='#carouselExample', data-bs-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.visually-hidden Previous
+          button.carousel-control-next(type='button', data-bs-target='#carouselExample', data-bs-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.visually-hidden Next
+
+      pre
+        code.language-html
+          | &lt;div id="carouselExample" class="carousel slide"&gt;
+          |   &lt;div class="carousel-inner"&gt;
+          |     &lt;div class="carousel-item active"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |   &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev"&gt;
+          |     &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+          |     &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
+          |   &lt;/button&gt;
+          |   &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next"&gt;
+          |     &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+          |     &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
+          |   &lt;/button&gt;
+          | &lt;/div&gt;
+
+      p Carousels don't automatically normalize slide dimensions. As such, you may need to use additional utilities or custom styles to appropriately size content. While carousels support previous/next controls and indicators, they're not explicitly required. Add and customize as you see fit.
+      p <strong>You must add the <code>.active</code> class to one of the slides</strong>, otherwise the carousel will not be visible. Also be sure to set a unique <code>id</code> on the <code>.carousel</code> for optional controls, especially if you're using multiple carousels on a single page. Control and indicator elements must have a <code>data-bs-target</code> attribute (or <code>href</code> for links) that matches the <code>id</code> of the <code>.carousel</code> element.
+
+      h4 Indicators
+      p You can add indicators to the carousel, alongside the previous/next controls. The indicators let users jump directly to a particular slide.
+
+      .bd-example
+        #carouselExampleIndicators.carousel.slide
+          .carousel-indicators
+            button.active(type='button', data-bs-target='#carouselExampleIndicators', data-bs-slide-to='0', aria-current='true', aria-label='Slide 1')
+            button(type='button', data-bs-target='#carouselExampleIndicators', data-bs-slide-to='1', aria-label='Slide 2')
+            button(type='button', data-bs-target='#carouselExampleIndicators', data-bs-slide-to='2', aria-label='Slide 3')
+          .carousel-inner
+            .carousel-item.active
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#777')
+                text(x='50%', y='50%', fill='#555', dy='.3em') First slide
+            .carousel-item
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#666')
+                text(x='50%', y='50%', fill='#444', dy='.3em') Second slide
+            .carousel-item
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#555')
+                text(x='50%', y='50%', fill='#333', dy='.3em') Third slide
+          button.carousel-control-prev(type='button', data-bs-target='#carouselExampleIndicators', data-bs-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.visually-hidden Previous
+          button.carousel-control-next(type='button', data-bs-target='#carouselExampleIndicators', data-bs-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.visually-hidden Next
+
+      pre
+        code.language-html
+          | &lt;div id="carouselExampleIndicators" class="carousel slide"&gt;
+          |   &lt;div class="carousel-indicators"&gt;
+          |     &lt;button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"&gt;&lt;/button&gt;
+          |     &lt;button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"&gt;&lt;/button&gt;
+          |     &lt;button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"&gt;&lt;/button&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="carousel-inner"&gt;
+          |     &lt;div class="carousel-item active"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |   &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"&gt;
+          |     &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+          |     &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
+          |   &lt;/button&gt;
+          |   &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"&gt;
+          |     &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+          |     &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
+          |   &lt;/button&gt;
+          | &lt;/div&gt;
+
+      h4 Captions
+      p You can add captions to your slides with the <code>.carousel-caption</code> element within any <code>.carousel-item</code>. They can be easily hidden on smaller viewports, as shown below, with optional display utilities. We hide them initially with <code>.d-none</code> and bring them back on medium-sized devices with <code>.d-md-block</code>.
+
+      .bd-example
+        #carouselExampleCaptions.carousel.slide
+          .carousel-indicators
+            button.active(type='button', data-bs-target='#carouselExampleCaptions', data-bs-slide-to='0', aria-current='true', aria-label='Slide 1')
+            button(type='button', data-bs-target='#carouselExampleCaptions', data-bs-slide-to='1', aria-label='Slide 2')
+            button(type='button', data-bs-target='#carouselExampleCaptions', data-bs-slide-to='2', aria-label='Slide 3')
+          .carousel-inner
+            .carousel-item.active
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#777')
+                text(x='50%', y='50%', fill='#555', dy='.3em') First slide
+              .carousel-caption.d-none.d-md-block
+                h5 First slide label
+                p Some representative placeholder content for the first slide.
+            .carousel-item
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#666')
+                text(x='50%', y='50%', fill='#444', dy='.3em') Second slide
+              .carousel-caption.d-none.d-md-block
+                h5 Second slide label
+                p Some representative placeholder content for the second slide.
+            .carousel-item
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#555')
+                text(x='50%', y='50%', fill='#333', dy='.3em') Third slide
+              .carousel-caption.d-none.d-md-block
+                h5 Third slide label
+                p Some representative placeholder content for the third slide.
+          button.carousel-control-prev(type='button', data-bs-target='#carouselExampleCaptions', data-bs-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.visually-hidden Previous
+          button.carousel-control-next(type='button', data-bs-target='#carouselExampleCaptions', data-bs-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.visually-hidden Next
+
+      pre
+        code.language-html
+          | &lt;div id="carouselExampleCaptions" class="carousel slide"&gt;
+          |   &lt;div class="carousel-indicators"&gt;
+          |     &lt;button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"&gt;&lt;/button&gt;
+          |     &lt;button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"&gt;&lt;/button&gt;
+          |     &lt;button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"&gt;&lt;/button&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="carousel-inner"&gt;
+          |     &lt;div class="carousel-item active"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |       &lt;div class="carousel-caption d-none d-md-block"&gt;
+          |         &lt;h5&gt;First slide label&lt;/h5&gt;
+          |         &lt;p&gt;Some representative placeholder content for the first slide.&lt;/p&gt;
+          |       &lt;/div&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |       &lt;div class="carousel-caption d-none d-md-block"&gt;
+          |         &lt;h5&gt;Second slide label&lt;/h5&gt;
+          |         &lt;p&gt;Some representative placeholder content for the second slide.&lt;/p&gt;
+          |       &lt;/div&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |       &lt;div class="carousel-caption d-none d-md-block"&gt;
+          |         &lt;h5&gt;Third slide label&lt;/h5&gt;
+          |         &lt;p&gt;Some representative placeholder content for the third slide.&lt;/p&gt;
+          |       &lt;/div&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |   &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"&gt;
+          |     &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+          |     &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
+          |   &lt;/button&gt;
+          |   &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"&gt;
+          |     &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+          |     &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
+          |   &lt;/button&gt;
+          | &lt;/div&gt;
+
+      h4 Crossfade
+      p Add <code>.carousel-fade</code> to your carousel to animate slides with a fade transition instead of a slide. Depending on your carousel content (e.g., text only slides), you may want to add <code>.bg-body</code> or some custom CSS to the <code>.carousel-item</code>s for proper crossfading.
+
+      .bd-example
+        #carouselExampleFade.carousel.slide.carousel-fade
+          .carousel-inner
+            .carousel-item.active
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#777')
+                text(x='50%', y='50%', fill='#555', dy='.3em') First slide
+            .carousel-item
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#666')
+                text(x='50%', y='50%', fill='#444', dy='.3em') Second slide
+            .carousel-item
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#555')
+                text(x='50%', y='50%', fill='#333', dy='.3em') Third slide
+          button.carousel-control-prev(type='button', data-bs-target='#carouselExampleFade', data-bs-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.visually-hidden Previous
+          button.carousel-control-next(type='button', data-bs-target='#carouselExampleFade', data-bs-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.visually-hidden Next
+
+      pre
+        code.language-html
+          | &lt;div id="carouselExampleFade" class="carousel slide carousel-fade"&gt;
+          |   &lt;div class="carousel-inner"&gt;
+          |     &lt;div class="carousel-item active"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |   &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev"&gt;
+          |     &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+          |     &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
+          |   &lt;/button&gt;
+          |   &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next"&gt;
+          |     &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+          |     &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
+          |   &lt;/button&gt;
+          | &lt;/div&gt;
+
+      h4 Autoplaying carousels
+      p You can make your carousels autoplay on page load by setting the <code>ride</code> option to <code>carousel</code>. Autoplaying carousels automatically <code>pause</code> while hovered with the mouse. This behavior can be controlled with the pause option. In browsers that support the Page Visibility API, the carousel will stop cycling when the webpage is not visible to the user (such as when the browser tab is inactive, or when the browser window is minimized).
+
+      .bd-example
+        #carouselExampleAutoplaying.carousel.slide(data-bs-ride='carousel')
+          .carousel-inner
+            .carousel-item.active
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#777')
+                text(x='50%', y='50%', fill='#555', dy='.3em') First slide
+            .carousel-item
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#666')
+                text(x='50%', y='50%', fill='#444', dy='.3em') Second slide
+            .carousel-item
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#555')
+                text(x='50%', y='50%', fill='#333', dy='.3em') Third slide
+          button.carousel-control-prev(type='button', data-bs-target='#carouselExampleAutoplaying', data-bs-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.visually-hidden Previous
+          button.carousel-control-next(type='button', data-bs-target='#carouselExampleAutoplaying', data-bs-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.visually-hidden Next
+
+      pre
+        code.language-html
+          | &lt;div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel"&gt;
+          |   &lt;div class="carousel-inner"&gt;
+          |     &lt;div class="carousel-item active"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |   &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"&gt;
+          |     &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+          |     &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
+          |   &lt;/button&gt;
+          |   &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"&gt;
+          |     &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+          |     &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
+          |   &lt;/button&gt;
+          | &lt;/div&gt;
+
+      p When the <code>ride</code> option is set to <code>true</code>, rather than <code>carousel</code>, the carousel won't automatically start to cycle on page load. Instead, it will only start after the first user interaction.
+
+      .bd-example
+        #carouselExampleRide.carousel.slide(data-bs-ride='true')
+          .carousel-inner
+            .carousel-item.active
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#777')
+                text(x='50%', y='50%', fill='#555', dy='.3em') First slide
+            .carousel-item
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#666')
+                text(x='50%', y='50%', fill='#444', dy='.3em') Second slide
+            .carousel-item
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#555')
+                text(x='50%', y='50%', fill='#333', dy='.3em') Third slide
+          button.carousel-control-prev(type='button', data-bs-target='#carouselExampleRide', data-bs-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.visually-hidden Previous
+          button.carousel-control-next(type='button', data-bs-target='#carouselExampleRide', data-bs-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.visually-hidden Next
+
+      pre
+        code.language-html
+          | &lt;div id="carouselExampleRide" class="carousel slide" data-bs-ride="true"&gt;
+          |   &lt;div class="carousel-inner"&gt;
+          |     &lt;div class="carousel-item active"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |   &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev"&gt;
+          |     &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+          |     &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
+          |   &lt;/button&gt;
+          |   &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next"&gt;
+          |     &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+          |     &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
+          |   &lt;/button&gt;
+          | &lt;/div&gt;
+
+      h4 Individual <code>.carousel-item</code> interval
+      p Add <code>data-bs-interval=""</code> to a <code>.carousel-item</code> to change the amount of time to delay between automatically cycling to the next item.
+
+      .bd-example
+        #carouselExampleInterval.carousel.slide(data-bs-ride='carousel')
+          .carousel-inner
+            .carousel-item.carousel-item-next.carousel-item-start(data-bs-interval='10000')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#777')
+                text(x='50%', y='50%', fill='#555', dy='.3em') First slide
+            .carousel-item(data-bs-interval='2000')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#666')
+                text(x='50%', y='50%', fill='#444', dy='.3em') Second slide
+            .carousel-item.active.carousel-item-start
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#555')
+                text(x='50%', y='50%', fill='#333', dy='.3em') Third slide
+          button.carousel-control-prev(type='button', data-bs-target='#carouselExampleInterval', data-bs-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.visually-hidden Previous
+          button.carousel-control-next(type='button', data-bs-target='#carouselExampleInterval', data-bs-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.visually-hidden Next
+
+      pre
+        code.language-html
+          | &lt;div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel"&gt;
+          |   &lt;div class="carousel-inner"&gt;
+          |     &lt;div class="carousel-item active" data-bs-interval="10000"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item" data-bs-interval="2000"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |   &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev"&gt;
+          |     &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+          |     &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
+          |   &lt;/button&gt;
+          |   &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next"&gt;
+          |     &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+          |     &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
+          |   &lt;/button&gt;
+          | &lt;/div&gt;
+
+      h4 Autoplaying carousels without controls
+      p Here's a carousel with slides only. Note the presence of the <code>.d-block</code> and <code>.w-100</code> on carousel images to prevent browser default image alignment.
+
+      .bd-example
+        #carouselExampleSlidesOnly.carousel.slide(data-bs-ride='carousel')
+          .carousel-inner
+            .carousel-item
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#777')
+                text(x='50%', y='50%', fill='#555', dy='.3em') First slide
+            .carousel-item.active
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#666')
+                text(x='50%', y='50%', fill='#444', dy='.3em') Second slide
+            .carousel-item
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#555')
+                text(x='50%', y='50%', fill='#333', dy='.3em') Third slide
+
+      pre
+        code.language-html
+          | &lt;div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel"&gt;
+          |   &lt;div class="carousel-inner"&gt;
+          |     &lt;div class="carousel-item active"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+
+      h4 Disable touch swiping
+      p Carousels support swiping left/right on touchscreen devices to move between slides. This can be disabled by setting the <code>touch</code> option to <code>false</code>.
+
+      .bd-example
+        #carouselExampleControlsNoTouching.carousel.slide(data-bs-touch='false')
+          .carousel-inner
+            .carousel-item.active
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#777')
+                text(x='50%', y='50%', fill='#555', dy='.3em') First slide
+            .carousel-item
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#666')
+                text(x='50%', y='50%', fill='#444', dy='.3em') Second slide
+            .carousel-item
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#555')
+                text(x='50%', y='50%', fill='#333', dy='.3em') Third slide
+          button.carousel-control-prev(type='button', data-bs-target='#carouselExampleControlsNoTouching', data-bs-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.visually-hidden Previous
+          button.carousel-control-next(type='button', data-bs-target='#carouselExampleControlsNoTouching', data-bs-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.visually-hidden Next
+
+      pre
+        code.language-html
+          | &lt;div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false"&gt;
+          |   &lt;div class="carousel-inner"&gt;
+          |     &lt;div class="carousel-item active"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |   &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev"&gt;
+          |     &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+          |     &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
+          |   &lt;/button&gt;
+          |   &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next"&gt;
+          |     &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+          |     &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
+          |   &lt;/button&gt;
+          | &lt;/div&gt;
+
+      h4 Dark variant
+      p Add <code>.carousel-dark</code> to the <code>.carousel</code> for darker controls, indicators, and captions. Controls are inverted compared to their default white fill with the <code>filter</code> CSS property. Captions and controls have additional Sass variables that customize the <code>color</code> and <code>background-color</code>.
+
+      .bd-example
+        #carouselExampleDark.carousel.carousel-dark.slide
+          .carousel-indicators
+            button.active(type='button', data-bs-target='#carouselExampleDark', data-bs-slide-to='0', aria-current='true', aria-label='Slide 1')
+            button(type='button', data-bs-target='#carouselExampleDark', data-bs-slide-to='1', aria-label='Slide 2')
+            button(type='button', data-bs-target='#carouselExampleDark', data-bs-slide-to='2', aria-label='Slide 3')
+          .carousel-inner
+            .carousel-item.active(data-bs-interval='10000')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#f5f5f5')
+                text(x='50%', y='50%', fill='#aaa', dy='.3em') First slide
+              .carousel-caption.d-none.d-md-block
+                h5 First slide label
+                p Some representative placeholder content for the first slide.
+            .carousel-item(data-bs-interval='2000')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#eee')
+                text(x='50%', y='50%', fill='#bbb', dy='.3em') Second slide
+              .carousel-caption.d-none.d-md-block
+                h5 Second slide label
+                p Some representative placeholder content for the second slide.
+            .carousel-item
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+                title Placeholder
+                rect(width='100%', height='100%', fill='#e5e5e5')
+                text(x='50%', y='50%', fill='#999', dy='.3em') Third slide
+              .carousel-caption.d-none.d-md-block
+                h5 Third slide label
+                p Some representative placeholder content for the third slide.
+          button.carousel-control-prev(type='button', data-bs-target='#carouselExampleDark', data-bs-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.visually-hidden Previous
+          button.carousel-control-next(type='button', data-bs-target='#carouselExampleDark', data-bs-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.visually-hidden Next
+
+      pre
+        code.language-html
+          | &lt;div id="carouselExampleDark" class="carousel carousel-dark slide"&gt;
+          |   &lt;div class="carousel-indicators"&gt;
+          |     &lt;button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"&gt;&lt;/button&gt;
+          |     &lt;button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"&gt;&lt;/button&gt;
+          |     &lt;button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"&gt;&lt;/button&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="carousel-inner"&gt;
+          |     &lt;div class="carousel-item active" data-bs-interval="10000"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |       &lt;div class="carousel-caption d-none d-md-block"&gt;
+          |         &lt;h5&gt;First slide label&lt;/h5&gt;
+          |         &lt;p&gt;Some representative placeholder content for the first slide.&lt;/p&gt;
+          |       &lt;/div&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item" data-bs-interval="2000"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |       &lt;div class="carousel-caption d-none d-md-block"&gt;
+          |         &lt;h5&gt;Second slide label&lt;/h5&gt;
+          |         &lt;p&gt;Some representative placeholder content for the second slide.&lt;/p&gt;
+          |       &lt;/div&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="carousel-item"&gt;
+          |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
+          |       &lt;div class="carousel-caption d-none d-md-block"&gt;
+          |         &lt;h5&gt;Third slide label&lt;/h5&gt;
+          |         &lt;p&gt;Some representative placeholder content for the third slide.&lt;/p&gt;
+          |       &lt;/div&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |   &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev"&gt;
+          |     &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
+          |     &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
+          |   &lt;/button&gt;
+          |   &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next"&gt;
+          |     &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
+          |     &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
+          |   &lt;/button&gt;
+          | &lt;/div&gt;

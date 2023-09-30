@@ -1,0 +1,115 @@
+extends ../layouts/2col.pug
+
+block append config
+  - var pageTitle = "Select";
+
+block content
+  div.card
+    div.card-body
+      h3 #{pageTitle}
+      p Customize the native <code>&lt;select&gt;</code>s with custom CSS that changes the element’s initial appearance.
+
+      h4 Default
+      p Custom <code>&lt;select&gt;</code> menus need only a custom class, <code>.form-select</code> to trigger the custom styles. Custom styles are limited to the <code>&lt;select&gt;</code>’s initial appearance and cannot modify the <code>&lt;option&gt;</code>s due to browser limitations.
+
+      .bd-example
+        select.form-select(aria-label='Default select example')
+          option(selected='') Open this select menu
+          option(value='1') One
+          option(value='2') Two
+          option(value='3') Three
+
+      pre
+        code.language-html
+          | &lt;select class="form-select" aria-label="Default select example"&gt;
+          |   &lt;option selected&gt;Open this select menu&lt;/option&gt;
+          |   &lt;option value="1"&gt;One&lt;/option&gt;
+          |   &lt;option value="2"&gt;Two&lt;/option&gt;
+          |   &lt;option value="3"&gt;Three&lt;/option&gt;
+          | &lt;/select&gt;
+
+      h4 Sizing
+      p You may also choose from small and large custom selects to match our similarly sized text inputs.
+
+      .bd-example
+        select.form-select.form-select-lg.mb-3(aria-label='Large select example')
+          option(selected='') Open this select menu
+          option(value='1') One
+          option(value='2') Two
+          option(value='3') Three
+        select.form-select.form-select-sm(aria-label='Small select example')
+          option(selected='') Open this select menu
+          option(value='1') One
+          option(value='2') Two
+          option(value='3') Three
+
+      pre
+        code.language-html
+          | &lt;select class="form-select form-select-lg mb-3" aria-label="Large select example"&gt;
+          |   &lt;option selected&gt;Open this select menu&lt;/option&gt;
+          |   &lt;option value="1"&gt;One&lt;/option&gt;
+          |   &lt;option value="2"&gt;Two&lt;/option&gt;
+          |   &lt;option value="3"&gt;Three&lt;/option&gt;
+          | &lt;/select&gt;
+          |
+          | &lt;select class="form-select form-select-sm" aria-label="Small select example"&gt;
+          |   &lt;option selected&gt;Open this select menu&lt;/option&gt;
+          |   &lt;option value="1"&gt;One&lt;/option&gt;
+          |   &lt;option value="2"&gt;Two&lt;/option&gt;
+          |   &lt;option value="3"&gt;Three&lt;/option&gt;
+          | &lt;/select&gt;
+
+      p The <code>multiple</code> attribute is also supported:
+
+      .bd-example
+        select.form-select(multiple='', aria-label='Multiple select example')
+          option(selected='') Open this select menu
+          option(value='1') One
+          option(value='2') Two
+          option(value='3') Three
+
+      pre
+        code.language-html
+          | &lt;select class="form-select" multiple aria-label="Multiple select example"&gt;
+          |   &lt;option selected&gt;Open this select menu&lt;/option&gt;
+          |   &lt;option value="1"&gt;One&lt;/option&gt;
+          |   &lt;option value="2"&gt;Two&lt;/option&gt;
+          |   &lt;option value="3"&gt;Three&lt;/option&gt;
+          | &lt;/select&gt;
+
+      p As is the <code>size</code> attribute:
+
+      .bd-example
+        select.form-select(size='3', aria-label='Size 3 select example')
+          option(selected='') Open this select menu
+          option(value='1') One
+          option(value='2') Two
+          option(value='3') Three
+
+      pre
+        code.language-html
+          | &lt;select class="form-select" size="3" aria-label="Size 3 select example"&gt;
+          |   &lt;option selected&gt;Open this select menu&lt;/option&gt;
+          |   &lt;option value="1"&gt;One&lt;/option&gt;
+          |   &lt;option value="2"&gt;Two&lt;/option&gt;
+          |   &lt;option value="3"&gt;Three&lt;/option&gt;
+          | &lt;/select&gt;
+
+      h4 Disabled
+      p Add the <code>disabled</code> boolean attribute on a select to give it a grayed out appearance and remove pointer events.
+
+      .bd-example
+        select.form-select(aria-label='Disabled select example', disabled='')
+          option(selected='') Open this select menu
+          option(value='1') One
+          option(value='2') Two
+          option(value='3') Three
+
+      pre
+        code.language-html
+          | &lt;select class="form-select" aria-label="Disabled select example" disabled&gt;
+          |   &lt;option selected&gt;Open this select menu&lt;/option&gt;
+          |   &lt;option value="1"&gt;One&lt;/option&gt;
+          |   &lt;option value="2"&gt;Two&lt;/option&gt;
+          |   &lt;option value="3"&gt;Three&lt;/option&gt;
+          | &lt;/select&gt;

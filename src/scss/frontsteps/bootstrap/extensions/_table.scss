@@ -1,0 +1,13 @@
+.table-striped-first-column {
+  > :not(caption) > tr > :nth-child(1) {
+    --#{$prefix}table-color-type: var(--#{$prefix}table-striped-color);
+    --#{$prefix}table-bg-type: var(--#{$prefix}table-striped-bg);
+  }
+}
+
+.table-striped-last-column {
+  > :not(caption) > tr > :nth-last-child(1) {
+    --#{$prefix}table-color-type: var(--#{$prefix}table-striped-color);
+    --#{$prefix}table-bg-type: var(--#{$prefix}table-striped-bg);
+  }
+}

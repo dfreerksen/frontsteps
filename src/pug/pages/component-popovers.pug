@@ -1,0 +1,111 @@
+extends ../layouts/2col.pug
+
+block append config
+  - var pageTitle = "Popovers";
+
+append scripts
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js", crossorigin="anonymous")
+  script.
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+block content
+  div.card
+    div.card-body
+      h3 #{pageTitle}
+      p Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.
+
+      h4 Overview
+      p Things to know when using the popover plugin:
+      ul
+        li Popovers rely on the third party library Popper for positioning. You must include popper.min.js before <code>bootstrap.js</code>, or use one <code>bootstrap.bundle.min.js</code> which contains Popper.
+        li Popovers require the popover plugin as a dependency.
+        li Popovers are opt-in for performance reasons, so <strong>you must initialize them yourself</strong>.
+        li Zero-length <code>title</code> and <code>content</code> values will never show a popover.
+        li Specify <code>container: 'body'</code> to avoid rendering problems in more complex components (like our input groups, button groups, etc).
+        li Triggering popovers on hidden elements will not work.
+        li Popovers for <code>.disabled</code> or <code>disabled</code> elements must be triggered on a wrapper element.
+        li When triggered from anchors that wrap across multiple lines, popovers will be centered between the anchors' overall width. Use <code>.text-nowrap</code> on your <code>&lt;a&gt;</code>s to avoid this behavior.
+        li Popovers must be hidden before their corresponding elements have been removed from the DOM.
+        li Popovers can be triggered thanks to an element inside a shadow DOM.
+      p Keep reading to see how popovers work with some examples.
+
+      h4 Example
+      h4 Enable popovers
+      p As mentioned above, you must initialize popovers before they can be used. One way to initialize all popovers on a page would be to select them by their <code>data-bs-toggle</code> attribute, like so:
+
+      pre
+        code.language-javascript
+          | const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+          | const popoverList = [...popoverTriggerList].map(popoverTriggerEl =&gt; new bootstrap.Popover(popoverTriggerEl))
+
+      h4 Live demo
+      p We use JavaScript similar to the snippet above to render the following live popover. Titles are set via <code>data-bs-title</code> and body content is set via <code>data-bs-content</code>.
+
+      .bd-example
+        button.btn.btn-lg.btn-danger(type='button', data-bs-toggle='popover', data-bs-title='Popover title', data-bs-content="And here's some amazing content. It's very engaging. Right?") Click to toggle popover
+
+      pre
+        code.language-html
+          | &lt;button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?"&gt;Click to toggle popover&lt;/button&gt;
+
+      h4 Four directions
+      p Four options are available: top, right, bottom, and left. Directions are mirrored when using Bootstrap in RTL. Set <code>data-bs-placement</code> to change the direction.
+
+      .bd-example
+        button.btn.btn-secondary(type='button', data-bs-container='body', data-bs-toggle='popover', data-bs-placement='top', data-bs-content='Top popover')
+          | Popover on top
+        button.btn.btn-secondary(type='button', data-bs-container='body', data-bs-toggle='popover', data-bs-placement='right', data-bs-content='Right popover')
+          | Popover on right
+        button.btn.btn-secondary(type='button', data-bs-container='body', data-bs-toggle='popover', data-bs-placement='bottom', data-bs-content='Bottom popover')
+          | Popover on bottom
+        button.btn.btn-secondary(type='button', data-bs-container='body', data-bs-toggle='popover', data-bs-placement='left', data-bs-content='Left popover')
+          | Popover on left
+
+      pre
+        code.language-html
+          | &lt;button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover"&gt;
+          |   Popover on top
+          | &lt;/button&gt;
+          | &lt;button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover"&gt;
+          |   Popover on right
+          | &lt;/button&gt;
+          | &lt;button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover"&gt;
+          |   Popover on bottom
+          | &lt;/button&gt;
+          | &lt;button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover"&gt;
+          |   Popover on left
+          | &lt;/button&gt;
+
+      h4 Custom container
+      p When you have some styles on a parent element that interfere with a popover, you'll want to specify a custom <code>container</code> so that the popover's HTML appears within that element instead. This is common in responsive tables, input groups, and the like.
+
+      pre
+        code.language-javascript
+          | const popover = new bootstrap.Popover('.example-popover', {
+          |   container: 'body'
+          | })
+
+      p Another situation where you'll want to set an explicit custom <code>container</code> are popovers inside a modal dialog, to make sure that the popover itself is appended to the modal. This is particularly important for popovers that contain interactive elements – modal dialogs will trap focus, so unless the popover is a child element of the modal, users won't be able to focus or activate these interactive elements.
+
+      pre
+        code.language-javascript
+          | const popover = new bootstrap.Popover('.example-popover', {
+          |   container: '.modal-body'
+          | })
+
+      h4 Dismiss on next click
+      p Use the <code>focus</code> trigger to dismiss popovers on the user's next click of an element other than the toggle element.
+
+      .bd-example
+        a.btn.btn-lg.btn-danger(tabindex='0', role='button', data-bs-toggle='popover', data-bs-trigger='focus', data-bs-title='Dismissible popover', data-bs-content="And here's some amazing content. It's very engaging. Right?") Dismissible popover
+
+      pre
+        code.language-html
+          | &lt;a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?"&gt;Dismissible popover&lt;/a&gt;
+
+      pre
+        code.language-javascript
+          | const popover = new bootstrap.Popover('.popover-dismiss', {
+          |   trigger: 'focus'
+          | })

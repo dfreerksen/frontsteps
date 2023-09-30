@@ -1,0 +1,505 @@
+extends ../layouts/2col.pug
+
+block append config
+  - var pageTitle = "Layout";
+
+block content
+  div.card
+    div.card-body
+      h3 #{pageTitle}
+      p Give your forms some structure—from inline to horizontal to custom grid implementations—with our form layout options.
+
+      h4 Forms
+      p Every group of form fields should reside in a <code>&lt;form&gt;</code> element. Bootstrap provides no default styling for the <code>&lt;form&gt;</code> element, but there are some powerful browser features that are provided by default.
+
+      ul
+        li New to browser forms? Consider reviewing the MDN form docs for an overview and complete list of available attributes.
+        li <code>&lt;button&gt;</code>s within a <code>&lt;form&gt;</code> default to <code>type="submit"</code>, so strive to be specific and always include a <code>type</code>.
+
+      p Since Bootstrap applies <code>display: block</code> and <code>width: 100%</code> to almost all our form controls, forms will by default stack vertically. Additional classes can be used to vary this layout on a per-form basis.
+
+      h4 Utilities
+      p Margin utilities are the easiest way to add some structure to forms. They provide basic grouping of labels, controls, optional form text, and form validation messaging. We recommend sticking to <code>margin-bottom</code> utilities, and using a single direction throughout the form for consistency.
+      p Feel free to build your forms however you like, with <code>&lt;fieldset&gt;</code>s, <code>&lt;div&gt;</code>s, or nearly any other element.
+
+      .bd-example
+        .mb-3
+          label.form-label(for='formGroupExampleInput') Example label
+          input#formGroupExampleInput.form-control(type='text', placeholder='Example input placeholder')
+        .mb-3
+          label.form-label(for='formGroupExampleInput2') Another label
+          input#formGroupExampleInput2.form-control(type='text', placeholder='Another input placeholder')
+
+      pre
+        code.language-html
+          | &lt;div class="mb-3"&gt;
+          |   &lt;label for="formGroupExampleInput" class="form-label"&gt;Example label&lt;/label&gt;
+          |   &lt;input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder"&gt;
+          | &lt;/div&gt;
+          | &lt;div class="mb-3"&gt;
+          |   &lt;label for="formGroupExampleInput2" class="form-label"&gt;Another label&lt;/label&gt;
+          |   &lt;input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder"&gt;
+          | &lt;/div&gt;
+
+      h4 Form grid
+      p More complex forms can be built using our grid classes. Use these for form layouts that require multiple columns, varied widths, and additional alignment options. <strong>Requires the <code>$enable-grid-classes</code> Sass variable to be enabled</strong> (on by default).
+
+      .bd-example
+        .row
+          .col
+            input.form-control(type='text', placeholder='First name', aria-label='First name')
+          .col
+            input.form-control(type='text', placeholder='Last name', aria-label='Last name')
+
+      pre
+        code.language-html
+          | &lt;div class="row"&gt;
+          |   &lt;div class="col"&gt;
+          |     &lt;input type="text" class="form-control" placeholder="First name" aria-label="First name"&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col"&gt;
+          |     &lt;input type="text" class="form-control" placeholder="Last name" aria-label="Last name"&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+
+      h4 Gutters
+      p By adding gutter modifier classes, you can have control over the gutter width in as well the inline as block direction. <strong>Also requires the <code>$enable-grid-classes</code> Sass variable to be enabled</strong> (on by default).
+
+      .bd-example
+        .row.g-3
+          .col
+            input.form-control(type='text', placeholder='First name', aria-label='First name')
+          .col
+            input.form-control(type='text', placeholder='Last name', aria-label='Last name')
+
+      pre
+        code.language-html
+          | &lt;div class="row g-3"&gt;
+          |   &lt;div class="col"&gt;
+          |     &lt;input type="text" class="form-control" placeholder="First name" aria-label="First name"&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col"&gt;
+          |     &lt;input type="text" class="form-control" placeholder="Last name" aria-label="Last name"&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+
+      p More complex layouts can also be created with the grid system.
+
+      .bd-example
+        form.row.g-3
+          .col-md-6
+            label.form-label(for='inputEmail4') Email
+            input#inputEmail4.form-control(type='email')
+          .col-md-6
+            label.form-label(for='inputPassword4') Password
+            input#inputPassword4.form-control(type='password')
+          .col-12
+            label.form-label(for='inputAddress') Address
+            input#inputAddress.form-control(type='text', placeholder='1234 Main St')
+          .col-12
+            label.form-label(for='inputAddress2') Address 2
+            input#inputAddress2.form-control(type='text', placeholder='Apartment, studio, or floor')
+          .col-md-6
+            label.form-label(for='inputCity') City
+            input#inputCity.form-control(type='text')
+          .col-md-4
+            label.form-label(for='inputState') State
+            select#inputState.form-select
+              option(selected='') Choose...
+              option ...
+          .col-md-2
+            label.form-label(for='inputZip') Zip
+            input#inputZip.form-control(type='text')
+          .col-12
+            .form-check
+              input#gridCheck.form-check-input(type='checkbox')
+              label.form-check-label(for='gridCheck')
+                | Check me out
+          .col-12
+            button.btn.btn-primary(type='submit') Sign in
+
+      pre
+        code.language-html
+          | &lt;form class="row g-3"&gt;
+          |   &lt;div class="col-md-6"&gt;
+          |     &lt;label for="inputEmail4" class="form-label"&gt;Email&lt;/label&gt;
+          |     &lt;input type="email" class="form-control" id="inputEmail4"&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-md-6"&gt;
+          |     &lt;label for="inputPassword4" class="form-label"&gt;Password&lt;/label&gt;
+          |     &lt;input type="password" class="form-control" id="inputPassword4"&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-12"&gt;
+          |     &lt;label for="inputAddress" class="form-label"&gt;Address&lt;/label&gt;
+          |     &lt;input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-12"&gt;
+          |     &lt;label for="inputAddress2" class="form-label"&gt;Address 2&lt;/label&gt;
+          |     &lt;input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-md-6"&gt;
+          |     &lt;label for="inputCity" class="form-label"&gt;City&lt;/label&gt;
+          |     &lt;input type="text" class="form-control" id="inputCity"&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-md-4"&gt;
+          |     &lt;label for="inputState" class="form-label"&gt;State&lt;/label&gt;
+          |     &lt;select id="inputState" class="form-select"&gt;
+          |       &lt;option selected&gt;Choose...&lt;/option&gt;
+          |       &lt;option&gt;...&lt;/option&gt;
+          |     &lt;/select&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-md-2"&gt;
+          |     &lt;label for="inputZip" class="form-label"&gt;Zip&lt;/label&gt;
+          |     &lt;input type="text" class="form-control" id="inputZip"&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-12"&gt;
+          |     &lt;div class="form-check"&gt;
+          |       &lt;input class="form-check-input" type="checkbox" id="gridCheck"&gt;
+          |       &lt;label class="form-check-label" for="gridCheck"&gt;
+          |         Check me out
+          |       &lt;/label&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-12"&gt;
+          |     &lt;button type="submit" class="btn btn-primary"&gt;Sign in&lt;/button&gt;
+          |   &lt;/div&gt;
+          | &lt;/form&gt;
+
+      h4 Horizontal form
+      p Create horizontal forms with the grid by adding the <code>.row</code> class to form groups and using the <code>.col-*-*</code> classes to specify the width of your labels and controls. Be sure to add <code>.col-form-label</code> to your <code>&lt;label&gt;</code>s as well so they’re vertically centered with their associated form controls.
+      p At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we’ve removed the <code>padding-top</code> on our stacked radio inputs label to better align the text baseline.
+
+      .bd-example
+        form
+          .row.mb-3
+            label.col-sm-2.col-form-label(for='inputEmail3') Email
+            .col-sm-10
+              input#inputEmail3.form-control(type='email')
+          .row.mb-3
+            label.col-sm-2.col-form-label(for='inputPassword3') Password
+            .col-sm-10
+              input#inputPassword3.form-control(type='password')
+          fieldset.row.mb-3
+            legend.col-form-label.col-sm-2.pt-0 Radios
+            .col-sm-10
+              .form-check
+                input#gridRadios1.form-check-input(type='radio', name='gridRadios', value='option1', checked='')
+                label.form-check-label(for='gridRadios1')
+                  | First radio
+              .form-check
+                input#gridRadios2.form-check-input(type='radio', name='gridRadios', value='option2')
+                label.form-check-label(for='gridRadios2')
+                  | Second radio
+              .form-check.disabled
+                input#gridRadios3.form-check-input(type='radio', name='gridRadios', value='option3', disabled='')
+                label.form-check-label(for='gridRadios3')
+                  | Third disabled radio
+          .row.mb-3
+            .col-sm-10.offset-sm-2
+              .form-check
+                input#gridCheck1.form-check-input(type='checkbox')
+                label.form-check-label(for='gridCheck1')
+                  | Example checkbox
+          button.btn.btn-primary(type='submit') Sign in
+
+      pre
+        code.language-html
+          | &lt;form&gt;
+          |   &lt;div class="row mb-3"&gt;
+          |     &lt;label for="inputEmail3" class="col-sm-2 col-form-label"&gt;Email&lt;/label&gt;
+          |     &lt;div class="col-sm-10"&gt;
+          |       &lt;input type="email" class="form-control" id="inputEmail3"&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="row mb-3"&gt;
+          |     &lt;label for="inputPassword3" class="col-sm-2 col-form-label"&gt;Password&lt;/label&gt;
+          |     &lt;div class="col-sm-10"&gt;
+          |       &lt;input type="password" class="form-control" id="inputPassword3"&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |   &lt;fieldset class="row mb-3"&gt;
+          |     &lt;legend class="col-form-label col-sm-2 pt-0"&gt;Radios&lt;/legend&gt;
+          |     &lt;div class="col-sm-10"&gt;
+          |       &lt;div class="form-check"&gt;
+          |         &lt;input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked&gt;
+          |         &lt;label class="form-check-label" for="gridRadios1"&gt;
+          |           First radio
+          |         &lt;/label&gt;
+          |       &lt;/div&gt;
+          |       &lt;div class="form-check"&gt;
+          |         &lt;input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2"&gt;
+          |         &lt;label class="form-check-label" for="gridRadios2"&gt;
+          |           Second radio
+          |         &lt;/label&gt;
+          |       &lt;/div&gt;
+          |       &lt;div class="form-check disabled"&gt;
+          |         &lt;input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled&gt;
+          |         &lt;label class="form-check-label" for="gridRadios3"&gt;
+          |           Third disabled radio
+          |         &lt;/label&gt;
+          |       &lt;/div&gt;
+          |     &lt;/div&gt;
+          |   &lt;/fieldset&gt;
+          |   &lt;div class="row mb-3"&gt;
+          |     &lt;div class="col-sm-10 offset-sm-2"&gt;
+          |       &lt;div class="form-check"&gt;
+          |         &lt;input class="form-check-input" type="checkbox" id="gridCheck1"&gt;
+          |         &lt;label class="form-check-label" for="gridCheck1"&gt;
+          |           Example checkbox
+          |         &lt;/label&gt;
+          |       &lt;/div&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |   &lt;button type="submit" class="btn btn-primary"&gt;Sign in&lt;/button&gt;
+          | &lt;/form&gt;
+
+      h4 Horizontal form label sizing
+      p Be sure to use <code>.col-form-label-sm</code> or <code>.col-form-label-lg</code> to your <code>&lt;label&gt;</code>s or <code>&lt;legend&gt;</code>s to correctly follow the size of <code>.form-control-lg</code> and <code>.form-control-sm</code>.
+
+      .bd-example
+        .row.mb-3
+          label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Email
+          .col-sm-10
+            input#colFormLabelSm.form-control.form-control-sm(type='email', placeholder='col-form-label-sm')
+        .row.mb-3
+          label.col-sm-2.col-form-label(for='colFormLabel') Email
+          .col-sm-10
+            input#colFormLabel.form-control(type='email', placeholder='col-form-label')
+        .row
+          label.col-sm-2.col-form-label.col-form-label-lg(for='colFormLabelLg') Email
+          .col-sm-10
+            input#colFormLabelLg.form-control.form-control-lg(type='email', placeholder='col-form-label-lg')
+
+      pre
+        code.language-html
+          | &lt;div class="row mb-3"&gt;
+          |   &lt;label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm"&gt;Email&lt;/label&gt;
+          |   &lt;div class="col-sm-10"&gt;
+          |     &lt;input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm"&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+          | &lt;div class="row mb-3"&gt;
+          |   &lt;label for="colFormLabel" class="col-sm-2 col-form-label"&gt;Email&lt;/label&gt;
+          |   &lt;div class="col-sm-10"&gt;
+          |     &lt;input type="email" class="form-control" id="colFormLabel" placeholder="col-form-label"&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+          | &lt;div class="row"&gt;
+          |   &lt;label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg"&gt;Email&lt;/label&gt;
+          |   &lt;div class="col-sm-10"&gt;
+          |     &lt;input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="col-form-label-lg"&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+
+      h4 Column sizing
+      p As shown in the previous examples, our grid system allows you to place any number of <code>.cols</code> within a <code>.row</code>. They’ll split the available width equally between them. You may also pick a subset of your columns to take up more or less space, while the remaining <code>.col</code>s equally split the rest, with specific column classes like <code>.col-sm-7</code>.
+
+      .bd-example
+        .row.g-3
+          .col-sm-7
+            input.form-control(type='text', placeholder='City', aria-label='City')
+          .col-sm
+            input.form-control(type='text', placeholder='State', aria-label='State')
+          .col-sm
+            input.form-control(type='text', placeholder='Zip', aria-label='Zip')
+
+      pre
+        code.language-html
+          | &lt;div class="row g-3"&gt;
+          |   &lt;div class="col-sm-7"&gt;
+          |     &lt;input type="text" class="form-control" placeholder="City" aria-label="City"&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-sm"&gt;
+          |     &lt;input type="text" class="form-control" placeholder="State" aria-label="State"&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-sm"&gt;
+          |     &lt;input type="text" class="form-control" placeholder="Zip" aria-label="Zip"&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+
+      h4 Auto-sizing
+      p The example below uses a flexbox utility to vertically center the contents and changes <code>.col</code> to <code>.col-auto</code> so that your columns only take up as much space as needed. Put another way, the column sizes itself based on the contents.
+
+      .bd-example
+        form.row.gy-2.gx-3.align-items-center
+          .col-auto
+            label.visually-hidden(for='autoSizingInput') Name
+            input#autoSizingInput.form-control(type='text', placeholder='Jane Doe')
+          .col-auto
+            label.visually-hidden(for='autoSizingInputGroup') Username
+            .input-group
+              .input-group-text @
+              input#autoSizingInputGroup.form-control(type='text', placeholder='Username')
+          .col-auto
+            label.visually-hidden(for='autoSizingSelect') Preference
+            select#autoSizingSelect.form-select
+              option(selected='') Choose...
+              option(value='1') One
+              option(value='2') Two
+              option(value='3') Three
+          .col-auto
+            .form-check
+              input#autoSizingCheck.form-check-input(type='checkbox')
+              label.form-check-label(for='autoSizingCheck')
+                | Remember me
+          .col-auto
+            button.btn.btn-primary(type='submit') Submit
+
+      pre
+        code.language-html
+          | &lt;form class="row gy-2 gx-3 align-items-center"&gt;
+          |   &lt;div class="col-auto"&gt;
+          |     &lt;label class="visually-hidden" for="autoSizingInput"&gt;Name&lt;/label&gt;
+          |     &lt;input type="text" class="form-control" id="autoSizingInput" placeholder="Jane Doe"&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-auto"&gt;
+          |     &lt;label class="visually-hidden" for="autoSizingInputGroup"&gt;Username&lt;/label&gt;
+          |     &lt;div class="input-group"&gt;
+          |       &lt;div class="input-group-text"&gt;@&lt;/div&gt;
+          |       &lt;input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Username"&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-auto"&gt;
+          |     &lt;label class="visually-hidden" for="autoSizingSelect"&gt;Preference&lt;/label&gt;
+          |     &lt;select class="form-select" id="autoSizingSelect"&gt;
+          |       &lt;option selected&gt;Choose...&lt;/option&gt;
+          |       &lt;option value="1"&gt;One&lt;/option&gt;
+          |       &lt;option value="2"&gt;Two&lt;/option&gt;
+          |       &lt;option value="3"&gt;Three&lt;/option&gt;
+          |     &lt;/select&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-auto"&gt;
+          |     &lt;div class="form-check"&gt;
+          |       &lt;input class="form-check-input" type="checkbox" id="autoSizingCheck"&gt;
+          |       &lt;label class="form-check-label" for="autoSizingCheck"&gt;
+          |         Remember me
+          |       &lt;/label&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-auto"&gt;
+          |     &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+          |   &lt;/div&gt;
+          | &lt;/form&gt;
+
+      p You can then remix that once again with size-specific column classes.
+
+      .bd-example
+        form.row.gx-3.gy-2.align-items-center
+          .col-sm-3
+            label.visually-hidden(for='specificSizeInputName') Name
+            input#specificSizeInputName.form-control(type='text', placeholder='Jane Doe')
+          .col-sm-3
+            label.visually-hidden(for='specificSizeInputGroupUsername') Username
+            .input-group
+              .input-group-text @
+              input#specificSizeInputGroupUsername.form-control(type='text', placeholder='Username')
+          .col-sm-3
+            label.visually-hidden(for='specificSizeSelect') Preference
+            select#specificSizeSelect.form-select
+              option(selected='') Choose...
+              option(value='1') One
+              option(value='2') Two
+              option(value='3') Three
+          .col-auto
+            .form-check
+              input#autoSizingCheck2.form-check-input(type='checkbox')
+              label.form-check-label(for='autoSizingCheck2')
+                | Remember me
+          .col-auto
+            button.btn.btn-primary(type='submit') Submit
+
+      pre
+        code.language-html
+          | &lt;form class="row gx-3 gy-2 align-items-center"&gt;
+          |   &lt;div class="col-sm-3"&gt;
+          |     &lt;label class="visually-hidden" for="specificSizeInputName"&gt;Name&lt;/label&gt;
+          |     &lt;input type="text" class="form-control" id="specificSizeInputName" placeholder="Jane Doe"&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-sm-3"&gt;
+          |     &lt;label class="visually-hidden" for="specificSizeInputGroupUsername"&gt;Username&lt;/label&gt;
+          |     &lt;div class="input-group"&gt;
+          |       &lt;div class="input-group-text"&gt;@&lt;/div&gt;
+          |       &lt;input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Username"&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-sm-3"&gt;
+          |     &lt;label class="visually-hidden" for="specificSizeSelect"&gt;Preference&lt;/label&gt;
+          |     &lt;select class="form-select" id="specificSizeSelect"&gt;
+          |       &lt;option selected&gt;Choose...&lt;/option&gt;
+          |       &lt;option value="1"&gt;One&lt;/option&gt;
+          |       &lt;option value="2"&gt;Two&lt;/option&gt;
+          |       &lt;option value="3"&gt;Three&lt;/option&gt;
+          |     &lt;/select&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-auto"&gt;
+          |     &lt;div class="form-check"&gt;
+          |       &lt;input class="form-check-input" type="checkbox" id="autoSizingCheck2"&gt;
+          |       &lt;label class="form-check-label" for="autoSizingCheck2"&gt;
+          |         Remember me
+          |       &lt;/label&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-auto"&gt;
+          |     &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+          |   &lt;/div&gt;
+          | &lt;/form&gt;
+
+      h4 Inline forms
+      p Use the <code>.row-cols-*</code> classes to create responsive horizontal layouts. By adding gutter modifier classes, we’ll have gutters in horizontal and vertical directions. On narrow mobile viewports, the <code>.col-12</code> helps stack the form controls and more. The <code>.align-items-center</code> aligns the form elements to the middle, making the <code>.form-check</code> align properly.
+
+      .bd-example
+        form.row.row-cols-lg-auto.g-3.align-items-center
+          .col-12
+            label.visually-hidden(for='inlineFormInputGroupUsername') Username
+            .input-group
+              .input-group-text @
+              input#inlineFormInputGroupUsername.form-control(type='text', placeholder='Username')
+          .col-12
+            label.visually-hidden(for='inlineFormSelectPref') Preference
+            select#inlineFormSelectPref.form-select
+              option(selected='') Choose...
+              option(value='1') One
+              option(value='2') Two
+              option(value='3') Three
+          .col-12
+            .form-check
+              input#inlineFormCheck.form-check-input(type='checkbox')
+              label.form-check-label(for='inlineFormCheck')
+                | Remember me
+          .col-12
+            button.btn.btn-primary(type='submit') Submit
+
+      pre
+        code.language-html
+          | &lt;form class="row row-cols-lg-auto g-3 align-items-center"&gt;
+          |   &lt;div class="col-12"&gt;
+          |     &lt;label class="visually-hidden" for="inlineFormInputGroupUsername"&gt;Username&lt;/label&gt;
+          |     &lt;div class="input-group"&gt;
+          |       &lt;div class="input-group-text"&gt;@&lt;/div&gt;
+          |       &lt;input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username"&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |
+          |   &lt;div class="col-12"&gt;
+          |     &lt;label class="visually-hidden" for="inlineFormSelectPref"&gt;Preference&lt;/label&gt;
+          |     &lt;select class="form-select" id="inlineFormSelectPref"&gt;
+          |       &lt;option selected&gt;Choose...&lt;/option&gt;
+          |       &lt;option value="1"&gt;One&lt;/option&gt;
+          |       &lt;option value="2"&gt;Two&lt;/option&gt;
+          |       &lt;option value="3"&gt;Three&lt;/option&gt;
+          |     &lt;/select&gt;
+          |   &lt;/div&gt;
+          |
+          |   &lt;div class="col-12"&gt;
+          |     &lt;div class="form-check"&gt;
+          |       &lt;input class="form-check-input" type="checkbox" id="inlineFormCheck"&gt;
+          |       &lt;label class="form-check-label" for="inlineFormCheck"&gt;
+          |         Remember me
+          |       &lt;/label&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |
+          |   &lt;div class="col-12"&gt;
+          |     &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+          |   &lt;/div&gt;
+          | &lt;/form&gt;

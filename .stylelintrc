@@ -1,0 +1,34 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss"
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "at-rule-no-unknown": [true, {
+      "ignoreAtRules": ["if", "each", "else", "for", "extend", "include", "mixin", "use"]
+    }],
+    "declaration-no-important": true,
+    "order/order": [
+      "dollar-variables",
+      "at-rules",
+      {
+        "type": "at-rule",
+        "name": "extend"
+      },
+      {
+        "type": "at-rule",
+        "name": "include"
+      },
+      {
+        "type": "at-rule",
+        "name": "media"
+      },
+      "declarations",
+      "rules"
+    ],
+    "order/properties-alphabetical-order": true
+  }
+}

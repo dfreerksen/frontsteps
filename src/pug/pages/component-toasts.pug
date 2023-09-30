@@ -1,0 +1,410 @@
+extends ../layouts/2col.pug
+
+block append config
+  - var pageTitle = "Toasts";
+
+append scripts
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js", crossorigin="anonymous")
+  script.
+    // General toast messages
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
+
+    if (toastTrigger) {
+      const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+      toastTrigger.addEventListener('click', () => {
+        toastBootstrap.show()
+      })
+    }
+    // Placement
+    const e = document.getElementById("toastPlacement");
+    e && document.getElementById("selectToastPlacement").addEventListener("change", function() {
+        e.dataset.originalClass || (e.dataset.originalClass = e.className),
+        e.className = `${e.dataset.originalClass} ${this.value}`
+    }),
+    document.querySelectorAll(".bd-example .toast").forEach(e=>{
+        const t = new bootstrap.Toast(e,{
+            autohide: !1
+        });
+        t.show()
+    }
+    );
+    const n = document.getElementById("liveToastBtn"),
+          i = document.getElementById("liveToast");
+    if (n) {
+        const e = bootstrap.Toast.getOrCreateInstance(i);
+        n.addEventListener("click", ()=>{
+            e.show()
+        }
+        )
+    }
+
+block content
+  div.card
+    div.card-body
+      h3 #{pageTitle}
+      p Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.
+      p Toasts are lightweight notifications designed to mimic the push notifications that have been popularized by mobile and desktop operating systems. They're built with flexbox, so they're easy to align and position.
+
+      h4 Overview
+      p Things to know when using the toast plugin:
+      ul
+        li Toasts are opt-in for performance reasons, so <strong>you must initialize them yourself</strong>.
+        li Toasts will automatically hide if you do not specify <code>autohide: false</code>.
+
+      h4 Examples
+      p To encourage extensible and predictable toasts, we recommend a header and body. Toast headers use <code>display: flex</code>, allowing easy alignment of content thanks to our margin and flexbox utilities.
+      p Toasts are as flexible as you need and have very little required markup. At a minimum, we require a single element to contain your “toasted” content and strongly encourage a dismiss button.
+
+      .bd-example
+        .toast.fade.show(role='alert', aria-live='assertive', aria-atomic='true')
+          .toast-header
+            svg.bd-placeholder-img.rounded.me-2(width='20', height='20', xmlns='http://www.w3.org/2000/svg', aria-hidden='true', preserveaspectratio='xMidYMid slice', focusable='false')
+              rect(width='100%', height='100%', fill='#007aff')
+            strong.me-auto Bootstrap
+            small 11 mins ago
+            button.btn-close(type='button', data-bs-dismiss='toast', aria-label='Close')
+          .toast-body
+            | Hello, world! This is a toast message.
+
+      pre
+        code.language-html
+          | &lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+          |   &lt;div class="toast-header"&gt;
+          |     &lt;img src="..." class="rounded me-2" alt="..."&gt;
+          |     &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+          |     &lt;small&gt;11 mins ago&lt;/small&gt;
+          |     &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="toast-body"&gt;
+          |     Hello, world! This is a toast message.
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+
+      h4 Live example
+      p Click the button below to show a toast (positioned with our utilities in the lower right corner) that has been hidden by default.
+
+      .bd-example
+        button#liveToastBtn.btn.btn-primary(type='button') Show live toast
+        .toast-container.position-fixed.bottom-0.end-0.p-3
+          #liveToast.toast(role='alert', aria-live='assertive', aria-atomic='true')
+            .toast-header
+              svg.bd-placeholder-img.rounded.me-2(width='20', height='20', xmlns='http://www.w3.org/2000/svg', aria-hidden='true', preserveaspectratio='xMidYMid slice', focusable='false')
+                rect(width='100%', height='100%', fill='#007aff')
+              strong.me-auto Bootstrap
+              small 11 mins ago
+              button.btn-close(type='button', data-bs-dismiss='toast', aria-label='Close')
+            .toast-body
+              | Hello, world! This is a toast message.
+
+      pre
+        code.language-html
+          | &lt;button type="button" class="btn btn-primary" id="liveToastBtn"&gt;Show live toast&lt;/button&gt;
+          |
+          | &lt;div class="toast-container position-fixed bottom-0 end-0 p-3"&gt;
+          |   &lt;div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+          |     &lt;div class="toast-header"&gt;
+          |       &lt;img src="..." class="rounded me-2" alt="..."&gt;
+          |       &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+          |       &lt;small&gt;11 mins ago&lt;/small&gt;
+          |       &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="toast-body"&gt;
+          |       Hello, world! This is a toast message.
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+
+      p We use the following JavaScript to trigger our live toast demo:
+
+      pre
+        code.language-javascript
+          | const toastTrigger = document.getElementById('liveToastBtn')
+          | const toastLiveExample = document.getElementById('liveToast')
+          |
+          | if (toastTrigger) {
+          |   const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+          |   toastTrigger.addEventListener('click', () =&gt; {
+          |     toastBootstrap.show()
+          |   })
+          | }
+
+      h4 Stacking
+      p You can stack toasts by wrapping them in a toast container, which will vertically add some spacing.
+
+      .bd-example
+        .toast-container.position-static
+          .toast.fade.show(role='alert', aria-live='assertive', aria-atomic='true')
+            .toast-header
+              svg.bd-placeholder-img.rounded.me-2(width='20', height='20', xmlns='http://www.w3.org/2000/svg', aria-hidden='true', preserveaspectratio='xMidYMid slice', focusable='false')
+                rect(width='100%', height='100%', fill='#007aff')
+              strong.me-auto Bootstrap
+              small.text-body-secondary just now
+              button.btn-close(type='button', data-bs-dismiss='toast', aria-label='Close')
+            .toast-body
+              | See? Just like this.
+          .toast.fade.show(role='alert', aria-live='assertive', aria-atomic='true')
+            .toast-header
+              svg.bd-placeholder-img.rounded.me-2(width='20', height='20', xmlns='http://www.w3.org/2000/svg', aria-hidden='true', preserveaspectratio='xMidYMid slice', focusable='false')
+                rect(width='100%', height='100%', fill='#007aff')
+              strong.me-auto Bootstrap
+              small.text-body-secondary 2 seconds ago
+              button.btn-close(type='button', data-bs-dismiss='toast', aria-label='Close')
+            .toast-body
+              | Heads up, toasts will stack automatically
+
+      pre
+        code.language-html
+          | &lt;div class="toast-container position-static"&gt;
+          |   &lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+          |     &lt;div class="toast-header"&gt;
+          |       &lt;img src="..." class="rounded me-2" alt="..."&gt;
+          |       &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+          |       &lt;small class="text-body-secondary"&gt;just now&lt;/small&gt;
+          |       &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="toast-body"&gt;
+          |       See? Just like this.
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          |
+          |   &lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+          |     &lt;div class="toast-header"&gt;
+          |       &lt;img src="..." class="rounded me-2" alt="..."&gt;
+          |       &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+          |       &lt;small class="text-body-secondary"&gt;2 seconds ago&lt;/small&gt;
+          |       &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="toast-body"&gt;
+          |       Heads up, toasts will stack automatically
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+
+      h4 Custom content
+      p Customize your toasts by removing sub-components, tweaking them with utilities, or by adding your own markup. Here we've created a simpler toast by removing the default <code>.toast-header</code>, adding a custom hide icon from Bootstrap Icons, and using some flexbox utilities to adjust the layout.
+
+      .bd-example
+        .toast.fade.show.align-items-center(role='alert', aria-live='assertive', aria-atomic='true')
+          .d-flex
+            .toast-body
+              | Hello, world! This is a toast message.
+            button.btn-close.me-2.m-auto(type='button', data-bs-dismiss='toast', aria-label='Close')
+
+      pre
+        code.language-html
+          | &lt;div class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+          |   &lt;div class="d-flex"&gt;
+          |     &lt;div class="toast-body"&gt;
+          |       Hello, world! This is a toast message.
+          |     &lt;/div&gt;
+          |     &lt;button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+
+      p Alternatively, you can also add additional controls and components to toasts.
+
+      .bd-example
+        .toast.fade.show(role='alert', aria-live='assertive', aria-atomic='true')
+          .toast-body
+            | Hello, world! This is a toast message.
+            .mt-2.pt-2.border-top
+              button.btn.btn-primary.btn-sm(type='button') Take action
+              button.btn.btn-secondary.btn-sm(type='button', data-bs-dismiss='toast') Close
+
+      pre
+        code.language-html
+          | &lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+          |   &lt;div class="toast-body"&gt;
+          |     Hello, world! This is a toast message.
+          |     &lt;div class="mt-2 pt-2 border-top"&gt;
+          |       &lt;button type="button" class="btn btn-primary btn-sm"&gt;Take action&lt;/button&gt;
+          |       &lt;button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="toast"&gt;Close&lt;/button&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+
+      h4 Color schemes
+      p Building on the above example, you can create different toast color schemes with our color and background utilities. Here we've added <code>.text-bg-primary</code> to the <code>.toast</code>, and then added <code>.btn-close-white</code> to our close button. For a crisp edge, we remove the default border with <code>.border-0</code>.
+
+      .bd-example
+        .toast.fade.show.align-items-center.text-bg-primary.border-0(role='alert', aria-live='assertive', aria-atomic='true')
+          .d-flex
+            .toast-body
+              | Hello, world! This is a toast message.
+            button.btn-close.btn-close-white.me-2.m-auto(type='button', data-bs-dismiss='toast', aria-label='Close')
+
+      pre
+        code.language-html
+          | &lt;div class="toast align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+          |   &lt;div class="d-flex"&gt;
+          |     &lt;div class="toast-body"&gt;
+          |       Hello, world! This is a toast message.
+          |     &lt;/div&gt;
+          |     &lt;button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+
+      h4 Placement
+
+      p Place toasts with custom CSS as you need them. The top right is often used for notifications, as is the top middle. If you're only ever going to show one toast at a time, put the positioning styles right on the <code>.toast</code>.
+
+      .bd-example.m-0.border-0
+        form
+          .mb-3
+            label(for='selectToastPlacement') Toast placement
+            select#selectToastPlacement.form-select.mt-2
+              option(value='', selected='') Select a position...
+              option(value='top-0 start-0') Top left
+              option(value='top-0 start-50 translate-middle-x') Top center
+              option(value='top-0 end-0') Top right
+              option(value='top-50 start-0 translate-middle-y') Middle left
+              option(value='top-50 start-50 translate-middle') Middle center
+              option(value='top-50 end-0 translate-middle-y') Middle right
+              option(value='bottom-0 start-0') Bottom left
+              option(value='bottom-0 start-50 translate-middle-x') Bottom center
+              option(value='bottom-0 end-0') Bottom right
+        .bg-body-secondary.position-relative.bd-example-toasts.rounded-3(aria-live='polite', aria-atomic='true')
+          #toastPlacement.toast-container.p-3
+            .toast.fade.show
+              .toast-header
+                svg.bd-placeholder-img.rounded.me-2(width='20', height='20', xmlns='http://www.w3.org/2000/svg', aria-hidden='true', preserveaspectratio='xMidYMid slice', focusable='false')
+                  rect(width='100%', height='100%', fill='#007aff')
+                strong.me-auto Bootstrap
+                small 11 mins ago
+              .toast-body
+                | Hello, world! This is a toast message.
+
+      pre
+        code.language-html
+          | &lt;form&gt;
+          |   &lt;div class="mb-3"&gt;
+          |     &lt;label for="selectToastPlacement"&gt;Toast placement&lt;/label&gt;
+          |     &lt;select class="form-select mt-2" id="selectToastPlacement"&gt;
+          |       &lt;option value="" selected&gt;Select a position...&lt;/option&gt;
+          |       &lt;option value="top-0 start-0"&gt;Top left&lt;/option&gt;
+          |       &lt;option value="top-0 start-50 translate-middle-x"&gt;Top center&lt;/option&gt;
+          |       &lt;option value="top-0 end-0"&gt;Top right&lt;/option&gt;
+          |       &lt;option value="top-50 start-0 translate-middle-y"&gt;Middle left&lt;/option&gt;
+          |       &lt;option value="top-50 start-50 translate-middle"&gt;Middle center&lt;/option&gt;
+          |       &lt;option value="top-50 end-0 translate-middle-y"&gt;Middle right&lt;/option&gt;
+          |       &lt;option value="bottom-0 start-0"&gt;Bottom left&lt;/option&gt;
+          |       &lt;option value="bottom-0 start-50 translate-middle-x"&gt;Bottom center&lt;/option&gt;
+          |       &lt;option value="bottom-0 end-0"&gt;Bottom right&lt;/option&gt;
+          |     &lt;/select&gt;
+          |   &lt;/div&gt;
+          | &lt;/form&gt;
+          | &lt;div aria-live="polite" aria-atomic="true" class="bg-body-secondary position-relative bd-example-toasts rounded-3"&gt;
+          |   &lt;div class="toast-container p-3" id="toastPlacement"&gt;
+          |     &lt;div class="toast"&gt;
+          |       &lt;div class="toast-header"&gt;
+          |         &lt;img src="..." class="rounded me-2" alt="..."&gt;
+          |         &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+          |         &lt;small&gt;11 mins ago&lt;/small&gt;
+          |       &lt;/div&gt;
+          |       &lt;div class="toast-body"&gt;
+          |         Hello, world! This is a toast message.
+          |       &lt;/div&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+
+      p For systems that generate more notifications, consider using a wrapping element so they can easily stack.
+
+      .bd-example.m-0.border-0.bd-example-toasts.p-0
+        .position-relative(aria-live='polite', aria-atomic='true')
+          // Position it:
+          // - `.toast-container` for spacing between toasts
+          // - `top-0` & `end-0` to position the toasts in the upper right corner
+          // - `.p-3` to prevent the toasts from sticking to the edge of the container
+          .toast-container.top-0.end-0.p-3
+            // Then put toasts within
+            .toast.fade.show(role='alert', aria-live='assertive', aria-atomic='true')
+              .toast-header
+                svg.bd-placeholder-img.rounded.me-2(width='20', height='20', xmlns='http://www.w3.org/2000/svg', aria-hidden='true', preserveaspectratio='xMidYMid slice', focusable='false')
+                  rect(width='100%', height='100%', fill='#007aff')
+                strong.me-auto Bootstrap
+                small.text-body-secondary just now
+                button.btn-close(type='button', data-bs-dismiss='toast', aria-label='Close')
+              .toast-body
+                | See? Just like this.
+            .toast.fade.show(role='alert', aria-live='assertive', aria-atomic='true')
+              .toast-header
+                svg.bd-placeholder-img.rounded.me-2(width='20', height='20', xmlns='http://www.w3.org/2000/svg', aria-hidden='true', preserveaspectratio='xMidYMid slice', focusable='false')
+                  rect(width='100%', height='100%', fill='#007aff')
+                strong.me-auto Bootstrap
+                small.text-body-secondary 2 seconds ago
+                button.btn-close(type='button', data-bs-dismiss='toast', aria-label='Close')
+              .toast-body
+                | Heads up, toasts will stack automatically
+
+      pre
+        code.language-html
+          | &lt;div aria-live="polite" aria-atomic="true" class="position-relative"&gt;
+          |   &lt;!-- Position it: --&gt;
+          |   &lt;!-- - `.toast-container` for spacing between toasts --&gt;
+          |   &lt;!-- - `top-0` &amp; `end-0` to position the toasts in the upper right corner --&gt;
+          |   &lt;!-- - `.p-3` to prevent the toasts from sticking to the edge of the container  --&gt;
+          |   &lt;div class="toast-container top-0 end-0 p-3"&gt;
+          |
+          |     &lt;!-- Then put toasts within --&gt;
+          |     &lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+          |       &lt;div class="toast-header"&gt;
+          |         &lt;img src="..." class="rounded me-2" alt="..."&gt;
+          |         &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+          |         &lt;small class="text-body-secondary"&gt;just now&lt;/small&gt;
+          |         &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+          |       &lt;/div&gt;
+          |       &lt;div class="toast-body"&gt;
+          |         See? Just like this.
+          |       &lt;/div&gt;
+          |     &lt;/div&gt;
+          |
+          |     &lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+          |       &lt;div class="toast-header"&gt;
+          |         &lt;img src="..." class="rounded me-2" alt="..."&gt;
+          |         &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+          |         &lt;small class="text-body-secondary"&gt;2 seconds ago&lt;/small&gt;
+          |         &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+          |       &lt;/div&gt;
+          |       &lt;div class="toast-body"&gt;
+          |         Heads up, toasts will stack automatically
+          |       &lt;/div&gt;
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+
+      p You can also get fancy with flexbox utilities to align toasts horizontally and/or vertically.
+
+      .bd-example.m-0.border-0.bd-example-toasts.d-flex
+        // Flexbox container for aligning the toasts
+        .d-flex.justify-content-center.align-items-center.w-100(aria-live='polite', aria-atomic='true')
+          // Then put toasts within
+          .toast.fade.show(role='alert', aria-live='assertive', aria-atomic='true')
+            .toast-header
+              svg.bd-placeholder-img.rounded.me-2(width='20', height='20', xmlns='http://www.w3.org/2000/svg', aria-hidden='true', preserveaspectratio='xMidYMid slice', focusable='false')
+                rect(width='100%', height='100%', fill='#007aff')
+              strong.me-auto Bootstrap
+              small 11 mins ago
+              button.btn-close(type='button', data-bs-dismiss='toast', aria-label='Close')
+            .toast-body
+              | Hello, world! This is a toast message.
+
+      pre
+        code.language-html
+          | &lt;!-- Flexbox container for aligning the toasts --&gt;
+          | &lt;div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100"&gt;
+          |
+          |   &lt;!-- Then put toasts within --&gt;
+          |   &lt;div class="toast" role="alert" aria-live="assertive" aria-atomic="true"&gt;
+          |     &lt;div class="toast-header"&gt;
+          |       &lt;img src="..." class="rounded me-2" alt="..."&gt;
+          |       &lt;strong class="me-auto"&gt;Bootstrap&lt;/strong&gt;
+          |       &lt;small&gt;11 mins ago&lt;/small&gt;
+          |       &lt;button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"&gt;&lt;/button&gt;
+          |     &lt;/div&gt;
+          |     &lt;div class="toast-body"&gt;
+          |       Hello, world! This is a toast message.
+          |     &lt;/div&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;

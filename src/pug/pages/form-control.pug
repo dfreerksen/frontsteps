@@ -1,0 +1,247 @@
+extends ../layouts/2col.pug
+
+block append config
+  - var pageTitle = "Form controls";
+
+block content
+  div.card
+    div.card-body
+      h3 #{pageTitle}
+      p Give textual form controls like <code>&lt;input&gt;</code>s and <code>&lt;textarea&gt;</code>s an upgrade with custom styles, sizing, focus states, and more.
+
+      h4 Example
+      p Form controls are styled with a mix of Sass and CSS variables, allowing them to adapt to color modes and support any customization method.
+
+      .bd-example
+        .mb-3
+          label.form-label(for='exampleFormControlInput1') Email address
+          input#exampleFormControlInput1.form-control(type='email', placeholder='name@example.com')
+        .mb-3
+          label.form-label(for='exampleFormControlTextarea1') Example textarea
+          textarea#exampleFormControlTextarea1.form-control(rows='3')
+
+      pre
+        code.language-html
+          | &lt;div class="mb-3"&gt;
+          |   &lt;label for="exampleFormControlInput1" class="form-label"&gt;Email address&lt;/label&gt;
+          |   &lt;input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"&gt;
+          | &lt;/div&gt;
+          | &lt;div class="mb-3"&gt;
+          |   &lt;label for="exampleFormControlTextarea1" class="form-label"&gt;Example textarea&lt;/label&gt;
+          |   &lt;textarea class="form-control" id="exampleFormControlTextarea1" rows="3"&gt;&lt;/textarea&gt;
+          | &lt;/div&gt;
+
+      h4 Sizing
+      p Set heights using classes like <code>.form-control-lg</code> and <code>.form-control-sm</code>.
+
+      .bd-example
+        input.form-control.form-control-lg(type='text', placeholder='.form-control-lg', aria-label='.form-control-lg example')
+        input.form-control(type='text', placeholder='Default input', aria-label='default input example')
+        input.form-control.form-control-sm(type='text', placeholder='.form-control-sm', aria-label='.form-control-sm example')
+
+      pre
+        code.language-html
+          | &lt;input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example"&gt;
+          | &lt;input class="form-control" type="text" placeholder="Default input" aria-label="default input example"&gt;
+          | &lt;input class="form-control form-control-sm" type="text" placeholder=".form-control-sm" aria-label=".form-control-sm example"&gt;
+
+      h4 Form text
+      p Block-level or inline-level form text can be created using <code>.form-text</code>.
+
+      p Form text below inputs can be styled with <code>.form-text</code>. If a block-level element will be used, a top margin is added for easy spacing from the inputs above.
+
+      .bd-example
+        label.form-label(for='inputPassword5') Password
+        input#inputPassword5.form-control(type='password', aria-describedby='passwordHelpBlock')
+        #passwordHelpBlock.form-text
+          | Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+
+      pre
+        code.language-html
+          | &lt;label for="inputPassword5" class="form-label"&gt;Password&lt;/label&gt;
+          | &lt;input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock"&gt;
+          | &lt;div id="passwordHelpBlock" class="form-text"&gt;
+          |   Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+          | &lt;/div&gt;
+
+      p Inline text can use any typical inline HTML element (be it a <code>&lt;span&gt;</code>, <code>&lt;small&gt;</code>, or something else) with nothing more than the <code>.form-text</code> class.
+
+      .bd-example
+        .row.g-3.align-items-center
+          .col-auto
+            label.col-form-label(for='inputPassword6') Password
+          .col-auto
+            input#inputPassword6.form-control(type='password', aria-describedby='passwordHelpInline')
+          .col-auto
+            span#passwordHelpInline.form-text
+              | Must be 8-20 characters long.
+
+      pre
+        code.language-html
+          | &lt;div class="row g-3 align-items-center"&gt;
+          |   &lt;div class="col-auto"&gt;
+          |     &lt;label for="inputPassword6" class="col-form-label"&gt;Password&lt;/label&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-auto"&gt;
+          |     &lt;input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline"&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-auto"&gt;
+          |     &lt;span id="passwordHelpInline" class="form-text"&gt;
+          |       Must be 8-20 characters long.
+          |     &lt;/span&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+
+      h4 Disabled
+      p Add the disabled <code>boolean</code> attribute on an input to give it a grayed out appearance, remove pointer events, and prevent focusing.
+
+      .bd-example
+        input.form-control(type='text', placeholder='Disabled input', aria-label='Disabled input example', disabled='')
+        input.form-control(type='text', value='Disabled readonly input', aria-label='Disabled input example', disabled='', readonly='')
+
+      pre
+        code.language-html
+          | &lt;input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled&gt;
+          | &lt;input class="form-control" type="text" value="Disabled readonly input" aria-label="Disabled input example" disabled readonly&gt;
+
+      h4 Readonly
+      p Add the <code>readonly</code> boolean attribute on an input to prevent modification of the input’s value. <code>readonly</code> inputs can still be focused and selected, while <code>disabled</code> inputs cannot.
+
+      .bd-example
+        input.form-control(type='text', value='Readonly input here...', aria-label='readonly input example', readonly='')
+
+      pre
+        code.language-html
+          | &lt;input class="form-control" type="text" value="Readonly input here..." aria-label="readonly input example" readonly&gt;
+
+      h4 Readonly plain text
+      p If you want to have <code>&lt;input readonly&gt;</code> elements in your form styled as plain text, replace <code>.form-control</code> with <code>.form-control-plaintext</code> to remove the default form field styling and preserve the correct <code>margin</code> and <code>padding</code>.
+
+      .bd-example
+        .mb-3.row
+          label.col-sm-2.col-form-label(for='staticEmail') Email
+          .col-sm-10
+            input#staticEmail.form-control-plaintext(type='text', readonly='', value='email@example.com')
+        .mb-3.row
+          label.col-sm-2.col-form-label(for='inputPassword') Password
+          .col-sm-10
+            input#inputPassword.form-control(type='password')
+
+      pre
+        code.language-html
+          | &lt;div class="mb-3 row"&gt;
+          |   &lt;label for="staticEmail" class="col-sm-2 col-form-label"&gt;Email&lt;/label&gt;
+          |   &lt;div class="col-sm-10"&gt;
+          |     &lt;input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com"&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+          | &lt;div class="mb-3 row"&gt;
+          |   &lt;label for="inputPassword" class="col-sm-2 col-form-label"&gt;Password&lt;/label&gt;
+          |   &lt;div class="col-sm-10"&gt;
+          |     &lt;input type="password" class="form-control" id="inputPassword"&gt;
+          |   &lt;/div&gt;
+          | &lt;/div&gt;
+
+      .bd-example
+        form.row.g-3
+          .col-auto
+            label.visually-hidden(for='staticEmail2') Email
+            input#staticEmail2.form-control-plaintext(type='text', readonly='', value='email@example.com')
+          .col-auto
+            label.visually-hidden(for='inputPassword2') Password
+            input#inputPassword2.form-control(type='password', placeholder='Password')
+          .col-auto
+            button.btn.btn-primary.mb-3(type='submit') Confirm identity
+
+      pre
+        code.language-html
+          | &lt;form class="row g-3"&gt;
+          |   &lt;div class="col-auto"&gt;
+          |     &lt;label for="staticEmail2" class="visually-hidden"&gt;Email&lt;/label&gt;
+          |     &lt;input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com"&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-auto"&gt;
+          |     &lt;label for="inputPassword2" class="visually-hidden"&gt;Password&lt;/label&gt;
+          |     &lt;input type="password" class="form-control" id="inputPassword2" placeholder="Password"&gt;
+          |   &lt;/div&gt;
+          |   &lt;div class="col-auto"&gt;
+          |     &lt;button type="submit" class="btn btn-primary mb-3"&gt;Confirm identity&lt;/button&gt;
+          |   &lt;/div&gt;
+          | &lt;/form&gt;
+
+      .bd-example
+        .mb-3
+          label.form-label(for='formFile') Default file input example
+          input#formFile.form-control(type='file')
+        .mb-3
+          label.form-label(for='formFileMultiple') Multiple files input example
+          input#formFileMultiple.form-control(type='file', multiple='')
+        .mb-3
+          label.form-label(for='formFileDisabled') Disabled file input example
+          input#formFileDisabled.form-control(type='file', disabled='')
+        .mb-3
+          label.form-label(for='formFileSm') Small file input example
+          input#formFileSm.form-control.form-control-sm(type='file')
+        div
+          label.form-label(for='formFileLg') Large file input example
+          input#formFileLg.form-control.form-control-lg(type='file')
+
+      pre
+        code.language-html
+          | &lt;div class="mb-3"&gt;
+          |   &lt;label for="formFile" class="form-label"&gt;Default file input example&lt;/label&gt;
+          |   &lt;input class="form-control" type="file" id="formFile"&gt;
+          | &lt;/div&gt;
+          | &lt;div class="mb-3"&gt;
+          |   &lt;label for="formFileMultiple" class="form-label"&gt;Multiple files input example&lt;/label&gt;
+          |   &lt;input class="form-control" type="file" id="formFileMultiple" multiple&gt;
+          | &lt;/div&gt;
+          | &lt;div class="mb-3"&gt;
+          |   &lt;label for="formFileDisabled" class="form-label"&gt;Disabled file input example&lt;/label&gt;
+          |   &lt;input class="form-control" type="file" id="formFileDisabled" disabled&gt;
+          | &lt;/div&gt;
+          | &lt;div class="mb-3"&gt;
+          |   &lt;label for="formFileSm" class="form-label"&gt;Small file input example&lt;/label&gt;
+          |   &lt;input class="form-control form-control-sm" id="formFileSm" type="file"&gt;
+          | &lt;/div&gt;
+          | &lt;div&gt;
+          |   &lt;label for="formFileLg" class="form-label"&gt;Large file input example&lt;/label&gt;
+          |   &lt;input class="form-control form-control-lg" id="formFileLg" type="file"&gt;
+          | &lt;/div&gt;
+
+      h4 Color
+      p Set the <code>type="color"</code> and add <code>.form-control-color</code> to the <code>&lt;input&gt;</code>. We use the modifier class to set fixed <code>height</code>s and override some inconsistencies between browsers.
+
+      .bd-example
+        label.form-label(for='exampleColorInput') Color picker
+        input#exampleColorInput.form-control.form-control-color(type='color', value='#563d7c', title='Choose your color')
+
+      pre
+        code.language-html
+          | &lt;label for="exampleColorInput" class="form-label"&gt;Color picker&lt;/label&gt;
+          | &lt;input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color"&gt;
+
+      h4 Datalists
+      p Datalists allow you to create a group of <code>&lt;option&gt;</code>s that can be accessed (and autocompleted) from within an <code>&lt;input&gt;</code>. These are similar to <code>&lt;select&gt;</code> elements, but come with more menu styling limitations and differences. While most browsers and operating systems include some support for <code>&lt;datalist&gt;</code> elements, their styling is inconsistent at best.
+
+      .bd-example
+        label.form-label(for='exampleDataList') Datalist example
+        input#exampleDataList.form-control(list='datalistOptions', placeholder='Type to search...')
+        datalist#datalistOptions
+          option(value='San Francisco')
+          option(value='New York')
+          option(value='Seattle')
+          option(value='Los Angeles')
+          option(value='Chicago')
+
+      pre
+        code.language-html
+          | &lt;label for="exampleDataList" class="form-label"&gt;Datalist example&lt;/label&gt;
+          | &lt;input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..."&gt;
+          | &lt;datalist id="datalistOptions"&gt;
+          |   &lt;option value="San Francisco"&gt;
+          |   &lt;option value="New York"&gt;
+          |   &lt;option value="Seattle"&gt;
+          |   &lt;option value="Los Angeles"&gt;
+          |   &lt;option value="Chicago"&gt;
+          | &lt;/datalist&gt;

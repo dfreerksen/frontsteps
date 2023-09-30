@@ -1,0 +1,33 @@
+#header.header {
+  color: var(--header-text-color);
+  font-size: $fs-header-text-size;
+  height: $fs-header-height;
+  transition: $fs-header-transition;
+  z-index: $fs-header-z-index;
+
+  a {
+    color: var(--header-link-color);
+
+    &:focus,
+    &:hover {
+      color: var(--header-link-hover-color);
+    }
+  }
+
+  .badge {
+    font-size: $fs-header-badge-text-size;
+  }
+
+  nav.navbar {
+    background-color: var(--header-background-color);
+    box-shadow: $fs-header-shadow;
+  }
+
+  .navbar-brand {
+    height: $fs-header-height;
+  }
+}
+
+.navbar-toggler-icon {
+  scale: 75%;
+}

@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head/title.pug
+    include includes/head/meta.pug
+    include includes/head/icons.pug
+    include includes/head/fonts.pug
+    include includes/head/css.pug
+    include includes/head/scripts.pug
+
+  body(class=bodyClass)
+    include includes/flash.pug
+    main#main.d-flex.align-items-center.justify-content-center.h-100.vh-100
+      block content
+    include includes/scripts.pug

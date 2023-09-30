@@ -1,0 +1,507 @@
+extends ../layouts/2col.pug
+
+block append config
+  - var pageTitle = "List group";
+
+block content
+  div.card
+    div.card-body
+      h3 #{pageTitle}
+      p List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.
+
+      h4 Basic example
+      p The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.
+
+      .bd-example
+        ul.list-group
+          li.list-group-item An item
+          li.list-group-item A second item
+          li.list-group-item A third item
+          li.list-group-item A fourth item
+          li.list-group-item And a fifth one
+
+      pre
+        code.language-html
+          | &lt;ul class="list-group"&gt;
+          |   &lt;li class="list-group-item"&gt;An item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A second item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A third item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A fourth item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;And a fifth one&lt;/li&gt;
+          | &lt;/ul&gt;
+
+      h4 Active items
+      p Add <code>.active</code> to a <code>.list-group-item</code> to indicate the current active selection.
+
+      .bd-example
+        ul.list-group
+          li.list-group-item.active(aria-current="true") An item
+          li.list-group-item A second item
+          li.list-group-item A third item
+          li.list-group-item A fourth item
+          li.list-group-item And a fifth one
+
+      pre
+        code.language-html
+          | &lt;ul class="list-group"&gt;
+          |   &lt;li class="list-group-item active" aria-current="true"&gt;An item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A second item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A third item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A fourth item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;And a fifth one&lt;/li&gt;
+          | &lt;/ul&gt;
+
+      h4 Disabled items
+      p Add <code>.disabled</code> to a <code>.list-group-item</code> to make it appear disabled. Note that some elements with <code>.disabled</code> will also require custom JavaScript to fully disable their click events (e.g., links).
+
+      .bd-example
+        ul.list-group
+          li.list-group-item.disabled(aria-disabled='true') A disabled item
+          li.list-group-item A second item
+          li.list-group-item A third item
+          li.list-group-item A fourth item
+          li.list-group-item And a fifth one
+
+      pre
+        code.language-html
+          | &lt;ul class="list-group"&gt;
+          |   &lt;li class="list-group-item disabled" aria-disabled="true"&gt;A disabled item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A second item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A third item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A fourth item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;And a fifth one&lt;/li&gt;
+          | &lt;/ul&gt;
+
+      h4 Links and buttons
+      p Use <code>&lt;a&gt;</code>s or <code>&lt;button&gt;</code>s to create actionable list group items with hover, disabled, and active states by adding <code>.list-group-item-action</code>. We separate these pseudo-classes to ensure list groups made of non-interactive elements (like <code>&lt;li&gt;</code>s or <code>&lt;div&gt;</code>s) don't provide a click or tap affordance.
+      p Be sure to <strong>not use the standard <code>.btn</code> classes here</strong>.
+
+      .bd-example
+        .list-group
+          a.list-group-item.list-group-item-action.active(href='#', aria-current='true')
+            | The current link item
+          a.list-group-item.list-group-item-action(href='#') A second link item
+          a.list-group-item.list-group-item-action(href='#') A third link item
+          a.list-group-item.list-group-item-action(href='#') A fourth link item
+          a.list-group-item.list-group-item-action.disabled(aria-disabled='true') A disabled link item
+
+      pre
+        code.language-html
+          | &lt;div class="list-group"&gt;
+          |   &lt;a href="#" class="list-group-item list-group-item-action active" aria-current="true"&gt;
+          |     The current link item
+          |   &lt;/a&gt;
+          |   &lt;a href="#" class="list-group-item list-group-item-action"&gt;A second link item&lt;/a&gt;
+          |   &lt;a href="#" class="list-group-item list-group-item-action"&gt;A third link item&lt;/a&gt;
+          |   &lt;a href="#" class="list-group-item list-group-item-action"&gt;A fourth link item&lt;/a&gt;
+          |   &lt;a class="list-group-item list-group-item-action disabled" aria-disabled="true"&gt;A disabled link item&lt;/a&gt;
+          | &lt;/div&gt;
+
+      p With <code>&lt;button&gt;</code>s, you can also make use of the <code>disabled</code> attribute instead of the <code>.disabled</code> class. Sadly, <code>&lt;a&gt;</code>s don't support the disabled attribute.
+
+      .bd-example
+        .list-group
+          button.list-group-item.list-group-item-action.active(type='button', aria-current='true')
+            | The current button
+          button.list-group-item.list-group-item-action(type='button') A second button item
+          button.list-group-item.list-group-item-action(type='button') A third button item
+          button.list-group-item.list-group-item-action(type='button') A fourth button item
+          button.list-group-item.list-group-item-action(type='button', disabled='') A disabled button item
+
+      pre
+        code.language-html
+          | &lt;div class="list-group"&gt;
+          |   &lt;button type="button" class="list-group-item list-group-item-action active" aria-current="true"&gt;
+          |     The current button
+          |   &lt;/button&gt;
+          |   &lt;button type="button" class="list-group-item list-group-item-action"&gt;A second button item&lt;/button&gt;
+          |   &lt;button type="button" class="list-group-item list-group-item-action"&gt;A third button item&lt;/button&gt;
+          |   &lt;button type="button" class="list-group-item list-group-item-action"&gt;A fourth button item&lt;/button&gt;
+          |   &lt;button type="button" class="list-group-item list-group-item-action" disabled&gt;A disabled button item&lt;/button&gt;
+          | &lt;/div&gt;
+
+      h4 Flush
+      p Add <code>.list-group-flush</code> to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).
+
+      .bd-example
+        ul.list-group.list-group-flush
+          li.list-group-item An item
+          li.list-group-item A second item
+          li.list-group-item A third item
+          li.list-group-item A fourth item
+          li.list-group-item And a fifth one
+
+      pre
+        code.language-html
+          | &lt;ul class="list-group list-group-flush"&gt;
+          |   &lt;li class="list-group-item"&gt;An item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A second item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A third item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A fourth item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;And a fifth one&lt;/li&gt;
+          | &lt;/ul&gt;
+
+      h4 Numbered
+      p Add the <code>.list-group-numbered</code> modifier class (and optionally use an <code>&lt;ol&gt;</code> element) to opt into numbered list group items. Numbers are generated via CSS (as opposed to a <code>&lt;ol&gt;</code>s default browser styling) for better placement inside list group items and to allow for better customization.
+      p Numbers are generated by <code>counter-reset</code> on the <code>&lt;ol&gt;</code>, and then styled and placed with a <code>::before</code> pseudo-element on the <code>&lt;li&gt;</code> with <code>counter-increment</code> and <code>content</code>.
+
+      .bd-example
+        ol.list-group.list-group-numbered
+          li.list-group-item A list item
+          li.list-group-item A list item
+          li.list-group-item A list item
+
+      pre
+        code.language-html
+          | &lt;ol class="list-group list-group-numbered"&gt;
+          |   &lt;li class="list-group-item"&gt;A list item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A list item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A list item&lt;/li&gt;
+          | &lt;/ol&gt;
+
+      p These work great with custom content as well.
+
+      .bd-example
+        ol.list-group.list-group-numbered
+          li.list-group-item.d-flex.justify-content-between.align-items-start
+            .ms-2.me-auto
+              .fw-bold Subheading
+              |       Content for list item
+            span.badge.bg-primary.rounded-pill 14
+          li.list-group-item.d-flex.justify-content-between.align-items-start
+            .ms-2.me-auto
+              .fw-bold Subheading
+              |       Content for list item
+            span.badge.bg-primary.rounded-pill 14
+          li.list-group-item.d-flex.justify-content-between.align-items-start
+            .ms-2.me-auto
+              .fw-bold Subheading
+              |       Content for list item
+            span.badge.bg-primary.rounded-pill 14
+
+      pre
+        code.language-html
+          | &lt;ol class="list-group list-group-numbered"&gt;
+          |   &lt;li class="list-group-item d-flex justify-content-between align-items-start"&gt;
+          |     &lt;div class="ms-2 me-auto"&gt;
+          |       &lt;div class="fw-bold"&gt;Subheading&lt;/div&gt;
+          |       Content for list item
+          |     &lt;/div&gt;
+          |     &lt;span class="badge bg-primary rounded-pill"&gt;14&lt;/span&gt;
+          |   &lt;/li&gt;
+          |   &lt;li class="list-group-item d-flex justify-content-between align-items-start"&gt;
+          |     &lt;div class="ms-2 me-auto"&gt;
+          |       &lt;div class="fw-bold"&gt;Subheading&lt;/div&gt;
+          |       Content for list item
+          |     &lt;/div&gt;
+          |     &lt;span class="badge bg-primary rounded-pill"&gt;14&lt;/span&gt;
+          |   &lt;/li&gt;
+          |   &lt;li class="list-group-item d-flex justify-content-between align-items-start"&gt;
+          |     &lt;div class="ms-2 me-auto"&gt;
+          |       &lt;div class="fw-bold"&gt;Subheading&lt;/div&gt;
+          |       Content for list item
+          |     &lt;/div&gt;
+          |     &lt;span class="badge bg-primary rounded-pill"&gt;14&lt;/span&gt;
+          |   &lt;/li&gt;
+          | &lt;/ol&gt;
+
+      h4 Horizontal
+      p Add <code>.list-group-horizontal</code> to change the layout of list group items from vertical to horizontal across all breakpoints. Alternatively, choose a responsive variant <code>.list-group-horizontal-{sm|md|lg|xl|xxl}</code> to make a list group horizontal starting at that breakpoint's <code>min-width</code>. Currently <strong>horizontal list groups cannot be combined with flush list groups</strong>.
+      p <strong>ProTip:</strong> Want equal-width list group items when horizontal? Add <code>.flex-fill</code> to each list group item.
+
+      .bd-example
+        ul.list-group.list-group-horizontal
+          li.list-group-item An item
+          li.list-group-item A second item
+          li.list-group-item A third item
+        ul.list-group.list-group-horizontal-sm
+          li.list-group-item An item
+          li.list-group-item A second item
+          li.list-group-item A third item
+        ul.list-group.list-group-horizontal-md
+          li.list-group-item An item
+          li.list-group-item A second item
+          li.list-group-item A third item
+        ul.list-group.list-group-horizontal-lg
+          li.list-group-item An item
+          li.list-group-item A second item
+          li.list-group-item A third item
+        ul.list-group.list-group-horizontal-xl
+          li.list-group-item An item
+          li.list-group-item A second item
+          li.list-group-item A third item
+        ul.list-group.list-group-horizontal-xxl
+          li.list-group-item An item
+          li.list-group-item A second item
+          li.list-group-item A third item
+
+      pre
+        code.language-html
+          | &lt;ul class="list-group list-group-horizontal"&gt;
+          |   &lt;li class="list-group-item"&gt;An item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A second item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A third item&lt;/li&gt;
+          | &lt;/ul&gt;
+          | &lt;ul class="list-group list-group-horizontal-sm"&gt;
+          |   &lt;li class="list-group-item"&gt;An item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A second item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A third item&lt;/li&gt;
+          | &lt;/ul&gt;
+          | &lt;ul class="list-group list-group-horizontal-md"&gt;
+          |   &lt;li class="list-group-item"&gt;An item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A second item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A third item&lt;/li&gt;
+          | &lt;/ul&gt;
+          | &lt;ul class="list-group list-group-horizontal-lg"&gt;
+          |   &lt;li class="list-group-item"&gt;An item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A second item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A third item&lt;/li&gt;
+          | &lt;/ul&gt;
+          | &lt;ul class="list-group list-group-horizontal-xl"&gt;
+          |   &lt;li class="list-group-item"&gt;An item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A second item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A third item&lt;/li&gt;
+          | &lt;/ul&gt;
+          | &lt;ul class="list-group list-group-horizontal-xxl"&gt;
+          |   &lt;li class="list-group-item"&gt;An item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A second item&lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;A third item&lt;/li&gt;
+          | &lt;/ul&gt;
+
+      h4 Variants
+      p Use contextual classes to style list items with a stateful background and color.
+
+      .bd-example
+        ul.list-group
+          li.list-group-item A simple default list group item
+          li.list-group-item.list-group-item-primary A simple primary list group item
+          li.list-group-item.list-group-item-secondary A simple secondary list group item
+          li.list-group-item.list-group-item-success A simple success list group item
+          li.list-group-item.list-group-item-danger A simple danger list group item
+          li.list-group-item.list-group-item-warning A simple warning list group item
+          li.list-group-item.list-group-item-info A simple info list group item
+          li.list-group-item.list-group-item-light A simple light list group item
+          li.list-group-item.list-group-item-dark A simple dark list group item
+
+      pre
+        code.language-html
+          | &lt;ul class="list-group"&gt;
+          |   &lt;li class="list-group-item"&gt;A simple default list group item&lt;/li&gt;
+          |
+          |   &lt;li class="list-group-item list-group-item-primary"&gt;A simple primary list group item&lt;/li&gt;
+          |   &lt;li class="list-group-item list-group-item-secondary"&gt;A simple secondary list group item&lt;/li&gt;
+          |   &lt;li class="list-group-item list-group-item-success"&gt;A simple success list group item&lt;/li&gt;
+          |   &lt;li class="list-group-item list-group-item-danger"&gt;A simple danger list group item&lt;/li&gt;
+          |   &lt;li class="list-group-item list-group-item-warning"&gt;A simple warning list group item&lt;/li&gt;
+          |   &lt;li class="list-group-item list-group-item-info"&gt;A simple info list group item&lt;/li&gt;
+          |   &lt;li class="list-group-item list-group-item-light"&gt;A simple light list group item&lt;/li&gt;
+          |   &lt;li class="list-group-item list-group-item-dark"&gt;A simple dark list group item&lt;/li&gt;
+          | &lt;/ul&gt;
+
+      h4 For links and buttons
+      p Contextual classes also work with <code>.list-group-item-action</code> for <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements. Note the addition of the hover styles here not present in the previous example. Also supported is the <code>.active</code> state; apply it to indicate an active selection on a contextual list group item.
+
+      .bd-example
+        .list-group
+          a.list-group-item.list-group-item-action(href='#') A simple default list group item
+          a.list-group-item.list-group-item-action.list-group-item-primary(href='#') A simple primary list group item
+          a.list-group-item.list-group-item-action.list-group-item-secondary(href='#') A simple secondary list group item
+          a.list-group-item.list-group-item-action.list-group-item-success(href='#') A simple success list group item
+          a.list-group-item.list-group-item-action.list-group-item-danger(href='#') A simple danger list group item
+          a.list-group-item.list-group-item-action.list-group-item-warning(href='#') A simple warning list group item
+          a.list-group-item.list-group-item-action.list-group-item-info(href='#') A simple info list group item
+          a.list-group-item.list-group-item-action.list-group-item-light(href='#') A simple light list group item
+          a.list-group-item.list-group-item-action.list-group-item-dark(href='#') A simple dark list group item
+
+      pre
+        code.language-html
+          | &lt;div class="list-group"&gt;
+          |   &lt;a href="#" class="list-group-item list-group-item-action"&gt;A simple default list group item&lt;/a&gt;
+          |
+          |   &lt;a href="#" class="list-group-item list-group-item-action list-group-item-primary"&gt;A simple primary list group item&lt;/a&gt;
+          |   &lt;a href="#" class="list-group-item list-group-item-action list-group-item-secondary"&gt;A simple secondary list group item&lt;/a&gt;
+          |   &lt;a href="#" class="list-group-item list-group-item-action list-group-item-success"&gt;A simple success list group item&lt;/a&gt;
+          |   &lt;a href="#" class="list-group-item list-group-item-action list-group-item-danger"&gt;A simple danger list group item&lt;/a&gt;
+          |   &lt;a href="#" class="list-group-item list-group-item-action list-group-item-warning"&gt;A simple warning list group item&lt;/a&gt;
+          |   &lt;a href="#" class="list-group-item list-group-item-action list-group-item-info"&gt;A simple info list group item&lt;/a&gt;
+          |   &lt;a href="#" class="list-group-item list-group-item-action list-group-item-light"&gt;A simple light list group item&lt;/a&gt;
+          |   &lt;a href="#" class="list-group-item list-group-item-action list-group-item-dark"&gt;A simple dark list group item&lt;/a&gt;
+          | &lt;/div&gt;
+
+      h4 With badges
+      p Add badges to any list group item to show unread counts, activity, and more with the help of some utilities.
+
+      .bd-example
+        ul.list-group
+          li.list-group-item.d-flex.justify-content-between.align-items-center
+            | A list item
+            span.badge.bg-primary.rounded-pill 14
+          li.list-group-item.d-flex.justify-content-between.align-items-center
+            | A second list item
+            span.badge.bg-primary.rounded-pill 2
+          li.list-group-item.d-flex.justify-content-between.align-items-center
+            | A third list item
+            span.badge.bg-primary.rounded-pill 1
+
+      pre
+        code.language-html
+          | &lt;ul class="list-group"&gt;
+          |   &lt;li class="list-group-item d-flex justify-content-between align-items-center"&gt;
+          |     A list item
+          |     &lt;span class="badge bg-primary rounded-pill"&gt;14&lt;/span&gt;
+          |   &lt;/li&gt;
+          |   &lt;li class="list-group-item d-flex justify-content-between align-items-center"&gt;
+          |     A second list item
+          |     &lt;span class="badge bg-primary rounded-pill"&gt;2&lt;/span&gt;
+          |   &lt;/li&gt;
+          |   &lt;li class="list-group-item d-flex justify-content-between align-items-center"&gt;
+          |     A third list item
+          |     &lt;span class="badge bg-primary rounded-pill"&gt;1&lt;/span&gt;
+          |   &lt;/li&gt;
+          | &lt;/ul&gt;
+
+      h4 Custom content
+      p Add nearly any HTML within, even for linked list groups like the one below, with the help of flexbox utilities.
+
+      .bd-example
+        .list-group
+          a.list-group-item.list-group-item-action.active(href='#', aria-current='true')
+            .d-flex.w-100.justify-content-between
+              h5.mb-1 List group item heading
+              small 3 days ago
+            p.mb-1 Some placeholder content in a paragraph.
+            small And some small print.
+          a.list-group-item.list-group-item-action(href='#')
+            .d-flex.w-100.justify-content-between
+              h5.mb-1 List group item heading
+              small.text-body-secondary 3 days ago
+            p.mb-1 Some placeholder content in a paragraph.
+            small.text-body-secondary And some muted small print.
+          a.list-group-item.list-group-item-action(href='#')
+            .d-flex.w-100.justify-content-between
+              h5.mb-1 List group item heading
+              small.text-body-secondary 3 days ago
+            p.mb-1 Some placeholder content in a paragraph.
+            small.text-body-secondary And some muted small print.
+
+      pre
+        code.language-html
+          | &lt;div class="list-group"&gt;
+          |   &lt;a href="#" class="list-group-item list-group-item-action active" aria-current="true"&gt;
+          |     &lt;div class="d-flex w-100 justify-content-between"&gt;
+          |       &lt;h5 class="mb-1"&gt;List group item heading&lt;/h5&gt;
+          |       &lt;small&gt;3 days ago&lt;/small&gt;
+          |     &lt;/div&gt;
+          |     &lt;p class="mb-1"&gt;Some placeholder content in a paragraph.&lt;/p&gt;
+          |     &lt;small&gt;And some small print.&lt;/small&gt;
+          |   &lt;/a&gt;
+          |   &lt;a href="#" class="list-group-item list-group-item-action"&gt;
+          |     &lt;div class="d-flex w-100 justify-content-between"&gt;
+          |       &lt;h5 class="mb-1"&gt;List group item heading&lt;/h5&gt;
+          |       &lt;small class="text-body-secondary"&gt;3 days ago&lt;/small&gt;
+          |     &lt;/div&gt;
+          |     &lt;p class="mb-1"&gt;Some placeholder content in a paragraph.&lt;/p&gt;
+          |     &lt;small class="text-body-secondary"&gt;And some muted small print.&lt;/small&gt;
+          |   &lt;/a&gt;
+          |   &lt;a href="#" class="list-group-item list-group-item-action"&gt;
+          |     &lt;div class="d-flex w-100 justify-content-between"&gt;
+          |       &lt;h5 class="mb-1"&gt;List group item heading&lt;/h5&gt;
+          |       &lt;small class="text-body-secondary"&gt;3 days ago&lt;/small&gt;
+          |     &lt;/div&gt;
+          |     &lt;p class="mb-1"&gt;Some placeholder content in a paragraph.&lt;/p&gt;
+          |     &lt;small class="text-body-secondary"&gt;And some muted small print.&lt;/small&gt;
+          |   &lt;/a&gt;
+          | &lt;/div&gt;
+
+      h4 Checkboxes and radios
+      p Place Bootstrap's checkboxes and radios within list group items and customize as needed. You can use them without <code>&lt;label&gt;</code>s, but please remember to include an <code>aria-label</code> attribute and value for accessibility.
+
+      .bd-example
+        ul.list-group
+          li.list-group-item
+            input#firstCheckbox.form-check-input.me-1(type='checkbox', value='')
+            label.form-check-label(for='firstCheckbox') First checkbox
+          li.list-group-item
+            input#secondCheckbox.form-check-input.me-1(type='checkbox', value='')
+            label.form-check-label(for='secondCheckbox') Second checkbox
+          li.list-group-item
+            input#thirdCheckbox.form-check-input.me-1(type='checkbox', value='')
+            label.form-check-label(for='thirdCheckbox') Third checkbox
+
+
+      pre
+        code.language-html
+          | &lt;ul class="list-group"&gt;
+          |   &lt;li class="list-group-item"&gt;
+          |     &lt;input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"&gt;
+          |     &lt;label class="form-check-label" for="firstCheckbox"&gt;First checkbox&lt;/label&gt;
+          |   &lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;
+          |     &lt;input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox"&gt;
+          |     &lt;label class="form-check-label" for="secondCheckbox"&gt;Second checkbox&lt;/label&gt;
+          |   &lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;
+          |     &lt;input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox"&gt;
+          |     &lt;label class="form-check-label" for="thirdCheckbox"&gt;Third checkbox&lt;/label&gt;
+          |   &lt;/li&gt;
+          | &lt;/ul&gt;
+
+      .bd-example
+        ul.list-group
+          li.list-group-item
+            input#firstRadio.form-check-input.me-1(type='radio', name='listGroupRadio', value='', checked='')
+            label.form-check-label(for='firstRadio') First radio
+          li.list-group-item
+            input#secondRadio.form-check-input.me-1(type='radio', name='listGroupRadio', value='')
+            label.form-check-label(for='secondRadio') Second radio
+          li.list-group-item
+            input#thirdRadio.form-check-input.me-1(type='radio', name='listGroupRadio', value='')
+            label.form-check-label(for='thirdRadio') Third radio
+
+      pre
+        code.language-html
+          | &lt;ul class="list-group"&gt;
+          |   &lt;li class="list-group-item"&gt;
+          |     &lt;input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio" checked&gt;
+          |     &lt;label class="form-check-label" for="firstRadio"&gt;First radio&lt;/label&gt;
+          |   &lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;
+          |     &lt;input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio"&gt;
+          |     &lt;label class="form-check-label" for="secondRadio"&gt;Second radio&lt;/label&gt;
+          |   &lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;
+          |     &lt;input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio"&gt;
+          |     &lt;label class="form-check-label" for="thirdRadio"&gt;Third radio&lt;/label&gt;
+          |   &lt;/li&gt;
+          | &lt;/ul&gt;
+
+      p You can use <code>.stretched-link</code> on <code>&lt;label&gt;</code>s to make the whole list group item clickable.
+
+      .bd-example
+        ul.list-group
+          li.list-group-item
+            input#firstCheckboxStretched.form-check-input.me-1(type='checkbox', value='')
+            label.form-check-label.stretched-link(for='firstCheckboxStretched') First checkbox
+          li.list-group-item
+            input#secondCheckboxStretched.form-check-input.me-1(type='checkbox', value='')
+            label.form-check-label.stretched-link(for='secondCheckboxStretched') Second checkbox
+          li.list-group-item
+            input#thirdCheckboxStretched.form-check-input.me-1(type='checkbox', value='')
+            label.form-check-label.stretched-link(for='thirdCheckboxStretched') Third checkbox
+
+      pre
+        code.language-html
+          | &lt;ul class="list-group"&gt;
+          |   &lt;li class="list-group-item"&gt;
+          |     &lt;input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched"&gt;
+          |     &lt;label class="form-check-label stretched-link" for="firstCheckboxStretched"&gt;First checkbox&lt;/label&gt;
+          |   &lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;
+          |     &lt;input class="form-check-input me-1" type="checkbox" value="" id="secondCheckboxStretched"&gt;
+          |     &lt;label class="form-check-label stretched-link" for="secondCheckboxStretched"&gt;Second checkbox&lt;/label&gt;
+          |   &lt;/li&gt;
+          |   &lt;li class="list-group-item"&gt;
+          |     &lt;input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckboxStretched"&gt;
+          |     &lt;label class="form-check-label stretched-link" for="thirdCheckboxStretched"&gt;Third checkbox&lt;/label&gt;
+          |   &lt;/li&gt;
+          | &lt;/ul&gt;

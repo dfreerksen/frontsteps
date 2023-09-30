@@ -1,0 +1,40 @@
+@mixin switch($res) {
+  $index: 1rem;
+  $mainval: 1rem;
+
+  @if $res == 'md' {
+    $index: 2rem;
+    $mainval: 1.5rem;
+  } @else if $res == 'lg' {
+    $index: 3rem;
+    $mainval: 2rem;
+  }
+
+  .form-check-input {
+    border-radius: $mainval * 2;
+    height: $mainval;
+    width: calc(#{$index} + 0.75rem);
+  }
+}
+
+.form-switch {
+  align-items: center;
+  display: flex;
+}
+
+.form-check-input {
+  clear: left;
+  margin-right: 0.5em;
+}
+
+.form-switch.form-switch-sm {
+  @include switch('sm');
+}
+
+.form-switch.form-switch-md {
+  @include switch('md');
+}
+
+.form-switch.form-switch-lg {
+  @include switch('lg');
+}

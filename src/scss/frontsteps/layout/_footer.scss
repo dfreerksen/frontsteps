@@ -1,0 +1,11 @@
+#footer.footer {
+  margin-left: $fs-sidebar-min-width;
+  transition: $fs-footer-transition;
+}
+
+// Maximized sidebar
+@include media-breakpoint-up(lg) {
+  #footer.footer {
+    margin-left: $fs-sidebar-width;
+  }
+}

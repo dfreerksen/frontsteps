@@ -1,0 +1,172 @@
+extends ../layouts/2col.pug
+
+block append config
+  - var pageTitle = "Dashboard"
+  - var index = true;
+  - var bodyClass = "dashboard"
+
+append scripts
+  script(src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js", crossorigin="anonymous")
+  script.
+    const chart1 = new Chart('chart1', {
+      type: 'line',
+      data: {
+        labels: ['First', 'Second', 'Third'],
+        datasets: [{
+          label: 'Dataset',
+          data: [300, 50, 175]
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    });
+    const chart2 = new Chart('chart2', {
+      type: 'pie',
+      data: {
+        labels: ['Red', 'Green', 'Yellow'],
+        datasets: [{
+          data: [300, 50, 100],
+          backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+          hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false
+      },
+    });
+    const chart3 = new Chart('chart3', {
+      type: 'polarArea',
+      data: {
+        labels: ['Red', 'Green', 'Yellow'],
+        datasets: [{
+          data: [300, 50, 100],
+          backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+          hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false
+      },
+    });
+    const chart4 = new Chart('chart4', {
+      type: 'bar',
+      data: {
+        labels: ['First', 'Second'],
+        datasets: [{
+          label: 'Dataset 1',
+          data: [300, 175]
+        }, {
+          label: 'Dataset 2',
+          data: [240, 25]
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false
+      }
+    });
+
+block content
+  .row.text-center
+    .col-12.col-md-6.col-lg-3
+      .card.mb-2.p-2(style='height: 97%;')
+        .card-body
+          canvas#chart1
+
+    .col-12.col-md-6.col-lg-3
+      .card.mb-2.p-2(style='height: 97%;')
+        .card-body
+          canvas#chart2
+
+    .col-12.col-md-6.col-lg-3
+      .card.mb-2.p-2(style='height: 97%;')
+        .card-body
+          canvas#chart3
+
+    .col-12.col-md-6.col-lg-3
+      .card.mb-2.p-2(style='height: 97%;')
+        .card-body
+          canvas#chart4
+
+  .row
+    .card.mb-2.p-2
+      .card-body
+        .table-responsive.p-20
+          table.table
+            thead
+              tr
+                th Name
+                th Status
+                th Date
+                th Price
+            tbody
+              tr
+                td Item #1 Name
+                td
+                  span.badge.bg-danger.rounded-pill Unavailable
+                td Nov 18
+                td
+                  span.text-success $12
+              tr
+                td Item #2 Name
+                td
+                  span.badge.bg-info.rounded-pill New
+                td Nov 19
+                td
+                  span.text-info $34
+              tr
+                td Item #3 Name
+                td
+                  span.badge.bg-success.rounded-pill New
+                td Nov 20
+                td
+                  span.text-danger -$45
+              tr
+                td Item #4 Name
+                td
+                  span.badge.bg-warning.rounded-pill Unavailable
+                td Nov 21
+                td
+                  span.text-success $65
+              tr
+                td Item #5 Name
+                td
+                  span.badge.bg-secondary.rounded-pill Used
+                td Nov 22
+                td
+                  span.text-success $78
+              tr
+                td Item #6 Name
+                td
+                  span.badge.bg-secondary.rounded-pill Used
+                td Nov 23
+                td
+                  span.text-danger -$88
+              tr
+                td Item #7 Name
+                td
+                  span.badge.bg-primary.rounded-pill Old
+                td Nov 22
+                td
+                  span.text-success $56
+
+  .row.text-center
+    .col-12.col-md-6
+      .card.mb-2.p-2
+        .card-body
+          | This is some text within a card body.
+      .card.mb-2.p-2
+        .card-body
+          | This is some text within a card body.
+
+    .col-12.col-md-6
+      .card.mb-2.p-2
+        .card-body
+          | This is some text within a card body.
+      .card.mb-2.p-2
+        .card-body
+          | This is some text within a card body.

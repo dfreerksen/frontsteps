@@ -1,0 +1,223 @@
+extends ../layouts/2col.pug
+
+block append config
+  - var pageTitle = "Color Switching";
+
+block content
+  div.card
+    div.card-body
+      h3 #{pageTitle}
+      p This theme provides a light and a dark mode theme. The light mode being the default.
+
+      h4 Overview
+      p Theme switching is done with Javascript. It is important to add this Javascript into the <code>&lt;head&gt;</code> tag. If it is added to the bottom of the page, you will see a flash of the light color mode before switching to the dark color mode.
+
+      pre
+        code.language-html
+          | &lt;script src="theme-switcher.min.js"&gt;&lt;/script&gt;
+
+      p Somewhere in the <code>&lt;body&gt;</code> should be an checkbox with a <code>#switcher</code> id
+
+      pre
+        code.language-html
+          | &lt;div class="form-check form-switch"&gt;
+          |   &lt;input class="form-check-input" type="checkbox" role="switch" id="switcher"&gt;
+          |   &lt;label class="form-check-label" for="switcher"&gt;Dark mode&lt;/label&gt;
+          | &lt;/div&gt;
+
+      h4 Example
+
+      .form-check.form-switch.form-switch-lg
+        input#switcher.form-check-input(type='checkbox', role='switch')
+        label.form-check-label(for='switcher') Dark mode
+
+      p The following is here to display what various elements looks like in light and dark mode.
+
+      .container-fluid
+        .text-center.mb-4
+          h4.border-bottom Buttons
+          button.btn.btn-primary(type='button') Primary
+          button.btn.btn-secondary(type='button') Secondary
+          button.btn.btn-success(type='button') Success
+          button.btn.btn-danger(type='button') Danger
+          button.btn.btn-warning(type='button') Warning
+          button.btn.btn-info(type='button') Info
+          button.btn.btn-light(type='button') Light
+          button.btn.btn-dark(type='button') Dark
+          button.btn.btn-link(type='button') Link
+
+        .text-center.mb-4
+          .btn-group.m-5.d-inline
+            button.btn.btn-danger.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+              | Action
+            ul.dropdown-menu
+              li
+                a.dropdown-item(href='#') Action
+              li
+                a.dropdown-item(href='#') Another action
+              li
+                a.dropdown-item(href='#') Something else here
+              li
+                hr.dropdown-divider
+              li
+                a.dropdown-item(href='#') Separated link
+
+          .dropdown.me-5.d-inline
+            button#dropdownMenu2.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+              | Dropdown
+            ul.dropdown-menu(aria-labelledby='dropdownMenu2')
+              li
+                button.dropdown-item(type='button') Action
+              li
+                button.dropdown-item(type='button')
+                  | Another action
+              li
+                button.dropdown-item(type='button')
+                  | Something else here
+
+          .btn-group(role='group', aria-label='Button group with nested dropdown')
+            button.btn.btn-primary(type='button') 1
+            button.btn.btn-primary(type='button') 2
+            .btn-group(role='group')
+              button#btnGroupDrop1.btn.btn-primary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+                | Dropdown
+              ul.dropdown-menu(aria-labelledby='btnGroupDrop1')
+                li
+                  a.dropdown-item(href='#') Dropdown link
+                li
+                  a.dropdown-item(href='#') Dropdown link
+
+          h3.d-inline.m-5
+            | Example badge
+            span.badge.bg-secondary New
+
+          .spinner-border.text-light(role='status')
+            span.visually-hidden Loading...
+          .spinner-border.text-dark(role='status')
+            span.visually-hidden Loading...
+
+        .text-center.mb-4
+          h4.border-bottom Typography
+          h1 h1. Bootstrap heading
+          h2 h2. Bootstrap heading
+          h3 h3. Bootstrap heading
+          h4 h4. Bootstrap heading
+          h5 h5. Bootstrap heading
+          h6 h6. Bootstrap heading
+          h3
+            | Fancy display heading
+            small.text-muted With faded secondary text
+
+        .mb-4
+          h4.border-bottom.text-center Tables
+          table.table
+            thead
+              tr
+                th Class
+                th Heading
+                th Heading
+            tbody
+              tr.table-primary
+                td primary
+                td Cell
+                td Cell
+              tr.table-secondary
+                td secondary
+                td Cell
+                td Cell
+              tr.table-success
+                td success
+                td Cell
+                td Cell
+              tr.table-danger
+                td danger
+                td Cell
+                td Cell
+              tr.table-warning
+                td warning
+                td Cell
+                td Cell
+              tr.table-info
+                td info
+                td Cell
+                td Cell
+              tr.table-light
+                td light
+                td Cell
+                td Cell
+              tr.table-dark
+                td dark
+                td Cell
+                td Cell
+
+        .mb-4
+          h4.border-bottom.text-center Switches
+          .row
+            .col-4.border-end
+              .form-check.form-switch
+                input#flexSwitchCheckDefault.form-check-input(type='checkbox')
+                label.form-check-label(for='flexSwitchCheckDefault') Default switch checkbox input
+              .form-check.form-switch
+                input#flexSwitchCheckChecked.form-check-input(type='checkbox', checked='')
+                label.form-check-label(for='flexSwitchCheckChecked') Checked switch checkbox input
+              .form-check.form-switch
+                input#flexSwitchCheckDisabled.form-check-input(type='checkbox', disabled='')
+                label.form-check-label(for='flexSwitchCheckDisabled') Disabled switch checkbox input
+              .form-check.form-switch
+                input#flexSwitchCheckCheckedDisabled.form-check-input(type='checkbox', checked='', disabled='')
+                label.form-check-label(for='flexSwitchCheckCheckedDisabled') Disabled checked switch checkbox input
+            .col-4.border-end
+              .form-check
+                input#defaultCheck1.form-check-input(type='checkbox', value='')
+                label.form-check-label(for='defaultCheck1')
+                  | Default checkbox
+              .form-check
+                input#defaultCheck2.form-check-input(type='checkbox', value='', disabled='')
+                label.form-check-label(for='defaultCheck2')
+                  | Disabled checkbox
+            .col-4
+              .form-check
+                input#exampleRadios1.form-check-input(type='radio', name='exampleRadios', value='option1', checked='')
+                label.form-check-label(for='exampleRadios1')
+                  | Default radio
+              .form-check
+                input#exampleRadios2.form-check-input(type='radio', name='exampleRadios', value='option2')
+                label.form-check-label(for='exampleRadios2')
+                  | Second default radio
+              .form-check
+                input#exampleRadios3.form-check-input(type='radio', name='exampleRadios', value='option3', disabled='')
+                label.form-check-label(for='exampleRadios3')
+                  | Disabled radio
+
+        .mb-4
+          h4.border-bottom.text-center Forms
+          form.row.g-3
+            .col-md-4
+              label.form-label(for='validationDefault01') First name
+              input#validationDefault01.form-control(type='text', value='Mark', required='')
+            .col-md-4
+              label.form-label(for='validationDefault02') Last name
+              input#validationDefault02.form-control(type='text', value='Otto', required='')
+            .col-md-4
+              label.form-label(for='validationDefaultUsername') Username
+              .input-group
+                span#inputGroupPrepend2.input-group-text @
+                input#validationDefaultUsername.form-control(type='email', aria-describedby='inputGroupPrepend2', required='')
+            .col-md-6
+              label.form-label(for='validationDefault03') City
+              input#validationDefault03.form-control(type='text', required='')
+            .col-md-3
+              label.form-label(for='validationDefault04') State
+              select#validationDefault04.form-select(required='')
+                option(selected='', disabled='', value='') Choose...
+                option ...
+            .col-md-3
+              label.form-label(for='validationDefault05') Zip
+              input#validationDefault05.form-control(type='text', required='')
+            .col-12
+              .form-check
+                input#invalidCheck2.form-check-input(type='checkbox', value='', required='')
+                label.form-check-label(for='invalidCheck2')
+                  | Agree to terms and conditions
+            .col-12.text-center
+              button.btn.btn-primary(type='submit') Submit form

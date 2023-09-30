@@ -1,0 +1,128 @@
+header#header.header.w-100.position-fixed.top-0
+  .container-fluid.px-0
+    nav#nav.navbar.navbar-dark.navbar-expand-lg.p-0
+      a.navbar-brand.d-flex.align-items-center.me-auto.p-3(href='#')
+        img.me-3(src='/assets/images/frontsteps-logo.svg', alt=themeTitle, width='30', height='30')
+        span #{themeTitle}
+
+      button#hamburger.navbar-toggler.m-3(type='button', data-bs-toggle='collapse', data-bs-target='#navigation', aria-controls='navigation', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+
+      #navigation.collapse.navbar-collapse.p-3
+        ul.navbar-nav.me-auto
+          li.nav-item
+            a.nav-link(href='#') Link 1
+
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+              | Link 1
+            ul.dropdown-menu
+              li
+                a.dropdown-item(href='#') Action
+              li
+                a.dropdown-item(href='#') Another action
+              li
+                hr.dropdown-divider
+              li
+                a.dropdown-item(href='#') Something else here
+
+        ul.navbar-nav.d-flex
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+              i.bi.bi-person-circle
+              span.d-lg-none.d-xxl-inline-block Profile
+            ul.dropdown-menu.dropdown-menu-end
+              li
+                a.dropdown-item(href='#')
+                  i.bi.bi-gear
+                  | Settings
+              li
+                a.dropdown-item(href='#')
+                  i.bi.bi-person
+                  | Profile
+              li
+                a.dropdown-item(href='#')
+                  i.bi.bi-envelope
+                  | Messages
+
+          li.nav-item.dropdown
+            a.nav-link.position-relative.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+              i.bi.bi-bell
+              span.d-lg-none.d-xxl-inline-block Notifications
+              span.position-absolute.mt-0.me-0.translate-middle.badge.rounded-pill.bg-danger
+                | 3
+                span.visually-hidden notifications
+            div.dropdown-menu.dropdown-menu-end.dropdown-menu-wide
+              .list-group.list-group-flush
+                div.list-group-item
+                  i.bi.bi-bell
+                  | Notifications
+                a.list-group-item.list-group-item-action(href='#')
+                  .d-flex
+                    img.rounded-5.border.border-2.border-white.me-2(src='https://randomuser.me/api/portraits/men/17.jpg', alt='', width="32", height="32")
+                    h6 John Doe liked your post
+                  small.ps-5 1 day ago
+                a.list-group-item.list-group-item-action(href='#')
+                  .d-flex
+                    img.rounded-5.border.border-2.border-white.me-2(src='https://randomuser.me/api/portraits/women/40.jpg', alt='', width="32", height="32")
+                    h6 Jane Doe liked your cover image
+                  small.ps-5 1 day ago
+                a.list-group-item.list-group-item-action(href='#')
+                  .d-flex
+                    img.rounded-5.border.border-2.border-white.me-2(src='https://randomuser.me/api/portraits/women/90.jpg', alt='', width="32", height="32")
+                    h6 Laura Doe commented on your video
+                  small.ps-5 1 day ago
+                a.list-group-item.list-group-item-action.text-center(href='#')
+                  | View all notifications
+                  i.bi.bi-chevron-right
+
+          li.nav-item.dropdown
+            a.nav-link.position-relative.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+              i.bi.bi-inbox
+              span.d-lg-none.d-xxl-inline-block Messages
+              span.position-absolute.mt-0.me-0.translate-middle.badge.rounded-pill.bg-danger
+                | 4
+                span.visually-hidden unread messages
+
+            div.dropdown-menu.dropdown-menu-end.dropdown-menu-wide
+              .list-group.list-group-flush
+                div.list-group-item
+                  i.bi.bi-inbox
+                  | Messages
+                a.list-group-item.list-group-item-action(href='#')
+                  .d-flex
+                    .pe-2
+                      img.rounded-5.border.border-2.border-white(src='https://randomuser.me/api/portraits/men/49.jpg', alt='', width="32", height="32")
+                    h6 Nick Doe
+                    small.text-light.ms-auto 5 min ago
+                  small.text-light Want to create your own customized data generator for your app...
+                a.list-group-item.list-group-item-action(href='#')
+                  .d-flex
+                    .pe-2
+                      img.rounded-5.border.border-2.border-white(src='https://randomuser.me/api/portraits/women/40.jpg', alt='', width="32", height="32")
+                    h6 Jane Doe
+                    small.text-light.ms-auto 5 min ago
+                  small.text-light Want to create your own customized data generator for your app...
+                a.list-group-item.list-group-item-action(href='#')
+                  .d-flex
+                    .pe-2
+                      img.rounded-5.border.border-2.border-white(src='https://randomuser.me/api/portraits/women/90.jpg', alt='', width="32", height="32")
+                    h6 Laura Doe
+                    small.text-light.ms-auto 30 min ago
+                  small.text-light Want to create your own customized data generator for your app...
+                a.list-group-item.list-group-item-action(href='#')
+                  .d-flex
+                    .pe-2
+                      img.rounded-5.border.border-2.border-white(src='https://randomuser.me/api/portraits/men/17.jpg', alt='', width="32", height="32")
+                    h6 John Doe
+                    small.text-light.ms-auto 1 hour ago
+                  small.text-light Want to create your own customized data generator for your app...
+
+                a.list-group-item.list-group-item-action.text-center(href='#')
+                  | View all messages
+                  i.bi.bi-chevron-right
+
+          li.nav-item
+            a.nav-link(href='#')
+              i.bi.bi-power
+              span.d-lg-none.d-xxl-inline-block Sign Out

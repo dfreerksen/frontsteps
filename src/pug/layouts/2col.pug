@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+  head
+    include includes/head/title.pug
+    include includes/head/meta.pug
+    include includes/head/icons.pug
+    include includes/head/fonts.pug
+    include includes/head/css.pug
+    include includes/head/scripts.pug
+
+  body(class=bodyClass)
+    include includes/flash.pug
+    include includes/header.pug
+    include includes/sidebar.pug
+    main#main.main
+      include includes/main/menu.pug
+      include includes/main/breadcrumbs.pug
+      div.container-fluid.p-3
+        block content
+    include includes/footer.pug
+    include includes/scripts.pug

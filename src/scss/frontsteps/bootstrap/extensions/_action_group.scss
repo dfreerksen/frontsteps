@@ -1,0 +1,17 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $next: breakpoint-next($breakpoint, $grid-breakpoints);
+  $infix: breakpoint-infix($next, $grid-breakpoints);
+
+  @if not ($infix == "") {
+    @include media-breakpoint-down($next) {
+      .btn-group.btn-group-action#{$infix} {
+        a,
+        button {
+          .label {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

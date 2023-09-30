@@ -1,0 +1,66 @@
+// Bootstrap helpers
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins/breakpoints";
+
+:root {
+  --bd-example-padding: 1rem;
+}
+
+.bd-example {
+  margin: 1rem auto;
+}
+
+.scrollspy-example {
+  height: 200px;
+  margin-top: 0.5rem;
+  overflow: auto;
+}
+
+.scrollspy-example-2 {
+  height: 350px;
+  overflow: auto;
+}
+
+.bd-example-toasts {
+  min-height: 240px;
+}
+
+.bd-example > .nav + .nav,
+.bd-example > .alert + .alert,
+.bd-example > .navbar + .navbar,
+.bd-example > .progress + .progress {
+  margin-top: 1rem;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  user-select: none;
+}
+
+.bd-example .fixed-top,
+.bd-example .sticky-top {
+  margin: calc(var(--bd-example-padding) * -1) calc(var(--bd-example-padding) * -1) var(--bd-example-padding);
+  position: static;
+}
+
+.bd-example .fixed-bottom,
+.bd-example .sticky-bottom {
+  margin: var(--bd-example-padding) calc(var(--bd-example-padding) * -1) calc(var(--bd-example-padding) * -1);
+  position: static;
+}
+
+.bd-example > .dropdown-menu {
+  display: block;
+  position: static;
+}
+
+.bd-example > .form-control + .form-control {
+  margin-top: 0.5rem;
+}
+
+.bd-example > .btn,
+.bd-example > .btn-group {
+  margin: 0.25rem 0.125rem;
+}

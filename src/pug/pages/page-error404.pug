@@ -1,0 +1,14 @@
+extends ../layouts/blank.pug
+
+block append config
+  - var pageTitle = "Error 404";
+
+block content
+  .container.text-center
+    .row.align-items-center
+      .col-lg
+        img(src='/assets/images/404.jpg', alt='404')
+      .col-lg
+        h1.fs-1 Error 404
+        h3 Page not found
+        a.btn.btn-primary(href='/index.html') Go to Home

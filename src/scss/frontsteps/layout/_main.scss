@@ -1,0 +1,12 @@
+#main.main {
+  margin-left: $fs-sidebar-min-width;
+  margin-top: $fs-header-height;
+  transition: $fs-main-transition;
+}
+
+// Maximized sidebar
+@include media-breakpoint-up(lg) {
+  #main.main {
+    margin-left: $fs-sidebar-width;
+  }
+}
