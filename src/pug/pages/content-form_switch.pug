@@ -4,9 +4,9 @@ block append config
   - var pageTitle = "Form Switch";
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p Extension to Bootstrap <code>.form-switch</code>
 
       h4 Small
@@ -14,16 +14,16 @@ block content
 
       .bd-example
         .form-check.form-switch.form-switch-sm
-          input#switchCheckSmDefault.form-check-input(type='checkbox', role='switch')
+          input#switchCheckSmDefault.form-check-input(type='checkbox' role='switch')
           label.form-check-label(for='switchCheckSmDefault') Default small switch checkbox input
         .form-check.form-switch.form-switch-sm
-          input#switchCheckSmChecked.form-check-input(type='checkbox', role='switch', checked='')
+          input#switchCheckSmChecked.form-check-input(type='checkbox' role='switch' checked='')
           label.form-check-label(for='switchCheckSmChecked') Checked small switch checkbox input
         .form-check.form-switch.form-switch-sm
-          input#switchCheckSmDisabled.form-check-input(type='checkbox', role='switch', disabled='')
+          input#switchCheckSmDisabled.form-check-input(type='checkbox' role='switch' disabled='')
           label.form-check-label(for='switchCheckSmDisabled') Disabled small switch checkbox input
         .form-check.form-switch.form-switch-sm
-          input#switchCheckSmCheckedDisabled.form-check-input(type='checkbox', role='switch', checked='', disabled='')
+          input#switchCheckSmCheckedDisabled.form-check-input(type='checkbox' role='switch' checked='' disabled='')
           label.form-check-label(for='switchCheckSmCheckedDisabled') Disabled small checked switch checkbox input
 
       pre
@@ -50,16 +50,16 @@ block content
 
       .bd-example
         .form-check.form-switch.form-switch-md
-          input#switchCheckMdDefault.form-check-input(type='checkbox', role='switch')
+          input#switchCheckMdDefault.form-check-input(type='checkbox' role='switch')
           label.form-check-label(for='switchCheckMdDefault') Default medium switch checkbox input
         .form-check.form-switch.form-switch-md
-          input#switchCheckMdChecked.form-check-input(type='checkbox', role='switch', checked='')
+          input#switchCheckMdChecked.form-check-input(type='checkbox' role='switch' checked='')
           label.form-check-label(for='switchCheckMdChecked') Checked medium switch checkbox input
         .form-check.form-switch.form-switch-md
-          input#switchCheckMdDisabled.form-check-input(type='checkbox', role='switch', disabled='')
+          input#switchCheckMdDisabled.form-check-input(type='checkbox' role='switch' disabled='')
           label.form-check-label(for='switchCheckMdDisabled') Disabled medium switch checkbox input
         .form-check.form-switch.form-switch-md
-          input#switchCheckMdCheckedDisabled.form-check-input(type='checkbox', role='switch', checked='', disabled='')
+          input#switchCheckMdCheckedDisabled.form-check-input(type='checkbox' role='switch' checked='' disabled='')
           label.form-check-label(for='switchCheckMdCheckedDisabled') Disabled medium checked switch checkbox input
 
       pre
@@ -86,16 +86,16 @@ block content
 
       .bd-example
         .form-check.form-switch.form-switch-lg
-          input#switchCheckLgDefault.form-check-input(type='checkbox', role='switch')
+          input#switchCheckLgDefault.form-check-input(type='checkbox' role='switch')
           label.form-check-label(for='switchCheckLgDefault') Default large switch checkbox input
         .form-check.form-switch.form-switch-lg
-          input#switchCheckLgChecked.form-check-input(type='checkbox', role='switch', checked='')
+          input#switchCheckLgChecked.form-check-input(type='checkbox' role='switch' checked='')
           label.form-check-label(for='switchCheckLgChecked') Checked large switch checkbox input
         .form-check.form-switch.form-switch-lg
-          input#switchCheckLgDisabled.form-check-input(type='checkbox', role='switch', disabled='')
+          input#switchCheckLgDisabled.form-check-input(type='checkbox' role='switch' disabled='')
           label.form-check-label(for='switchCheckLgDisabled') Disabled large switch checkbox input
         .form-check.form-switch.form-switch-lg
-          input#switchCheckLgCheckedDisabled.form-check-input(type='checkbox', role='switch', checked='', disabled='')
+          input#switchCheckLgCheckedDisabled.form-check-input(type='checkbox' role='switch' checked='' disabled='')
           label.form-check-label(for='switchCheckLgCheckedDisabled') Disabled large checked switch checkbox input
 
       pre

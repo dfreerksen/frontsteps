@@ -4,9 +4,9 @@ block append config
   - var pageTitle = "Layout";
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p Give your forms some structure—from inline to horizontal to custom grid implementations—with our form layout options.
 
       h4 Forms
@@ -25,10 +25,10 @@ block content
       .bd-example
         .mb-3
           label.form-label(for='formGroupExampleInput') Example label
-          input#formGroupExampleInput.form-control(type='text', placeholder='Example input placeholder')
+          input#formGroupExampleInput.form-control(type='text' placeholder='Example input placeholder')
         .mb-3
           label.form-label(for='formGroupExampleInput2') Another label
-          input#formGroupExampleInput2.form-control(type='text', placeholder='Another input placeholder')
+          input#formGroupExampleInput2.form-control(type='text' placeholder='Another input placeholder')
 
       pre
         code.language-html
@@ -47,9 +47,9 @@ block content
       .bd-example
         .row
           .col
-            input.form-control(type='text', placeholder='First name', aria-label='First name')
+            input.form-control(type='text' placeholder='First name' aria-label='First name')
           .col
-            input.form-control(type='text', placeholder='Last name', aria-label='Last name')
+            input.form-control(type='text' placeholder='Last name' aria-label='Last name')
 
       pre
         code.language-html
@@ -68,9 +68,9 @@ block content
       .bd-example
         .row.g-3
           .col
-            input.form-control(type='text', placeholder='First name', aria-label='First name')
+            input.form-control(type='text' placeholder='First name' aria-label='First name')
           .col
-            input.form-control(type='text', placeholder='Last name', aria-label='Last name')
+            input.form-control(type='text' placeholder='Last name' aria-label='Last name')
 
       pre
         code.language-html
@@ -95,10 +95,10 @@ block content
             input#inputPassword4.form-control(type='password')
           .col-12
             label.form-label(for='inputAddress') Address
-            input#inputAddress.form-control(type='text', placeholder='1234 Main St')
+            input#inputAddress.form-control(type='text' placeholder='1234 Main St')
           .col-12
             label.form-label(for='inputAddress2') Address 2
-            input#inputAddress2.form-control(type='text', placeholder='Apartment, studio, or floor')
+            input#inputAddress2.form-control(type='text' placeholder='Apartment, studio, or floor')
           .col-md-6
             label.form-label(for='inputCity') City
             input#inputCity.form-control(type='text')
@@ -166,8 +166,8 @@ block content
           | &lt;/form&gt;
 
       h4 Horizontal form
-      p Create horizontal forms with the grid by adding the <code>.row</code> class to form groups and using the <code>.col-*-*</code> classes to specify the width of your labels and controls. Be sure to add <code>.col-form-label</code> to your <code>&lt;label&gt;</code>s as well so they’re vertically centered with their associated form controls.
-      p At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we’ve removed the <code>padding-top</code> on our stacked radio inputs label to better align the text baseline.
+      p Create horizontal forms with the grid by adding the <code>.row</code> class to form groups and using the <code>.col-*-*</code> classes to specify the width of your labels and controls. Be sure to add <code>.col-form-label</code> to your <code>&lt;label&gt;</code>s as well so they're vertically centered with their associated form controls.
+      p At times, you maybe need to use margin or padding utilities to create that perfect alignment you need. For example, we've removed the <code>padding-top</code> on our stacked radio inputs label to better align the text baseline.
 
       .bd-example
         form
@@ -183,15 +183,15 @@ block content
             legend.col-form-label.col-sm-2.pt-0 Radios
             .col-sm-10
               .form-check
-                input#gridRadios1.form-check-input(type='radio', name='gridRadios', value='option1', checked='')
+                input#gridRadios1.form-check-input(type='radio' name='gridRadios' value='option1' checked='')
                 label.form-check-label(for='gridRadios1')
                   | First radio
               .form-check
-                input#gridRadios2.form-check-input(type='radio', name='gridRadios', value='option2')
+                input#gridRadios2.form-check-input(type='radio' name='gridRadios' value='option2')
                 label.form-check-label(for='gridRadios2')
                   | Second radio
               .form-check.disabled
-                input#gridRadios3.form-check-input(type='radio', name='gridRadios', value='option3', disabled='')
+                input#gridRadios3.form-check-input(type='radio' name='gridRadios' value='option3' disabled='')
                 label.form-check-label(for='gridRadios3')
                   | Third disabled radio
           .row.mb-3
@@ -260,15 +260,15 @@ block content
         .row.mb-3
           label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Email
           .col-sm-10
-            input#colFormLabelSm.form-control.form-control-sm(type='email', placeholder='col-form-label-sm')
+            input#colFormLabelSm.form-control.form-control-sm(type='email' placeholder='col-form-label-sm')
         .row.mb-3
           label.col-sm-2.col-form-label(for='colFormLabel') Email
           .col-sm-10
-            input#colFormLabel.form-control(type='email', placeholder='col-form-label')
+            input#colFormLabel.form-control(type='email' placeholder='col-form-label')
         .row
           label.col-sm-2.col-form-label.col-form-label-lg(for='colFormLabelLg') Email
           .col-sm-10
-            input#colFormLabelLg.form-control.form-control-lg(type='email', placeholder='col-form-label-lg')
+            input#colFormLabelLg.form-control.form-control-lg(type='email' placeholder='col-form-label-lg')
 
       pre
         code.language-html
@@ -292,16 +292,16 @@ block content
           | &lt;/div&gt;
 
       h4 Column sizing
-      p As shown in the previous examples, our grid system allows you to place any number of <code>.cols</code> within a <code>.row</code>. They’ll split the available width equally between them. You may also pick a subset of your columns to take up more or less space, while the remaining <code>.col</code>s equally split the rest, with specific column classes like <code>.col-sm-7</code>.
+      p As shown in the previous examples, our grid system allows you to place any number of <code>.cols</code> within a <code>.row</code>. They'll split the available width equally between them. You may also pick a subset of your columns to take up more or less space, while the remaining <code>.col</code>s equally split the rest, with specific column classes like <code>.col-sm-7</code>.
 
       .bd-example
         .row.g-3
           .col-sm-7
-            input.form-control(type='text', placeholder='City', aria-label='City')
+            input.form-control(type='text' placeholder='City' aria-label='City')
           .col-sm
-            input.form-control(type='text', placeholder='State', aria-label='State')
+            input.form-control(type='text' placeholder='State' aria-label='State')
           .col-sm
-            input.form-control(type='text', placeholder='Zip', aria-label='Zip')
+            input.form-control(type='text' placeholder='Zip' aria-label='Zip')
 
       pre
         code.language-html
@@ -324,12 +324,12 @@ block content
         form.row.gy-2.gx-3.align-items-center
           .col-auto
             label.visually-hidden(for='autoSizingInput') Name
-            input#autoSizingInput.form-control(type='text', placeholder='Jane Doe')
+            input#autoSizingInput.form-control(type='text' placeholder='Jane Doe')
           .col-auto
             label.visually-hidden(for='autoSizingInputGroup') Username
             .input-group
               .input-group-text @
-              input#autoSizingInputGroup.form-control(type='text', placeholder='Username')
+              input#autoSizingInputGroup.form-control(type='text' placeholder='Username')
           .col-auto
             label.visually-hidden(for='autoSizingSelect') Preference
             select#autoSizingSelect.form-select
@@ -387,12 +387,12 @@ block content
         form.row.gx-3.gy-2.align-items-center
           .col-sm-3
             label.visually-hidden(for='specificSizeInputName') Name
-            input#specificSizeInputName.form-control(type='text', placeholder='Jane Doe')
+            input#specificSizeInputName.form-control(type='text' placeholder='Jane Doe')
           .col-sm-3
             label.visually-hidden(for='specificSizeInputGroupUsername') Username
             .input-group
               .input-group-text @
-              input#specificSizeInputGroupUsername.form-control(type='text', placeholder='Username')
+              input#specificSizeInputGroupUsername.form-control(type='text' placeholder='Username')
           .col-sm-3
             label.visually-hidden(for='specificSizeSelect') Preference
             select#specificSizeSelect.form-select
@@ -445,7 +445,7 @@ block content
           | &lt;/form&gt;
 
       h4 Inline forms
-      p Use the <code>.row-cols-*</code> classes to create responsive horizontal layouts. By adding gutter modifier classes, we’ll have gutters in horizontal and vertical directions. On narrow mobile viewports, the <code>.col-12</code> helps stack the form controls and more. The <code>.align-items-center</code> aligns the form elements to the middle, making the <code>.form-check</code> align properly.
+      p Use the <code>.row-cols-*</code> classes to create responsive horizontal layouts. By adding gutter modifier classes, we'll have gutters in horizontal and vertical directions. On narrow mobile viewports, the <code>.col-12</code> helps stack the form controls and more. The <code>.align-items-center</code> aligns the form elements to the middle, making the <code>.form-check</code> align properly.
 
       .bd-example
         form.row.row-cols-lg-auto.g-3.align-items-center
@@ -453,7 +453,7 @@ block content
             label.visually-hidden(for='inlineFormInputGroupUsername') Username
             .input-group
               .input-group-text @
-              input#inlineFormInputGroupUsername.form-control(type='text', placeholder='Username')
+              input#inlineFormInputGroupUsername.form-control(type='text' placeholder='Username')
           .col-12
             label.visually-hidden(for='inlineFormSelectPref') Preference
             select#inlineFormSelectPref.form-select

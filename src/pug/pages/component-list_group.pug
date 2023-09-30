@@ -4,9 +4,9 @@ block append config
   - var pageTitle = "List group";
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.
 
       h4 Basic example
@@ -35,7 +35,7 @@ block content
 
       .bd-example
         ul.list-group
-          li.list-group-item.active(aria-current="true") An item
+          li.list-group-item.active(aria-current='true') An item
           li.list-group-item A second item
           li.list-group-item A third item
           li.list-group-item A fourth item
@@ -78,7 +78,7 @@ block content
 
       .bd-example
         .list-group
-          a.list-group-item.list-group-item-action.active(href='#', aria-current='true')
+          a.list-group-item.list-group-item-action.active(href='#' aria-current='true')
             | The current link item
           a.list-group-item.list-group-item-action(href='#') A second link item
           a.list-group-item.list-group-item-action(href='#') A third link item
@@ -101,23 +101,23 @@ block content
 
       .bd-example
         .list-group
-          button.list-group-item.list-group-item-action.active(type='button', aria-current='true')
+          button.list-group-item.list-group-item-action.active(type='button' aria-current='true')
             | The current button
           button.list-group-item.list-group-item-action(type='button') A second button item
           button.list-group-item.list-group-item-action(type='button') A third button item
           button.list-group-item.list-group-item-action(type='button') A fourth button item
-          button.list-group-item.list-group-item-action(type='button', disabled='') A disabled button item
+          button.list-group-item.list-group-item-action(type='button' disabled='') A disabled button item
 
       pre
         code.language-html
           | &lt;div class="list-group"&gt;
-          |   &lt;button type="button" class="list-group-item list-group-item-action active" aria-current="true"&gt;
+          |   &lt;button type='button' class="list-group-item list-group-item-action active" aria-current="true"&gt;
           |     The current button
           |   &lt;/button&gt;
-          |   &lt;button type="button" class="list-group-item list-group-item-action"&gt;A second button item&lt;/button&gt;
-          |   &lt;button type="button" class="list-group-item list-group-item-action"&gt;A third button item&lt;/button&gt;
-          |   &lt;button type="button" class="list-group-item list-group-item-action"&gt;A fourth button item&lt;/button&gt;
-          |   &lt;button type="button" class="list-group-item list-group-item-action" disabled&gt;A disabled button item&lt;/button&gt;
+          |   &lt;button type='button' class="list-group-item list-group-item-action"&gt;A second button item&lt;/button&gt;
+          |   &lt;button type='button' class="list-group-item list-group-item-action"&gt;A third button item&lt;/button&gt;
+          |   &lt;button type='button' class="list-group-item list-group-item-action"&gt;A fourth button item&lt;/button&gt;
+          |   &lt;button type='button' class="list-group-item list-group-item-action" disabled&gt;A disabled button item&lt;/button&gt;
           | &lt;/div&gt;
 
       h4 Flush
@@ -365,7 +365,7 @@ block content
 
       .bd-example
         .list-group
-          a.list-group-item.list-group-item-action.active(href='#', aria-current='true')
+          a.list-group-item.list-group-item-action.active(href='#' aria-current='true')
             .d-flex.w-100.justify-content-between
               h5.mb-1 List group item heading
               small 3 days ago
@@ -419,15 +419,14 @@ block content
       .bd-example
         ul.list-group
           li.list-group-item
-            input#firstCheckbox.form-check-input.me-1(type='checkbox', value='')
+            input#firstCheckbox.form-check-input.me-1(type='checkbox' value='')
             label.form-check-label(for='firstCheckbox') First checkbox
           li.list-group-item
-            input#secondCheckbox.form-check-input.me-1(type='checkbox', value='')
+            input#secondCheckbox.form-check-input.me-1(type='checkbox' value='')
             label.form-check-label(for='secondCheckbox') Second checkbox
           li.list-group-item
-            input#thirdCheckbox.form-check-input.me-1(type='checkbox', value='')
+            input#thirdCheckbox.form-check-input.me-1(type='checkbox' value='')
             label.form-check-label(for='thirdCheckbox') Third checkbox
-
 
       pre
         code.language-html
@@ -449,13 +448,13 @@ block content
       .bd-example
         ul.list-group
           li.list-group-item
-            input#firstRadio.form-check-input.me-1(type='radio', name='listGroupRadio', value='', checked='')
+            input#firstRadio.form-check-input.me-1(type='radio' name='listGroupRadio' value='' checked='')
             label.form-check-label(for='firstRadio') First radio
           li.list-group-item
-            input#secondRadio.form-check-input.me-1(type='radio', name='listGroupRadio', value='')
+            input#secondRadio.form-check-input.me-1(type='radio' name='listGroupRadio' value='')
             label.form-check-label(for='secondRadio') Second radio
           li.list-group-item
-            input#thirdRadio.form-check-input.me-1(type='radio', name='listGroupRadio', value='')
+            input#thirdRadio.form-check-input.me-1(type='radio' name='listGroupRadio' value='')
             label.form-check-label(for='thirdRadio') Third radio
 
       pre
@@ -480,13 +479,13 @@ block content
       .bd-example
         ul.list-group
           li.list-group-item
-            input#firstCheckboxStretched.form-check-input.me-1(type='checkbox', value='')
+            input#firstCheckboxStretched.form-check-input.me-1(type='checkbox' value='')
             label.form-check-label.stretched-link(for='firstCheckboxStretched') First checkbox
           li.list-group-item
-            input#secondCheckboxStretched.form-check-input.me-1(type='checkbox', value='')
+            input#secondCheckboxStretched.form-check-input.me-1(type='checkbox' value='')
             label.form-check-label.stretched-link(for='secondCheckboxStretched') Second checkbox
           li.list-group-item
-            input#thirdCheckboxStretched.form-check-input.me-1(type='checkbox', value='')
+            input#thirdCheckboxStretched.form-check-input.me-1(type='checkbox' value='')
             label.form-check-label.stretched-link(for='thirdCheckboxStretched') Third checkbox
 
       pre

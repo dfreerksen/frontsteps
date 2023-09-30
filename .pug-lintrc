@@ -1,0 +1,22 @@
+{
+  "disallowVHTMLDirective": true,
+  "disallowAttributeInterpolation": true,
+  "disallowDuplicateAttributes": true,
+  "disallowMultipleLineBreaks": true,
+  "disallowStringConcatenation": true,
+  "disallowStringInterpolation": true,
+  "requireClassLiteralsBeforeAttributes": true,
+  "requireIdLiteralsBeforeAttributes": true,
+  "requireLowerCaseTags": true,
+  "requireSpaceAfterCodeOperator": true,
+  "requireStrictEqualityOperators": true,
+  "validateAnchors": true,
+  "validateAttributeQuoteMarks": "'",
+  "validateAttributeSeparator": {
+    "multiLineSeparator": "\n  ",
+    "separator": " "
+  },
+  "validateDivTags": true,
+  "validateIndentation": 2,
+  "validateSelfClosingTags": true
+}

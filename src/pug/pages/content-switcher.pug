@@ -4,9 +4,9 @@ block append config
   - var pageTitle = "Color Switching";
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p This theme provides a light and a dark mode theme. The light mode being the default.
 
       h4 Overview
@@ -28,7 +28,7 @@ block content
       h4 Example
 
       .form-check.form-switch.form-switch-lg
-        input#switcher.form-check-input(type='checkbox', role='switch')
+        input#switcher.form-check-input(type='checkbox' role='switch')
         label.form-check-label(for='switcher') Dark mode
 
       p The following is here to display what various elements looks like in light and dark mode.
@@ -48,7 +48,7 @@ block content
 
         .text-center.mb-4
           .btn-group.m-5.d-inline
-            button.btn.btn-danger.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+            button.btn.btn-danger.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
               | Action
             ul.dropdown-menu
               li
@@ -63,7 +63,7 @@ block content
                 a.dropdown-item(href='#') Separated link
 
           .dropdown.me-5.d-inline
-            button#dropdownMenu2.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+            button#dropdownMenu2.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
               | Dropdown
             ul.dropdown-menu(aria-labelledby='dropdownMenu2')
               li
@@ -75,11 +75,11 @@ block content
                 button.dropdown-item(type='button')
                   | Something else here
 
-          .btn-group(role='group', aria-label='Button group with nested dropdown')
+          .btn-group(role='group' aria-label='Button group with nested dropdown')
             button.btn.btn-primary(type='button') 1
             button.btn.btn-primary(type='button') 2
             .btn-group(role='group')
-              button#btnGroupDrop1.btn.btn-primary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+              button#btnGroupDrop1.btn.btn-primary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
                 | Dropdown
               ul.dropdown-menu(aria-labelledby='btnGroupDrop1')
                 li
@@ -158,34 +158,34 @@ block content
                 input#flexSwitchCheckDefault.form-check-input(type='checkbox')
                 label.form-check-label(for='flexSwitchCheckDefault') Default switch checkbox input
               .form-check.form-switch
-                input#flexSwitchCheckChecked.form-check-input(type='checkbox', checked='')
+                input#flexSwitchCheckChecked.form-check-input(type='checkbox' checked='')
                 label.form-check-label(for='flexSwitchCheckChecked') Checked switch checkbox input
               .form-check.form-switch
-                input#flexSwitchCheckDisabled.form-check-input(type='checkbox', disabled='')
+                input#flexSwitchCheckDisabled.form-check-input(type='checkbox' disabled='')
                 label.form-check-label(for='flexSwitchCheckDisabled') Disabled switch checkbox input
               .form-check.form-switch
-                input#flexSwitchCheckCheckedDisabled.form-check-input(type='checkbox', checked='', disabled='')
+                input#flexSwitchCheckCheckedDisabled.form-check-input(type='checkbox' checked='' disabled='')
                 label.form-check-label(for='flexSwitchCheckCheckedDisabled') Disabled checked switch checkbox input
             .col-4.border-end
               .form-check
-                input#defaultCheck1.form-check-input(type='checkbox', value='')
+                input#defaultCheck1.form-check-input(type='checkbox' value='')
                 label.form-check-label(for='defaultCheck1')
                   | Default checkbox
               .form-check
-                input#defaultCheck2.form-check-input(type='checkbox', value='', disabled='')
+                input#defaultCheck2.form-check-input(type='checkbox' value='' disabled='')
                 label.form-check-label(for='defaultCheck2')
                   | Disabled checkbox
             .col-4
               .form-check
-                input#exampleRadios1.form-check-input(type='radio', name='exampleRadios', value='option1', checked='')
+                input#exampleRadios1.form-check-input(type='radio' name='exampleRadios' value='option1' checked='')
                 label.form-check-label(for='exampleRadios1')
                   | Default radio
               .form-check
-                input#exampleRadios2.form-check-input(type='radio', name='exampleRadios', value='option2')
+                input#exampleRadios2.form-check-input(type='radio' name='exampleRadios' value='option2')
                 label.form-check-label(for='exampleRadios2')
                   | Second default radio
               .form-check
-                input#exampleRadios3.form-check-input(type='radio', name='exampleRadios', value='option3', disabled='')
+                input#exampleRadios3.form-check-input(type='radio' name='exampleRadios' value='option3' disabled='')
                 label.form-check-label(for='exampleRadios3')
                   | Disabled radio
 
@@ -194,29 +194,29 @@ block content
           form.row.g-3
             .col-md-4
               label.form-label(for='validationDefault01') First name
-              input#validationDefault01.form-control(type='text', value='Mark', required='')
+              input#validationDefault01.form-control(type='text' value='Mark' required='')
             .col-md-4
               label.form-label(for='validationDefault02') Last name
-              input#validationDefault02.form-control(type='text', value='Otto', required='')
+              input#validationDefault02.form-control(type='text' value='Otto' required='')
             .col-md-4
               label.form-label(for='validationDefaultUsername') Username
               .input-group
                 span#inputGroupPrepend2.input-group-text @
-                input#validationDefaultUsername.form-control(type='email', aria-describedby='inputGroupPrepend2', required='')
+                input#validationDefaultUsername.form-control(type='email' aria-describedby='inputGroupPrepend2' required='')
             .col-md-6
               label.form-label(for='validationDefault03') City
-              input#validationDefault03.form-control(type='text', required='')
+              input#validationDefault03.form-control(type='text' required='')
             .col-md-3
               label.form-label(for='validationDefault04') State
               select#validationDefault04.form-select(required='')
-                option(selected='', disabled='', value='') Choose...
+                option(selected='' disabled='' value='') Choose...
                 option ...
             .col-md-3
               label.form-label(for='validationDefault05') Zip
-              input#validationDefault05.form-control(type='text', required='')
+              input#validationDefault05.form-control(type='text' required='')
             .col-12
               .form-check
-                input#invalidCheck2.form-check-input(type='checkbox', value='', required='')
+                input#invalidCheck2.form-check-input(type='checkbox' value='' required='')
                 label.form-check-label(for='invalidCheck2')
                   | Agree to terms and conditions
             .col-12.text-center

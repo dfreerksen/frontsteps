@@ -4,9 +4,9 @@ block append config
   - var pageTitle = "Form controls";
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p Give textual form controls like <code>&lt;input&gt;</code>s and <code>&lt;textarea&gt;</code>s an upgrade with custom styles, sizing, focus states, and more.
 
       h4 Example
@@ -15,7 +15,7 @@ block content
       .bd-example
         .mb-3
           label.form-label(for='exampleFormControlInput1') Email address
-          input#exampleFormControlInput1.form-control(type='email', placeholder='name@example.com')
+          input#exampleFormControlInput1.form-control(type='email' placeholder='name@example.com')
         .mb-3
           label.form-label(for='exampleFormControlTextarea1') Example textarea
           textarea#exampleFormControlTextarea1.form-control(rows='3')
@@ -35,9 +35,9 @@ block content
       p Set heights using classes like <code>.form-control-lg</code> and <code>.form-control-sm</code>.
 
       .bd-example
-        input.form-control.form-control-lg(type='text', placeholder='.form-control-lg', aria-label='.form-control-lg example')
-        input.form-control(type='text', placeholder='Default input', aria-label='default input example')
-        input.form-control.form-control-sm(type='text', placeholder='.form-control-sm', aria-label='.form-control-sm example')
+        input.form-control.form-control-lg(type='text' placeholder='.form-control-lg' aria-label='.form-control-lg example')
+        input.form-control(type='text' placeholder='Default input' aria-label='default input example')
+        input.form-control.form-control-sm(type='text' placeholder='.form-control-sm' aria-label='.form-control-sm example')
 
       pre
         code.language-html
@@ -52,7 +52,7 @@ block content
 
       .bd-example
         label.form-label(for='inputPassword5') Password
-        input#inputPassword5.form-control(type='password', aria-describedby='passwordHelpBlock')
+        input#inputPassword5.form-control(type='password' aria-describedby='passwordHelpBlock')
         #passwordHelpBlock.form-text
           | Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
 
@@ -71,7 +71,7 @@ block content
           .col-auto
             label.col-form-label(for='inputPassword6') Password
           .col-auto
-            input#inputPassword6.form-control(type='password', aria-describedby='passwordHelpInline')
+            input#inputPassword6.form-control(type='password' aria-describedby='passwordHelpInline')
           .col-auto
             span#passwordHelpInline.form-text
               | Must be 8-20 characters long.
@@ -96,8 +96,8 @@ block content
       p Add the disabled <code>boolean</code> attribute on an input to give it a grayed out appearance, remove pointer events, and prevent focusing.
 
       .bd-example
-        input.form-control(type='text', placeholder='Disabled input', aria-label='Disabled input example', disabled='')
-        input.form-control(type='text', value='Disabled readonly input', aria-label='Disabled input example', disabled='', readonly='')
+        input.form-control(type='text' placeholder='Disabled input' aria-label='Disabled input example' disabled='')
+        input.form-control(type='text' value='Disabled readonly input' aria-label='Disabled input example' disabled='' readonly='')
 
       pre
         code.language-html
@@ -105,10 +105,10 @@ block content
           | &lt;input class="form-control" type="text" value="Disabled readonly input" aria-label="Disabled input example" disabled readonly&gt;
 
       h4 Readonly
-      p Add the <code>readonly</code> boolean attribute on an input to prevent modification of the input’s value. <code>readonly</code> inputs can still be focused and selected, while <code>disabled</code> inputs cannot.
+      p Add the <code>readonly</code> boolean attribute on an input to prevent modification of the input's value. <code>readonly</code> inputs can still be focused and selected, while <code>disabled</code> inputs cannot.
 
       .bd-example
-        input.form-control(type='text', value='Readonly input here...', aria-label='readonly input example', readonly='')
+        input.form-control(type='text' value='Readonly input here...' aria-label='readonly input example' readonly='')
 
       pre
         code.language-html
@@ -121,7 +121,7 @@ block content
         .mb-3.row
           label.col-sm-2.col-form-label(for='staticEmail') Email
           .col-sm-10
-            input#staticEmail.form-control-plaintext(type='text', readonly='', value='email@example.com')
+            input#staticEmail.form-control-plaintext(type='text' readonly='' value='email@example.com')
         .mb-3.row
           label.col-sm-2.col-form-label(for='inputPassword') Password
           .col-sm-10
@@ -146,10 +146,10 @@ block content
         form.row.g-3
           .col-auto
             label.visually-hidden(for='staticEmail2') Email
-            input#staticEmail2.form-control-plaintext(type='text', readonly='', value='email@example.com')
+            input#staticEmail2.form-control-plaintext(type='text' readonly='' value='email@example.com')
           .col-auto
             label.visually-hidden(for='inputPassword2') Password
-            input#inputPassword2.form-control(type='password', placeholder='Password')
+            input#inputPassword2.form-control(type='password' placeholder='Password')
           .col-auto
             button.btn.btn-primary.mb-3(type='submit') Confirm identity
 
@@ -175,10 +175,10 @@ block content
           input#formFile.form-control(type='file')
         .mb-3
           label.form-label(for='formFileMultiple') Multiple files input example
-          input#formFileMultiple.form-control(type='file', multiple='')
+          input#formFileMultiple.form-control(type='file' multiple='')
         .mb-3
           label.form-label(for='formFileDisabled') Disabled file input example
-          input#formFileDisabled.form-control(type='file', disabled='')
+          input#formFileDisabled.form-control(type='file' disabled='')
         .mb-3
           label.form-label(for='formFileSm') Small file input example
           input#formFileSm.form-control.form-control-sm(type='file')
@@ -214,7 +214,7 @@ block content
 
       .bd-example
         label.form-label(for='exampleColorInput') Color picker
-        input#exampleColorInput.form-control.form-control-color(type='color', value='#563d7c', title='Choose your color')
+        input#exampleColorInput.form-control.form-control-color(type='color' value='#563d7c' title='Choose your color')
 
       pre
         code.language-html
@@ -226,7 +226,7 @@ block content
 
       .bd-example
         label.form-label(for='exampleDataList') Datalist example
-        input#exampleDataList.form-control(list='datalistOptions', placeholder='Type to search...')
+        input#exampleDataList.form-control(list='datalistOptions' placeholder='Type to search...')
         datalist#datalistOptions
           option(value='San Francisco')
           option(value='New York')

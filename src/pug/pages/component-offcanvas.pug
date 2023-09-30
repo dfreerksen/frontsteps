@@ -4,9 +4,9 @@ block append config
   - var pageTitle = "Offcanvas";
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p Build hidden sidebars into your project for navigation, shopping carts, and more with a few classes and our JavaScript plugin.
 
       h4 How it works
@@ -29,19 +29,19 @@ block content
       p You can use a link with the href attribute, or a button with the <code>data-bs-target</code> attribute. In both cases, the <code>data-bs-toggle="offcanvas"</code> is required.
 
       .bd-example
-        a.btn.btn-primary(data-bs-toggle='offcanvas', href='#offcanvasExample', role='button', aria-controls='offcanvasExample')
+        a.btn.btn-primary(data-bs-toggle='offcanvas' href='#offcanvasExample' role='button' aria-controls='offcanvasExample')
           | Link with href
-        button.btn.btn-primary(type='button', data-bs-toggle='offcanvas', data-bs-target='#offcanvasExample', aria-controls='offcanvasExample')
+        button.btn.btn-primary(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasExample' aria-controls='offcanvasExample')
           | Button with data-bs-target
-        #offcanvasExample.offcanvas.offcanvas-start(tabindex='-1', aria-labelledby='offcanvasExampleLabel')
+        #offcanvasExample.offcanvas.offcanvas-start(tabindex='-1' aria-labelledby='offcanvasExampleLabel')
           .offcanvas-header
             h5#offcanvasExampleLabel.offcanvas-title Offcanvas
-            button.btn-close(type='button', data-bs-dismiss='offcanvas', aria-label='Close')
+            button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
           .offcanvas-body
             div
               | Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
             .dropdown.mt-3
-              button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown')
+              button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown')
                 | Dropdown button
               ul.dropdown-menu
                 li
@@ -56,21 +56,21 @@ block content
           | &lt;a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"&gt;
           |   Link with href
           | &lt;/a&gt;
-          | &lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"&gt;
+          | &lt;button class="btn btn-primary" type='button' data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"&gt;
           |   Button with data-bs-target
           | &lt;/button&gt;
           |
           | &lt;div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"&gt;
           |   &lt;div class="offcanvas-header"&gt;
           |     &lt;h5 class="offcanvas-title" id="offcanvasExampleLabel"&gt;Offcanvas&lt;/h5&gt;
-          |     &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+          |     &lt;button type='button' class="btn-close" data-bs-dismiss="offcanvas" aria-label='Close'&gt;&lt;/button&gt;
           |   &lt;/div&gt;
           |   &lt;div class="offcanvas-body"&gt;
           |     &lt;div&gt;
           |       Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
           |     &lt;/div&gt;
           |     &lt;div class="dropdown mt-3"&gt;
-          |       &lt;button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"&gt;
+          |       &lt;button class="btn btn-secondary dropdown-toggle" type='button' data-bs-toggle="dropdown"&gt;
           |         Dropdown button
           |       &lt;/button&gt;
           |       &lt;ul class="dropdown-menu"&gt;
@@ -86,22 +86,22 @@ block content
       p Scrolling the <code>&lt;body&gt;</code> element is disabled when an offcanvas and its backdrop are visible. Use the <code>data-bs-scroll</code> attribute to enable <code>&lt;body&gt;</code> scrolling.
 
       .bd-example
-        button.btn.btn-primary(type='button', data-bs-toggle='offcanvas', data-bs-target='#offcanvasScrolling', aria-controls='offcanvasScrolling') Enable body scrolling
-        #offcanvasScrolling.offcanvas.offcanvas-start(data-bs-scroll='true', data-bs-backdrop='false', tabindex='-1', aria-labelledby='offcanvasScrollingLabel')
+        button.btn.btn-primary(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasScrolling' aria-controls='offcanvasScrolling') Enable body scrolling
+        #offcanvasScrolling.offcanvas.offcanvas-start(data-bs-scroll='true' data-bs-backdrop='false' tabindex='-1' aria-labelledby='offcanvasScrollingLabel')
           .offcanvas-header
             h5#offcanvasScrollingLabel.offcanvas-title Offcanvas with body scrolling
-            button.btn-close(type='button', data-bs-dismiss='offcanvas', aria-label='Close')
+            button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
           .offcanvas-body
             p Try scrolling the rest of the page to see this option in action.
 
       pre
         code.language-html
-          | &lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"&gt;Enable body scrolling&lt;/button&gt;
+          | &lt;button class="btn btn-primary" type='button' data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"&gt;Enable body scrolling&lt;/button&gt;
           |
           | &lt;div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel"&gt;
           |   &lt;div class="offcanvas-header"&gt;
           |     &lt;h5 class="offcanvas-title" id="offcanvasScrollingLabel"&gt;Offcanvas with body scrolling&lt;/h5&gt;
-          |     &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+          |     &lt;button type='button' class="btn-close" data-bs-dismiss="offcanvas" aria-label='Close'&gt;&lt;/button&gt;
           |   &lt;/div&gt;
           |   &lt;div class="offcanvas-body"&gt;
           |     &lt;p&gt;Try scrolling the rest of the page to see this option in action.&lt;/p&gt;
@@ -112,22 +112,22 @@ block content
       p You can also enable <code>&lt;body&gt;</code> scrolling with a visible backdrop.
 
       .bd-example
-        button.btn.btn-primary(type='button', data-bs-toggle='offcanvas', data-bs-target='#offcanvasWithBothOptions', aria-controls='offcanvasWithBothOptions') Enable both scrolling &amp; backdrop
-        #offcanvasWithBothOptions.offcanvas.offcanvas-start(data-bs-scroll='true', tabindex='-1', aria-labelledby='offcanvasWithBothOptionsLabel')
+        button.btn.btn-primary(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasWithBothOptions' aria-controls='offcanvasWithBothOptions') Enable both scrolling &amp; backdrop
+        #offcanvasWithBothOptions.offcanvas.offcanvas-start(data-bs-scroll='true' tabindex='-1' aria-labelledby='offcanvasWithBothOptionsLabel')
           .offcanvas-header
             h5#offcanvasWithBothOptionsLabel.offcanvas-title Backdrop with scrolling
-            button.btn-close(type='button', data-bs-dismiss='offcanvas', aria-label='Close')
+            button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
           .offcanvas-body
             p Try scrolling the rest of the page to see this option in action.
 
       pre
         code.language-html
-          | &lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"&gt;Enable both scrolling &amp; backdrop&lt;/button&gt;
+          | &lt;button class="btn btn-primary" type='button' data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"&gt;Enable both scrolling &amp; backdrop&lt;/button&gt;
           |
           | &lt;div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel"&gt;
           |   &lt;div class="offcanvas-header"&gt;
           |     &lt;h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"&gt;Backdrop with scrolling&lt;/h5&gt;
-          |     &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+          |     &lt;button type='button' class="btn-close" data-bs-dismiss="offcanvas" aria-label='Close'&gt;&lt;/button&gt;
           |   &lt;/div&gt;
           |   &lt;div class="offcanvas-body"&gt;
           |     &lt;p&gt;Try scrolling the rest of the page to see this option in action.&lt;/p&gt;
@@ -138,26 +138,26 @@ block content
       p When backdrop is set to static, the offcanvas will not close when clicking outside of it.
 
       .bd-example
-        button.btn.btn-primary(type='button', data-bs-toggle='offcanvas', data-bs-target='#staticBackdrop', aria-controls='staticBackdrop')
+        button.btn.btn-primary(type='button' data-bs-toggle='offcanvas' data-bs-target='#staticBackdrop' aria-controls='staticBackdrop')
           | Toggle static offcanvas
-        #staticBackdrop.offcanvas.offcanvas-start(data-bs-backdrop='static', tabindex='-1', aria-labelledby='staticBackdropLabel')
+        #staticBackdrop.offcanvas.offcanvas-start(data-bs-backdrop='static' tabindex='-1' aria-labelledby='staticBackdropLabel')
           .offcanvas-header
             h5#staticBackdropLabel.offcanvas-title Offcanvas
-            button.btn-close(type='button', data-bs-dismiss='offcanvas', aria-label='Close')
+            button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
           .offcanvas-body
             div
               | I will not close if you click outside of me.
 
       pre
         code.language-html
-          | &lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"&gt;
+          | &lt;button class="btn btn-primary" type='button' data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"&gt;
           |   Toggle static offcanvas
           | &lt;/button&gt;
           |
           | &lt;div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel"&gt;
           |   &lt;div class="offcanvas-header"&gt;
           |     &lt;h5 class="offcanvas-title" id="staticBackdropLabel"&gt;Offcanvas&lt;/h5&gt;
-          |     &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+          |     &lt;button type='button' class="btn-close" data-bs-dismiss="offcanvas" aria-label='Close'&gt;&lt;/button&gt;
           |   &lt;/div&gt;
           |   &lt;div class="offcanvas-body"&gt;
           |     &lt;div&gt;
@@ -170,25 +170,25 @@ block content
       p Change the appearance of offcanvases with utilities to better match them to different contexts like dark navbars. Here we add <code>.text-bg-dark</code> to the <code>.offcanvas</code> and <code>.btn-close-white</code> to <code>.btn-close</code> for proper styling with a dark offcanvas. If you have dropdowns within, consider also adding <code>.dropdown-menu-dark</code> to <code>.dropdown-menu</code>.
 
       .bd-example
-        button.btn.btn-primary(type='button', data-bs-toggle='offcanvas', data-bs-target='#offcanvasDark', aria-controls='offcanvasDark')
+        button.btn.btn-primary(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasDark' aria-controls='offcanvasDark')
           | Toggle dark offcanvas
-        #offcanvasDark.offcanvas.offcanvas-start.text-bg-dark(tabindex='-1', aria-labelledby='offcanvasDarkLabel')
+        #offcanvasDark.offcanvas.offcanvas-start.text-bg-dark(tabindex='-1' aria-labelledby='offcanvasDarkLabel')
           .offcanvas-header
             h5#offcanvasDarkLabel.offcanvas-title Offcanvas
-            button.btn-close.btn-close-white(type='button', data-bs-dismiss='offcanvasDark', aria-label='Close')
+            button.btn-close.btn-close-white(type='button' data-bs-dismiss='offcanvasDark' aria-label='Close')
           .offcanvas-body
             p Place offcanvas content here.
 
       pre
         code.language-html
-          | &lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark" aria-controls="offcanvasDark"&gt;
+          | &lt;button class="btn btn-primary" type='button' data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark" aria-controls="offcanvasDark"&gt;
           |   Toggle dark offcanvas
           | &lt;/button&gt;
           |
           | &lt;div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel"&gt;
           |   &lt;div class="offcanvas-header"&gt;
           |     &lt;h5 class="offcanvas-title" id="offcanvasDarkLabel"&gt;Offcanvas&lt;/h5&gt;
-          |     &lt;button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvasDark" aria-label="Close"&gt;&lt;/button&gt;
+          |     &lt;button type='button' class="btn-close btn-close-white" data-bs-dismiss="offcanvasDark" aria-label='Close'&gt;&lt;/button&gt;
           |   &lt;/div&gt;
           |   &lt;div class="offcanvas-body"&gt;
           |     &lt;p&gt;Place offcanvas content here.&lt;/p&gt;
@@ -199,12 +199,12 @@ block content
       p Responsive offcanvas classes hide content outside the viewport from a specified breakpoint and down. Above that breakpoint, the contents within will behave as usual. For example, <code>.offcanvas-lg</code> hides content in an offcanvas below the <code>lg</code> breakpoint, but shows the content above the <code>lg</code> breakpoint.
 
       .bd-example
-        button.btn.btn-primary.d-lg-none(type='button', data-bs-toggle='offcanvas', data-bs-target='#offcanvasResponsive', aria-controls='offcanvasResponsive') Toggle offcanvas
+        button.btn.btn-primary.d-lg-none(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasResponsive' aria-controls='offcanvasResponsive') Toggle offcanvas
         .alert.alert-info.d-none.d-lg-block Resize your browser to show the responsive offcanvas toggle.
-        #offcanvasResponsive.offcanvas-lg.offcanvas-end(tabindex='-1', aria-labelledby='offcanvasResponsiveLabel')
+        #offcanvasResponsive.offcanvas-lg.offcanvas-end(tabindex='-1' aria-labelledby='offcanvasResponsiveLabel')
           .offcanvas-header
             h5#offcanvasResponsiveLabel.offcanvas-title Responsive offcanvas
-            button.btn-close(type='button', data-bs-dismiss='offcanvas', data-bs-target='#offcanvasResponsive', aria-label='Close')
+            button.btn-close(type='button' data-bs-dismiss='offcanvas' data-bs-target='#offcanvasResponsive' aria-label='Close')
           .offcanvas-body
             p.mb-0
               | This is content within an
@@ -213,14 +213,14 @@ block content
 
       pre
         code.language-html
-          | &lt;button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"&gt;Toggle offcanvas&lt;/button&gt;
+          | &lt;button class="btn btn-primary d-lg-none" type='button' data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"&gt;Toggle offcanvas&lt;/button&gt;
           |
           | &lt;div class="alert alert-info d-none d-lg-block"&gt;Resize your browser to show the responsive offcanvas toggle.&lt;/div&gt;
           |
           | &lt;div class="offcanvas-lg offcanvas-end" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel"&gt;
           |   &lt;div class="offcanvas-header"&gt;
           |     &lt;h5 class="offcanvas-title" id="offcanvasResponsiveLabel"&gt;Responsive offcanvas&lt;/h5&gt;
-          |     &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"&gt;&lt;/button&gt;
+          |     &lt;button type='button' class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label='Close'&gt;&lt;/button&gt;
           |   &lt;/div&gt;
           |   &lt;div class="offcanvas-body"&gt;
           |     &lt;p class="mb-0"&gt;This is content within an &lt;code&gt;.offcanvas-lg&lt;/code&gt;.&lt;/p&gt;
@@ -249,22 +249,22 @@ block content
       p Try the top, right, and bottom examples out below.
 
       .bd-example
-        button.btn.btn-primary(type='button', data-bs-toggle='offcanvas', data-bs-target='#offcanvasTop', aria-controls='offcanvasTop') Toggle top offcanvas
-        #offcanvasTop.offcanvas.offcanvas-top(tabindex='-1', aria-labelledby='offcanvasTopLabel')
+        button.btn.btn-primary(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasTop' aria-controls='offcanvasTop') Toggle top offcanvas
+        #offcanvasTop.offcanvas.offcanvas-top(tabindex='-1' aria-labelledby='offcanvasTopLabel')
           .offcanvas-header
             h5#offcanvasTopLabel.offcanvas-title Offcanvas top
-            button.btn-close(type='button', data-bs-dismiss='offcanvas', aria-label='Close')
+            button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
           .offcanvas-body
             | ...
 
       pre
         code.language-html
-          | &lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"&gt;Toggle top offcanvas&lt;/button&gt;
+          | &lt;button class="btn btn-primary" type='button' data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"&gt;Toggle top offcanvas&lt;/button&gt;
           |
           | &lt;div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel"&gt;
           |   &lt;div class="offcanvas-header"&gt;
           |     &lt;h5 class="offcanvas-title" id="offcanvasTopLabel"&gt;Offcanvas top&lt;/h5&gt;
-          |     &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+          |     &lt;button type='button' class="btn-close" data-bs-dismiss="offcanvas" aria-label='Close'&gt;&lt;/button&gt;
           |   &lt;/div&gt;
           |   &lt;div class="offcanvas-body"&gt;
           |     ...
@@ -272,22 +272,22 @@ block content
           | &lt;/div&gt;
 
       .bd-example
-        button.btn.btn-primary(type='button', data-bs-toggle='offcanvas', data-bs-target='#offcanvasRight', aria-controls='offcanvasRight') Toggle right offcanvas
-        #offcanvasRight.offcanvas.offcanvas-end(tabindex='-1', aria-labelledby='offcanvasRightLabel')
+        button.btn.btn-primary(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasRight' aria-controls='offcanvasRight') Toggle right offcanvas
+        #offcanvasRight.offcanvas.offcanvas-end(tabindex='-1' aria-labelledby='offcanvasRightLabel')
           .offcanvas-header
             h5#offcanvasRightLabel.offcanvas-title Offcanvas right
-            button.btn-close(type='button', data-bs-dismiss='offcanvas', aria-label='Close')
+            button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
           .offcanvas-body
             | ...
 
       pre
         code.language-html
-          | &lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"&gt;Toggle right offcanvas&lt;/button&gt;
+          | &lt;button class="btn btn-primary" type='button' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"&gt;Toggle right offcanvas&lt;/button&gt;
           |
           | &lt;div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"&gt;
           |   &lt;div class="offcanvas-header"&gt;
           |     &lt;h5 class="offcanvas-title" id="offcanvasRightLabel"&gt;Offcanvas right&lt;/h5&gt;
-          |     &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+          |     &lt;button type='button' class="btn-close" data-bs-dismiss="offcanvas" aria-label='Close'&gt;&lt;/button&gt;
           |   &lt;/div&gt;
           |   &lt;div class="offcanvas-body"&gt;
           |     ...
@@ -295,22 +295,22 @@ block content
           | &lt;/div&gt;
 
       .bd-example
-        button.btn.btn-primary(type='button', data-bs-toggle='offcanvas', data-bs-target='#offcanvasBottom', aria-controls='offcanvasBottom') Toggle bottom offcanvas
-        #offcanvasBottom.offcanvas.offcanvas-bottom(tabindex='-1', aria-labelledby='offcanvasBottomLabel')
+        button.btn.btn-primary(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasBottom' aria-controls='offcanvasBottom') Toggle bottom offcanvas
+        #offcanvasBottom.offcanvas.offcanvas-bottom(tabindex='-1' aria-labelledby='offcanvasBottomLabel')
           .offcanvas-header
             h5#offcanvasBottomLabel.offcanvas-title Offcanvas bottom
-            button.btn-close(type='button', data-bs-dismiss='offcanvas', aria-label='Close')
+            button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
           .offcanvas-body.small
             | ...
 
       pre
         code.language-html
-          | &lt;button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"&gt;Toggle bottom offcanvas&lt;/button&gt;
+          | &lt;button class="btn btn-primary" type='button' data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"&gt;Toggle bottom offcanvas&lt;/button&gt;
           |
           | &lt;div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel"&gt;
           |   &lt;div class="offcanvas-header"&gt;
           |     &lt;h5 class="offcanvas-title" id="offcanvasBottomLabel"&gt;Offcanvas bottom&lt;/h5&gt;
-          |     &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+          |     &lt;button type='button' class="btn-close" data-bs-dismiss="offcanvas" aria-label='Close'&gt;&lt;/button&gt;
           |   &lt;/div&gt;
           |   &lt;div class="offcanvas-body small"&gt;
           |     ...

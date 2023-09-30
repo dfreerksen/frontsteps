@@ -4,9 +4,9 @@ block append config
   - var pageTitle = "Navbar";
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p Documentation and examples for Bootstrap's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.
 
       h4 How it works
@@ -38,16 +38,16 @@ block content
         nav.navbar.navbar-expand-lg.bg-body-tertiary
           .container-fluid
             a.navbar-brand(href='#') Navbar
-            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
               span.navbar-toggler-icon
             #navbarSupportedContent.collapse.navbar-collapse
               ul.navbar-nav.me-auto.mb-2.mb-lg-0
                 li.nav-item
-                  a.nav-link.active(aria-current='page', href='#') Home
+                  a.nav-link.active(aria-current='page' href='#') Home
                 li.nav-item
                   a.nav-link(href='#') Link
                 li.nav-item.dropdown
-                  a.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                  a.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
                     | Dropdown
                   ul.dropdown-menu
                     li
@@ -61,7 +61,7 @@ block content
                 li.nav-item
                   a.nav-link.disabled(aria-disabled='true') Disabled
               form.d-flex(role='search')
-                input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+                input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
                 button.btn.btn-outline-success(type='submit') Search
 
       pre
@@ -69,7 +69,7 @@ block content
           | &lt;nav class="navbar navbar-expand-lg bg-body-tertiary"&gt;
           |   &lt;div class="container-fluid"&gt;
           |     &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
-          |     &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
+          |     &lt;button class="navbar-toggler" type='button' data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
           |       &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
           |     &lt;/button&gt;
           |     &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
@@ -142,7 +142,7 @@ block content
         nav.navbar.bg-body-tertiary
           .container
             a.navbar-brand(href='#')
-              img(src='/assets/images/bootstrap-logo.svg', alt='Bootstrap', width='30', height='24')
+              img(src='/assets/images/bootstrap-logo.svg' alt='Bootstrap' width='30' height='24')
 
       pre
         code.language-html
@@ -161,7 +161,7 @@ block content
         nav.navbar.bg-body-tertiary
           .container-fluid
             a.navbar-brand(href='#')
-              img.d-inline-block.align-text-top(src='/assets/images/bootstrap-logo.svg', alt='Logo', width='30', height='24')
+              img.d-inline-block.align-text-top(src='/assets/images/bootstrap-logo.svg' alt='Logo' width='30' height='24')
               | Bootstrap
 
       pre
@@ -184,12 +184,12 @@ block content
         nav.navbar.navbar-expand-lg.bg-body-tertiary
           .container-fluid
             a.navbar-brand(href='#') Navbar
-            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
               span.navbar-toggler-icon
             #navbarNav.collapse.navbar-collapse
               ul.navbar-nav
                 li.nav-item
-                  a.nav-link.active(aria-current='page', href='#') Home
+                  a.nav-link.active(aria-current='page' href='#') Home
                 li.nav-item
                   a.nav-link(href='#') Features
                 li.nav-item
@@ -202,7 +202,7 @@ block content
           | &lt;nav class="navbar navbar-expand-lg bg-body-tertiary"&gt;
           |   &lt;div class="container-fluid"&gt;
           |     &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
-          |     &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"&gt;
+          |     &lt;button class="navbar-toggler" type='button' data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"&gt;
           |       &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
           |     &lt;/button&gt;
           |     &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;
@@ -230,11 +230,11 @@ block content
         nav.navbar.navbar-expand-lg.bg-body-tertiary
           .container-fluid
             a.navbar-brand(href='#') Navbar
-            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarNavAltMarkup', aria-controls='navbarNavAltMarkup', aria-expanded='false', aria-label='Toggle navigation')
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
               span.navbar-toggler-icon
             #navbarNavAltMarkup.collapse.navbar-collapse
               .navbar-nav
-                a.nav-link.active(aria-current='page', href='#') Home
+                a.nav-link.active(aria-current='page' href='#') Home
                 a.nav-link(href='#') Features
                 a.nav-link(href='#') Pricing
                 a.nav-link.disabled(aria-disabled='true') Disabled
@@ -244,7 +244,7 @@ block content
           | &lt;nav class="navbar navbar-expand-lg bg-body-tertiary"&gt;
           |   &lt;div class="container-fluid"&gt;
           |     &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
-          |     &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"&gt;
+          |     &lt;button class="navbar-toggler" type='button' data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"&gt;
           |       &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
           |     &lt;/button&gt;
           |     &lt;div class="collapse navbar-collapse" id="navbarNavAltMarkup"&gt;
@@ -264,18 +264,18 @@ block content
         nav.navbar.navbar-expand-lg.bg-body-tertiary
           .container-fluid
             a.navbar-brand(href='#') Navbar
-            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
               span.navbar-toggler-icon
             #navbarNavDropdown.collapse.navbar-collapse
               ul.navbar-nav
                 li.nav-item
-                  a.nav-link.active(aria-current='page', href='#') Home
+                  a.nav-link.active(aria-current='page' href='#') Home
                 li.nav-item
                   a.nav-link(href='#') Features
                 li.nav-item
                   a.nav-link(href='#') Pricing
                 li.nav-item.dropdown
-                  a.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                  a.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
                     | Dropdown link
                   ul.dropdown-menu
                     li
@@ -290,7 +290,7 @@ block content
           | &lt;nav class="navbar navbar-expand-lg bg-body-tertiary"&gt;
           |   &lt;div class="container-fluid"&gt;
           |     &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
-          |     &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"&gt;
+          |     &lt;button class="navbar-toggler" type='button' data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"&gt;
           |       &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
           |     &lt;/button&gt;
           |     &lt;div class="collapse navbar-collapse" id="navbarNavDropdown"&gt;
@@ -326,7 +326,7 @@ block content
         nav.navbar.bg-body-tertiary
           .container-fluid
             form.d-flex(role='search')
-              input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+              input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
               button.btn.btn-outline-success(type='submit') Search
 
       pre
@@ -347,7 +347,7 @@ block content
           .container-fluid
             a.navbar-brand Navbar
             form.d-flex(role='search')
-              input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+              input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
               button.btn.btn-outline-success(type='submit') Search
 
       pre
@@ -369,7 +369,7 @@ block content
           form.container-fluid
             .input-group
               span#basic-addon1.input-group-text @
-              input.form-control(type='text', placeholder='Username', aria-label='Username', aria-describedby='basic-addon1')
+              input.form-control(type='text' placeholder='Username' aria-label='Username' aria-describedby='basic-addon1')
 
       pre
         code.language-html
@@ -394,8 +394,8 @@ block content
         code.language-html
           | &lt;nav class="navbar bg-body-tertiary"&gt;
           |   &lt;form class="container-fluid justify-content-start"&gt;
-          |     &lt;button class="btn btn-outline-success me-2" type="button"&gt;Main button&lt;/button&gt;
-          |     &lt;button class="btn btn-sm btn-outline-secondary" type="button"&gt;Smaller button&lt;/button&gt;
+          |     &lt;button class="btn btn-outline-success me-2" type='button'&gt;Main button&lt;/button&gt;
+          |     &lt;button class="btn btn-sm btn-outline-secondary" type='button'&gt;Smaller button&lt;/button&gt;
           |   &lt;/form&gt;
           | &lt;/nav&gt;
 
@@ -424,12 +424,12 @@ block content
         nav.navbar.navbar-expand-lg.bg-body-tertiary
           .container-fluid
             a.navbar-brand(href='#') Navbar w/ text
-            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarText', aria-controls='navbarText', aria-expanded='false', aria-label='Toggle navigation')
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarText' aria-controls='navbarText' aria-expanded='false' aria-label='Toggle navigation')
               span.navbar-toggler-icon
             #navbarText.collapse.navbar-collapse
               ul.navbar-nav.me-auto.mb-2.mb-lg-0
                 li.nav-item
-                  a.nav-link.active(aria-current='page', href='#') Home
+                  a.nav-link.active(aria-current='page' href='#') Home
                 li.nav-item
                   a.nav-link(href='#') Features
                 li.nav-item
@@ -442,7 +442,7 @@ block content
           | &lt;nav class="navbar navbar-expand-lg bg-body-tertiary"&gt;
           |   &lt;div class="container-fluid"&gt;
           |     &lt;a class="navbar-brand" href="#"&gt;Navbar w/ text&lt;/a&gt;
-          |     &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"&gt;
+          |     &lt;button class="navbar-toggler" type='button' data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"&gt;
           |       &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
           |     &lt;/button&gt;
           |     &lt;div class="collapse navbar-collapse" id="navbarText"&gt;
@@ -471,12 +471,12 @@ block content
         nav.navbar.navbar-expand-lg.bg-dark.border-bottom.border-body(data-bs-theme='dark')
           .container-fluid
             a.navbar-brand(href='#') Navbar
-            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarColor01', aria-controls='navbarColor01', aria-expanded='false', aria-label='Toggle navigation')
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarColor01' aria-controls='navbarColor01' aria-expanded='false' aria-label='Toggle navigation')
               span.navbar-toggler-icon
             #navbarColor01.collapse.navbar-collapse
               ul.navbar-nav.me-auto.mb-2.mb-lg-0
                 li.nav-item
-                  a.nav-link.active(aria-current='page', href='#') Home
+                  a.nav-link.active(aria-current='page' href='#') Home
                 li.nav-item
                   a.nav-link(href='#') Features
                 li.nav-item
@@ -484,17 +484,17 @@ block content
                 li.nav-item
                   a.nav-link(href='#') About
               form.d-flex(role='search')
-                input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+                input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
                 button.btn.btn-outline-light(type='submit') Search
         nav.navbar.navbar-expand-lg.bg-primary(data-bs-theme='dark')
           .container-fluid
             a.navbar-brand(href='#') Navbar
-            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarColor02', aria-controls='navbarColor02', aria-expanded='false', aria-label='Toggle navigation')
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarColor02' aria-controls='navbarColor02' aria-expanded='false' aria-label='Toggle navigation')
               span.navbar-toggler-icon
             #navbarColor02.collapse.navbar-collapse
               ul.navbar-nav.me-auto.mb-2.mb-lg-0
                 li.nav-item
-                  a.nav-link.active(aria-current='page', href='#') Home
+                  a.nav-link.active(aria-current='page' href='#') Home
                 li.nav-item
                   a.nav-link(href='#') Features
                 li.nav-item
@@ -502,17 +502,17 @@ block content
                 li.nav-item
                   a.nav-link(href='#') About
               form.d-flex(role='search')
-                input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+                input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
                 button.btn.btn-outline-light(type='submit') Search
-        nav.navbar.navbar-expand-lg(style='background-color: #e3f2fd;', data-bs-theme='light')
+        nav.navbar.navbar-expand-lg(style='background-color: #e3f2fd;' data-bs-theme='light')
           .container-fluid
             a.navbar-brand(href='#') Navbar
-            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarColor03', aria-controls='navbarColor03', aria-expanded='false', aria-label='Toggle navigation')
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarColor03' aria-controls='navbarColor03' aria-expanded='false' aria-label='Toggle navigation')
               span.navbar-toggler-icon
             #navbarColor03.collapse.navbar-collapse
               ul.navbar-nav.me-auto.mb-2.mb-lg-0
                 li.nav-item
-                  a.nav-link.active(aria-current='page', href='#') Home
+                  a.nav-link.active(aria-current='page' href='#') Home
                 li.nav-item
                   a.nav-link(href='#') Features
                 li.nav-item
@@ -520,7 +520,7 @@ block content
                 li.nav-item
                   a.nav-link(href='#') About
               form.d-flex(role='search')
-                input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+                input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
                 button.btn.btn-outline-primary(type='submit') Search
 
       pre
@@ -649,16 +649,16 @@ block content
         nav.navbar.navbar-expand-lg.bg-body-tertiary
           .container-fluid
             a.navbar-brand(href='#') Navbar scroll
-            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarScroll', aria-controls='navbarScroll', aria-expanded='false', aria-label='Toggle navigation')
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarScroll' aria-controls='navbarScroll' aria-expanded='false' aria-label='Toggle navigation')
               span.navbar-toggler-icon
             #navbarScroll.collapse.navbar-collapse
               ul.navbar-nav.me-auto.my-2.my-lg-0.navbar-nav-scroll(style='--bs-scroll-height: 100px;')
                 li.nav-item
-                  a.nav-link.active(aria-current='page', href='#') Home
+                  a.nav-link.active(aria-current='page' href='#') Home
                 li.nav-item
                   a.nav-link(href='#') Link
                 li.nav-item.dropdown
-                  a.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                  a.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
                     | Link
                   ul.dropdown-menu
                     li
@@ -672,7 +672,7 @@ block content
                 li.nav-item
                   a.nav-link.disabled(aria-disabled='true') Link
               form.d-flex(role='search')
-                input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+                input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
                 button.btn.btn-outline-success(type='submit') Search
 
       pre
@@ -680,7 +680,7 @@ block content
           | &lt;nav class="navbar navbar-expand-lg bg-body-tertiary"&gt;
           |   &lt;div class="container-fluid"&gt;
           |     &lt;a class="navbar-brand" href="#"&gt;Navbar scroll&lt;/a&gt;
-          |     &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation"&gt;
+          |     &lt;button class="navbar-toggler" type='button' data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation"&gt;
           |       &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
           |     &lt;/button&gt;
           |     &lt;div class="collapse navbar-collapse" id="navbarScroll"&gt;
@@ -725,26 +725,26 @@ block content
       .bd-example
         nav.navbar.navbar-expand-lg.bg-body-tertiary
           .container-fluid
-            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarTogglerDemo01', aria-controls='navbarTogglerDemo01', aria-expanded='false', aria-label='Toggle navigation')
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarTogglerDemo01' aria-controls='navbarTogglerDemo01' aria-expanded='false' aria-label='Toggle navigation')
               span.navbar-toggler-icon
             #navbarTogglerDemo01.collapse.navbar-collapse
               a.navbar-brand(href='#') Hidden brand
               ul.navbar-nav.me-auto.mb-2.mb-lg-0
                 li.nav-item
-                  a.nav-link.active(aria-current='page', href='#') Home
+                  a.nav-link.active(aria-current='page' href='#') Home
                 li.nav-item
                   a.nav-link(href='#') Link
                 li.nav-item
                   a.nav-link.disabled(aria-disabled='true') Disabled
               form.d-flex(role='search')
-                input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+                input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
                 button.btn.btn-outline-success(type='submit') Search
 
       pre
         code.language-html
           | &lt;nav class="navbar navbar-expand-lg bg-body-tertiary"&gt;
           |   &lt;div class="container-fluid"&gt;
-          |     &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"&gt;
+          |     &lt;button class="navbar-toggler" type='button' data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"&gt;
           |       &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
           |     &lt;/button&gt;
           |     &lt;div class="collapse navbar-collapse" id="navbarTogglerDemo01"&gt;
@@ -774,18 +774,18 @@ block content
         nav.navbar.navbar-expand-lg.bg-body-tertiary
           .container-fluid
             a.navbar-brand(href='#') Navbar
-            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarTogglerDemo02', aria-controls='navbarTogglerDemo02', aria-expanded='false', aria-label='Toggle navigation')
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarTogglerDemo02' aria-controls='navbarTogglerDemo02' aria-expanded='false' aria-label='Toggle navigation')
               span.navbar-toggler-icon
             #navbarTogglerDemo02.collapse.navbar-collapse
               ul.navbar-nav.me-auto.mb-2.mb-lg-0
                 li.nav-item
-                  a.nav-link.active(aria-current='page', href='#') Home
+                  a.nav-link.active(aria-current='page' href='#') Home
                 li.nav-item
                   a.nav-link(href='#') Link
                 li.nav-item
                   a.nav-link.disabled(aria-disabled='true') Disabled
               form.d-flex(role='search')
-                input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+                input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
                 button.btn.btn-outline-success(type='submit') Search
 
       pre
@@ -793,7 +793,7 @@ block content
           | &lt;nav class="navbar navbar-expand-lg bg-body-tertiary"&gt;
           |   &lt;div class="container-fluid"&gt;
           |     &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
-          |     &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"&gt;
+          |     &lt;button class="navbar-toggler" type='button' data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"&gt;
           |       &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
           |     &lt;/button&gt;
           |     &lt;div class="collapse navbar-collapse" id="navbarTogglerDemo02"&gt;
@@ -821,26 +821,26 @@ block content
       .bd-example
         nav.navbar.navbar-expand-lg.bg-body-tertiary
           .container-fluid
-            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarTogglerDemo03', aria-controls='navbarTogglerDemo03', aria-expanded='false', aria-label='Toggle navigation')
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarTogglerDemo03' aria-controls='navbarTogglerDemo03' aria-expanded='false' aria-label='Toggle navigation')
               span.navbar-toggler-icon
             a.navbar-brand(href='#') Navbar
             #navbarTogglerDemo03.collapse.navbar-collapse
               ul.navbar-nav.me-auto.mb-2.mb-lg-0
                 li.nav-item
-                  a.nav-link.active(aria-current='page', href='#') Home
+                  a.nav-link.active(aria-current='page' href='#') Home
                 li.nav-item
                   a.nav-link(href='#') Link
                 li.nav-item
                   a.nav-link.disabled(aria-disabled='true') Disabled
               form.d-flex(role='search')
-                input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+                input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
                 button.btn.btn-outline-success(type='submit') Search
 
       pre
         code.language-html
           | &lt;nav class="navbar navbar-expand-lg bg-body-tertiary"&gt;
           |   &lt;div class="container-fluid"&gt;
-          |     &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation"&gt;
+          |     &lt;button class="navbar-toggler" type='button' data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation"&gt;
           |       &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
           |     &lt;/button&gt;
           |     &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
@@ -874,7 +874,7 @@ block content
             span.text-body-secondary Toggleable via the navbar brand.
         nav.navbar.navbar-dark.bg-dark
           .container-fluid
-            button.navbar-toggler(type='button', data-bs-toggle='collapse', data-bs-target='#navbarToggleExternalContent', aria-controls='navbarToggleExternalContent', aria-expanded='false', aria-label='Toggle navigation')
+            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarToggleExternalContent' aria-controls='navbarToggleExternalContent' aria-expanded='false' aria-label='Toggle navigation')
               span.navbar-toggler-icon
 
       pre
@@ -887,7 +887,7 @@ block content
           | &lt;/div&gt;
           | &lt;nav class="navbar navbar-dark bg-dark"&gt;
           |   &lt;div class="container-fluid"&gt;
-          |     &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
+          |     &lt;button class="navbar-toggler" type='button' data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
           |       &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
           |     &lt;/button&gt;
           |   &lt;/div&gt;
@@ -903,20 +903,20 @@ block content
         nav.navbar.bg-body-tertiary.fixed-top
           .container-fluid
             a.navbar-brand(href='#') Offcanvas navbar
-            button.navbar-toggler(type='button', data-bs-toggle='offcanvas', data-bs-target='#offcanvasNavbar', aria-controls='offcanvasNavbar', aria-label='Toggle navigation')
+            button.navbar-toggler(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasNavbar' aria-controls='offcanvasNavbar' aria-label='Toggle navigation')
               span.navbar-toggler-icon
-            #offcanvasNavbar.offcanvas.offcanvas-end(tabindex='-1', aria-labelledby='offcanvasNavbarLabel')
+            #offcanvasNavbar.offcanvas.offcanvas-end(tabindex='-1' aria-labelledby='offcanvasNavbarLabel')
               .offcanvas-header
                 h5#offcanvasNavbarLabel.offcanvas-title Offcanvas
-                button.btn-close(type='button', data-bs-dismiss='offcanvas', aria-label='Close')
+                button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
               .offcanvas-body
                 ul.navbar-nav.justify-content-end.flex-grow-1.pe-3
                   li.nav-item
-                    a.nav-link.active(aria-current='page', href='#') Home
+                    a.nav-link.active(aria-current='page' href='#') Home
                   li.nav-item
                     a.nav-link(href='#') Link
                   li.nav-item.dropdown
-                    a.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                    a.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
                       | Dropdown
                     ul.dropdown-menu
                       li
@@ -928,7 +928,7 @@ block content
                       li
                         a.dropdown-item(href='#') Something else here
                 form.d-flex.mt-3(role='search')
-                  input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+                  input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
                   button.btn.btn-outline-success(type='submit') Search
 
       pre
@@ -936,13 +936,13 @@ block content
           | &lt;nav class="navbar bg-body-tertiary fixed-top"&gt;
           |   &lt;div class="container-fluid"&gt;
           |     &lt;a class="navbar-brand" href="#"&gt;Offcanvas navbar&lt;/a&gt;
-          |     &lt;button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"&gt;
+          |     &lt;button class="navbar-toggler" type='button' data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"&gt;
           |       &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
           |     &lt;/button&gt;
           |     &lt;div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"&gt;
           |       &lt;div class="offcanvas-header"&gt;
           |         &lt;h5 class="offcanvas-title" id="offcanvasNavbarLabel"&gt;Offcanvas&lt;/h5&gt;
-          |         &lt;button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+          |         &lt;button type='button' class="btn-close" data-bs-dismiss="offcanvas" aria-label='Close'&gt;&lt;/button&gt;
           |       &lt;/div&gt;
           |       &lt;div class="offcanvas-body"&gt;
           |         &lt;ul class="navbar-nav justify-content-end flex-grow-1 pe-3"&gt;
@@ -981,7 +981,7 @@ block content
         code.language-html
           | &lt;nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top"&gt;
           |   &lt;a class="navbar-brand" href="#"&gt;Offcanvas navbar&lt;/a&gt;
-          |   &lt;button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation"&gt;
+          |   &lt;button class="navbar-toggler" type='button' data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation"&gt;
           |     &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
           |   &lt;/button&gt;
           |   &lt;div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel"&gt;
@@ -995,20 +995,20 @@ block content
         nav.navbar.navbar-dark.bg-dark.fixed-top
           .container-fluid
             a.navbar-brand(href='#') Offcanvas dark navbar
-            button.navbar-toggler(type='button', data-bs-toggle='offcanvas', data-bs-target='#offcanvasDarkNavbar', aria-controls='offcanvasDarkNavbar', aria-label='Toggle navigation')
+            button.navbar-toggler(type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasDarkNavbar' aria-controls='offcanvasDarkNavbar' aria-label='Toggle navigation')
               span.navbar-toggler-icon
-            #offcanvasDarkNavbar.offcanvas.offcanvas-end.text-bg-dark(tabindex='-1', aria-labelledby='offcanvasDarkNavbarLabel')
+            #offcanvasDarkNavbar.offcanvas.offcanvas-end.text-bg-dark(tabindex='-1' aria-labelledby='offcanvasDarkNavbarLabel')
               .offcanvas-header
                 h5#offcanvasDarkNavbarLabel.offcanvas-title Dark offcanvas
-                button.btn-close.btn-close-white(type='button', data-bs-dismiss='offcanvas', aria-label='Close')
+                button.btn-close.btn-close-white(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
               .offcanvas-body
                 ul.navbar-nav.justify-content-end.flex-grow-1.pe-3
                   li.nav-item
-                    a.nav-link.active(aria-current='page', href='#') Home
+                    a.nav-link.active(aria-current='page' href='#') Home
                   li.nav-item
                     a.nav-link(href='#') Link
                   li.nav-item.dropdown
-                    a.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                    a.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
                       | Dropdown
                     ul.dropdown-menu.dropdown-menu-dark
                       li
@@ -1020,7 +1020,7 @@ block content
                       li
                         a.dropdown-item(href='#') Something else here
                 form.d-flex.mt-3(role='search')
-                  input.form-control.me-2(type='search', placeholder='Search', aria-label='Search')
+                  input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
                   button.btn.btn-success(type='submit') Search
 
       pre
@@ -1028,13 +1028,13 @@ block content
           | &lt;nav class="navbar navbar-dark bg-dark fixed-top"&gt;
           |   &lt;div class="container-fluid"&gt;
           |     &lt;a class="navbar-brand" href="#"&gt;Offcanvas dark navbar&lt;/a&gt;
-          |     &lt;button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation"&gt;
+          |     &lt;button class="navbar-toggler" type='button' data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation"&gt;
           |       &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
           |     &lt;/button&gt;
           |     &lt;div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel"&gt;
           |       &lt;div class="offcanvas-header"&gt;
           |         &lt;h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"&gt;Dark offcanvas&lt;/h5&gt;
-          |         &lt;button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"&gt;&lt;/button&gt;
+          |         &lt;button type='button' class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label='Close'&gt;&lt;/button&gt;
           |       &lt;/div&gt;
           |       &lt;div class="offcanvas-body"&gt;
           |         &lt;ul class="navbar-nav justify-content-end flex-grow-1 pe-3"&gt;

@@ -19,7 +19,7 @@ module.exports = function renderSCSS () {
   const copyright = `/*
  * ${packageJSON.title} v${packageJSON.version} (${packageJSON.homepage})
  * Copyright ${new Date().getFullYear()} ${packageJSON.author}
- * Licensed under ${packageJSON.license} (https://github.com/dfreerksen/${packageJSON.name}/blob/master/LICENSE)
+ * Licensed under ${packageJSON.license} (${packageJSON.homepage}/blob/master/LICENSE)
  */
 `
 

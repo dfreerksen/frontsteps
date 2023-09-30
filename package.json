@@ -3,7 +3,7 @@
   "name": "@dfreerksen/frontsteps",
   "license": "MIT",
   "author": "David Freerksen",
-  "version": "1.0.0",
+  "version": "1.0.0.1",
   "homepage": "https://github.com/dfreerksen/frontsteps",
   "description": "Frontstep Bootstrap 5 theme",
   "keywords": [
@@ -52,6 +52,7 @@
     "postcss-minify": "^1.1.0",
     "prettier": "^3.0.3",
     "pug": "^3.0.2",
+    "pug-lint": "^2.7.0",
     "sass": "^1.67.0",
     "shelljs": "^0.8.5",
     "stylelint": "^15.10.3",

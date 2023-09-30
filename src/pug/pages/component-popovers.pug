@@ -4,15 +4,15 @@ block append config
   - var pageTitle = "Popovers";
 
 append scripts
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js", crossorigin="anonymous")
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js' crossorigin='anonymous')
   script.
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
     const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.
 
       h4 Overview
@@ -43,37 +43,37 @@ block content
       p We use JavaScript similar to the snippet above to render the following live popover. Titles are set via <code>data-bs-title</code> and body content is set via <code>data-bs-content</code>.
 
       .bd-example
-        button.btn.btn-lg.btn-danger(type='button', data-bs-toggle='popover', data-bs-title='Popover title', data-bs-content="And here's some amazing content. It's very engaging. Right?") Click to toggle popover
+        button.btn.btn-lg.btn-danger(type='button' data-bs-toggle='popover' data-bs-title='Popover title' data-bs-content='And here\'s some amazing content. It\'s very engaging. Right?') Click to toggle popover
 
       pre
         code.language-html
-          | &lt;button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?"&gt;Click to toggle popover&lt;/button&gt;
+          | &lt;button type='button' class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?"&gt;Click to toggle popover&lt;/button&gt;
 
       h4 Four directions
       p Four options are available: top, right, bottom, and left. Directions are mirrored when using Bootstrap in RTL. Set <code>data-bs-placement</code> to change the direction.
 
       .bd-example
-        button.btn.btn-secondary(type='button', data-bs-container='body', data-bs-toggle='popover', data-bs-placement='top', data-bs-content='Top popover')
+        button.btn.btn-secondary(type='button' data-bs-container='body' data-bs-toggle='popover' data-bs-placement='top' data-bs-content='Top popover')
           | Popover on top
-        button.btn.btn-secondary(type='button', data-bs-container='body', data-bs-toggle='popover', data-bs-placement='right', data-bs-content='Right popover')
+        button.btn.btn-secondary(type='button' data-bs-container='body' data-bs-toggle='popover' data-bs-placement='right' data-bs-content='Right popover')
           | Popover on right
-        button.btn.btn-secondary(type='button', data-bs-container='body', data-bs-toggle='popover', data-bs-placement='bottom', data-bs-content='Bottom popover')
+        button.btn.btn-secondary(type='button' data-bs-container='body' data-bs-toggle='popover' data-bs-placement='bottom' data-bs-content='Bottom popover')
           | Popover on bottom
-        button.btn.btn-secondary(type='button', data-bs-container='body', data-bs-toggle='popover', data-bs-placement='left', data-bs-content='Left popover')
+        button.btn.btn-secondary(type='button' data-bs-container='body' data-bs-toggle='popover' data-bs-placement='left' data-bs-content='Left popover')
           | Popover on left
 
       pre
         code.language-html
-          | &lt;button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover"&gt;
+          | &lt;button type='button' class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover"&gt;
           |   Popover on top
           | &lt;/button&gt;
-          | &lt;button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover"&gt;
+          | &lt;button type='button' class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover"&gt;
           |   Popover on right
           | &lt;/button&gt;
-          | &lt;button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover"&gt;
+          | &lt;button type='button' class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover"&gt;
           |   Popover on bottom
           | &lt;/button&gt;
-          | &lt;button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover"&gt;
+          | &lt;button type='button' class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover"&gt;
           |   Popover on left
           | &lt;/button&gt;
 
@@ -98,7 +98,7 @@ block content
       p Use the <code>focus</code> trigger to dismiss popovers on the user's next click of an element other than the toggle element.
 
       .bd-example
-        a.btn.btn-lg.btn-danger(tabindex='0', role='button', data-bs-toggle='popover', data-bs-trigger='focus', data-bs-title='Dismissible popover', data-bs-content="And here's some amazing content. It's very engaging. Right?") Dismissible popover
+        a.btn.btn-lg.btn-danger(tabindex='0' role='button' data-bs-toggle='popover' data-bs-trigger='focus' data-bs-title='Dismissible popover' data-bs-content='And here\'s some amazing content. It\'s very engaging. Right?') Dismissible popover
 
       pre
         code.language-html

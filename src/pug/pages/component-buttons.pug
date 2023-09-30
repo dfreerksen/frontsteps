@@ -4,24 +4,24 @@ block append config
   - var pageTitle = "Buttons";
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p Use Bootstrap's custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.
 
       h4 Variants
       p Bootstrap includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.
 
       .bd-example
-        button.btn.btn-primary(type="button") Primary
-        button.btn.btn-secondary(type="button") Secondary
-        button.btn.btn-success(type="button") Success
-        button.btn.btn-danger(type="button") Danger
-        button.btn.btn-warning(type="button") Warning
-        button.btn.btn-info(type="button") Info
-        button.btn.btn-light(type="button") Light
-        button.btn.btn-dark(type="button") Dark
-        button.btn.btn-link(type="button") Link
+        button.btn.btn-primary(type='button') Primary
+        button.btn.btn-secondary(type='button') Secondary
+        button.btn.btn-success(type='button') Success
+        button.btn.btn-danger(type='button') Danger
+        button.btn.btn-warning(type='button') Warning
+        button.btn.btn-info(type='button') Info
+        button.btn.btn-light(type='button') Light
+        button.btn.btn-dark(type='button') Dark
+        button.btn.btn-link(type='button') Link
 
       pre
         code.language-html
@@ -40,11 +40,11 @@ block content
       p When using button classes on <code>&lt;a&gt;</code> elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a <code>role="button"</code> to appropriately convey their purpose to assistive technologies such as screen readers.
 
       .bd-example
-        a.btn.btn-primary(href="#", role="button") Link
-        button.btn.btn-primary(type="submit") Button
-        input.btn.btn-primary(type="button", value="Input")
-        input.btn.btn-primary(type="submit", value="Submit")
-        input.btn.btn-primary(type="reset", value="Reset")
+        a.btn.btn-primary(href='#' role='button') Link
+        button.btn.btn-primary(type='submit') Button
+        input.btn.btn-primary(type='button' value='Input')
+        input.btn.btn-primary(type='submit' value='Submit')
+        input.btn.btn-primary(type='reset' value='Reset')
 
       pre
         code.language-html
@@ -58,8 +58,8 @@ block content
       p Fancy larger or smaller buttons? Add <code>.btn-lg</code> or <code>.btn-sm</code> for additional sizes.
 
       .bd-example
-        button.btn.btn-primary.btn-lg(type="button") Large button
-        button.btn.btn-secondary.btn-lg(type="button") Large button
+        button.btn.btn-primary.btn-lg(type='button') Large button
+        button.btn.btn-secondary.btn-lg(type='button') Large button
 
       pre
         code.language-html
@@ -67,8 +67,8 @@ block content
           | &lt;button type="button" class="btn btn-secondary btn-lg"&gt;Large button&lt;/button&gt;
 
       .bd-example
-        button.btn.btn-primary.btn-sm(type="button") Small button
-        button.btn.btn-secondary.btn-sm(type="button") Small button
+        button.btn.btn-primary.btn-sm(type='button') Small button
+        button.btn.btn-secondary.btn-sm(type='button') Small button
 
       pre
         code.language-html
@@ -79,10 +79,10 @@ block content
       p Make buttons look inactive by adding the <code>disabled</code> boolean attribute to any <code>&lt;button&gt;</code> element. Disabled buttons have <code>pointer-events: none</code> applied to, preventing hover and active states from triggering.
 
       .bd-example
-        button.btn.btn-primary(type="button", disabled="disabled") Primary button
-        button.btn.btn-secondary(type="button", disabled="disabled") Button
-        button.btn.btn-outline-primary(type="button", disabled="disabled") Primary button
-        button.btn.btn-outline-secondary(type="button", disabled="disabled") Button
+        button.btn.btn-primary(type='button' disabled='disabled') Primary button
+        button.btn.btn-secondary(type='button' disabled='disabled') Button
+        button.btn.btn-outline-primary(type='button' disabled='disabled') Primary button
+        button.btn.btn-outline-secondary(type='button' disabled='disabled') Button
 
       pre
         code.language-html
@@ -100,8 +100,8 @@ block content
         li Disabled buttons using <code>&lt;a&gt;</code> <i>should not</i> include the <code>href</code> attribute.
 
       .bd-example
-        a.btn.btn-primary.disabled(role="button", aria-disabled="true") Primary link
-        a.btn.btn-secondary.disabled(role="button", aria-disabled="true") Link
+        a.btn.btn-primary.disabled(role='button' aria-disabled='true') Primary link
+        a.btn.btn-secondary.disabled(role='button' aria-disabled='true') Link
 
       pre
         code.language-html
@@ -112,9 +112,9 @@ block content
       p Create responsive stacks of full-width, “block buttons” like those in Bootstrap 4 with a mix of our display and gap utilities. By using utilities instead of button-specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
       .bd-example
-        div.d-grid.gap-2
-          button.btn.btn-primary(type="button") Button
-          button.btn.btn-primary(type="button") Button
+        .d-grid.gap-2
+          button.btn.btn-primary(type='button') Button
+          button.btn.btn-primary(type='button') Button
 
       pre
         code.language-html
@@ -126,9 +126,9 @@ block content
       p Here we create a responsive variation, starting with vertically stacked buttons until the <code>md</code> breakpoint, where <code>.d-md-block</code> replaces the <code>.d-grid</code> class, thus nullifying the <code>gap-2</code> utility. Resize your browser to see them change.
 
       .bd-example
-        div.d-grid.gap-2.d-md-block
-          button.btn.btn-primary(type="button") Button
-          button.btn.btn-primary(type="button") Button
+        .d-grid.gap-2.d-md-block
+          button.btn.btn-primary(type='button') Button
+          button.btn.btn-primary(type='button') Button
 
       pre
         code.language-html
@@ -140,9 +140,9 @@ block content
       p You can adjust the width of your block buttons with grid column width classes. For example, for a half-width “block button”, use <code>.col-6</code>. Center it horizontally with <code>.mx-auto</code>, too.
 
       .bd-example
-        div.d-grid.gap-2.col-6.mx-auto
-          button.btn.btn-primary(type="button") Button
-          button.btn.btn-primary(type="button") Button
+        .d-grid.gap-2.col-6.mx-auto
+          button.btn.btn-primary(type='button') Button
+          button.btn.btn-primary(type='button') Button
 
       pre
         code.language-html
@@ -154,9 +154,9 @@ block content
       p Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we've taken our previous responsive example and added some flex utilities and a margin utility on the button to right-align the buttons when they're no longer stacked.
 
       .bd-example
-        div.d-grid.gap-2.d-md-flex.justify-content-md-end
-          button.btn.btn-primary.me-md-2(type="button") Button
-          button.btn.btn-primary(type="button") Button
+        .d-grid.gap-2.d-md-flex.justify-content-md-end
+          button.btn.btn-primary.me-md-2(type='button') Button
+          button.btn.btn-primary(type='button') Button
 
       pre
         code.language-html
@@ -173,14 +173,14 @@ block content
 
       .bd-example
         p.d-inline-flex.gap-1
-          <button type="button" class="btn" data-bs-toggle="button">Toggle button</button>
-          <button type="button" class="btn active" data-bs-toggle="button" aria-pressed="true">Active toggle button</button>
-          <button type="button" class="btn" disabled data-bs-toggle="button">Disabled toggle button</button>
+          button.btn(type='button' data-bs-toggle='button') Toggle button
+          button.btn.active(type='button' data-bs-toggle='button' aria-pressed='true') Active toggle button
+          button.btn(type='button' disabled='' data-bs-toggle='button') Disabled toggle button
 
         p.d-inline-flex.gap-1
-          <button type="button" class="btn btn-primary" data-bs-toggle="button">Toggle button</button>
-          <button type="button" class="btn btn-primary active" data-bs-toggle="button" aria-pressed="true">Active toggle button</button>
-          <button type="button" class="btn btn-primary" disabled data-bs-toggle="button">Disabled toggle button</button>
+          button.btn.btn-primary(type='button' data-bs-toggle='button') Toggle button
+          button.btn.btn-primary.active(type='button' data-bs-toggle='button' aria-pressed='true') Active toggle button
+          button.btn.btn-primary(type='button' disabled='' data-bs-toggle='button') Disabled toggle button
 
       pre
         code.language-html
@@ -198,14 +198,14 @@ block content
 
       .bd-example
         p.d-inline-flex.gap-1
-          a.btn(href="#", role="button", data-bs-toggle="button") Toggle link
-          a.btn.active(href="#", role="button", data-bs-toggle="button", aria-pressed="true") Active toggle link
-          a.btn.disabled(aria-disabled="true", role="button", data-bs-toggle="button") Disabled toggle link
+          a.btn(href='#' role='button' data-bs-toggle='button') Toggle link
+          a.btn.active(href='#' role='button' data-bs-toggle='button' aria-pressed='true') Active toggle link
+          a.btn.disabled(aria-disabled='true' role='button' data-bs-toggle='button') Disabled toggle link
 
         p.d-inline-flex.gap-1
-          a.btn.btn-primary(href="#", role="button", data-bs-toggle="button") Toggle link
-          a.btn.btn-primary.active(href="#", role="button", data-bs-toggle="button", aria-pressed="true") Active toggle link
-          a.btn.btn-primary.disabled(aria-disabled="true", role="button", data-bs-toggle="button") Disabled toggle link
+          a.btn.btn-primary(href='#' role='button' data-bs-toggle='button') Toggle link
+          a.btn.btn-primary.active(href='#' role='button' data-bs-toggle='button' aria-pressed='true') Active toggle link
+          a.btn.btn-primary.disabled(aria-disabled='true' role='button' data-bs-toggle='button') Disabled toggle link
 
       pre
         code.language-html

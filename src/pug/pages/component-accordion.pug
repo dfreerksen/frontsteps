@@ -4,9 +4,9 @@ block append config
   - var pageTitle = "Accordion";
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.
 
       h4 How it works
@@ -19,7 +19,7 @@ block content
         #accordionExample.accordion
           .accordion-item
             h2.accordion-header
-              button.accordion-button(type='button', data-bs-toggle='collapse', data-bs-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+              button.accordion-button(type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne')
                 | Accordion Item #1
             #collapseOne.accordion-collapse.collapse.show(data-bs-parent='#accordionExample')
               .accordion-body
@@ -29,7 +29,7 @@ block content
                 | , though the transition does limit overflow.
           .accordion-item
             h2.accordion-header
-              button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+              button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')
                 | Accordion Item #2
             #collapseTwo.accordion-collapse.collapse(data-bs-parent='#accordionExample')
               .accordion-body
@@ -39,7 +39,7 @@ block content
                 | , though the transition does limit overflow.
           .accordion-item
             h2.accordion-header
-              button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+              button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
                 | Accordion Item #3
             #collapseThree.accordion-collapse.collapse(data-bs-parent='#accordionExample')
               .accordion-body
@@ -53,7 +53,7 @@ block content
           | &lt;div class="accordion" id="accordionExample"&gt;
           |   &lt;div class="accordion-item"&gt;
           |     &lt;h2 class="accordion-header"&gt;
-          |       &lt;button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"&gt;
+          |       &lt;button class="accordion-button" type='button' data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"&gt;
           |         Accordion Item #1
           |       &lt;/button&gt;
           |     &lt;/h2&gt;
@@ -65,7 +65,7 @@ block content
           |   &lt;/div&gt;
           |   &lt;div class="accordion-item"&gt;
           |     &lt;h2 class="accordion-header"&gt;
-          |       &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"&gt;
+          |       &lt;button class="accordion-button collapsed" type='button' data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"&gt;
           |         Accordion Item #2
           |       &lt;/button&gt;
           |     &lt;/h2&gt;
@@ -77,7 +77,7 @@ block content
           |   &lt;/div&gt;
           |   &lt;div class="accordion-item"&gt;
           |     &lt;h2 class="accordion-header"&gt;
-          |       &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"&gt;
+          |       &lt;button class="accordion-button collapsed" type='button' data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"&gt;
           |         Accordion Item #3
           |       &lt;/button&gt;
           |     &lt;/h2&gt;
@@ -96,7 +96,7 @@ block content
         #accordionFlushExample.accordion.accordion-flush
           .accordion-item
             h2.accordion-header
-              button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseOne', aria-expanded='false', aria-controls='flush-collapseOne')
+              button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseOne' aria-expanded='false' aria-controls='flush-collapseOne')
                 | Accordion Item #1
             #flush-collapseOne.accordion-collapse.collapse(data-bs-parent='#accordionFlushExample')
               .accordion-body
@@ -105,7 +105,7 @@ block content
                 |  class. This is the first item's accordion body.
           .accordion-item
             h2.accordion-header
-              button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseTwo', aria-expanded='false', aria-controls='flush-collapseTwo')
+              button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseTwo' aria-expanded='false' aria-controls='flush-collapseTwo')
                 | Accordion Item #2
             #flush-collapseTwo.accordion-collapse.collapse(data-bs-parent='#accordionFlushExample')
               .accordion-body
@@ -114,7 +114,7 @@ block content
                 |  class. This is the second item's accordion body. Let's imagine this being filled with some actual content.
           .accordion-item
             h2.accordion-header
-              button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#flush-collapseThree', aria-expanded='false', aria-controls='flush-collapseThree')
+              button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseThree' aria-expanded='false' aria-controls='flush-collapseThree')
                 | Accordion Item #3
             #flush-collapseThree.accordion-collapse.collapse(data-bs-parent='#accordionFlushExample')
               .accordion-body
@@ -127,7 +127,7 @@ block content
           | &lt;div class="accordion accordion-flush" id="accordionFlushExample"&gt;
           |   &lt;div class="accordion-item"&gt;
           |     &lt;h2 class="accordion-header"&gt;
-          |       &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"&gt;
+          |       &lt;button class="accordion-button collapsed" type='button' data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"&gt;
           |         Accordion Item #1
           |       &lt;/button&gt;
           |     &lt;/h2&gt;
@@ -137,7 +137,7 @@ block content
           |   &lt;/div&gt;
           |   &lt;div class="accordion-item"&gt;
           |     &lt;h2 class="accordion-header"&gt;
-          |       &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"&gt;
+          |       &lt;button class="accordion-button collapsed" type='button' data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"&gt;
           |         Accordion Item #2
           |       &lt;/button&gt;
           |     &lt;/h2&gt;
@@ -147,7 +147,7 @@ block content
           |   &lt;/div&gt;
           |   &lt;div class="accordion-item"&gt;
           |     &lt;h2 class="accordion-header"&gt;
-          |       &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"&gt;
+          |       &lt;button class="accordion-button collapsed" type='button' data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"&gt;
           |         Accordion Item #3
           |       &lt;/button&gt;
           |     &lt;/h2&gt;
@@ -164,7 +164,7 @@ block content
         #accordionPanelsStayOpenExample.accordion
           .accordion-item
             h2.accordion-header
-              button.accordion-button(type='button', data-bs-toggle='collapse', data-bs-target='#panelsStayOpen-collapseOne', aria-expanded='true', aria-controls='panelsStayOpen-collapseOne')
+              button.accordion-button(type='button' data-bs-toggle='collapse' data-bs-target='#panelsStayOpen-collapseOne' aria-expanded='true' aria-controls='panelsStayOpen-collapseOne')
                 | Accordion Item #1
             #panelsStayOpen-collapseOne.accordion-collapse.collapse.show
               .accordion-body
@@ -174,7 +174,7 @@ block content
                 | , though the transition does limit overflow.
           .accordion-item
             h2.accordion-header
-              button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#panelsStayOpen-collapseTwo', aria-expanded='false', aria-controls='panelsStayOpen-collapseTwo')
+              button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#panelsStayOpen-collapseTwo' aria-expanded='false' aria-controls='panelsStayOpen-collapseTwo')
                 | Accordion Item #2
             #panelsStayOpen-collapseTwo.accordion-collapse.collapse
               .accordion-body
@@ -184,7 +184,7 @@ block content
                 | , though the transition does limit overflow.
           .accordion-item
             h2.accordion-header
-              button.accordion-button.collapsed(type='button', data-bs-toggle='collapse', data-bs-target='#panelsStayOpen-collapseThree', aria-expanded='false', aria-controls='panelsStayOpen-collapseThree')
+              button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#panelsStayOpen-collapseThree' aria-expanded='false' aria-controls='panelsStayOpen-collapseThree')
                 | Accordion Item #3
             #panelsStayOpen-collapseThree.accordion-collapse.collapse
               .accordion-body
@@ -198,7 +198,7 @@ block content
           | &lt;div class="accordion" id="accordionPanelsStayOpenExample"&gt;
           |   &lt;div class="accordion-item"&gt;
           |     &lt;h2 class="accordion-header"&gt;
-          |       &lt;button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne"&gt;
+          |       &lt;button class="accordion-button" type='button' data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne"&gt;
           |         Accordion Item #1
           |       &lt;/button&gt;
           |     &lt;/h2&gt;
@@ -210,7 +210,7 @@ block content
           |   &lt;/div&gt;
           |   &lt;div class="accordion-item"&gt;
           |     &lt;h2 class="accordion-header"&gt;
-          |       &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo"&gt;
+          |       &lt;button class="accordion-button collapsed" type='button' data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo"&gt;
           |         Accordion Item #2
           |       &lt;/button&gt;
           |     &lt;/h2&gt;
@@ -222,7 +222,7 @@ block content
           |   &lt;/div&gt;
           |   &lt;div class="accordion-item"&gt;
           |     &lt;h2 class="accordion-header"&gt;
-          |       &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree"&gt;
+          |       &lt;button class="accordion-button collapsed" type='button' data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree"&gt;
           |         Accordion Item #3
           |       &lt;/button&gt;
           |     &lt;/h2&gt;

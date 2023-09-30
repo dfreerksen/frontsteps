@@ -4,9 +4,9 @@ block append config
   - var pageTitle = "Navs & tabs";
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p Documentation and examples for how to use Bootstrap's included navigation components.
 
       h4 Base nav
@@ -16,7 +16,7 @@ block content
       .bd-example
         ul.nav
           li.nav-item
-            a.nav-link.active(aria-current='page', href='#') Active
+            a.nav-link.active(aria-current='page' href='#') Active
           li.nav-item
             a.nav-link(href='#') Link
           li.nav-item
@@ -45,7 +45,7 @@ block content
 
       .bd-example
         nav.nav
-          a.nav-link.active(aria-current='page', href='#') Active
+          a.nav-link.active(aria-current='page' href='#') Active
           a.nav-link(href='#') Link
           a.nav-link(href='#') Link
           a.nav-link.disabled(aria-disabled='true') Disabled
@@ -69,7 +69,7 @@ block content
       .bd-example
         ul.nav.justify-content-center
           li.nav-item
-            a.nav-link.active(aria-current='page', href='#') Active
+            a.nav-link.active(aria-current='page' href='#') Active
           li.nav-item
             a.nav-link(href='#') Link
           li.nav-item
@@ -99,7 +99,7 @@ block content
       .bd-example
         ul.nav.justify-content-end
           li.nav-item
-            a.nav-link.active(aria-current='page', href='#') Active
+            a.nav-link.active(aria-current='page' href='#') Active
           li.nav-item
             a.nav-link(href='#') Link
           li.nav-item
@@ -130,7 +130,7 @@ block content
       .bd-example
         ul.nav.flex-column
           li.nav-item
-            a.nav-link.active(aria-current='page', href='#') Active
+            a.nav-link.active(aria-current='page' href='#') Active
           li.nav-item
             a.nav-link(href='#') Link
           li.nav-item
@@ -159,7 +159,7 @@ block content
 
       .bd-example
         nav.nav.flex-column
-          a.nav-link.active(aria-current='page', href='#') Active
+          a.nav-link.active(aria-current='page' href='#') Active
           a.nav-link(href='#') Link
           a.nav-link(href='#') Link
           a.nav-link.disabled(aria-disabled='true') Disabled
@@ -179,7 +179,7 @@ block content
       .bd-example
         ul.nav.nav-tabs
           li.nav-item
-            a.nav-link.active(aria-current='page', href='#') Active
+            a.nav-link.active(aria-current='page' href='#') Active
           li.nav-item
             a.nav-link(href='#') Link
           li.nav-item
@@ -210,7 +210,7 @@ block content
       .bd-example
         ul.nav.nav-pills
           li.nav-item
-            a.nav-link.active(aria-current='page', href='#') Active
+            a.nav-link.active(aria-current='page' href='#') Active
           li.nav-item
             a.nav-link(href='#') Link
           li.nav-item
@@ -241,7 +241,7 @@ block content
       .bd-example
         ul.nav.nav-underline
           li.nav-item
-            a.nav-link.active(aria-current='page', href='#') Active
+            a.nav-link.active(aria-current='page' href='#') Active
           li.nav-item
             a.nav-link(href='#') Link
           li.nav-item
@@ -272,7 +272,7 @@ block content
       .bd-example
         ul.nav.nav-pills.nav-fill
           li.nav-item
-            a.nav-link.active(aria-current='page', href='#') Active
+            a.nav-link.active(aria-current='page' href='#') Active
           li.nav-item
             a.nav-link(href='#') Much longer nav link
           li.nav-item
@@ -301,7 +301,7 @@ block content
 
       .bd-example
         nav.nav.nav-pills.nav-fill
-          a.nav-link.active(aria-current='page', href='#') Active
+          a.nav-link.active(aria-current='page' href='#') Active
           a.nav-link(href='#') Much longer nav link
           a.nav-link(href='#') Link
           a.nav-link.disabled(aria-disabled='true') Disabled
@@ -320,14 +320,13 @@ block content
       .bd-example
         ul.nav.nav-pills.nav-justified
           li.nav-item
-            a.nav-link.active(aria-current='page', href='#') Active
+            a.nav-link.active(aria-current='page' href='#') Active
           li.nav-item
             a.nav-link(href='#') Much longer nav link
           li.nav-item
             a.nav-link(href='#') Link
           li.nav-item
             a.nav-link.disabled(aria-disabled='true') Disabled
-
 
       pre
         code.language-html
@@ -350,7 +349,7 @@ block content
 
       .bd-example
         nav.nav.nav-pills.nav-justified
-          a.nav-link.active(aria-current='page', href='#') Active
+          a.nav-link.active(aria-current='page' href='#') Active
           a.nav-link(href='#') Much longer nav link
           a.nav-link(href='#') Link
           a.nav-link.disabled(aria-disabled='true') Disabled
@@ -369,7 +368,7 @@ block content
 
       .bd-example
         nav.nav.nav-pills.flex-column.flex-sm-row
-          a.flex-sm-fill.text-sm-center.nav-link.active(aria-current='page', href='#') Active
+          a.flex-sm-fill.text-sm-center.nav-link.active(aria-current='page' href='#') Active
           a.flex-sm-fill.text-sm-center.nav-link(href='#') Longer nav link
           a.flex-sm-fill.text-sm-center.nav-link(href='#') Link
           a.flex-sm-fill.text-sm-center.nav-link.disabled(aria-disabled='true') Disabled
@@ -391,9 +390,9 @@ block content
       .bd-example
         ul.nav.nav-tabs
           li.nav-item
-            a.nav-link.active(aria-current='page', href='#') Active
+            a.nav-link.active(aria-current='page' href='#') Active
           li.nav-item.dropdown
-            a.nav-link.dropdown-toggle(data-bs-toggle='dropdown', href='#', role='button', aria-expanded='false') Dropdown
+            a.nav-link.dropdown-toggle(data-bs-toggle='dropdown' href='#' role='button' aria-expanded='false') Dropdown
             ul.dropdown-menu
               li
                 a.dropdown-item(href='#') Action
@@ -439,9 +438,9 @@ block content
       .bd-example
         ul.nav.nav-pills
           li.nav-item
-            a.nav-link.active(aria-current='page', href='#') Active
+            a.nav-link.active(aria-current='page' href='#') Active
           li.nav-item.dropdown
-            a.nav-link.dropdown-toggle(data-bs-toggle='dropdown', href='#', role='button', aria-expanded='false') Dropdown
+            a.nav-link.dropdown-toggle(data-bs-toggle='dropdown' href='#' role='button' aria-expanded='false') Dropdown
             ul.dropdown-menu
               li
                 a.dropdown-item(href='#') Action

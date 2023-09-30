@@ -4,9 +4,9 @@ block append config
   - var pageTitle = "Dropdowns";
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.
 
       h4 Overview
@@ -27,19 +27,19 @@ block content
       .bd-example
         ul.list-group
           li.list-group-item
-            input#firstCheckboxStretched.form-check-input.me-1(type='checkbox', value='')
+            input#firstCheckboxStretched.form-check-input.me-1(type='checkbox' value='')
             label.form-check-label.stretched-link(for='firstCheckboxStretched') First checkbox
           li.list-group-item
-            input#secondCheckboxStretched.form-check-input.me-1(type='checkbox', value='')
+            input#secondCheckboxStretched.form-check-input.me-1(type='checkbox' value='')
             label.form-check-label.stretched-link(for='secondCheckboxStretched') Second checkbox
           li.list-group-item
-            input#thirdCheckboxStretched.form-check-input.me-1(type='checkbox', value='')
+            input#thirdCheckboxStretched.form-check-input.me-1(type='checkbox' value='')
             label.form-check-label.stretched-link(for='thirdCheckboxStretched') Third checkbox
 
       pre
         code.language-html
           | &lt;div class="dropdown"&gt;
-          |   &lt;button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button class="btn btn-secondary dropdown-toggle" type='button' data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     Dropdown button
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -53,7 +53,7 @@ block content
 
       .bd-example
         .dropdown
-          a.btn.btn-secondary.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+          a.btn.btn-secondary.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
             | Dropdown link
           ul.dropdown-menu
             li
@@ -81,7 +81,7 @@ block content
 
       .bd-example
         .btn-group
-          button.btn.btn-danger.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-danger.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             | Action
           ul.dropdown-menu
             li
@@ -99,7 +99,7 @@ block content
         code.language-html
           | &lt;!-- Example single danger button --&gt;
           | &lt;div class="btn-group"&gt;
-          |   &lt;button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     Action
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -118,7 +118,7 @@ block content
       .bd-example
         .btn-group
           button.btn.btn-danger(type='button') Action
-          button.btn.btn-danger.dropdown-toggle.dropdown-toggle-split(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-danger.dropdown-toggle.dropdown-toggle-split(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             span.visually-hidden Toggle Dropdown
           ul.dropdown-menu
             li
@@ -136,8 +136,8 @@ block content
         code.language-html
           | &lt;!-- Example split danger button --&gt;
           | &lt;div class="btn-group"&gt;
-          |   &lt;button type="button" class="btn btn-danger"&gt;Action&lt;/button&gt;
-          |   &lt;button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-danger"&gt;Action&lt;/button&gt;
+          |   &lt;button type='button' class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     &lt;span class="visually-hidden"&gt;Toggle Dropdown&lt;/span&gt;
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -154,7 +154,7 @@ block content
 
       .bd-example
         .btn-group
-          button.btn.btn-secondary.btn-lg.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-secondary.btn-lg.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             | Large button
           ul.dropdown-menu
             li
@@ -169,7 +169,7 @@ block content
               a.dropdown-item(href='#') Separated link
         .btn-group
           button.btn.btn-lg.btn-secondary(type='button') Large split button
-          button.btn.btn-lg.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-lg.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             span.visually-hidden Toggle Dropdown
           ul.dropdown-menu
             li
@@ -187,7 +187,7 @@ block content
         code.language-html
           | &lt;!-- Large button groups (default and split) --&gt;
           | &lt;div class="btn-group"&gt;
-          |   &lt;button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button class="btn btn-secondary btn-lg dropdown-toggle" type='button' data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     Large button
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -195,10 +195,10 @@ block content
           |   &lt;/ul&gt;
           | &lt;/div&gt;
           | &lt;div class="btn-group"&gt;
-          |   &lt;button class="btn btn-secondary btn-lg" type="button"&gt;
+          |   &lt;button class="btn btn-secondary btn-lg" type='button'&gt;
           |     Large split button
           |   &lt;/button&gt;
-          |   &lt;button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     &lt;span class="visually-hidden"&gt;Toggle Dropdown&lt;/span&gt;
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -208,7 +208,7 @@ block content
 
       .bd-example
         .btn-group
-          button.btn.btn-secondary.btn-sm.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-secondary.btn-sm.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             | Small button
           ul.dropdown-menu
             li
@@ -223,7 +223,7 @@ block content
               a.dropdown-item(href='#') Separated link
         .btn-group
           button.btn.btn-sm.btn-secondary(type='button') Small split button
-          button.btn.btn-sm.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-sm.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             span.visually-hidden Toggle Dropdown
           ul.dropdown-menu
             li
@@ -241,7 +241,7 @@ block content
         code.language-html
           | &lt;!-- Small button groups (default and split) --&gt;
           | &lt;div class="btn-group"&gt;
-          |   &lt;button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button class="btn btn-secondary btn-sm dropdown-toggle" type='button' data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     Small button
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -249,10 +249,10 @@ block content
           |   &lt;/ul&gt;
           | &lt;/div&gt;
           | &lt;div class="btn-group"&gt;
-          |   &lt;button class="btn btn-secondary btn-sm" type="button"&gt;
+          |   &lt;button class="btn btn-secondary btn-sm" type='button'&gt;
           |     Small split button
           |   &lt;/button&gt;
-          |   &lt;button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     &lt;span class="visually-hidden"&gt;Toggle Dropdown&lt;/span&gt;
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -267,7 +267,7 @@ block content
 
       .bd-example
         .dropdown-center
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             | Centered dropdown
           ul.dropdown-menu
             li
@@ -280,7 +280,7 @@ block content
       pre
         code.language-html
           | &lt;div class="dropdown-center"&gt;
-          |   &lt;button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button class="btn btn-secondary dropdown-toggle" type='button' data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     Centered dropdown
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -295,7 +295,7 @@ block content
 
       .bd-example
         .btn-group.dropup
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             | Dropup
           ul.dropdown-menu
             li
@@ -311,7 +311,7 @@ block content
         .btn-group.dropup
           button.btn.btn-secondary(type='button')
             | Split dropup
-          button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             span.visually-hidden Toggle Dropdown
           ul.dropdown-menu
             li
@@ -329,7 +329,7 @@ block content
         code.language-html
           | &lt;!-- Default dropup button --&gt;
           | &lt;div class="btn-group dropup"&gt;
-          |   &lt;button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     Dropup
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -339,10 +339,10 @@ block content
           |
           | &lt;!-- Split dropup button --&gt;
           | &lt;div class="btn-group dropup"&gt;
-          |   &lt;button type="button" class="btn btn-secondary"&gt;
+          |   &lt;button type='button' class="btn btn-secondary"&gt;
           |     Split dropup
           |   &lt;/button&gt;
-          |   &lt;button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     &lt;span class="visually-hidden"&gt;Toggle Dropdown&lt;/span&gt;
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -355,7 +355,7 @@ block content
 
       .bd-example
         .dropup-center.dropup
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             | Centered dropup
           ul.dropdown-menu
             li
@@ -368,7 +368,7 @@ block content
       pre
         code.language-html
           | &lt;div class="dropup-center dropup"&gt;
-          |   &lt;button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button class="btn btn-secondary dropdown-toggle" type='button' data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     Centered dropup
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -383,7 +383,7 @@ block content
 
       .bd-example
         .btn-group.dropend
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             | Dropend
           ul.dropdown-menu
             li
@@ -399,7 +399,7 @@ block content
         .btn-group.dropend
           button.btn.btn-secondary(type='button')
             | Split dropend
-          button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             span.visually-hidden Toggle Dropend
           ul.dropdown-menu
             li
@@ -417,7 +417,7 @@ block content
         code.language-html
           | &lt;!-- Default dropend button --&gt;
           | &lt;div class="btn-group dropend"&gt;
-          |   &lt;button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     Dropend
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -427,10 +427,10 @@ block content
           |
           | &lt;!-- Split dropend button --&gt;
           | &lt;div class="btn-group dropend"&gt;
-          |   &lt;button type="button" class="btn btn-secondary"&gt;
+          |   &lt;button type='button' class="btn btn-secondary"&gt;
           |     Split dropend
           |   &lt;/button&gt;
-          |   &lt;button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     &lt;span class="visually-hidden"&gt;Toggle Dropend&lt;/span&gt;
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -443,7 +443,7 @@ block content
 
       .bd-example
         .btn-group.dropstart
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             | Dropstart
           ul.dropdown-menu
             li
@@ -457,7 +457,7 @@ block content
             li
               a.dropdown-item(href='#') Separated link
         .btn-group.dropstart
-          button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             span.visually-hidden Toggle Dropstart
           ul.dropdown-menu
             li
@@ -477,7 +477,7 @@ block content
         code.language-html
           | &lt;!-- Default dropstart button --&gt;
           | &lt;div class="btn-group dropstart"&gt;
-          |   &lt;button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     Dropstart
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -487,13 +487,13 @@ block content
           |
           | &lt;!-- Split dropstart button --&gt;
           | &lt;div class="btn-group dropstart"&gt;
-          |   &lt;button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     &lt;span class="visually-hidden"&gt;Toggle Dropstart&lt;/span&gt;
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
           |     &lt;!-- Dropdown menu links --&gt;
           |   &lt;/ul&gt;
-          |   &lt;button type="button" class="btn btn-secondary"&gt;
+          |   &lt;button type='button' class="btn btn-secondary"&gt;
           |     Split dropstart
           |   &lt;/button&gt;
           | &lt;/div&gt;
@@ -503,7 +503,7 @@ block content
 
       .bd-example
         .dropdown
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             | Dropdown
           ul.dropdown-menu
             li
@@ -516,13 +516,13 @@ block content
       pre
         code.language-html
         | &lt;div class="dropdown"&gt;
-        |   &lt;button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+        |   &lt;button class="btn btn-secondary dropdown-toggle" type='button' data-bs-toggle="dropdown" aria-expanded="false"&gt;
         |     Dropdown
         |   &lt;/button&gt;
         |   &lt;ul class="dropdown-menu"&gt;
-        |     &lt;li&gt;&lt;button class="dropdown-item" type="button"&gt;Action&lt;/button&gt;&lt;/li&gt;
-        |     &lt;li&gt;&lt;button class="dropdown-item" type="button"&gt;Another action&lt;/button&gt;&lt;/li&gt;
-        |     &lt;li&gt;&lt;button class="dropdown-item" type="button"&gt;Something else here&lt;/button&gt;&lt;/li&gt;
+        |     &lt;li&gt;&lt;button class="dropdown-item" type='button'&gt;Action&lt;/button&gt;&lt;/li&gt;
+        |     &lt;li&gt;&lt;button class="dropdown-item" type='button'&gt;Another action&lt;/button&gt;&lt;/li&gt;
+        |     &lt;li&gt;&lt;button class="dropdown-item" type='button'&gt;Something else here&lt;/button&gt;&lt;/li&gt;
         |   &lt;/ul&gt;
         | &lt;/div&gt;
 
@@ -556,7 +556,7 @@ block content
           li
             a.dropdown-item(href='#') Regular link
           li
-            a.dropdown-item.active(href='#', aria-current='true') Active link
+            a.dropdown-item.active(href='#' aria-current='true') Active link
           li
             a.dropdown-item(href='#') Another link
 
@@ -594,7 +594,7 @@ block content
 
       .bd-example
         .btn-group
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             | Right-aligned menu example
           ul.dropdown-menu.dropdown-menu-end
             li
@@ -607,13 +607,13 @@ block content
       pre
         code.language-html
           | &lt;div class="btn-group"&gt;
-          |   &lt;button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     Right-aligned menu example
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu dropdown-menu-end"&gt;
-          |     &lt;li&gt;&lt;button class="dropdown-item" type="button"&gt;Action&lt;/button&gt;&lt;/li&gt;
-          |     &lt;li&gt;&lt;button class="dropdown-item" type="button"&gt;Another action&lt;/button&gt;&lt;/li&gt;
-          |     &lt;li&gt;&lt;button class="dropdown-item" type="button"&gt;Something else here&lt;/button&gt;&lt;/li&gt;
+          |     &lt;li&gt;&lt;button class="dropdown-item" type='button'&gt;Action&lt;/button&gt;&lt;/li&gt;
+          |     &lt;li&gt;&lt;button class="dropdown-item" type='button'&gt;Another action&lt;/button&gt;&lt;/li&gt;
+          |     &lt;li&gt;&lt;button class="dropdown-item" type='button'&gt;Something else here&lt;/button&gt;&lt;/li&gt;
           |   &lt;/ul&gt;
           | &lt;/div&gt;
 
@@ -623,7 +623,7 @@ block content
 
       .bd-example
         .btn-group
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', data-bs-display='static', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' data-bs-display='static' aria-expanded='false')
             | Left-aligned but right aligned when large screen
           ul.dropdown-menu.dropdown-menu-lg-end
             li
@@ -636,13 +636,13 @@ block content
       pre
         code.language-html
           | &lt;div class="btn-group"&gt;
-          |   &lt;button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"&gt;
           |     Left-aligned but right aligned when large screen
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu dropdown-menu-lg-end"&gt;
-          |     &lt;li&gt;&lt;button class="dropdown-item" type="button"&gt;Action&lt;/button&gt;&lt;/li&gt;
-          |     &lt;li&gt;&lt;button class="dropdown-item" type="button"&gt;Another action&lt;/button&gt;&lt;/li&gt;
-          |     &lt;li&gt;&lt;button class="dropdown-item" type="button"&gt;Something else here&lt;/button&gt;&lt;/li&gt;
+          |     &lt;li&gt;&lt;button class="dropdown-item" type='button'&gt;Action&lt;/button&gt;&lt;/li&gt;
+          |     &lt;li&gt;&lt;button class="dropdown-item" type='button'&gt;Another action&lt;/button&gt;&lt;/li&gt;
+          |     &lt;li&gt;&lt;button class="dropdown-item" type='button'&gt;Something else here&lt;/button&gt;&lt;/li&gt;
           |   &lt;/ul&gt;
           | &lt;/div&gt;
 
@@ -650,7 +650,7 @@ block content
 
       .bd-example
         .btn-group
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', data-bs-display='static', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' data-bs-display='static' aria-expanded='false')
             | Right-aligned but left aligned when large screen
           ul.dropdown-menu.dropdown-menu-end.dropdown-menu-lg-start
             li
@@ -663,13 +663,13 @@ block content
       pre
         code.language-html
           | &lt;div class="btn-group"&gt;
-          |   &lt;button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"&gt;
           |     Right-aligned but left aligned when large screen
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start"&gt;
-          |     &lt;li&gt;&lt;button class="dropdown-item" type="button"&gt;Action&lt;/button&gt;&lt;/li&gt;
-          |     &lt;li&gt;&lt;button class="dropdown-item" type="button"&gt;Another action&lt;/button&gt;&lt;/li&gt;
-          |     &lt;li&gt;&lt;button class="dropdown-item" type="button"&gt;Something else here&lt;/button&gt;&lt;/li&gt;
+          |     &lt;li&gt;&lt;button class="dropdown-item" type='button'&gt;Action&lt;/button&gt;&lt;/li&gt;
+          |     &lt;li&gt;&lt;button class="dropdown-item" type='button'&gt;Another action&lt;/button&gt;&lt;/li&gt;
+          |     &lt;li&gt;&lt;button class="dropdown-item" type='button'&gt;Something else here&lt;/button&gt;&lt;/li&gt;
           |   &lt;/ul&gt;
           | &lt;/div&gt;
 
@@ -680,7 +680,7 @@ block content
 
       .bd-example
         .btn-group
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             | Dropdown
           ul.dropdown-menu
             li
@@ -690,7 +690,7 @@ block content
             li
               a.dropdown-item(href='#') Menu item
         .btn-group
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             | Right-aligned menu
           ul.dropdown-menu.dropdown-menu-end
             li
@@ -700,7 +700,7 @@ block content
             li
               a.dropdown-item(href='#') Menu item
         .btn-group
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', data-bs-display='static', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' data-bs-display='static' aria-expanded='false')
             | Left-aligned, right-aligned lg
           ul.dropdown-menu.dropdown-menu-lg-end
             li
@@ -710,7 +710,7 @@ block content
             li
               a.dropdown-item(href='#') Menu item
         .btn-group
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', data-bs-display='static', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' data-bs-display='static' aria-expanded='false')
             | Right-aligned, left-aligned lg
           ul.dropdown-menu.dropdown-menu-end.dropdown-menu-lg-start
             li
@@ -720,7 +720,7 @@ block content
             li
               a.dropdown-item(href='#') Menu item
         .btn-group.dropstart
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             | Dropstart
           ul.dropdown-menu
             li
@@ -730,7 +730,7 @@ block content
             li
               a.dropdown-item(href='#') Menu item
         .btn-group.dropend
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             | Dropend
           ul.dropdown-menu
             li
@@ -740,7 +740,7 @@ block content
             li
               a.dropdown-item(href='#') Menu item
         .btn-group.dropup
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             | Dropup
           ul.dropdown-menu
             li
@@ -753,7 +753,7 @@ block content
       pre
         code.language-html
           | &lt;div class="btn-group"&gt;
-          |   &lt;button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button class="btn btn-secondary dropdown-toggle" type='button' data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     Dropdown
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -764,7 +764,7 @@ block content
           | &lt;/div&gt;
           |
           | &lt;div class="btn-group"&gt;
-          |   &lt;button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     Right-aligned menu
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu dropdown-menu-end"&gt;
@@ -775,7 +775,7 @@ block content
           | &lt;/div&gt;
           |
           | &lt;div class="btn-group"&gt;
-          |   &lt;button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"&gt;
           |     Left-aligned, right-aligned lg
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu dropdown-menu-lg-end"&gt;
@@ -786,7 +786,7 @@ block content
           | &lt;/div&gt;
           |
           | &lt;div class="btn-group"&gt;
-          |   &lt;button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false"&gt;
           |     Right-aligned, left-aligned lg
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start"&gt;
@@ -797,7 +797,7 @@ block content
           | &lt;/div&gt;
           |
           | &lt;div class="btn-group dropstart"&gt;
-          |   &lt;button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     Dropstart
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -808,7 +808,7 @@ block content
           | &lt;/div&gt;
           |
           | &lt;div class="btn-group dropend"&gt;
-          |   &lt;button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     Dropend
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -819,7 +819,7 @@ block content
           | &lt;/div&gt;
           |
           | &lt;div class="btn-group dropup"&gt;
-          |   &lt;button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     Dropup
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -905,10 +905,10 @@ block content
           form.px-4.py-3
             .mb-3
               label.form-label(for='exampleDropdownFormEmail1') Email address
-              input#exampleDropdownFormEmail1.form-control(type='email', placeholder='email@example.com')
+              input#exampleDropdownFormEmail1.form-control(type='email' placeholder='email@example.com')
             .mb-3
               label.form-label(for='exampleDropdownFormPassword1') Password
-              input#exampleDropdownFormPassword1.form-control(type='password', placeholder='Password')
+              input#exampleDropdownFormPassword1.form-control(type='password' placeholder='Password')
             .mb-3
               .form-check
                 input#dropdownCheck.form-check-input(type='checkbox')
@@ -948,15 +948,15 @@ block content
 
       .bd-example
         .dropdown
-          button.btn.btn-primary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false', data-bs-auto-close='outside')
+          button.btn.btn-primary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false' data-bs-auto-close='outside')
             | Dropdown form
           form.dropdown-menu.p-4
             .mb-3
               label.form-label(for='exampleDropdownFormEmail2') Email address
-              input#exampleDropdownFormEmail2.form-control(type='email', placeholder='email@example.com')
+              input#exampleDropdownFormEmail2.form-control(type='email' placeholder='email@example.com')
             .mb-3
               label.form-label(for='exampleDropdownFormPassword2') Password
-              input#exampleDropdownFormPassword2.form-control(type='password', placeholder='Password')
+              input#exampleDropdownFormPassword2.form-control(type='password' placeholder='Password')
             .mb-3
               .form-check
                 input#dropdownCheck2.form-check-input(type='checkbox')
@@ -967,7 +967,7 @@ block content
       pre
         code.language-html
           | &lt;div class="dropdown"&gt;
-          |   &lt;button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"&gt;
+          |   &lt;button type='button' class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"&gt;
           |     Dropdown form
           |   &lt;/button&gt;
           |   &lt;form class="dropdown-menu p-4"&gt;
@@ -997,7 +997,7 @@ block content
       .bd-example
         .d-flex
           .dropdown.me-1
-            button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false', data-bs-offset='10,20')
+            button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false' data-bs-offset='10,20')
               | Offset
             ul.dropdown-menu
               li
@@ -1008,7 +1008,7 @@ block content
                 a.dropdown-item(href='#') Something else here
           .btn-group
             button.btn.btn-secondary(type='button') Reference
-            button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button', data-bs-toggle='dropdown', aria-expanded='false', data-bs-reference='parent')
+            button.btn.btn-secondary.dropdown-toggle.dropdown-toggle-split(type='button' data-bs-toggle='dropdown' aria-expanded='false' data-bs-reference='parent')
               span.visually-hidden Toggle Dropdown
             ul.dropdown-menu
               li
@@ -1026,7 +1026,7 @@ block content
         code.language-html
           | &lt;div class="d-flex"&gt;
           |   &lt;div class="dropdown me-1"&gt;
-          |     &lt;button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20"&gt;
+          |     &lt;button type='button' class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20"&gt;
           |       Offset
           |     &lt;/button&gt;
           |     &lt;ul class="dropdown-menu"&gt;
@@ -1036,8 +1036,8 @@ block content
           |     &lt;/ul&gt;
           |   &lt;/div&gt;
           |   &lt;div class="btn-group"&gt;
-          |     &lt;button type="button" class="btn btn-secondary"&gt;Reference&lt;/button&gt;
-          |     &lt;button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent"&gt;
+          |     &lt;button type='button' class="btn btn-secondary"&gt;Reference&lt;/button&gt;
+          |     &lt;button type='button' class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent"&gt;
           |       &lt;span class="visually-hidden"&gt;Toggle Dropdown&lt;/span&gt;
           |     &lt;/button&gt;
           |     &lt;ul class="dropdown-menu"&gt;
@@ -1055,7 +1055,7 @@ block content
 
       .bd-example
         .btn-group
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', data-bs-auto-close='true', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' data-bs-auto-close='true' aria-expanded='false')
             | Default dropdown
           ul.dropdown-menu
             li
@@ -1065,7 +1065,7 @@ block content
             li
               a.dropdown-item(href='#') Menu item
         .btn-group
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', data-bs-auto-close='inside', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' data-bs-auto-close='inside' aria-expanded='false')
             | Clickable inside
           ul.dropdown-menu
             li
@@ -1075,7 +1075,7 @@ block content
             li
               a.dropdown-item(href='#') Menu item
         .btn-group
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', data-bs-auto-close='outside', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' data-bs-auto-close='outside' aria-expanded='false')
             | Clickable outside
           ul.dropdown-menu
             li
@@ -1085,7 +1085,7 @@ block content
             li
               a.dropdown-item(href='#') Menu item
         .btn-group
-          button.btn.btn-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', data-bs-auto-close='false', aria-expanded='false')
+          button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' data-bs-auto-close='false' aria-expanded='false')
             | Manual close
           ul.dropdown-menu
             li
@@ -1098,7 +1098,7 @@ block content
       pre
         code.language-html
           | &lt;div class="btn-group"&gt;
-          |   &lt;button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false"&gt;
+          |   &lt;button class="btn btn-secondary dropdown-toggle" type='button' data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false"&gt;
           |     Default dropdown
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -1109,7 +1109,7 @@ block content
           | &lt;/div&gt;
           |
           | &lt;div class="btn-group"&gt;
-          |   &lt;button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false"&gt;
+          |   &lt;button class="btn btn-secondary dropdown-toggle" type='button' data-bs-toggle="dropdown" data-bs-auto-close="inside" aria-expanded="false"&gt;
           |     Clickable inside
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -1120,7 +1120,7 @@ block content
           | &lt;/div&gt;
           |
           | &lt;div class="btn-group"&gt;
-          |   &lt;button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"&gt;
+          |   &lt;button class="btn btn-secondary dropdown-toggle" type='button' data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false"&gt;
           |     Clickable outside
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -1131,7 +1131,7 @@ block content
           | &lt;/div&gt;
           |
           | &lt;div class="btn-group"&gt;
-          |   &lt;button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false"&gt;
+          |   &lt;button class="btn btn-secondary dropdown-toggle" type='button' data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false"&gt;
           |     Manual close
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;

@@ -4,21 +4,21 @@ block append config
   - var pageTitle = "Floating labels";
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
 
       p Create beautifully simple form labels that float over your input fields.
 
       h4 Example
-      p Wrap a pair of <code>&lt;input class="form-control"&gt;</code> and <code>&lt;label&gt;</code> elements in <code>.form-floating</code> to enable floating labels with Bootstrap’s textual form fields. A <code>placeholder</code> is required on each <code>&lt;input&gt;</code> as our method of CSS-only floating labels uses the <code>:placeholder-shown</code> pseudo-element. Also note that the <code>&lt;input&gt;</code> must come first so we can utilize a sibling selector (e.g., <code>~</code>).
+      p Wrap a pair of <code>&lt;input class="form-control"&gt;</code> and <code>&lt;label&gt;</code> elements in <code>.form-floating</code> to enable floating labels with Bootstrap's textual form fields. A <code>placeholder</code> is required on each <code>&lt;input&gt;</code> as our method of CSS-only floating labels uses the <code>:placeholder-shown</code> pseudo-element. Also note that the <code>&lt;input&gt;</code> must come first so we can utilize a sibling selector (e.g., <code>~</code>).
 
       .bd-example
         .form-floating.mb-3
-          input#floatingInput.form-control(type='email', placeholder='name@example.com')
+          input#floatingInput.form-control(type='email' placeholder='name@example.com')
           label(for='floatingInput') Email address
         .form-floating
-          input#floatingPassword.form-control(type='password', placeholder='Password')
+          input#floatingPassword.form-control(type='password' placeholder='Password')
           label(for='floatingPassword') Password
 
       pre
@@ -32,11 +32,11 @@ block content
           |   &lt;label for="floatingPassword"&gt;Password&lt;/label&gt;
           | &lt;/div&gt;
 
-      p When there’s a <code>value</code> already defined, <code>&lt;label&gt;</code>s will automatically adjust to their floated position.
+      p When there's a <code>value</code> already defined, <code>&lt;label&gt;</code>s will automatically adjust to their floated position.
 
       .bd-example
         form.form-floating
-          input#floatingInputValue.form-control(type='email', placeholder='name@example.com', value='test@example.com')
+          input#floatingInputValue.form-control(type='email' placeholder='name@example.com' value='test@example.com')
           label(for='floatingInputValue') Input with value
 
       pre
@@ -50,7 +50,7 @@ block content
 
       .bd-example
         form.form-floating
-          input#floatingInputInvalid.form-control.is-invalid(type='email', placeholder='name@example.com', value='test@example.com')
+          input#floatingInputInvalid.form-control.is-invalid(type='email' placeholder='name@example.com' value='test@example.com')
           label(for='floatingInputInvalid') Invalid input
 
       pre
@@ -79,7 +79,7 @@ block content
 
       .bd-example
         .form-floating
-          textarea#floatingTextarea2.form-control(placeholder='Leave a comment here', style='height: 100px')
+          textarea#floatingTextarea2.form-control(placeholder='Leave a comment here' style='height: 100px')
           label(for='floatingTextarea2') Comments
 
       pre
@@ -90,7 +90,7 @@ block content
           | &lt;/div&gt;
 
       h4 Selects
-      p Other than <code>.form-control</code>, floating labels are only available on <code>.form-select</code>s. They work in the same way, but unlike <code>&lt;input&gt;</code>s, they’ll always show the <code>&lt;label&gt;</code> in its floated state. <strong>Selects with <code>size</code> and <code>multiple</code> are not supported.</strong>
+      p Other than <code>.form-control</code>, floating labels are only available on <code>.form-select</code>s. They work in the same way, but unlike <code>&lt;input&gt;</code>s, they'll always show the <code>&lt;label&gt;</code> in its floated state. <strong>Selects with <code>size</code> and <code>multiple</code> are not supported.</strong>
 
       .bd-example
         .form-floating
@@ -117,16 +117,16 @@ block content
 
       .bd-example
         .form-floating.mb-3
-          input#floatingInputDisabled.form-control(type='email', placeholder='name@example.com', disabled='')
+          input#floatingInputDisabled.form-control(type='email' placeholder='name@example.com' disabled='')
           label(for='floatingInputDisabled') Email address
         .form-floating.mb-3
-          textarea#floatingTextareaDisabled.form-control(placeholder='Leave a comment here', disabled='')
+          textarea#floatingTextareaDisabled.form-control(placeholder='Leave a comment here' disabled='')
           label(for='floatingTextareaDisabled') Comments
         .form-floating.mb-3
-          textarea#floatingTextarea2Disabled.form-control(placeholder='Leave a comment here', style='height: 100px', disabled='') Disabled textarea with some text inside
+          textarea#floatingTextarea2Disabled.form-control(placeholder='Leave a comment here' style='height: 100px' disabled='') Disabled textarea with some text inside
           label(for='floatingTextarea2Disabled') Comments
         .form-floating
-          select#floatingSelectDisabled.form-select(aria-label='Floating label disabled select example', disabled='')
+          select#floatingSelectDisabled.form-select(aria-label='Floating label disabled select example' disabled='')
             option(selected='') Open this select menu
             option(value='1') One
             option(value='2') Two
@@ -162,10 +162,10 @@ block content
 
       .bd-example
         .form-floating.mb-3
-          input#floatingEmptyPlaintextInput.form-control-plaintext(type='email', readonly='', placeholder='name@example.com')
+          input#floatingEmptyPlaintextInput.form-control-plaintext(type='email' readonly='' placeholder='name@example.com')
           label(for='floatingEmptyPlaintextInput') Empty input
         .form-floating.mb-3
-          input#floatingPlaintextInput.form-control-plaintext(type='email', readonly='', placeholder='name@example.com', value='name@example.com')
+          input#floatingPlaintextInput.form-control-plaintext(type='email' readonly='' placeholder='name@example.com' value='name@example.com')
           label(for='floatingPlaintextInput') Input with value
 
       pre
@@ -186,7 +186,7 @@ block content
         .input-group.mb-3
           span.input-group-text @
           .form-floating
-            input#floatingInputGroup1.form-control(type='text', placeholder='Username')
+            input#floatingInputGroup1.form-control(type='text' placeholder='Username')
             label(for='floatingInputGroup1') Username
 
       pre
@@ -205,7 +205,7 @@ block content
         .input-group.has-validation
           span.input-group-text @
           .form-floating.is-invalid
-            input#floatingInputGroup2.form-control.is-invalid(type='text', placeholder='Username', required='')
+            input#floatingInputGroup2.form-control.is-invalid(type='text' placeholder='Username' required='')
             label(for='floatingInputGroup2') Username
           .invalid-feedback
             | Please choose a username.
@@ -230,7 +230,7 @@ block content
         .row.g-2
           .col-md
             .form-floating
-              input#floatingInputGrid.form-control(type='email', placeholder='name@example.com', value='mdo@example.com')
+              input#floatingInputGrid.form-control(type='email' placeholder='name@example.com' value='mdo@example.com')
               label(for='floatingInputGrid') Email address
           .col-md
             .form-floating

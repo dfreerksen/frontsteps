@@ -4,9 +4,9 @@ block append config
   - var pageTitle = "Carousel";
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p A slideshow component for cycling through elements—images or slides of text—like a carousel.
 
       h4 How it works
@@ -23,24 +23,24 @@ block content
         #carouselExample.carousel.slide
           .carousel-inner
             .carousel-item.active
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: First slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#777')
-                text(x='50%', y='50%', fill='#555', dy='.3em') First slide
+                rect(width='100%' height='100%' fill='#777')
+                text(x='50%' y='50%' fill='#555' dy='.3em') First slide
             .carousel-item
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Second slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#666')
-                text(x='50%', y='50%', fill='#444', dy='.3em') Second slide
+                rect(width='100%' height='100%' fill='#666')
+                text(x='50%' y='50%' fill='#444' dy='.3em') Second slide
             .carousel-item
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Third slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#555')
-                text(x='50%', y='50%', fill='#333', dy='.3em') Third slide
-          button.carousel-control-prev(type='button', data-bs-target='#carouselExample', data-bs-slide='prev')
+                rect(width='100%' height='100%' fill='#555')
+                text(x='50%' y='50%' fill='#333' dy='.3em') Third slide
+          button.carousel-control-prev(type='button' data-bs-target='#carouselExample' data-bs-slide='prev')
             span.carousel-control-prev-icon(aria-hidden='true')
             span.visually-hidden Previous
-          button.carousel-control-next(type='button', data-bs-target='#carouselExample', data-bs-slide='next')
+          button.carousel-control-next(type='button' data-bs-target='#carouselExample' data-bs-slide='next')
             span.carousel-control-next-icon(aria-hidden='true')
             span.visually-hidden Next
 
@@ -58,11 +58,11 @@ block content
           |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
           |     &lt;/div&gt;
           |   &lt;/div&gt;
-          |   &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev"&gt;
+          |   &lt;button class="carousel-control-prev" type='button' data-bs-target="#carouselExample" data-bs-slide="prev"&gt;
           |     &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
           |     &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
           |   &lt;/button&gt;
-          |   &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next"&gt;
+          |   &lt;button class="carousel-control-next" type='button' data-bs-target="#carouselExample" data-bs-slide="next"&gt;
           |     &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
           |     &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
           |   &lt;/button&gt;
@@ -77,29 +77,29 @@ block content
       .bd-example
         #carouselExampleIndicators.carousel.slide
           .carousel-indicators
-            button.active(type='button', data-bs-target='#carouselExampleIndicators', data-bs-slide-to='0', aria-current='true', aria-label='Slide 1')
-            button(type='button', data-bs-target='#carouselExampleIndicators', data-bs-slide-to='1', aria-label='Slide 2')
-            button(type='button', data-bs-target='#carouselExampleIndicators', data-bs-slide-to='2', aria-label='Slide 3')
+            button.active(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+            button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='1' aria-label='Slide 2')
+            button(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide-to='2' aria-label='Slide 3')
           .carousel-inner
             .carousel-item.active
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: First slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#777')
-                text(x='50%', y='50%', fill='#555', dy='.3em') First slide
+                rect(width='100%' height='100%' fill='#777')
+                text(x='50%' y='50%' fill='#555' dy='.3em') First slide
             .carousel-item
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Second slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#666')
-                text(x='50%', y='50%', fill='#444', dy='.3em') Second slide
+                rect(width='100%' height='100%' fill='#666')
+                text(x='50%' y='50%' fill='#444' dy='.3em') Second slide
             .carousel-item
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Third slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#555')
-                text(x='50%', y='50%', fill='#333', dy='.3em') Third slide
-          button.carousel-control-prev(type='button', data-bs-target='#carouselExampleIndicators', data-bs-slide='prev')
+                rect(width='100%' height='100%' fill='#555')
+                text(x='50%' y='50%' fill='#333' dy='.3em') Third slide
+          button.carousel-control-prev(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='prev')
             span.carousel-control-prev-icon(aria-hidden='true')
             span.visually-hidden Previous
-          button.carousel-control-next(type='button', data-bs-target='#carouselExampleIndicators', data-bs-slide='next')
+          button.carousel-control-next(type='button' data-bs-target='#carouselExampleIndicators' data-bs-slide='next')
             span.carousel-control-next-icon(aria-hidden='true')
             span.visually-hidden Next
 
@@ -107,9 +107,9 @@ block content
         code.language-html
           | &lt;div id="carouselExampleIndicators" class="carousel slide"&gt;
           |   &lt;div class="carousel-indicators"&gt;
-          |     &lt;button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"&gt;&lt;/button&gt;
-          |     &lt;button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"&gt;&lt;/button&gt;
-          |     &lt;button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"&gt;&lt;/button&gt;
+          |     &lt;button type='button' data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"&gt;&lt;/button&gt;
+          |     &lt;button type='button' data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"&gt;&lt;/button&gt;
+          |     &lt;button type='button' data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"&gt;&lt;/button&gt;
           |   &lt;/div&gt;
           |   &lt;div class="carousel-inner"&gt;
           |     &lt;div class="carousel-item active"&gt;
@@ -122,11 +122,11 @@ block content
           |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
           |     &lt;/div&gt;
           |   &lt;/div&gt;
-          |   &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"&gt;
+          |   &lt;button class="carousel-control-prev" type='button' data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"&gt;
           |     &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
           |     &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
           |   &lt;/button&gt;
-          |   &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"&gt;
+          |   &lt;button class="carousel-control-next" type='button' data-bs-target="#carouselExampleIndicators" data-bs-slide="next"&gt;
           |     &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
           |     &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
           |   &lt;/button&gt;
@@ -138,38 +138,38 @@ block content
       .bd-example
         #carouselExampleCaptions.carousel.slide
           .carousel-indicators
-            button.active(type='button', data-bs-target='#carouselExampleCaptions', data-bs-slide-to='0', aria-current='true', aria-label='Slide 1')
-            button(type='button', data-bs-target='#carouselExampleCaptions', data-bs-slide-to='1', aria-label='Slide 2')
-            button(type='button', data-bs-target='#carouselExampleCaptions', data-bs-slide-to='2', aria-label='Slide 3')
+            button.active(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+            button(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='1' aria-label='Slide 2')
+            button(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide-to='2' aria-label='Slide 3')
           .carousel-inner
             .carousel-item.active
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: First slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#777')
-                text(x='50%', y='50%', fill='#555', dy='.3em') First slide
+                rect(width='100%' height='100%' fill='#777')
+                text(x='50%' y='50%' fill='#555' dy='.3em') First slide
               .carousel-caption.d-none.d-md-block
                 h5 First slide label
                 p Some representative placeholder content for the first slide.
             .carousel-item
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Second slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#666')
-                text(x='50%', y='50%', fill='#444', dy='.3em') Second slide
+                rect(width='100%' height='100%' fill='#666')
+                text(x='50%' y='50%' fill='#444' dy='.3em') Second slide
               .carousel-caption.d-none.d-md-block
                 h5 Second slide label
                 p Some representative placeholder content for the second slide.
             .carousel-item
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Third slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#555')
-                text(x='50%', y='50%', fill='#333', dy='.3em') Third slide
+                rect(width='100%' height='100%' fill='#555')
+                text(x='50%' y='50%' fill='#333' dy='.3em') Third slide
               .carousel-caption.d-none.d-md-block
                 h5 Third slide label
                 p Some representative placeholder content for the third slide.
-          button.carousel-control-prev(type='button', data-bs-target='#carouselExampleCaptions', data-bs-slide='prev')
+          button.carousel-control-prev(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide='prev')
             span.carousel-control-prev-icon(aria-hidden='true')
             span.visually-hidden Previous
-          button.carousel-control-next(type='button', data-bs-target='#carouselExampleCaptions', data-bs-slide='next')
+          button.carousel-control-next(type='button' data-bs-target='#carouselExampleCaptions' data-bs-slide='next')
             span.carousel-control-next-icon(aria-hidden='true')
             span.visually-hidden Next
 
@@ -177,9 +177,9 @@ block content
         code.language-html
           | &lt;div id="carouselExampleCaptions" class="carousel slide"&gt;
           |   &lt;div class="carousel-indicators"&gt;
-          |     &lt;button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"&gt;&lt;/button&gt;
-          |     &lt;button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"&gt;&lt;/button&gt;
-          |     &lt;button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"&gt;&lt;/button&gt;
+          |     &lt;button type='button' data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"&gt;&lt;/button&gt;
+          |     &lt;button type='button' data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"&gt;&lt;/button&gt;
+          |     &lt;button type='button' data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"&gt;&lt;/button&gt;
           |   &lt;/div&gt;
           |   &lt;div class="carousel-inner"&gt;
           |     &lt;div class="carousel-item active"&gt;
@@ -204,11 +204,11 @@ block content
           |       &lt;/div&gt;
           |     &lt;/div&gt;
           |   &lt;/div&gt;
-          |   &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"&gt;
+          |   &lt;button class="carousel-control-prev" type='button' data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"&gt;
           |     &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
           |     &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
           |   &lt;/button&gt;
-          |   &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"&gt;
+          |   &lt;button class="carousel-control-next" type='button' data-bs-target="#carouselExampleCaptions" data-bs-slide="next"&gt;
           |     &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
           |     &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
           |   &lt;/button&gt;
@@ -221,24 +221,24 @@ block content
         #carouselExampleFade.carousel.slide.carousel-fade
           .carousel-inner
             .carousel-item.active
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: First slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#777')
-                text(x='50%', y='50%', fill='#555', dy='.3em') First slide
+                rect(width='100%' height='100%' fill='#777')
+                text(x='50%' y='50%' fill='#555' dy='.3em') First slide
             .carousel-item
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Second slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#666')
-                text(x='50%', y='50%', fill='#444', dy='.3em') Second slide
+                rect(width='100%' height='100%' fill='#666')
+                text(x='50%' y='50%' fill='#444' dy='.3em') Second slide
             .carousel-item
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Third slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#555')
-                text(x='50%', y='50%', fill='#333', dy='.3em') Third slide
-          button.carousel-control-prev(type='button', data-bs-target='#carouselExampleFade', data-bs-slide='prev')
+                rect(width='100%' height='100%' fill='#555')
+                text(x='50%' y='50%' fill='#333' dy='.3em') Third slide
+          button.carousel-control-prev(type='button' data-bs-target='#carouselExampleFade' data-bs-slide='prev')
             span.carousel-control-prev-icon(aria-hidden='true')
             span.visually-hidden Previous
-          button.carousel-control-next(type='button', data-bs-target='#carouselExampleFade', data-bs-slide='next')
+          button.carousel-control-next(type='button' data-bs-target='#carouselExampleFade' data-bs-slide='next')
             span.carousel-control-next-icon(aria-hidden='true')
             span.visually-hidden Next
 
@@ -256,11 +256,11 @@ block content
           |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
           |     &lt;/div&gt;
           |   &lt;/div&gt;
-          |   &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev"&gt;
+          |   &lt;button class="carousel-control-prev" type='button' data-bs-target="#carouselExampleFade" data-bs-slide="prev"&gt;
           |     &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
           |     &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
           |   &lt;/button&gt;
-          |   &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next"&gt;
+          |   &lt;button class="carousel-control-next" type='button' data-bs-target="#carouselExampleFade" data-bs-slide="next"&gt;
           |     &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
           |     &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
           |   &lt;/button&gt;
@@ -273,24 +273,24 @@ block content
         #carouselExampleAutoplaying.carousel.slide(data-bs-ride='carousel')
           .carousel-inner
             .carousel-item.active
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: First slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#777')
-                text(x='50%', y='50%', fill='#555', dy='.3em') First slide
+                rect(width='100%' height='100%' fill='#777')
+                text(x='50%' y='50%' fill='#555' dy='.3em') First slide
             .carousel-item
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Second slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#666')
-                text(x='50%', y='50%', fill='#444', dy='.3em') Second slide
+                rect(width='100%' height='100%' fill='#666')
+                text(x='50%' y='50%' fill='#444' dy='.3em') Second slide
             .carousel-item
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Third slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#555')
-                text(x='50%', y='50%', fill='#333', dy='.3em') Third slide
-          button.carousel-control-prev(type='button', data-bs-target='#carouselExampleAutoplaying', data-bs-slide='prev')
+                rect(width='100%' height='100%' fill='#555')
+                text(x='50%' y='50%' fill='#333' dy='.3em') Third slide
+          button.carousel-control-prev(type='button' data-bs-target='#carouselExampleAutoplaying' data-bs-slide='prev')
             span.carousel-control-prev-icon(aria-hidden='true')
             span.visually-hidden Previous
-          button.carousel-control-next(type='button', data-bs-target='#carouselExampleAutoplaying', data-bs-slide='next')
+          button.carousel-control-next(type='button' data-bs-target='#carouselExampleAutoplaying' data-bs-slide='next')
             span.carousel-control-next-icon(aria-hidden='true')
             span.visually-hidden Next
 
@@ -308,11 +308,11 @@ block content
           |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
           |     &lt;/div&gt;
           |   &lt;/div&gt;
-          |   &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"&gt;
+          |   &lt;button class="carousel-control-prev" type='button' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev"&gt;
           |     &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
           |     &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
           |   &lt;/button&gt;
-          |   &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"&gt;
+          |   &lt;button class="carousel-control-next" type='button' data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next"&gt;
           |     &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
           |     &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
           |   &lt;/button&gt;
@@ -324,24 +324,24 @@ block content
         #carouselExampleRide.carousel.slide(data-bs-ride='true')
           .carousel-inner
             .carousel-item.active
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: First slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#777')
-                text(x='50%', y='50%', fill='#555', dy='.3em') First slide
+                rect(width='100%' height='100%' fill='#777')
+                text(x='50%' y='50%' fill='#555' dy='.3em') First slide
             .carousel-item
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Second slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#666')
-                text(x='50%', y='50%', fill='#444', dy='.3em') Second slide
+                rect(width='100%' height='100%' fill='#666')
+                text(x='50%' y='50%' fill='#444' dy='.3em') Second slide
             .carousel-item
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Third slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#555')
-                text(x='50%', y='50%', fill='#333', dy='.3em') Third slide
-          button.carousel-control-prev(type='button', data-bs-target='#carouselExampleRide', data-bs-slide='prev')
+                rect(width='100%' height='100%' fill='#555')
+                text(x='50%' y='50%' fill='#333' dy='.3em') Third slide
+          button.carousel-control-prev(type='button' data-bs-target='#carouselExampleRide' data-bs-slide='prev')
             span.carousel-control-prev-icon(aria-hidden='true')
             span.visually-hidden Previous
-          button.carousel-control-next(type='button', data-bs-target='#carouselExampleRide', data-bs-slide='next')
+          button.carousel-control-next(type='button' data-bs-target='#carouselExampleRide' data-bs-slide='next')
             span.carousel-control-next-icon(aria-hidden='true')
             span.visually-hidden Next
 
@@ -359,11 +359,11 @@ block content
           |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
           |     &lt;/div&gt;
           |   &lt;/div&gt;
-          |   &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev"&gt;
+          |   &lt;button class="carousel-control-prev" type='button' data-bs-target="#carouselExampleRide" data-bs-slide="prev"&gt;
           |     &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
           |     &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
           |   &lt;/button&gt;
-          |   &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next"&gt;
+          |   &lt;button class="carousel-control-next" type='button' data-bs-target="#carouselExampleRide" data-bs-slide="next"&gt;
           |     &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
           |     &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
           |   &lt;/button&gt;
@@ -376,24 +376,24 @@ block content
         #carouselExampleInterval.carousel.slide(data-bs-ride='carousel')
           .carousel-inner
             .carousel-item.carousel-item-next.carousel-item-start(data-bs-interval='10000')
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: First slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#777')
-                text(x='50%', y='50%', fill='#555', dy='.3em') First slide
+                rect(width='100%' height='100%' fill='#777')
+                text(x='50%' y='50%' fill='#555' dy='.3em') First slide
             .carousel-item(data-bs-interval='2000')
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Second slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#666')
-                text(x='50%', y='50%', fill='#444', dy='.3em') Second slide
+                rect(width='100%' height='100%' fill='#666')
+                text(x='50%' y='50%' fill='#444' dy='.3em') Second slide
             .carousel-item.active.carousel-item-start
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Third slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#555')
-                text(x='50%', y='50%', fill='#333', dy='.3em') Third slide
-          button.carousel-control-prev(type='button', data-bs-target='#carouselExampleInterval', data-bs-slide='prev')
+                rect(width='100%' height='100%' fill='#555')
+                text(x='50%' y='50%' fill='#333' dy='.3em') Third slide
+          button.carousel-control-prev(type='button' data-bs-target='#carouselExampleInterval' data-bs-slide='prev')
             span.carousel-control-prev-icon(aria-hidden='true')
             span.visually-hidden Previous
-          button.carousel-control-next(type='button', data-bs-target='#carouselExampleInterval', data-bs-slide='next')
+          button.carousel-control-next(type='button' data-bs-target='#carouselExampleInterval' data-bs-slide='next')
             span.carousel-control-next-icon(aria-hidden='true')
             span.visually-hidden Next
 
@@ -411,11 +411,11 @@ block content
           |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
           |     &lt;/div&gt;
           |   &lt;/div&gt;
-          |   &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev"&gt;
+          |   &lt;button class="carousel-control-prev" type='button' data-bs-target="#carouselExampleInterval" data-bs-slide="prev"&gt;
           |     &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
           |     &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
           |   &lt;/button&gt;
-          |   &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next"&gt;
+          |   &lt;button class="carousel-control-next" type='button' data-bs-target="#carouselExampleInterval" data-bs-slide="next"&gt;
           |     &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
           |     &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
           |   &lt;/button&gt;
@@ -428,20 +428,20 @@ block content
         #carouselExampleSlidesOnly.carousel.slide(data-bs-ride='carousel')
           .carousel-inner
             .carousel-item
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: First slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#777')
-                text(x='50%', y='50%', fill='#555', dy='.3em') First slide
+                rect(width='100%' height='100%' fill='#777')
+                text(x='50%' y='50%' fill='#555' dy='.3em') First slide
             .carousel-item.active
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Second slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#666')
-                text(x='50%', y='50%', fill='#444', dy='.3em') Second slide
+                rect(width='100%' height='100%' fill='#666')
+                text(x='50%' y='50%' fill='#444' dy='.3em') Second slide
             .carousel-item
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Third slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#555')
-                text(x='50%', y='50%', fill='#333', dy='.3em') Third slide
+                rect(width='100%' height='100%' fill='#555')
+                text(x='50%' y='50%' fill='#333' dy='.3em') Third slide
 
       pre
         code.language-html
@@ -466,24 +466,24 @@ block content
         #carouselExampleControlsNoTouching.carousel.slide(data-bs-touch='false')
           .carousel-inner
             .carousel-item.active
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: First slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#777')
-                text(x='50%', y='50%', fill='#555', dy='.3em') First slide
+                rect(width='100%' height='100%' fill='#777')
+                text(x='50%' y='50%' fill='#555' dy='.3em') First slide
             .carousel-item
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Second slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#666')
-                text(x='50%', y='50%', fill='#444', dy='.3em') Second slide
+                rect(width='100%' height='100%' fill='#666')
+                text(x='50%' y='50%' fill='#444' dy='.3em') Second slide
             .carousel-item
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Third slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#555')
-                text(x='50%', y='50%', fill='#333', dy='.3em') Third slide
-          button.carousel-control-prev(type='button', data-bs-target='#carouselExampleControlsNoTouching', data-bs-slide='prev')
+                rect(width='100%' height='100%' fill='#555')
+                text(x='50%' y='50%' fill='#333' dy='.3em') Third slide
+          button.carousel-control-prev(type='button' data-bs-target='#carouselExampleControlsNoTouching' data-bs-slide='prev')
             span.carousel-control-prev-icon(aria-hidden='true')
             span.visually-hidden Previous
-          button.carousel-control-next(type='button', data-bs-target='#carouselExampleControlsNoTouching', data-bs-slide='next')
+          button.carousel-control-next(type='button' data-bs-target='#carouselExampleControlsNoTouching' data-bs-slide='next')
             span.carousel-control-next-icon(aria-hidden='true')
             span.visually-hidden Next
 
@@ -501,11 +501,11 @@ block content
           |       &lt;img src="..." class="d-block w-100" alt="..."&gt;
           |     &lt;/div&gt;
           |   &lt;/div&gt;
-          |   &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev"&gt;
+          |   &lt;button class="carousel-control-prev" type='button' data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev"&gt;
           |     &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
           |     &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
           |   &lt;/button&gt;
-          |   &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next"&gt;
+          |   &lt;button class="carousel-control-next" type='button' data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next"&gt;
           |     &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
           |     &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
           |   &lt;/button&gt;
@@ -517,38 +517,38 @@ block content
       .bd-example
         #carouselExampleDark.carousel.carousel-dark.slide
           .carousel-indicators
-            button.active(type='button', data-bs-target='#carouselExampleDark', data-bs-slide-to='0', aria-current='true', aria-label='Slide 1')
-            button(type='button', data-bs-target='#carouselExampleDark', data-bs-slide-to='1', aria-label='Slide 2')
-            button(type='button', data-bs-target='#carouselExampleDark', data-bs-slide-to='2', aria-label='Slide 3')
+            button.active(type='button' data-bs-target='#carouselExampleDark' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+            button(type='button' data-bs-target='#carouselExampleDark' data-bs-slide-to='1' aria-label='Slide 2')
+            button(type='button' data-bs-target='#carouselExampleDark' data-bs-slide-to='2' aria-label='Slide 3')
           .carousel-inner
             .carousel-item.active(data-bs-interval='10000')
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: First slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: First slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#f5f5f5')
-                text(x='50%', y='50%', fill='#aaa', dy='.3em') First slide
+                rect(width='100%' height='100%' fill='#f5f5f5')
+                text(x='50%' y='50%' fill='#aaa' dy='.3em') First slide
               .carousel-caption.d-none.d-md-block
                 h5 First slide label
                 p Some representative placeholder content for the first slide.
             .carousel-item(data-bs-interval='2000')
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Second slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Second slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#eee')
-                text(x='50%', y='50%', fill='#bbb', dy='.3em') Second slide
+                rect(width='100%' height='100%' fill='#eee')
+                text(x='50%' y='50%' fill='#bbb' dy='.3em') Second slide
               .carousel-caption.d-none.d-md-block
                 h5 Second slide label
                 p Some representative placeholder content for the second slide.
             .carousel-item
-              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800', height='400', xmlns='http://www.w3.org/2000/svg', role='img', aria-label='Placeholder: Third slide', preserveaspectratio='xMidYMid slice', focusable='false')
+              svg.bd-placeholder-img.bd-placeholder-img-lg.d-block.w-100(width='800' height='400' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Placeholder: Third slide' preserveaspectratio='xMidYMid slice' focusable='false')
                 title Placeholder
-                rect(width='100%', height='100%', fill='#e5e5e5')
-                text(x='50%', y='50%', fill='#999', dy='.3em') Third slide
+                rect(width='100%' height='100%' fill='#e5e5e5')
+                text(x='50%' y='50%' fill='#999' dy='.3em') Third slide
               .carousel-caption.d-none.d-md-block
                 h5 Third slide label
                 p Some representative placeholder content for the third slide.
-          button.carousel-control-prev(type='button', data-bs-target='#carouselExampleDark', data-bs-slide='prev')
+          button.carousel-control-prev(type='button' data-bs-target='#carouselExampleDark' data-bs-slide='prev')
             span.carousel-control-prev-icon(aria-hidden='true')
             span.visually-hidden Previous
-          button.carousel-control-next(type='button', data-bs-target='#carouselExampleDark', data-bs-slide='next')
+          button.carousel-control-next(type='button' data-bs-target='#carouselExampleDark' data-bs-slide='next')
             span.carousel-control-next-icon(aria-hidden='true')
             span.visually-hidden Next
 
@@ -556,9 +556,9 @@ block content
         code.language-html
           | &lt;div id="carouselExampleDark" class="carousel carousel-dark slide"&gt;
           |   &lt;div class="carousel-indicators"&gt;
-          |     &lt;button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"&gt;&lt;/button&gt;
-          |     &lt;button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"&gt;&lt;/button&gt;
-          |     &lt;button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"&gt;&lt;/button&gt;
+          |     &lt;button type='button' data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"&gt;&lt;/button&gt;
+          |     &lt;button type='button' data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"&gt;&lt;/button&gt;
+          |     &lt;button type='button' data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"&gt;&lt;/button&gt;
           |   &lt;/div&gt;
           |   &lt;div class="carousel-inner"&gt;
           |     &lt;div class="carousel-item active" data-bs-interval="10000"&gt;
@@ -583,11 +583,11 @@ block content
           |       &lt;/div&gt;
           |     &lt;/div&gt;
           |   &lt;/div&gt;
-          |   &lt;button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev"&gt;
+          |   &lt;button class="carousel-control-prev" type='button' data-bs-target="#carouselExampleDark" data-bs-slide="prev"&gt;
           |     &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt;
           |     &lt;span class="visually-hidden"&gt;Previous&lt;/span&gt;
           |   &lt;/button&gt;
-          |   &lt;button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next"&gt;
+          |   &lt;button class="carousel-control-next" type='button' data-bs-target="#carouselExampleDark" data-bs-slide="next"&gt;
           |     &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt;
           |     &lt;span class="visually-hidden"&gt;Next&lt;/span&gt;
           |   &lt;/button&gt;

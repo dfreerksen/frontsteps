@@ -4,25 +4,25 @@ block append config
   - var pageTitle = "Checks & radios";
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p Create consistent cross-browser and cross-device checkboxes and radios with our completely rewritten checks component.
 
       h4 Approach
       p Browser default checkboxes and radios are replaced with the help of <code>.form-check</code>, a series of classes for both input types that improves the layout and behavior of their HTML elements, that provide greater customization and cross browser consistency. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
-      p Structurally, our <code>&lt;input&gt;</code>s and <code>&lt;label&gt;</code>s are sibling elements as opposed to an <code>&lt;input&gt;</code> within a <code>&lt;label&gt;</code>. This is slightly more verbose as you must specify id and for attributes to relate the <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code>. We use the sibling selector (<code>~</code>) for all our <code>&lt;input&gt;</code> states, like <code>:checked</code> or <code>:disabled</code>. When combined with the <code>.form-check-label</code> class, we can easily style the text for each item based on the <code>&lt;input&gt;</code>’s state.
+      p Structurally, our <code>&lt;input&gt;</code>s and <code>&lt;label&gt;</code>s are sibling elements as opposed to an <code>&lt;input&gt;</code> within a <code>&lt;label&gt;</code>. This is slightly more verbose as you must specify id and for attributes to relate the <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code>. We use the sibling selector (<code>~</code>) for all our <code>&lt;input&gt;</code> states, like <code>:checked</code> or <code>:disabled</code>. When combined with the <code>.form-check-label</code> class, we can easily style the text for each item based on the <code>&lt;input&gt;</code>'s state.
       p Our checks use custom Bootstrap icons to indicate checked or indeterminate states.
 
       h4 Checks
 
       .bd-example
         .form-check
-          input#flexCheckDefault.form-check-input(type='checkbox', value='')
+          input#flexCheckDefault.form-check-input(type='checkbox' value='')
           label.form-check-label(for='flexCheckDefault')
             | Default checkbox
         .form-check
-          input#flexCheckChecked.form-check-input(type='checkbox', value='', checked='')
+          input#flexCheckChecked.form-check-input(type='checkbox' value='' checked='')
           label.form-check-label(for='flexCheckChecked')
             | Checked checkbox
 
@@ -46,7 +46,7 @@ block content
 
       .bd-example
         .form-check
-          input#flexCheckIndeterminate.form-check-input(type='checkbox', value='')
+          input#flexCheckIndeterminate.form-check-input(type='checkbox' value='')
           label.form-check-label(for='flexCheckIndeterminate')
             | Indeterminate checkbox
 
@@ -60,19 +60,19 @@ block content
           | &lt;/div&gt;
 
       h4 Disabled
-      p Add the <code>disabled</code> attribute and the associated <code>&lt;label&gt;</code>s are automatically styled to match with a lighter color to help indicate the input’s state.
+      p Add the <code>disabled</code> attribute and the associated <code>&lt;label&gt;</code>s are automatically styled to match with a lighter color to help indicate the input's state.
 
       .bd-example
         .form-check
-          input#flexCheckIndeterminateDisabled.form-check-input(type='checkbox', value='', disabled='')
+          input#flexCheckIndeterminateDisabled.form-check-input(type='checkbox' value='' disabled='')
           label.form-check-label(for='flexCheckIndeterminateDisabled')
             | Disabled indeterminate checkbox
         .form-check
-          input#flexCheckDisabled.form-check-input(type='checkbox', value='', disabled='')
+          input#flexCheckDisabled.form-check-input(type='checkbox' value='' disabled='')
           label.form-check-label(for='flexCheckDisabled')
             | Disabled checkbox
         .form-check
-          input#flexCheckCheckedDisabled.form-check-input(type='checkbox', value='', checked='', disabled='')
+          input#flexCheckCheckedDisabled.form-check-input(type='checkbox' value='' checked='' disabled='')
           label.form-check-label(for='flexCheckCheckedDisabled')
             | Disabled checked checkbox
 
@@ -101,11 +101,11 @@ block content
 
       .bd-example
         .form-check
-          input#flexRadioDefault1.form-check-input(type='radio', name='flexRadioDefault')
+          input#flexRadioDefault1.form-check-input(type='radio' name='flexRadioDefault')
           label.form-check-label(for='flexRadioDefault1')
             | Default radio
         .form-check
-          input#flexRadioDefault2.form-check-input(type='radio', name='flexRadioDefault', checked='')
+          input#flexRadioDefault2.form-check-input(type='radio' name='flexRadioDefault' checked='')
           label.form-check-label(for='flexRadioDefault2')
             | Default checked radio
 
@@ -125,15 +125,15 @@ block content
           | &lt;/div&gt;
 
       h4 Disabled
-      p Add the <code>disabled</code> attribute and the associated <code>&lt;label&gt;</code>s are automatically styled to match with a lighter color to help indicate the input’s state.
+      p Add the <code>disabled</code> attribute and the associated <code>&lt;label&gt;</code>s are automatically styled to match with a lighter color to help indicate the input's state.
 
       .bd-example
         .form-check
-          input#flexRadioDisabled.form-check-input(type='radio', name='flexRadioDisabled', disabled='')
+          input#flexRadioDisabled.form-check-input(type='radio' name='flexRadioDisabled' disabled='')
           label.form-check-label(for='flexRadioDisabled')
             | Disabled radio
         .form-check
-          input#flexRadioCheckedDisabled.form-check-input(type='radio', name='flexRadioDisabled', checked='', disabled='')
+          input#flexRadioCheckedDisabled.form-check-input(type='radio' name='flexRadioDisabled' checked='' disabled='')
           label.form-check-label(for='flexRadioCheckedDisabled')
             | Disabled checked radio
 
@@ -157,16 +157,16 @@ block content
 
       .bd-example
         .form-check.form-switch
-          input#flexSwitchCheckDefault.form-check-input(type='checkbox', role='switch')
+          input#flexSwitchCheckDefault.form-check-input(type='checkbox' role='switch')
           label.form-check-label(for='flexSwitchCheckDefault') Default switch checkbox input
         .form-check.form-switch
-          input#flexSwitchCheckChecked.form-check-input(type='checkbox', role='switch', checked='')
+          input#flexSwitchCheckChecked.form-check-input(type='checkbox' role='switch' checked='')
           label.form-check-label(for='flexSwitchCheckChecked') Checked switch checkbox input
         .form-check.form-switch
-          input#flexSwitchCheckDisabled.form-check-input(type='checkbox', role='switch', disabled='')
+          input#flexSwitchCheckDisabled.form-check-input(type='checkbox' role='switch' disabled='')
           label.form-check-label(for='flexSwitchCheckDisabled') Disabled switch checkbox input
         .form-check.form-switch
-          input#flexSwitchCheckCheckedDisabled.form-check-input(type='checkbox', role='switch', checked='', disabled='')
+          input#flexSwitchCheckCheckedDisabled.form-check-input(type='checkbox' role='switch' checked='' disabled='')
           label.form-check-label(for='flexSwitchCheckCheckedDisabled') Disabled checked switch checkbox input
 
       pre
@@ -193,11 +193,11 @@ block content
 
       .bd-example
         .form-check
-          input#defaultCheck1.form-check-input(type='checkbox', value='')
+          input#defaultCheck1.form-check-input(type='checkbox' value='')
           label.form-check-label(for='defaultCheck1')
             | Default checkbox
         .form-check
-          input#defaultCheck2.form-check-input(type='checkbox', value='', disabled='')
+          input#defaultCheck2.form-check-input(type='checkbox' value='' disabled='')
           label.form-check-label(for='defaultCheck2')
             | Disabled checkbox
 
@@ -218,15 +218,15 @@ block content
 
       .bd-example
         .form-check
-          input#exampleRadios1.form-check-input(type='radio', name='exampleRadios', value='option1', checked='')
+          input#exampleRadios1.form-check-input(type='radio' name='exampleRadios' value='option1' checked='')
           label.form-check-label(for='exampleRadios1')
             | Default radio
         .form-check
-          input#exampleRadios2.form-check-input(type='radio', name='exampleRadios', value='option2')
+          input#exampleRadios2.form-check-input(type='radio' name='exampleRadios' value='option2')
           label.form-check-label(for='exampleRadios2')
             | Second default radio
         .form-check
-          input#exampleRadios3.form-check-input(type='radio', name='exampleRadios', value='option3', disabled='')
+          input#exampleRadios3.form-check-input(type='radio' name='exampleRadios' value='option3' disabled='')
           label.form-check-label(for='exampleRadios3')
             | Disabled radio
 
@@ -256,13 +256,13 @@ block content
 
       .bd-example
         .form-check.form-check-inline
-          input#inlineCheckbox1.form-check-input(type='checkbox', value='option1')
+          input#inlineCheckbox1.form-check-input(type='checkbox' value='option1')
           label.form-check-label(for='inlineCheckbox1') 1
         .form-check.form-check-inline
-          input#inlineCheckbox2.form-check-input(type='checkbox', value='option2')
+          input#inlineCheckbox2.form-check-input(type='checkbox' value='option2')
           label.form-check-label(for='inlineCheckbox2') 2
         .form-check.form-check-inline
-          input#inlineCheckbox3.form-check-input(type='checkbox', value='option3', disabled='')
+          input#inlineCheckbox3.form-check-input(type='checkbox' value='option3' disabled='')
           label.form-check-label(for='inlineCheckbox3') 3 (disabled)
 
       pre
@@ -282,13 +282,13 @@ block content
 
       .bd-example
         .form-check.form-check-inline
-          input#inlineRadio1.form-check-input(type='radio', name='inlineRadioOptions', value='option1')
+          input#inlineRadio1.form-check-input(type='radio' name='inlineRadioOptions' value='option1')
           label.form-check-label(for='inlineRadio1') 1
         .form-check.form-check-inline
-          input#inlineRadio2.form-check-input(type='radio', name='inlineRadioOptions', value='option2')
+          input#inlineRadio2.form-check-input(type='radio' name='inlineRadioOptions' value='option2')
           label.form-check-label(for='inlineRadio2') 2
         .form-check.form-check-inline
-          input#inlineRadio3.form-check-input(type='radio', name='inlineRadioOptions', value='option3', disabled='')
+          input#inlineRadio3.form-check-input(type='radio' name='inlineRadioOptions' value='option3' disabled='')
           label.form-check-label(for='inlineRadio3') 3 (disabled)
 
       pre
@@ -311,11 +311,11 @@ block content
 
       .bd-example
         .form-check.form-check-reverse
-          input#reverseCheck1.form-check-input(type='checkbox', value='')
+          input#reverseCheck1.form-check-input(type='checkbox' value='')
           label.form-check-label(for='reverseCheck1')
             | Reverse checkbox
         .form-check.form-check-reverse
-          input#reverseCheck2.form-check-input(type='checkbox', value='', disabled='')
+          input#reverseCheck2.form-check-input(type='checkbox' value='' disabled='')
           label.form-check-label(for='reverseCheck2')
             | Disabled reverse checkbox
         .form-check.form-switch.form-check-reverse
@@ -347,9 +347,9 @@ block content
 
       .bd-example
         div
-          input#checkboxNoLabel.form-check-input(type='checkbox', value='', aria-label='...')
+          input#checkboxNoLabel.form-check-input(type='checkbox' value='' aria-label='...')
         div
-          input#radioNoLabel1.form-check-input(type='radio', name='radioNoLabel', value='', aria-label='...')
+          input#radioNoLabel1.form-check-input(type='radio' name='radioNoLabel' value='' aria-label='...')
 
       pre
         code.language-html
@@ -367,11 +367,11 @@ block content
       h4 Checkbox toggle buttons
 
       .bd-example
-        input#btn-check.btn-check(type='checkbox', autocomplete='off')
+        input#btn-check.btn-check(type='checkbox' autocomplete='off')
         label.btn.btn-primary(for='btn-check') Single toggle
-        input#btn-check-2.btn-check(type='checkbox', checked='', autocomplete='off')
+        input#btn-check-2.btn-check(type='checkbox' checked='' autocomplete='off')
         label.btn.btn-primary(for='btn-check-2') Checked
-        input#btn-check-3.btn-check(type='checkbox', autocomplete='off', disabled='')
+        input#btn-check-3.btn-check(type='checkbox' autocomplete='off' disabled='')
         label.btn.btn-primary(for='btn-check-3') Disabled
 
       pre
@@ -386,11 +386,11 @@ block content
           | &lt;label class="btn btn-primary" for="btn-check-3"&gt;Disabled&lt;/label&gt;
 
       .bd-example
-        input#btn-check-4.btn-check(type='checkbox', autocomplete='off')
+        input#btn-check-4.btn-check(type='checkbox' autocomplete='off')
         label.btn(for='btn-check-4') Single toggle
-        input#btn-check-5.btn-check(type='checkbox', checked='', autocomplete='off')
+        input#btn-check-5.btn-check(type='checkbox' checked='' autocomplete='off')
         label.btn(for='btn-check-5') Checked
-        input#btn-check-6.btn-check(type='checkbox', autocomplete='off', disabled='')
+        input#btn-check-6.btn-check(type='checkbox' autocomplete='off' disabled='')
         label.btn(for='btn-check-6') Disabled
 
       pre
@@ -407,13 +407,13 @@ block content
       h4 Radio toggle buttons
 
       .bd-example
-        input#option1.btn-check(type='radio', name='options', autocomplete='off', checked='')
+        input#option1.btn-check(type='radio' name='options' autocomplete='off' checked='')
         label.btn.btn-secondary(for='option1') Checked
-        input#option2.btn-check(type='radio', name='options', autocomplete='off')
+        input#option2.btn-check(type='radio' name='options' autocomplete='off')
         label.btn.btn-secondary(for='option2') Radio
-        input#option3.btn-check(type='radio', name='options', autocomplete='off', disabled='')
+        input#option3.btn-check(type='radio' name='options' autocomplete='off' disabled='')
         label.btn.btn-secondary(for='option3') Disabled
-        input#option4.btn-check(type='radio', name='options', autocomplete='off')
+        input#option4.btn-check(type='radio' name='options' autocomplete='off')
         label.btn.btn-secondary(for='option4') Radio
 
       pre
@@ -431,13 +431,13 @@ block content
           | &lt;label class="btn btn-secondary" for="option4"&gt;Radio&lt;/label&gt;
 
       .bd-example
-        input#option5.btn-check(type='radio', name='options-base', autocomplete='off', checked='')
+        input#option5.btn-check(type='radio' name='options-base' autocomplete='off' checked='')
         label.btn(for='option5') Checked
-        input#option6.btn-check(type='radio', name='options-base', autocomplete='off')
+        input#option6.btn-check(type='radio' name='options-base' autocomplete='off')
         label.btn(for='option6') Radio
-        input#option7.btn-check(type='radio', name='options-base', autocomplete='off', disabled='')
+        input#option7.btn-check(type='radio' name='options-base' autocomplete='off' disabled='')
         label.btn(for='option7') Disabled
-        input#option8.btn-check(type='radio', name='options-base', autocomplete='off')
+        input#option8.btn-check(type='radio' name='options-base' autocomplete='off')
         label.btn(for='option8') Radio
 
       pre
@@ -458,15 +458,15 @@ block content
       p Different variants of <code>.btn</code>, such at the various outlined styles, are supported.
 
       .bd-example
-        input#btn-check-outlined.btn-check(type='checkbox', autocomplete='off')
+        input#btn-check-outlined.btn-check(type='checkbox' autocomplete='off')
         label.btn.btn-outline-primary(for='btn-check-outlined') Single toggle
         br
-        input#btn-check-2-outlined.btn-check(type='checkbox', checked='', autocomplete='off')
+        input#btn-check-2-outlined.btn-check(type='checkbox' checked='' autocomplete='off')
         label.btn.btn-outline-secondary(for='btn-check-2-outlined') Checked
         br
-        input#success-outlined.btn-check(type='radio', name='options-outlined', autocomplete='off', checked='')
+        input#success-outlined.btn-check(type='radio' name='options-outlined' autocomplete='off' checked='')
         label.btn.btn-outline-success(for='success-outlined') Checked success radio
-        input#danger-outlined.btn-check(type='radio', name='options-outlined', autocomplete='off')
+        input#danger-outlined.btn-check(type='radio' name='options-outlined' autocomplete='off')
         label.btn.btn-outline-danger(for='danger-outlined') Danger radio
 
       pre

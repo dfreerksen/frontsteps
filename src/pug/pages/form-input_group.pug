@@ -4,9 +4,9 @@ block append config
   - var pageTitle = "Input group";
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p Easily extend form controls by adding text, buttons, or button groups on either side of textual inputs, custom selects, and custom file inputs.
 
       h4 Basic example
@@ -15,24 +15,24 @@ block content
       .bd-example
         .input-group.mb-3
           span#basic-addon1.input-group-text @
-          input.form-control(type='text', placeholder='Username', aria-label='Username', aria-describedby='basic-addon1')
+          input.form-control(type='text' placeholder='Username' aria-label='Username' aria-describedby='basic-addon1')
         .input-group.mb-3
-          input.form-control(type='text', placeholder="Recipient's username", aria-label="Recipient's username", aria-describedby='basic-addon2')
+          input.form-control(type='text' placeholder='Recipient\'s username' aria-label='Recipient\'s username' aria-describedby='basic-addon2')
           span#basic-addon2.input-group-text @example.com
         .mb-3
           label.form-label(for='basic-url') Your vanity URL
           .input-group
             span#basic-addon3.input-group-text https://example.com/users/
-            input#basic-url.form-control(type='text', aria-describedby='basic-addon3 basic-addon4')
+            input#basic-url.form-control(type='text' aria-describedby='basic-addon3 basic-addon4')
           #basic-addon4.form-text Example help text goes outside the input group.
         .input-group.mb-3
           span.input-group-text $
-          input.form-control(type='text', aria-label='Amount (to the nearest dollar)')
+          input.form-control(type='text' aria-label='Amount (to the nearest dollar)')
           span.input-group-text .00
         .input-group.mb-3
-          input.form-control(type='text', placeholder='Username', aria-label='Username')
+          input.form-control(type='text' placeholder='Username' aria-label='Username')
           span.input-group-text @
-          input.form-control(type='text', placeholder='Server', aria-label='Server')
+          input.form-control(type='text' placeholder='Server' aria-label='Server')
         .input-group
           span.input-group-text With textarea
           textarea.form-control(aria-label='With textarea')
@@ -81,7 +81,7 @@ block content
       .bd-example
         .input-group.flex-nowrap
           span#addon-wrapping.input-group-text @
-          input.form-control(type='text', placeholder='Username', aria-label='Username', aria-describedby='addon-wrapping')
+          input.form-control(type='text' placeholder='Username' aria-label='Username' aria-describedby='addon-wrapping')
 
       pre
         code.language-html
@@ -93,18 +93,18 @@ block content
       h4 Sizing
       p Add the relative form sizing classes to the <code>.input-group</code> itself and contents within will automatically resize—no need for repeating the form control size classes on each element.
       p
-        strong Sizing on the individual input group elements isn’t supported.
+        strong Sizing on the individual input group elements isn't supported.
 
       .bd-example
         .input-group.input-group-sm.mb-3
           span#inputGroup-sizing-sm.input-group-text Small
-          input.form-control(type='text', aria-label='Sizing example input', aria-describedby='inputGroup-sizing-sm')
+          input.form-control(type='text' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-sm')
         .input-group.mb-3
           span#inputGroup-sizing-default.input-group-text Default
-          input.form-control(type='text', aria-label='Sizing example input', aria-describedby='inputGroup-sizing-default')
+          input.form-control(type='text' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-default')
         .input-group.input-group-lg
           span#inputGroup-sizing-lg.input-group-text Large
-          input.form-control(type='text', aria-label='Sizing example input', aria-describedby='inputGroup-sizing-lg')
+          input.form-control(type='text' aria-label='Sizing example input' aria-describedby='inputGroup-sizing-lg')
 
       pre
         code.language-html
@@ -124,17 +124,17 @@ block content
           | &lt;/div&gt;
 
       h4 Checkboxes and radios
-      p Place any checkbox or radio option within an input group’s addon instead of text. We recommend adding <code>.mt-0</code> to the <code>.form-check-input</code> when there’s no visible text next to the input.
+      p Place any checkbox or radio option within an input group's addon instead of text. We recommend adding <code>.mt-0</code> to the <code>.form-check-input</code> when there's no visible text next to the input.
 
       .bd-example
         .input-group.mb-3
           .input-group-text
-            input.form-check-input.mt-0(type='checkbox', value='', aria-label='Checkbox for following text input')
-          input.form-control(type='text', aria-label='Text input with checkbox')
+            input.form-check-input.mt-0(type='checkbox' value='' aria-label='Checkbox for following text input')
+          input.form-control(type='text' aria-label='Text input with checkbox')
         .input-group
           .input-group-text
-            input.form-check-input.mt-0(type='radio', value='', aria-label='Radio button for following text input')
-          input.form-control(type='text', aria-label='Text input with radio button')
+            input.form-check-input.mt-0(type='radio' value='' aria-label='Radio button for following text input')
+          input.form-control(type='text' aria-label='Text input with radio button')
 
       pre
         code.language-html
@@ -158,8 +158,8 @@ block content
       .bd-example
         .input-group
           span.input-group-text First and last name
-          input.form-control(type='text', aria-label='First name')
-          input.form-control(type='text', aria-label='Last name')
+          input.form-control(type='text' aria-label='First name')
+          input.form-control(type='text' aria-label='Last name')
 
       pre
         code.language-html
@@ -176,9 +176,9 @@ block content
         .input-group.mb-3
           span.input-group-text $
           span.input-group-text 0.00
-          input.form-control(type='text', aria-label='Dollar amount (with dot and two decimal places)')
+          input.form-control(type='text' aria-label='Dollar amount (with dot and two decimal places)')
         .input-group
-          input.form-control(type='text', aria-label='Dollar amount (with dot and two decimal places)')
+          input.form-control(type='text' aria-label='Dollar amount (with dot and two decimal places)')
           span.input-group-text $
           span.input-group-text 0.00
 
@@ -201,48 +201,48 @@ block content
       .bd-example
         .input-group.mb-3
           button#button-addon1.btn.btn-outline-secondary(type='button') Button
-          input.form-control(type='text', placeholder='', aria-label='Example text with button addon', aria-describedby='button-addon1')
+          input.form-control(type='text' placeholder='' aria-label='Example text with button addon' aria-describedby='button-addon1')
         .input-group.mb-3
-          input.form-control(type='text', placeholder="Recipient's username", aria-label="Recipient's username", aria-describedby='button-addon2')
+          input.form-control(type='text' placeholder='Recipient\'s username' aria-label='Recipient\'s username' aria-describedby='button-addon2')
           button#button-addon2.btn.btn-outline-secondary(type='button') Button
         .input-group.mb-3
           button.btn.btn-outline-secondary(type='button') Button
           button.btn.btn-outline-secondary(type='button') Button
-          input.form-control(type='text', placeholder='', aria-label='Example text with two button addons')
+          input.form-control(type='text' placeholder='' aria-label='Example text with two button addons')
         .input-group
-          input.form-control(type='text', placeholder="Recipient's username", aria-label="Recipient's username with two button addons")
+          input.form-control(type='text' placeholder='Recipient\'s username' aria-label='Recipient\'s username with two button addons')
           button.btn.btn-outline-secondary(type='button') Button
           button.btn.btn-outline-secondary(type='button') Button
 
       pre
         code.language-html
           | &lt;div class="input-group mb-3"&gt;
-          |   &lt;button class="btn btn-outline-secondary" type="button" id="button-addon1"&gt;Button&lt;/button&gt;
+          |   &lt;button class="btn btn-outline-secondary" type='button' id="button-addon1"&gt;Button&lt;/button&gt;
           |   &lt;input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1"&gt;
           | &lt;/div&gt;
           |
           | &lt;div class="input-group mb-3"&gt;
           |   &lt;input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2"&gt;
-          |   &lt;button class="btn btn-outline-secondary" type="button" id="button-addon2"&gt;Button&lt;/button&gt;
+          |   &lt;button class="btn btn-outline-secondary" type='button' id="button-addon2"&gt;Button&lt;/button&gt;
           | &lt;/div&gt;
           |
           | &lt;div class="input-group mb-3"&gt;
-          |   &lt;button class="btn btn-outline-secondary" type="button"&gt;Button&lt;/button&gt;
-          |   &lt;button class="btn btn-outline-secondary" type="button"&gt;Button&lt;/button&gt;
+          |   &lt;button class="btn btn-outline-secondary" type='button'&gt;Button&lt;/button&gt;
+          |   &lt;button class="btn btn-outline-secondary" type='button'&gt;Button&lt;/button&gt;
           |   &lt;input type="text" class="form-control" placeholder="" aria-label="Example text with two button addons"&gt;
           | &lt;/div&gt;
           |
           | &lt;div class="input-group"&gt;
           |   &lt;input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username with two button addons"&gt;
-          |   &lt;button class="btn btn-outline-secondary" type="button"&gt;Button&lt;/button&gt;
-          |   &lt;button class="btn btn-outline-secondary" type="button"&gt;Button&lt;/button&gt;
+          |   &lt;button class="btn btn-outline-secondary" type='button'&gt;Button&lt;/button&gt;
+          |   &lt;button class="btn btn-outline-secondary" type='button'&gt;Button&lt;/button&gt;
           | &lt;/div&gt;
 
       h4 Buttons with dropdowns
 
       .bd-example
         .input-group.mb-3
-          button.btn.btn-outline-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false') Dropdown
+          button.btn.btn-outline-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false') Dropdown
           ul.dropdown-menu
             li
               a.dropdown-item(href='#') Action
@@ -254,10 +254,10 @@ block content
               hr.dropdown-divider
             li
               a.dropdown-item(href='#') Separated link
-          input.form-control(type='text', aria-label='Text input with dropdown button')
+          input.form-control(type='text' aria-label='Text input with dropdown button')
         .input-group.mb-3
-          input.form-control(type='text', aria-label='Text input with dropdown button')
-          button.btn.btn-outline-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false') Dropdown
+          input.form-control(type='text' aria-label='Text input with dropdown button')
+          button.btn.btn-outline-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false') Dropdown
           ul.dropdown-menu.dropdown-menu-end
             li
               a.dropdown-item(href='#') Action
@@ -270,7 +270,7 @@ block content
             li
               a.dropdown-item(href='#') Separated link
         .input-group
-          button.btn.btn-outline-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false') Dropdown
+          button.btn.btn-outline-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false') Dropdown
           ul.dropdown-menu
             li
               a.dropdown-item(href='#') Action before
@@ -282,8 +282,8 @@ block content
               hr.dropdown-divider
             li
               a.dropdown-item(href='#') Separated link
-          input.form-control(type='text', aria-label='Text input with 2 dropdown buttons')
-          button.btn.btn-outline-secondary.dropdown-toggle(type='button', data-bs-toggle='dropdown', aria-expanded='false') Dropdown
+          input.form-control(type='text' aria-label='Text input with 2 dropdown buttons')
+          button.btn.btn-outline-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false') Dropdown
           ul.dropdown-menu.dropdown-menu-end
             li
               a.dropdown-item(href='#') Action
@@ -299,7 +299,7 @@ block content
       pre
         code.language-html
           | &lt;div class="input-group mb-3"&gt;
-          |   &lt;button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Dropdown&lt;/button&gt;
+          |   &lt;button class="btn btn-outline-secondary dropdown-toggle" type='button' data-bs-toggle="dropdown" aria-expanded="false"&gt;Dropdown&lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
           |     &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
           |     &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
@@ -312,7 +312,7 @@ block content
           |
           | &lt;div class="input-group mb-3"&gt;
           |   &lt;input type="text" class="form-control" aria-label="Text input with dropdown button"&gt;
-          |   &lt;button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Dropdown&lt;/button&gt;
+          |   &lt;button class="btn btn-outline-secondary dropdown-toggle" type='button' data-bs-toggle="dropdown" aria-expanded="false"&gt;Dropdown&lt;/button&gt;
           |   &lt;ul class="dropdown-menu dropdown-menu-end"&gt;
           |     &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
           |     &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
@@ -323,7 +323,7 @@ block content
           | &lt;/div&gt;
           |
           | &lt;div class="input-group"&gt;
-          |   &lt;button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Dropdown&lt;/button&gt;
+          |   &lt;button class="btn btn-outline-secondary dropdown-toggle" type='button' data-bs-toggle="dropdown" aria-expanded="false"&gt;Dropdown&lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
           |     &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action before&lt;/a&gt;&lt;/li&gt;
           |     &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action before&lt;/a&gt;&lt;/li&gt;
@@ -332,7 +332,7 @@ block content
           |     &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
           |   &lt;/ul&gt;
           |   &lt;input type="text" class="form-control" aria-label="Text input with 2 dropdown buttons"&gt;
-          |   &lt;button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;Dropdown&lt;/button&gt;
+          |   &lt;button class="btn btn-outline-secondary dropdown-toggle" type='button' data-bs-toggle="dropdown" aria-expanded="false"&gt;Dropdown&lt;/button&gt;
           |   &lt;ul class="dropdown-menu dropdown-menu-end"&gt;
           |     &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
           |     &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
@@ -347,7 +347,7 @@ block content
       .bd-example
         .input-group.mb-3
           button.btn.btn-outline-secondary(type='button') Action
-          button.btn.btn-outline-secondary.dropdown-toggle.dropdown-toggle-split(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-outline-secondary.dropdown-toggle.dropdown-toggle-split(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             span.visually-hidden Toggle Dropdown
           ul.dropdown-menu
             li
@@ -360,11 +360,11 @@ block content
               hr.dropdown-divider
             li
               a.dropdown-item(href='#') Separated link
-          input.form-control(type='text', aria-label='Text input with segmented dropdown button')
+          input.form-control(type='text' aria-label='Text input with segmented dropdown button')
         .input-group
-          input.form-control(type='text', aria-label='Text input with segmented dropdown button')
+          input.form-control(type='text' aria-label='Text input with segmented dropdown button')
           button.btn.btn-outline-secondary(type='button') Action
-          button.btn.btn-outline-secondary.dropdown-toggle.dropdown-toggle-split(type='button', data-bs-toggle='dropdown', aria-expanded='false')
+          button.btn.btn-outline-secondary.dropdown-toggle.dropdown-toggle-split(type='button' data-bs-toggle='dropdown' aria-expanded='false')
             span.visually-hidden Toggle Dropdown
           ul.dropdown-menu.dropdown-menu-end
             li
@@ -381,8 +381,8 @@ block content
       pre
         code.language-html
           | &lt;div class="input-group mb-3"&gt;
-          |   &lt;button type="button" class="btn btn-outline-secondary"&gt;Action&lt;/button&gt;
-          |   &lt;button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-outline-secondary"&gt;Action&lt;/button&gt;
+          |   &lt;button type='button' class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     &lt;span class="visually-hidden"&gt;Toggle Dropdown&lt;/span&gt;
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu"&gt;
@@ -397,8 +397,8 @@ block content
           |
           | &lt;div class="input-group"&gt;
           |   &lt;input type="text" class="form-control" aria-label="Text input with segmented dropdown button"&gt;
-          |   &lt;button type="button" class="btn btn-outline-secondary"&gt;Action&lt;/button&gt;
-          |   &lt;button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+          |   &lt;button type='button' class="btn btn-outline-secondary"&gt;Action&lt;/button&gt;
+          |   &lt;button type='button' class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"&gt;
           |     &lt;span class="visually-hidden"&gt;Toggle Dropdown&lt;/span&gt;
           |   &lt;/button&gt;
           |   &lt;ul class="dropdown-menu dropdown-menu-end"&gt;
@@ -466,7 +466,7 @@ block content
           | &lt;/div&gt;
           |
           | &lt;div class="input-group mb-3"&gt;
-          |   &lt;button class="btn btn-outline-secondary" type="button"&gt;Button&lt;/button&gt;
+          |   &lt;button class="btn btn-outline-secondary" type='button'&gt;Button&lt;/button&gt;
           |   &lt;select class="form-select" id="inputGroupSelect03" aria-label="Example select with button addon"&gt;
           |     &lt;option selected&gt;Choose...&lt;/option&gt;
           |     &lt;option value="1"&gt;One&lt;/option&gt;
@@ -482,7 +482,7 @@ block content
           |     &lt;option value="2"&gt;Two&lt;/option&gt;
           |     &lt;option value="3"&gt;Three&lt;/option&gt;
           |   &lt;/select&gt;
-          |   &lt;button class="btn btn-outline-secondary" type="button"&gt;Button&lt;/button&gt;
+          |   &lt;button class="btn btn-outline-secondary" type='button'&gt;Button&lt;/button&gt;
           | &lt;/div&gt;
 
       h4 Custom file input
@@ -496,9 +496,9 @@ block content
           label.input-group-text(for='inputGroupFile02') Upload
         .input-group.mb-3
           button#inputGroupFileAddon03.btn.btn-outline-secondary(type='button') Button
-          input#inputGroupFile03.form-control(type='file', aria-describedby='inputGroupFileAddon03', aria-label='Upload')
+          input#inputGroupFile03.form-control(type='file' aria-describedby='inputGroupFileAddon03' aria-label='Upload')
         .input-group
-          input#inputGroupFile04.form-control(type='file', aria-describedby='inputGroupFileAddon04', aria-label='Upload')
+          input#inputGroupFile04.form-control(type='file' aria-describedby='inputGroupFileAddon04' aria-label='Upload')
           button#inputGroupFileAddon04.btn.btn-outline-secondary(type='button') Button
 
       pre
@@ -514,11 +514,11 @@ block content
           | &lt;/div&gt;
           |
           | &lt;div class="input-group mb-3"&gt;
-          |   &lt;button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03"&gt;Button&lt;/button&gt;
+          |   &lt;button class="btn btn-outline-secondary" type='button' id="inputGroupFileAddon03"&gt;Button&lt;/button&gt;
           |   &lt;input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="Upload"&gt;
           | &lt;/div&gt;
           |
           | &lt;div class="input-group"&gt;
           |   &lt;input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload"&gt;
-          |   &lt;button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04"&gt;Button&lt;/button&gt;
+          |   &lt;button class="btn btn-outline-secondary" type='button' id="inputGroupFileAddon04"&gt;Button&lt;/button&gt;
           | &lt;/div&gt;

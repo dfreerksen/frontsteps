@@ -4,9 +4,9 @@ block append config
   - var pageTitle = "Badge";
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p Documentation and examples for badges, our small count and labeling component.
 
       h4 Example
@@ -47,13 +47,13 @@ block content
       p Badges can be used as part of links or buttons to provide a counter.
 
       .bd-example
-        button.btn.btn-primary(type="button")
+        button.btn.btn-primary(type='button')
           | Notifications
           span.badge.text-bg-secondary 4
 
       pre
         code.language-html
-          | &lt;button type="button" class="btn btn-primary"&gt;
+          | &lt;button type='button' class="btn btn-primary"&gt;
           |   Notifications &lt;span class="badge text-bg-secondary"&gt;4&lt;/span&gt;
           | &lt;/button&gt;
 
@@ -65,7 +65,7 @@ block content
       p Use utilities to modify a <code>.badge</code> and position it in the corner of a link or button.
 
       .bd-example
-        button.btn.btn-primary.position-relative(type="button")
+        button.btn.btn-primary.position-relative(type='button')
           | Inbox
           span.position-absolute.top-0.start-100.translate-middle.badge.rounded-pill.bg-danger
             | 99+
@@ -73,7 +73,7 @@ block content
 
       pre
         code.language-html
-          | &lt;button type="button" class="btn btn-primary position-relative"&gt;
+          | &lt;button type='button' class="btn btn-primary position-relative"&gt;
           |   Inbox
           |   &lt;span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"&gt;
           |     99+
@@ -84,14 +84,14 @@ block content
       p You can also replace the .badge class with a few more utilities without a count for a more generic indicator.
 
       .bd-example
-        button.btn.btn-primary.position-relative(type="button")
+        button.btn.btn-primary.position-relative(type='button')
           | Profile
           span.position-absolute.top-0.start-100.translate-middle.p-2.bg-danger.border.border-light.rounded-circle
             span.visually-hidden New alerts
 
       pre
         code.language-html
-          | &lt;button type="button" class="btn btn-primary position-relative"&gt;
+          | &lt;button type='button' class="btn btn-primary position-relative"&gt;
           |   Profile
           |   &lt;span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"&gt;
           |     &lt;span class="visually-hidden"&gt;New alerts&lt;/span&gt;

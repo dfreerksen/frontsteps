@@ -4,8 +4,8 @@ block append config
   - var pageTitle = "3 Column Layout";
 
 append scripts
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js", crossorigin="anonymous")
-  script(src="js/flash.js")
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js' crossorigin='anonymous')
+  script(src='js/flash.js')
   script.
     flashSuccess('Good job!')
     flashDanger('Danger')
@@ -15,14 +15,14 @@ append scripts
     flash('Generic flash')
 
 block flash
-  div.alert.alert-success.alert-dismissible.fade.show.d-flex(role="alert")
+  .alert.alert-success.alert-dismissible.fade.show.d-flex(role='alert')
     i.bi.bi-check-circle-fill.me-2
     div An example success alert
-    button.btn-close(type="button" data-bs-dismiss="alert" aria-label="Close")
+    button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
 
 block content
-  div.card
-    div.card-body
+  .card
+    .card-body
       p
         | Alerts
 

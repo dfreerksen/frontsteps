@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang='en')
   head
     include includes/head/title.pug
     include includes/head/meta.pug
@@ -15,7 +15,7 @@ html(lang="en")
     main#main.main
       include includes/main/menu.pug
       include includes/main/breadcrumbs.pug
-      div.container-fluid.p-3
+      .container-fluid.p-3
         block content
     include includes/footer.pug
     include includes/scripts.pug

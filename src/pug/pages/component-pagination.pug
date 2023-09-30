@@ -4,9 +4,9 @@ block append config
   - var pageTitle = "Pagination";
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p Documentation and examples for showing pagination to indicate a series of related content exists across multiple pages.
 
       h3 Overview
@@ -46,7 +46,7 @@ block content
         nav(aria-label='Page navigation example')
           ul.pagination
             li.page-item
-              a.page-link(href='#', aria-label='Previous')
+              a.page-link(href='#' aria-label='Previous')
                 span(aria-hidden='true') &laquo;
             li.page-item
               a.page-link(href='#') 1
@@ -55,7 +55,7 @@ block content
             li.page-item
               a.page-link(href='#') 3
             li.page-item
-              a.page-link(href='#', aria-label='Next')
+              a.page-link(href='#' aria-label='Next')
                 span(aria-hidden='true') &raquo;
 
       pre

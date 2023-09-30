@@ -42,8 +42,6 @@ Several tools are used to ensure code is styled, linted and formatted correctly.
 
 [ESLint](https://github.com/eslint/eslint) is for Javascript linting. ESLint is installed with Yarn.
 
-In general, it's best to run this linter within your IDE with available integrations such as [Sublime Text](https://github.com/SublimeLinter/SublimeLinter-eslint) or [VS Code](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint).
-
 Manually run ESLint for the repo
 
 ```
@@ -54,10 +52,18 @@ $ yarn run eslint .
 
 [Stylelint](https://github.com/stylelint/stylelint) is for SASS and SCSS linting. Stylelint is installed with Yarn.
 
-It is best to run this linter within your IDE with available integrations such as [Sublime Text](https://github.com/SublimeLinter/SublimeLinter-stylelint) or [VS Code](https://marketplace.visualstudio.com/items?itemName=thibaudcolas.stylelint).
-
 Manually run Stylelint for the repo
 
 ```
 $ yarn run stylelint "**/*.scss"
+```
+
+### pug-lint
+
+[pug-lint](https://github.com/pugjs/pug-lint) is a linter and style checker for Pug. pug-lint is installed with Yarn.
+
+Manually run pug-lint for the repo
+
+```
+$ yarn run pug-lint ./src/pug/
 ```

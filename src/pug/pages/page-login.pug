@@ -6,22 +6,22 @@ block append config
 block content
   form.login-form
     .text-center
-      img.mb-4(src='/assets/images/frontsteps-logo.svg', alt=themeTitle, width='72', height='72')
+      img.mb-4(src='/assets/images/frontsteps-logo.svg' alt=themeTitle width='72' height='72')
 
     h3.mb-3 Please sign in
     .form-floating.mb-1
-      input#floatingInput.form-control(type='email', placeholder='name@example.com')
+      input#floatingInput.form-control(type='email' placeholder='name@example.com')
       label(for='floatingInput') Email address
     .form-floating.mb-1
-      input#floatingPassword.form-control(type='password', placeholder='Password')
+      input#floatingPassword.form-control(type='password' placeholder='Password')
       label(for='floatingPassword') Password
     .form-check.my-3
-      input#flexCheckDefault.form-check-input(type='checkbox', value='remember-me')
+      input#flexCheckDefault.form-check-input(type='checkbox' value='remember-me')
       label.form-check-label(for='flexCheckDefault')
         | Remember me
     button.btn.btn-primary.w-100.py-2(type='submit') Sign in
 
     .text-center
-      a.btn.btn-link(href='/page-register.html') Sign Up
+      a.btn.btn-link(href='page-register.html') Sign Up
     .text-center
       a.btn.btn-link(href='#') Forgot Password?

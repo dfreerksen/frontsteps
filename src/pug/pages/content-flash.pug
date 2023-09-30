@@ -4,8 +4,8 @@ block append config
   - var pageTitle = "Flash";
 
 append scripts
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js", crossorigin="anonymous")
-  script(src="js/flash.min.js")
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js' crossorigin='anonymous')
+  script(src='js/flash.min.js')
   script.
     flash('This is an example of a flash message sent when the page loads', 'success')
   script.
@@ -21,9 +21,9 @@ append scripts
     }, false);
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p Extension of Bootstrap <code>.alert</code> to add inline alerts with Javascript.
 
       p Include the Javascript
@@ -54,13 +54,13 @@ block content
       form#exampleFlash.row.align-items-end
         .col-md-7
           label.form-label(for='message') Message
-          input#message.form-control(type='text', name='message', value='Send this message')
+          input#message.form-control(type='text' name='message' value='Send this message')
         .col-md-4
           label.form-label(for='type') Type
           select#type.form-select(name='type')
             option(value='primary') Primary
             option(value='secondary') Secondary
-            option(value='success', selected='') Success
+            option(value='success' selected='') Success
             option(value='error') Error
             option(value='danger') Danger
             option(value='warning') Warning

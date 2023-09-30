@@ -1,33 +1,33 @@
 extends ../layouts/blank.pug
 
 block append config
-  - var pageTitle = "Register";
+  - var pageTitle = 'Register';
 
 block content
   form.register-form
     .text-center
-      img.mb-4(src='/assets/images/frontsteps-logo.svg', alt=themeTitle, width='72', height='72')
+      img.mb-4(src='/assets/images/frontsteps-logo.svg' alt=themeTitle width='72' height='72')
 
     h3.mb-3 Sign up
     .form-floating.mb-1
-      input#username.form-control(type='string', placeholder='Username')
+      input#username.form-control(type='string' placeholder='Username')
       label(for='username') Username
     .form-floating.mb-1
-      input#email.form-control(type='email', placeholder='name@example.com')
+      input#email.form-control(type='email' placeholder='name@example.com')
       label(for='email') Email address
     .form-floating.mb-1
-      input#password.form-control(type='password', placeholder='Password')
+      input#password.form-control(type='password' placeholder='Password')
       label(for='password') Password
     .form-floating.mb-1
-      input#password_confirmation.form-control(type='password', placeholder='Confirm Password')
+      input#password_confirmation.form-control(type='password' placeholder='Confirm Password')
       label(for='password_confirmation') Confirm Password
     .form-check.my-3
-      input#remember_me.form-check-input(type='checkbox', value='remember-me')
+      input#remember_me.form-check-input(type='checkbox' value='remember-me')
       label.form-check-label(for='remember_me')
         | Remember me
     button.btn.btn-primary.w-100.py-2(type='submit') Sign Up
 
     .text-center
-      a.btn.btn-link(href='/page-login.html') Sign In
+      a.btn.btn-link(href='page-login.html') Sign In
     .text-center
       a.btn.btn-link(href='#') Forgot Password?

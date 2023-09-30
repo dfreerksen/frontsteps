@@ -4,15 +4,15 @@ block append config
   - var pageTitle = "Alerts";
 
 append scripts
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js", crossorigin="anonymous")
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js' crossorigin='anonymous')
   script.
     const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
     const appendAlert = (message, type) => {
       const wrapper = document.createElement('div')
       wrapper.innerHTML = [
-        `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+        `<div class="alert alert-${type} alert-dismissible" role='alert'>`,
         `   <div>${message}</div>`,
-        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+        '   <button type='button' class="btn-close" data-bs-dismiss='alert' aria-label='Close'></button>',
         '</div>'
       ].join('')
 
@@ -26,9 +26,9 @@ append scripts
     }
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
 
       h4 Examples
@@ -54,28 +54,28 @@ block content
 
       pre
         code.language-html
-          | &lt;div class="alert alert-primary" role="alert"&gt;
+          | &lt;div class="alert alert-primary" role='alert'&gt;
           |   A simple primary alert - check it out!
           | &lt;/div&gt;
-          | &lt;div class="alert alert-secondary" role="alert"&gt;
+          | &lt;div class="alert alert-secondary" role='alert'&gt;
           |   A simple secondary alert - check it out!
           | &lt;/div&gt;
-          | &lt;div class="alert alert-success" role="alert"&gt;
+          | &lt;div class="alert alert-success" role='alert'&gt;
           |   A simple success alert - check it out!
           | &lt;/div&gt;
-          | &lt;div class="alert alert-danger" role="alert"&gt;
+          | &lt;div class="alert alert-danger" role='alert'&gt;
           |   A simple danger alert - check it out!
           | &lt;/div&gt;
-          | &lt;div class="alert alert-warning" role="alert"&gt;
+          | &lt;div class="alert alert-warning" role='alert'&gt;
           |   A simple warning alert - check it out!
           | &lt;/div&gt;
-          | &lt;div class="alert alert-info" role="alert"&gt;
+          | &lt;div class="alert alert-info" role='alert'&gt;
           |   A simple info alert - check it out!
           | &lt;/div&gt;
-          | &lt;div class="alert alert-light" role="alert"&gt;
+          | &lt;div class="alert alert-light" role='alert'&gt;
           |   A simple light alert - check it out!
           | &lt;/div&gt;
-          | &lt;div class="alert alert-dark" role="alert"&gt;
+          | &lt;div class="alert alert-dark" role='alert'&gt;
           |   A simple dark alert - check it out!
           | &lt;/div&gt;
 
@@ -89,7 +89,7 @@ block content
       pre
         code.language-html
           | &lt;div id="liveAlertPlaceholder"&gt;&lt;/div&gt;
-          | &lt;button type="button" class="btn btn-primary" id="liveAlertBtn"&gt;Show live alert&lt;/button&gt;
+          | &lt;button type='button' class="btn btn-primary" id="liveAlertBtn"&gt;Show live alert&lt;/button&gt;
 
       p We use the following JavaScript to trigger our live alert demo:
 
@@ -99,9 +99,9 @@ block content
           | const appendAlert = (message, type) =&gt; {
           |   const wrapper = document.createElement('div')
           |   wrapper.innerHTML = [
-          |     `&lt;div class="alert alert-${type} alert-dismissible" role="alert"&gt;`,
+          |     `&lt;div class="alert alert-${type} alert-dismissible" role='alert'&gt;`,
           |     `   &lt;div&gt;${message}&lt;/div&gt;`,
-          |     '   &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;',
+          |     '   &lt;button type='button' class="btn-close" data-bs-dismiss='alert' aria-label='Close'&gt;&lt;/button&gt;',
           |     '&lt;/div&gt;'
           |   ].join('')
           |
@@ -154,28 +154,28 @@ block content
 
       pre
         code.language-html
-          | &lt;div class="alert alert-primary" role="alert"&gt;
+          | &lt;div class="alert alert-primary" role='alert'&gt;
           |   A simple primary alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
           | &lt;/div&gt;
-          | &lt;div class="alert alert-secondary" role="alert"&gt;
+          | &lt;div class="alert alert-secondary" role='alert'&gt;
           |   A simple secondary alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
           | &lt;/div&gt;
-          | &lt;div class="alert alert-success" role="alert"&gt;
+          | &lt;div class="alert alert-success" role='alert'&gt;
           |   A simple success alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
           | &lt;/div&gt;
-          | &lt;div class="alert alert-danger" role="alert"&gt;
+          | &lt;div class="alert alert-danger" role='alert'&gt;
           |   A simple danger alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
           | &lt;/div&gt;
-          | &lt;div class="alert alert-warning" role="alert"&gt;
+          | &lt;div class="alert alert-warning" role='alert'&gt;
           |   A simple warning alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
           | &lt;/div&gt;
-          | &lt;div class="alert alert-info" role="alert"&gt;
+          | &lt;div class="alert alert-info" role='alert'&gt;
           |   A simple info alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
           | &lt;/div&gt;
-          | &lt;div class="alert alert-light" role="alert"&gt;
+          | &lt;div class="alert alert-light" role='alert'&gt;
           |   A simple light alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
           | &lt;/div&gt;
-          | &lt;div class="alert alert-dark" role="alert"&gt;
+          | &lt;div class="alert alert-dark" role='alert'&gt;
           |   A simple dark alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
           | &lt;/div&gt;
 
@@ -193,7 +193,7 @@ block content
 
       pre
         code.language-html
-          | &lt;div class="alert alert-success" role="alert"&gt;
+          | &lt;div class="alert alert-success" role='alert'&gt;
           |   &lt;h4 class="alert-heading"&gt;Well done!&lt;/h4&gt;
           |   &lt;p&gt;Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.&lt;/p&gt;
           |   &lt;hr&gt;
@@ -211,7 +211,7 @@ block content
 
       pre
         code.language-html
-          | &lt;div class="alert alert-primary d-flex align-items-center" role="alert"&gt;
+          | &lt;div class="alert alert-primary d-flex align-items-center" role='alert'&gt;
           |   &lt;i class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" aria-label="Warning:"&gt;&lt;/i&gt;
           |   &lt;div&gt;
           |     An example alert with an icon
@@ -240,25 +240,25 @@ block content
 
       pre
         code.language-html
-          | &lt;div class="alert alert-primary d-flex align-items-center" role="alert"&gt;
+          | &lt;div class="alert alert-primary d-flex align-items-center" role='alert'&gt;
           |   &lt;i class="bi bi-info-circle-fill flex-shrink-0 me-2" aria-label="Info:"&gt;&lt;/i&gt;
           |   &lt;div&gt;
           |     An example alert with an icon
           |   &lt;/div&gt;
           | &lt;/div&gt;
-          | &lt;div class="alert alert-success d-flex align-items-center" role="alert"&gt;
+          | &lt;div class="alert alert-success d-flex align-items-center" role='alert'&gt;
           |   &lt;i class="bi bi-check-circle-fill flex-shrink-0 me-2" aria-label="Success:"&gt;&lt;/i&gt;
           |   &lt;div&gt;
           |     An example success alert with an icon
           |   &lt;/div&gt;
           | &lt;/div&gt;
-          | &lt;div class="alert alert-warning d-flex align-items-center" role="alert"&gt;
+          | &lt;div class="alert alert-warning d-flex align-items-center" role='alert'&gt;
           |   &lt;i class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" aria-label="Warning:"&gt;&lt;/i&gt;
           |   &lt;div&gt;
           |     An example warning alert with an icon
           |   &lt;/div&gt;
           | &lt;/div&gt;
-          | &lt;div class="alert alert-danger d-flex align-items-center" role="alert"&gt;
+          | &lt;div class="alert alert-danger d-flex align-items-center" role='alert'&gt;
           |   &lt;i class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" aria-label="Danger:"&gt;&lt;/i&gt;
           |   &lt;div&gt;
           |     An example danger alert with an icon
@@ -271,7 +271,7 @@ block content
       ul
         li Be sure you've loaded the alert plugin, or the compiled Bootstrap JavaScript.
         li Add a close button and the <code>.alert-dismissible</code> class, which adds extra padding to the right of the alert and positions the close button.
-        li On the close button, add the <code>data-bs-dismiss="alert"</code> attribute, which triggers the JavaScript functionality. Be sure to use the <code>&lt;button&gt;</code> element with it for proper behavior across all devices.
+        li On the close button, add the <code>data-bs-dismiss='alert'</code> attribute, which triggers the JavaScript functionality. Be sure to use the <code>&lt;button&gt;</code> element with it for proper behavior across all devices.
         li To animate alerts when dismissing them, be sure to add the <code>.fade</code> and <code>.show</code> classes.
 
       p You can see this in action with a live demo:
@@ -280,11 +280,11 @@ block content
         .alert.alert-warning.alert-dismissible.fade.show(role='alert')
           strong Holy guacamole!
           |  You should check in on some of those fields below.
-          button.btn-close(type='button', data-bs-dismiss='alert', aria-label='Close')
+          button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
 
       pre
         code.language-html
-          | &lt;div class="alert alert-warning alert-dismissible fade show" role="alert"&gt;
+          | &lt;div class="alert alert-warning alert-dismissible fade show" role='alert'&gt;
           |   &lt;strong&gt;Holy guacamole!&lt;/strong&gt; You should check in on some of those fields below.
-          |   &lt;button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"&gt;&lt;/button&gt;
+          |   &lt;button type='button' class="btn-close" data-bs-dismiss='alert' aria-label='Close'&gt;&lt;/button&gt;
           | &lt;/div&gt;

@@ -4,15 +4,15 @@ block append config
   - var pageTitle = "Scrollspy";
 
 append scripts
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js", crossorigin="anonymous")
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js' crossorigin='anonymous')
   script.
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 block content
-  div.card
-    div.card-body
-      h3 #{pageTitle}
+  .card
+    .card-body
+      h3= pageTitle
       p Automatically update Bootstrap navigation or list group components based on scroll position to indicate which link is currently active in the viewport.
 
       h4 How it works
@@ -37,7 +37,7 @@ block content
             li.nav-item
               a.nav-link(href='#scrollspyHeading2') Second
             li.nav-item.dropdown
-              a.nav-link.dropdown-toggle.active(data-bs-toggle='dropdown', href='#', role='button', aria-expanded='false') Dropdown
+              a.nav-link.dropdown-toggle.active(data-bs-toggle='dropdown' href='#' role='button' aria-expanded='false') Dropdown
               ul.dropdown-menu
                 li
                   a.dropdown-item(href='#scrollspyHeading3') Third
@@ -47,7 +47,7 @@ block content
                   hr.dropdown-divider
                 li
                   a.dropdown-item.active(href='#scrollspyHeading5') Fifth
-        .scrollspy-example.bg-body-tertiary.p-3.rounded-2(data-bs-spy='scroll', data-bs-target='#navbar-example2', data-bs-root-margin='0px 0px -40%', data-bs-smooth-scroll='true', tabindex='0')
+        .scrollspy-example.bg-body-tertiary.p-3.rounded-2(data-bs-spy='scroll' data-bs-target='#navbar-example2' data-bs-root-margin='0px 0px -40%' data-bs-smooth-scroll='true' tabindex='0')
           h4#scrollspyHeading1 First heading
           p
             | This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.
@@ -117,7 +117,7 @@ block content
                   a.nav-link.ms-3.my-1(href='#item-3-1') Item 3-1
                   a.nav-link.ms-3.my-1(href='#item-3-2') Item 3-2
           .col-8
-            .scrollspy-example-2(data-bs-spy='scroll', data-bs-target='#navbar-example3', data-bs-smooth-scroll='true', tabindex='0')
+            .scrollspy-example-2(data-bs-spy='scroll' data-bs-target='#navbar-example3' data-bs-smooth-scroll='true' tabindex='0')
               #item-1
                 h4 Item 1
                 p
@@ -228,7 +228,7 @@ block content
               a.list-group-item.list-group-item-action(href='#list-item-3') Item 3
               a.list-group-item.list-group-item-action(href='#list-item-4') Item 4
           .col-8
-            .scrollspy-example(data-bs-spy='scroll', data-bs-target='#list-example', data-bs-smooth-scroll='true', tabindex='0')
+            .scrollspy-example(data-bs-spy='scroll' data-bs-target='#list-example' data-bs-smooth-scroll='true' tabindex='0')
               h4#list-item-1 Item 1
               p
                 | This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.
@@ -280,7 +280,7 @@ block content
               a.p-1.rounded(href='#simple-list-item-4') Item 4
               a.p-1.rounded(href='#simple-list-item-5') Item 5
           .col-8
-            .scrollspy-example(data-bs-spy='scroll', data-bs-target='#simple-list-example', data-bs-offset='0', data-bs-smooth-scroll='true', tabindex='0')
+            .scrollspy-example(data-bs-spy='scroll' data-bs-target='#simple-list-example' data-bs-offset='0' data-bs-smooth-scroll='true' tabindex='0')
               h4#simple-list-item-1 Item 1
               p
                 | This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.
