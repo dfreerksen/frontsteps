@@ -2,13 +2,12 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Spinners";
+  - var pageSubtitle = "Indicate the loading state with spinners";
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      p Indicate the loading state of a component or page with Bootstrap spinners, built entirely with HTML, CSS, and no JavaScript.
-
       h4 About
       p Bootstrap "spinners" can be used to show the loading state in your projects. They're built only with HTML and CSS, meaning you don't need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, alignment, and sizing can be easily customized with our amazing utility classes.
       p For accessibility purposes, each loader here includes <code>role="status"</code> and a nested <code>&lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;</code>.

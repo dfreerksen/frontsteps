@@ -2,13 +2,12 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Navbar";
+  - var pageSubtitle = "Responsive navigation header, the navbar. Includes support for branding, navigation, and more";
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      p Documentation and examples for Bootstrap's powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin.
-
       h4 How it works
       p Here's what you need to know before getting started with the navbar:
 
@@ -642,7 +641,7 @@ block content
 
       h4 Scrolling
       p Add <code>.navbar-nav-scroll</code> to a <code>.navbar-nav</code> (or other navbar sub-component) to enable vertical scrolling within the toggleable contents of a collapsed navbar. By default, scrolling kicks in at <code>75vh</code> (or 75% of the viewport height), but you can override that with the local CSS custom property <code>--bs-navbar-height</code> or custom styles. At larger viewports when the navbar is expanded, content will appear as it does in a default navbar.
-      p Please note that this behavior comes with a potential drawback of <code>overflow</code>—when setting <code>overflow-y: auto</code> (required to scroll the content here), <code>overflow-x</code> is the equivalent of <code>auto</code>, which will crop some horizontal content.
+      p Please note that this behavior comes with a potential drawback of <code>overflow</code>-when setting <code>overflow-y: auto</code> (required to scroll the content here), <code>overflow-x</code> is the equivalent of <code>auto</code>, which will crop some horizontal content.
       p Here's an example navbar using <code>.navbar-nav-scroll</code> with <code>style="--bs-scroll-height: 100px;"</code>, with some extra margin utilities for optimum spacing.
 
       .bd-example

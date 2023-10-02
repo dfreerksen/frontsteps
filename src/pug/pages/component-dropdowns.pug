@@ -2,13 +2,12 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Dropdowns";
+  - var pageSubtitle = "Toggle contextual overlays for displaying lists of links and more";
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      p Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.
-
       h4 Overview
       p Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They're made interactive with the included Bootstrap dropdown JavaScript plugin. They're toggled by clicking, not by hovering; this is an intentional design decision.
       p Dropdowns are built on a third party library, Popper, which provides dynamic positioning and viewport detection. Be sure to include <code>popper.min.js</code> before Bootstrap's JavaScript or use <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code> which contains Popper. Popper isn't used to position dropdowns in navbars though as dynamic positioning isn't required.
@@ -549,7 +548,7 @@ block content
           | &lt;/ul&gt;
 
       h4 Active
-      p Add <code>.active</code> to items in the dropdown to <strong>style them as active</strong>. To convey the active state to assistive technologies, use the <code>aria-current</code> attribute — using the <code>page</code> value for the current page, or <code>true</code> for the current item in a set.
+      p Add <code>.active</code> to items in the dropdown to <strong>style them as active</strong>. To convey the active state to assistive technologies, use the <code>aria-current</code> attribute - using the <code>page</code> value for the current page, or <code>true</code> for the current item in a set.
 
       .bd-example
         ul.dropdown-menu

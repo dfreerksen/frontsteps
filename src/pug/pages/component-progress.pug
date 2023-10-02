@@ -2,13 +2,12 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Progress";
+  - var pageSubtitle = "Custom progress bars featuring support for stacked bars, animated backgrounds, and text labels";
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      p Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels.
-
       h4 How it works
       p Progress components are built with two HTML elements, some CSS to set the width, and a few attributes. We don't use the HTML5 <code>&lt;progress&gt;</code> element, ensuring you can stack progress bars, animate them, and place text labels over them.
       ul

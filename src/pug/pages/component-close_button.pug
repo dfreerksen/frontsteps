@@ -2,13 +2,12 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Close button";
+  - var pageSubtitle = "A close button for dismissing content like modals and alerts";
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      p A generic close button for dismissing content like modals and alerts.
-
       h4 Example
       p Provide an option to dismiss or close a component with <code>.btn-close</code>. Default styling is limited, but highly customizable. Modify the Sass variables to replace the default <code>background-image</code>. <strong>Be sure to include text for screen readers</strong>, as we've done with <code>aria-label</code>.
 

@@ -2,13 +2,12 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Range";
+  - var pageSubtitle = "Custom range inputs for consistent cross-browser styling";
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      p Use our custom range inputs for consistent cross-browser styling and built-in customization.
-
       h4 Overview
       p Create custom <code>&lt;input type="range"&gt;</code> controls with <code>.form-range</code>. The track (the background) and thumb (the value) are both styled to appear the same across browsers. As only Firefox supports “filling” their track from the left or right of the thumb as a means to visually indicate progress, we do not currently support it.
 
@@ -34,7 +33,7 @@ block content
           | &lt;input type="range" class="form-range" id="disabledRange" disabled&gt;
 
       h4 Min and max
-      p Range inputs have implicit values for <code>min</code> and <code>max—0</code> and <code>100</code>, respectively. You may specify new values for those using the <code>min</code> and <code>max</code> attributes.
+      p Range inputs have implicit values for <code>min</code> and <code>max-0</code> and <code>100</code>, respectively. You may specify new values for those using the <code>min</code> and <code>max</code> attributes.
 
       .bd-example
         label.form-label(for='customRange2') Example range

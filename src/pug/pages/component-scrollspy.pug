@@ -2,6 +2,7 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Scrollspy";
+  - var pageSubtitle = "Automatically update navigation or list group components based on scroll position to indicate which link is currently active in the viewport";
   - var skipMenu = true;
 
 append scripts
@@ -13,8 +14,6 @@ append scripts
 block content
   .card
     .card-body
-      p Automatically update Bootstrap navigation or list group components based on scroll position to indicate which link is currently active in the viewport.
-
       h4 How it works
       p Scrollspy toggles the <code>.active</code> class on anchor (<code>&lt;a&gt;</code>) elements when the element with the <code>id</code> referenced by the anchor's <code>href</code> is scrolled into view. Scrollspy is best used in conjunction with a Bootstrap nav component or list group, but it will also work with any anchor elements in the current page. Here's how it works.
 

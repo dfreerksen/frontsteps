@@ -2,6 +2,7 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Toasts";
+  - var pageSubtitle = "Push notifications for visitors with a toast, a lightweight and easily customizable alert message";
   - var skipMenu = true;
 
 append scripts
@@ -43,7 +44,6 @@ append scripts
 block content
   .card
     .card-body
-      p Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.
       p Toasts are lightweight notifications designed to mimic the push notifications that have been popularized by mobile and desktop operating systems. They're built with flexbox, so they're easy to align and position.
 
       h4 Overview
@@ -249,7 +249,7 @@ block content
 
       p Place toasts with custom CSS as you need them. The top right is often used for notifications, as is the top middle. If you're only ever going to show one toast at a time, put the positioning styles right on the <code>.toast</code>.
 
-      .bd-example.m-0.border-0
+      .bd-example
         form
           .mb-3
             label(for='selectToastPlacement') Toast placement
@@ -311,7 +311,7 @@ block content
 
       p For systems that generate more notifications, consider using a wrapping element so they can easily stack.
 
-      .bd-example.m-0.border-0.bd-example-toasts.p-0
+      .bd-example.bd-example-toasts
         .position-relative(aria-live='polite' aria-atomic='true')
           // Position it:
           // - `.toast-container` for spacing between toasts
@@ -376,7 +376,7 @@ block content
 
       p You can also get fancy with flexbox utilities to align toasts horizontally and/or vertically.
 
-      .bd-example.m-0.border-0.bd-example-toasts.d-flex
+      .bd-example.bd-example-toasts.d-flex
         // Flexbox container for aligning the toasts
         .d-flex.justify-content-center.align-items-center.w-100(aria-live='polite' aria-atomic='true')
           // Then put toasts within

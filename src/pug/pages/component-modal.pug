@@ -2,6 +2,7 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Modal";
+  - var pageSubtitle = "Javascript modal plugin to add dialogs for lightboxes, user notifications, or custom content";
   - var skipMenu = true;
 
 append scripts
@@ -28,8 +29,6 @@ append scripts
 block content
   .card
     .card-body
-      p Use Bootstrap's JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.
-
       h4 How it works
       p Before getting started with Bootstrap's modal component, be sure to read the following as our menu options have recently changed.
 
@@ -56,7 +55,7 @@ block content
       h4 Modal components
       p Below is a static modal example (meaning its <code>position</code> and <code>display</code> have been overridden). Included are the modal header, modal body (required for <code>padding</code>), and modal footer (optional). We ask that you include modal headers with dismiss actions whenever possible, or provide another explicit dismiss action.
 
-      .bd-example.bg-body-tertiary
+      .bd-example
         .modal.position-static.d-block(tabindex='-1')
           .modal-dialog
             .modal-content
@@ -369,7 +368,7 @@ block content
                 h1#gridModalLabel.modal-title.fs-5 Grids in modals
                 button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
               .modal-body
-                .container-fluid.bd-example-row
+                .container-fluid
                   .row
                     .col-md-4 .col-md-4
                     .col-md-4.ms-auto .col-md-4 .ms-auto
@@ -502,7 +501,7 @@ block content
           | }
 
       h4 Toggle between modals
-      p Toggle between multiple modals with some clever placement of the <code>data-bs-target</code> and <code>data-bs-toggle</code> attributes. For example, you could toggle a password reset modal from within an already open sign in modal. <strong>Please note multiple modals cannot be open at the same time</strong>—this method simply toggles between two separate modals.
+      p Toggle between multiple modals with some clever placement of the <code>data-bs-target</code> and <code>data-bs-toggle</code> attributes. For example, you could toggle a password reset modal from within an already open sign in modal. <strong>Please note multiple modals cannot be open at the same time</strong> - this method simply toggles between two separate modals.
 
       .bd-example
         #exampleModalToggle.modal.fade(aria-hidden='true' aria-labelledby='exampleModalToggleLabel' tabindex='-1')

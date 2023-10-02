@@ -2,6 +2,7 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Alerts";
+  - var pageSubtitle = "Contextual feedback messages for user actions with alert messages";
   - var skipMenu = true;
 
 append scripts
@@ -29,8 +30,6 @@ append scripts
 block content
   .card
     .card-body
-      p Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
-
       h4 Examples
       p Alerts are available for any length of text, as well as an optional close button. For proper styling, use one of the eight <strong>required</strong> contextual classes (e.g., <code>.alert-success</code>). For inline dismissal, use the alerts JavaScript plugin.
 

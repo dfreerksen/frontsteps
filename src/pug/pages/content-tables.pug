@@ -2,13 +2,12 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Tables";
+  - var pageSubtitle = "Opt-in styling of tables";
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      p Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Bootstrap.
-
       h4 Overview
       p Due to the widespread use of <code>&lt;table&gt;</code>. elements across third-party widgets like calendars and date pickers, Bootstrap's tables are <strong>opt-in</strong>. Add the base class <code>.table</code> to any <code>&lt;table&gt;</code>, then extend with our optional modifier classes or custom styles. All table styles are not inherited in Bootstrap, meaning any nested tables can be styled independent from the parent.
       p Using the most basic table markup, here's how <code>.table</code>-based tables look in Bootstrap.
@@ -688,7 +687,7 @@ block content
           | &lt;/table&gt;
 
       h4 Table group dividers
-      p Add a thicker border, darker between table groups—<code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code>—with <code>.table-group-divider</code>. Customize the color by changing the <code>border-top-color</code> (which we don't currently provide a utility class for at this time).
+      p Add a thicker border, darker between table groups-<code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code>-with <code>.table-group-divider</code>. Customize the color by changing the <code>border-top-color</code> (which we don't currently provide a utility class for at this time).
 
       .bd-example
         table.table
