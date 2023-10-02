@@ -1,6 +1,8 @@
 $fs-primary: #003462;
 $fs-secondary: #8c8e90;
 $fs-tertiary: #92c83e;
+$fs-light: #fff;
+$fs-dark: #32363a;
 
 // Shared
 $fs-transition: all 0.2s;
@@ -26,7 +28,6 @@ $fs-link-text-color-dark: #709aae;
 $fs-link-hover-text-color-light: #84a0af;
 $fs-link-hover-text-color-dark: #c2d5df;
 $fs-link-text-decoration: none;
-$fs-link-hover-text-decoration: none;
 $fs-link-transition: $fs-transition;
 
 // Header
@@ -82,8 +83,6 @@ $fs-sidebar-chevron-transition: $fs-transition;
 $fs-main-transition: $fs-transition;
 
 // Page heading
-$fs-page-heading-background-color-light: #fff;
-$fs-page-heading-background-color-dark: #212529;
 $fs-page-heading-shadow: 0 1px 10px rgb(0 0 0 / 10%);
 
 // Footer
@@ -103,6 +102,9 @@ $fs-card-box-shadow: 0 0 30px rgb(1 41  112 / 10%);
 
 :root,
 [data-bs-theme="light"] {
+  // Bootstrap
+  --bs-body-bg: #{$fs-light};
+
   // Shared
   --theme-background-color: #{$fs-theme-background-color};
   --theme-text-color: #{$fs-theme-text-color};
@@ -121,7 +123,6 @@ $fs-card-box-shadow: 0 0 30px rgb(1 41  112 / 10%);
   --link-color: #{$fs-link-text-color-light};
   --link-hover-color: #{$fs-link-hover-text-color-light};
   --link-text-decoration: #{$fs-link-text-decoration};
-  --link-hover-text-decoration: #{$fs-link-hover-text-decoration};
 
   // Header
   --header-background-color: var(--theme-background-color, $fs-header-background-color-light);
@@ -142,11 +143,14 @@ $fs-card-box-shadow: 0 0 30px rgb(1 41  112 / 10%);
   --sidebar-scrollbar-color: $fs-sidebar-scrollbar-color;
 
   // Page heading
-  --page-heading-background-color: #{$fs-page-heading-background-color-light};
+  --page-heading-background-color: var(--bs-body-bg);
 }
 
 [data-bs-theme="dark"] {
   color-scheme: dark;
+
+  // Bootstrap
+  --bs-body-bg: #{$fs-dark};
 
   // Shared
   --theme-background-color: #{$fs-theme-background-color};
@@ -165,7 +169,6 @@ $fs-card-box-shadow: 0 0 30px rgb(1 41  112 / 10%);
   --link-color: #{$fs-link-text-color-dark};
   --link-hover-color: #{$fs-link-hover-text-color-dark};
   --link-text-decoration: #{$fs-link-text-decoration};
-  --link-hover-text-decoration: #{$fs-link-hover-text-decoration};
 
   // Header
   --header-background-color: var(--theme-background-color, $fs-header-background-color-dark);
@@ -186,5 +189,5 @@ $fs-card-box-shadow: 0 0 30px rgb(1 41  112 / 10%);
   --sidebar-scrollbar-color: $fs-sidebar-scrollbar-color;
 
   // Page heading
-  --page-heading-background-color: #{$fs-page-heading-background-color-dark};
+  --page-heading-background-color: var(--bs-body-bg);
 }

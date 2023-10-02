@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.4
+
+_Released 10/02/2023_
+
+### Changed
+
+* Separate `a` from `a:not(.btn)` styles
+* Move fonts into CSS
+
 ## 1.0.3
 
 _Released 10/02/2023_
