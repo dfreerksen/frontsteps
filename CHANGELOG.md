@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.3
+
+_Released 10/02/2023_
+
+### Added
+
+* Added styles for page heading
+* Add `aria-label` to flash Javascript
+
 ## 1.0.2
 
 _Released 10/02/2023_
