@@ -1,11 +1,18 @@
 a {
-  color: var(--link-color);
   text-decoration: var(--link-text-decoration);
   transition: $fs-link-transition;
 
   &:hover,
   &:focus {
-    color: var(--link-hover-color);
     text-decoration: var(--link-hover-text-decoration);
+  }
+}
+
+a:not(.btn) {
+  color: var(--link-color);
+
+  &:hover,
+  &:focus {
+    color: var(--link-hover-color);
   }
 }

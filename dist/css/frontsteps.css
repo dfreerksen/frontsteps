@@ -75,15 +75,20 @@ body {
 }
 
 a {
-  color: var(--link-color);
   -webkit-text-decoration: var(--link-text-decoration);
           text-decoration: var(--link-text-decoration);
   transition: all 0.2s;
 }
 a:hover, a:focus {
-  color: var(--link-hover-color);
   -webkit-text-decoration: var(--link-hover-text-decoration);
           text-decoration: var(--link-hover-text-decoration);
+}
+
+a:not(.btn) {
+  color: var(--link-color);
+}
+a:not(.btn):hover, a:not(.btn):focus {
+  color: var(--link-hover-color);
 }
 
 h1,
