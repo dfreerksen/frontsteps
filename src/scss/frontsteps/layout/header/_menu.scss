@@ -25,13 +25,11 @@
 
   a.list-group-item {
     color: var(--header-link-color);
-  }
 
-  a.list-group-item {
     &:hover,
     &:focus {
-      color: var(--header-link-hover-color);
       background: var(--header-link-background-hover-color);
+      color: var(--header-link-hover-color);
     }
   }
 

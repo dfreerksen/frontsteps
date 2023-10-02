@@ -26,6 +26,9 @@
 @import "frontsteps/auth/login";
 @import "frontsteps/auth/register";
 
+// Bootstrap overrides
+@import "frontsteps/bootstrap/overrides/card";
+
 // Extensions to Bootstrap
 @import "frontsteps/bootstrap/extensions/action_group";
 @import "frontsteps/bootstrap/extensions/switch";

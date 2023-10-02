@@ -1,5 +1,6 @@
 /node_modules
 .DS_Store
+/RESOURCES
 /dist/**/*.html
 /dist/assets
 /dist/css/doc.css

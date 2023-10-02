@@ -24,7 +24,11 @@
 
 .form-check-input {
   clear: left;
-  margin-right: 0.5em;
+  margin-top: 0;
+}
+
+.form-check-input + .form-check-label {
+  margin-left: 0.5em;
 }
 
 .form-switch.form-switch-sm {

@@ -147,8 +147,8 @@ img {
   color: var(--header-link-color);
 }
 #header.header a.list-group-item:hover, #header.header a.list-group-item:focus {
-  color: var(--header-link-hover-color);
   background: var(--header-link-background-hover-color);
+  color: var(--header-link-hover-color);
 }
 #header.header .dropdown-menu a,
 #header.header .list-group a {
@@ -322,6 +322,11 @@ form.register-form {
   width: 20rem;
 }
 
+.card {
+  box-shadow: 0 0 30px rgba(1, 41, 112, 0.1);
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 575.98px) {
   .btn-group.btn-group-action-sm a .label,
   .btn-group.btn-group-action-sm button .label {
@@ -359,7 +364,11 @@ form.register-form {
 
 .form-check-input {
   clear: left;
-  margin-right: 0.5em;
+  margin-top: 0;
+}
+
+.form-check-input + .form-check-label {
+  margin-left: 0.5em;
 }
 
 .form-switch.form-switch-sm .form-check-input {

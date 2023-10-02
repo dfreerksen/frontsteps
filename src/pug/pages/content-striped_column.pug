@@ -108,3 +108,73 @@ block content
           |     &lt;/tr&gt;
           |   &lt;/tbody&gt;
           | &lt;/table&gt;
+
+      h4 Both
+      p Both with colored rows
+
+      .bd-example
+        table.table.table-striped-first-column.table-striped-last-column
+          thead
+            tr
+              th(scope='col') #
+              th(scope='col') Header 1
+              th(scope='col') Header 2
+              th(scope='col') Header 3
+          tbody
+            tr.table-primary
+              th(scope='row') 1
+              td Record 1
+              td Record 1
+              td Record 1
+            tr.table-secondary
+              th(scope='row') 2
+              td Record 2
+              td Record 2
+              td Record 2
+            tr.table-success
+              th(scope='row') 3
+              td Record 3
+              td Record 3
+              td Record 3
+            tr.table-danger
+              th(scope='row') 4
+              td Record 4
+              td Record 4
+              td Record 4
+            tr.table-warning
+              th(scope='row') 5
+              td Record 5
+              td Record 5
+              td Record 5
+            tr.table-info
+              th(scope='row') 6
+              td Record 6
+              td Record 6
+              td Record 6
+            tr.table-light
+              th(scope='row') 7
+              td Record 7
+              td Record 7
+              td Record 7
+            tr.table-dark
+              th(scope='row') 8
+              td Record 8
+              td Record 8
+              td Record 8
+
+      pre
+        code.language-html
+          | &lt;table class="table table-striped-first-column table-striped-last-column"&gt;
+          |   &lt;thead&gt;
+          |     &lt;tr&gt;
+          |       &lt;th scope="col"&gt;Header&lt;/th&gt;
+          |       ...
+          |     &lt;/tr&gt;
+          |   &lt;/thead&gt;
+          |   &lt;tbody&gt;
+          |     &lt;tr&gt;
+          |       &lt;th scope="row"&gt;Data&lt;/th&gt;
+          |       ...
+          |     &lt;/tr&gt;
+          |   &lt;/tbody&gt;
+          | &lt;/table&gt;

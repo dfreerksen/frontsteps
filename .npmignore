@@ -1,0 +1,16 @@
+/.vscode
+/RESOURCES
+.editorconfig
+.eslintignore
+.eslintrc
+.nvmrc
+.pug-lintrc
+.stylelintignore
+.stylelintrc
+TODO.md
+/scripts
+/src
+/dist/**/*.html
+/dist/js/doc*.js
+/dist/css/doc*.css
+/dist/assets/

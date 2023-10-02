@@ -67,3 +67,12 @@ Manually run pug-lint for the repo
 ```
 $ yarn run pug-lint ./src/pug/
 ```
+
+## Publishing
+
+Publish a new version
+
+1. Note all changes in `CHANGELOG.md`
+2. Change version in `package.json`
+3. Dry run to see the content changes `npm publish --dry-run`
+4. Publish new version to NPM with `npm publish`
