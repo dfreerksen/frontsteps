@@ -74,5 +74,6 @@ Publish a new version
 
 1. Note all changes in `CHANGELOG.md`
 2. Change version in `package.json`
-3. Dry run to see the content changes `npm publish --dry-run`
-4. Publish new version to NPM with `npm publish`
+3. Make sure the version change gets added to the compiled asset files with `yarn run build`
+4. Dry run to see the content changes `npm publish --dry-run`
+5. Publish new version to NPM with `npm publish`

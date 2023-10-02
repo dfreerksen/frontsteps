@@ -2,11 +2,11 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Select";
+  - var skipMenu = true;
 
 block content
   .card
     .card-body
-      h3= pageTitle
       p Customize the native <code>&lt;select&gt;</code>s with custom CSS that changes the element's initial appearance.
 
       h4 Default

@@ -24,16 +24,28 @@
       icon: 'bi-2-circle-fill'
     },
     success: {
-      icon: 'bi-check-circle-fill'
+      icon: 'bi-check-circle-fill',
+      aria: {
+        label: 'Success:'
+      }
     },
     warning: {
-      icon: 'bi-exclamation-circle-fill'
+      icon: 'bi-exclamation-circle-fill',
+      aria: {
+        label: 'Warning:'
+      }
     },
     danger: {
-      icon: 'bi-x-circle-fill'
+      icon: 'bi-x-circle-fill',
+      aria: {
+        label: 'Danger:'
+      }
     },
     info: {
-      icon: 'bi-info-circle-fill'
+      icon: 'bi-info-circle-fill',
+      aria: {
+        label: 'Info:'
+      }
     },
     light: {
       icon: 'bi-brightness-high-fill'
@@ -44,7 +56,7 @@
   }
 
   window.flash = (message, type = 'info', options = {}) => {
-    const typeOptions = { icon: 'bi-info-circle-fill' }
+    const typeOptions = { icon: 'bi-info-circle-fill', aria: { label: 'Info:' } }
     const opts = Object.assign({}, typeOptions, options)
     const alertPlaceholder = document.getElementById('flash')
     const wrapper = document.createElement('div')
@@ -60,7 +72,7 @@
     wrapper.setAttribute('class', `alert alert-${forcedType} alert-dismissible fade show d-flex`)
     wrapper.setAttribute('role', 'alert')
     wrapper.innerHTML = [
-      `<i class="bi ${opts.icon} me-2"></i>`,
+      `<i class="bi ${opts.icon} me-2" aria-label="${opts.aria.label}"></i>`,
       `<div>${message}</div>`,
       '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>'
     ].join('')

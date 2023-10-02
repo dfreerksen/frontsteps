@@ -2,6 +2,7 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Collapse";
+  - var skipMenu = true;
 
 append scripts
   script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js' crossorigin='anonymous')
@@ -12,7 +13,6 @@ append scripts
 block content
   .card
     .card-body
-      h3= pageTitle
       p Toggle the visibility of content across your project with a few classes and our JavaScript plugins.
 
       h4 How it works

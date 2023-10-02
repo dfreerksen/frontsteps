@@ -1,7 +1,8 @@
 block breadcrumbs
-  .d-flex.flex-wrap.px-4.pt-4
-    nav(aria-label='breadcrumb')
-      ol.breadcrumb
-        li.breadcrumb-item
-          a(href='index.html') Dashboard
-        li.breadcrumb-item.active(aria-current='page')= pageTitle
+  if !skipBreadcrumbs
+    .d-flex.flex-wrap.px-4.pt-4
+      nav(aria-label='breadcrumb')
+        ol.breadcrumb
+          li.breadcrumb-item
+            a(href='index.html') Dashboard
+          li.breadcrumb-item.active(aria-current='page')= pageTitle

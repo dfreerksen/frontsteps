@@ -2,11 +2,11 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Breadcrumb";
+  - var skipMenu = true;
 
 block content
   .card
     .card-body
-      h3= pageTitle
       p Indicate the current page's location within a navigational hierarchy that automatically adds separators via CSS.
 
       h4 Example

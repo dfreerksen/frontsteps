@@ -1,1 +1,26 @@
 block menu
+  .page-heading.container-fluid.p-0
+    .d-flex.justify-content-between.align-items-center.flex-wrap.p-3.border-bottom
+      .me-auto
+        h1.h3.m-0.page-title= pageTitle
+        if pageSubtitle
+          h2.h6.m-0.page-sub-title= pageSubtitle
+      if !skipMenu
+        .btn-toolbar.ms-auto(role='toolbar', aria-label='Toolbar')
+          .btn-group.me-2(role='group', aria-label='List')
+            a.btn.btn-outline-secondary(href='#')
+              i.bi.bi-list-ol(aria-hidden='true')
+              | All
+
+          .btn-group.me-2(role='group', aria-label='Manage')
+            a.btn.btn-outline-primary(href='#')
+              i.bi.bi-plus(aria-hidden='true')
+              | Create
+            a.btn.btn-outline-primary(href='#')
+              i.bi.bi-pencil(aria-hidden='true')
+              | Edit
+
+          .btn-group(role='group', aria-label='Destroy')
+            a.btn.btn-outline-danger(href='#')
+              i.bi.bi-trash3(aria-hidden='true')
+              | Delete

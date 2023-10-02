@@ -29,25 +29,25 @@ header#header.header.w-100.position-fixed.top-0
         ul.navbar-nav.d-flex
           li.nav-item.dropdown
             a.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
-              i.bi.bi-person-circle
+              i.bi.bi-person-circle(aria-label='Profile')
               span.d-lg-none.d-xxl-inline-block Profile
             ul.dropdown-menu.dropdown-menu-end
               li
                 a.dropdown-item(href='#')
-                  i.bi.bi-gear
+                  i.bi.bi-gear(aria-label='Settings')
                   | Settings
               li
                 a.dropdown-item(href='#')
-                  i.bi.bi-person
+                  i.bi.bi-person(aria-label='Profile')
                   | Profile
               li
                 a.dropdown-item(href='#')
-                  i.bi.bi-envelope
+                  i.bi.bi-envelope(aria-label='Messages')
                   | Messages
 
           li.nav-item.dropdown
             a.nav-link.position-relative.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
-              i.bi.bi-bell
+              i.bi.bi-bell(aria-label='Notifications')
               span.d-lg-none.d-xxl-inline-block Notifications
               span.position-absolute.mt-0.me-0.translate-middle.badge.rounded-pill.bg-danger
                 | 3
@@ -55,7 +55,7 @@ header#header.header.w-100.position-fixed.top-0
             .dropdown-menu.dropdown-menu-end.dropdown-menu-wide
               .list-group.list-group-flush
                 .list-group-item
-                  i.bi.bi-bell
+                  i.bi.bi-bell(aria-hidden='true')
                   | Notifications
                 a.list-group-item.list-group-item-action(href='#')
                   .d-flex
@@ -74,11 +74,11 @@ header#header.header.w-100.position-fixed.top-0
                   small.ps-5 1 day ago
                 a.list-group-item.list-group-item-action.text-center(href='#')
                   | View all notifications
-                  i.bi.bi-chevron-right
+                  i.bi.bi-chevron-right(aria-hidden='true')
 
           li.nav-item.dropdown
             a.nav-link.position-relative.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
-              i.bi.bi-inbox
+              i.bi.bi-inbox(aria-label='Messages')
               span.d-lg-none.d-xxl-inline-block Messages
               span.position-absolute.mt-0.me-0.translate-middle.badge.rounded-pill.bg-danger
                 | 4
@@ -87,7 +87,7 @@ header#header.header.w-100.position-fixed.top-0
             .dropdown-menu.dropdown-menu-end.dropdown-menu-wide
               .list-group.list-group-flush
                 .list-group-item
-                  i.bi.bi-inbox
+                  i.bi.bi-inbox(aria-hidden='true')
                   | Messages
                 a.list-group-item.list-group-item-action(href='#')
                   .d-flex
@@ -120,9 +120,9 @@ header#header.header.w-100.position-fixed.top-0
 
                 a.list-group-item.list-group-item-action.text-center(href='#')
                   | View all messages
-                  i.bi.bi-chevron-right
+                  i.bi.bi-chevron-right(aria-hidden='true')
 
           li.nav-item
             a.nav-link(href='#')
-              i.bi.bi-power
+              i.bi.bi-power(aria-label='Sign Out')
               span.d-lg-none.d-xxl-inline-block Sign Out

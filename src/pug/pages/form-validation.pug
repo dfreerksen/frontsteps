@@ -2,6 +2,7 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Validation";
+  - var skipMenu = true;
 
 append scripts
   script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js' crossorigin='anonymous')
@@ -9,7 +10,6 @@ append scripts
 block content
   .card
     .card-body
-      h3= pageTitle
       p Provide valuable, actionable feedback to your users with HTML5 form validation, via browser default behaviors or custom styles and JavaScript.
 
       h4 How it works

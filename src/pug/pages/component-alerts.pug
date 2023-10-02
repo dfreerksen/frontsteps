@@ -2,6 +2,7 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Alerts";
+  - var skipMenu = true;
 
 append scripts
   script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js' crossorigin='anonymous')
@@ -28,7 +29,6 @@ append scripts
 block content
   .card
     .card-body
-      h3= pageTitle
       p Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
 
       h4 Examples

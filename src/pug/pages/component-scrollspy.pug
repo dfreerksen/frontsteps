@@ -2,6 +2,7 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Scrollspy";
+  - var skipMenu = true;
 
 append scripts
   script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js' crossorigin='anonymous')
@@ -12,7 +13,6 @@ append scripts
 block content
   .card
     .card-body
-      h3= pageTitle
       p Automatically update Bootstrap navigation or list group components based on scroll position to indicate which link is currently active in the viewport.
 
       h4 How it works

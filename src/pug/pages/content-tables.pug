@@ -2,11 +2,11 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Tables";
+  - var skipMenu = true;
 
 block content
   .card
     .card-body
-      h3= pageTitle
       p Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Bootstrap.
 
       h4 Overview
@@ -922,7 +922,7 @@ block content
       pre
         code.language-html
           | &lt;table class="table"&gt;
-          |   &lt;thead class="table-dark"&gt;
+          |   &lt;thead class="table-light"&gt;
           |     ...
           |   &lt;/thead&gt;
           |   &lt;tbody&gt;
@@ -932,7 +932,7 @@ block content
 
       .bd-example
         table.table
-          thead.table-light
+          thead.table-dark
             tr
               th(scope='col') #
               th(scope='col') First
@@ -970,7 +970,7 @@ block content
 
       .bd-example
         table.table
-          thead.table-light
+          thead
             tr
               th(scope='col') #
               th(scope='col') First

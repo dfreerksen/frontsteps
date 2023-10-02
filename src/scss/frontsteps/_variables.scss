@@ -22,7 +22,7 @@ $fs-heading-font-family: "Nunito", var(--bs-body-font-family);
 
 // Links
 $fs-link-text-color-light: #08c;
-$fs-link-text-color-dark: #005580;
+$fs-link-text-color-dark: #709aae;
 $fs-link-hover-text-color-light: #84a0af;
 $fs-link-hover-text-color-dark: #c2d5df;
 $fs-link-text-decoration: none;
@@ -81,6 +81,11 @@ $fs-sidebar-chevron-transition: $fs-transition;
 // Main
 $fs-main-transition: $fs-transition;
 
+// Page heading
+$fs-page-heading-background-color-light: #fff;
+$fs-page-heading-background-color-dark: #212529;
+$fs-page-heading-shadow: 0 1px 10px rgb(0 0 0 / 10%);
+
 // Footer
 $fs-footer-transition: $fs-transition;
 
@@ -135,6 +140,9 @@ $fs-card-box-shadow: 0 0 30px rgb(1 41  112 / 10%);
   --sidebar-icon-color: #{$fs-sidebar-icon-color-light};
   --sidebar-icon-hover-color: #{$fs-sidebar-icon-hover-color-light};
   --sidebar-scrollbar-color: $fs-sidebar-scrollbar-color;
+
+  // Page heading
+  --page-heading-background-color: #{$fs-page-heading-background-color-light};
 }
 
 [data-bs-theme="dark"] {
@@ -176,4 +184,7 @@ $fs-card-box-shadow: 0 0 30px rgb(1 41  112 / 10%);
   --sidebar-icon-color: #{$fs-sidebar-icon-color-dark};
   --sidebar-icon-hover-color: #{$fs-sidebar-icon-hover-color-dark};
   --sidebar-scrollbar-color: $fs-sidebar-scrollbar-color;
+
+  // Page heading
+  --page-heading-background-color: #{$fs-page-heading-background-color-dark};
 }

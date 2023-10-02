@@ -2,6 +2,7 @@ extends ../layouts/2col.pug
 
 block append config
   - var pageTitle = "Modal";
+  - var skipMenu = true;
 
 append scripts
   script(src='https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/javascript.min.js' crossorigin='anonymous')
@@ -27,7 +28,6 @@ append scripts
 block content
   .card
     .card-body
-      h3= pageTitle
       p Use Bootstrap's JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely custom content.
 
       h4 How it works

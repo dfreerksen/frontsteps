@@ -1,5 +1,5 @@
 /*
- * Frontstep Bootstrap 5 Theme v1.0.1 (https://github.com/dfreerksen/frontsteps)
+ * Frontstep Bootstrap 5 Theme v1.0.3 (https://github.com/dfreerksen/frontsteps)
  * Copyright 2023 David Freerksen
  * Licensed under MIT (https://github.com/dfreerksen/frontsteps/blob/master/LICENSE)
  */
@@ -31,6 +31,7 @@
   --sidebar-icon-color: #7d94b9;
   --sidebar-icon-hover-color: #92c83e;
   --sidebar-scrollbar-color: $fs-sidebar-scrollbar-color;
+  --page-heading-background-color: #fff;
 }
 
 [data-bs-theme=dark] {
@@ -42,7 +43,7 @@
   --body-text-color: #f6f9ff;
   --body-font-family: Open Sans, var(--bs-body-font-family);
   --heading-font-family: Nunito, var(--bs-body-font-family);
-  --link-color: #005580;
+  --link-color: #709aae;
   --link-hover-color: #c2d5df;
   --link-text-decoration: none;
   --link-hover-text-decoration: none;
@@ -60,6 +61,7 @@
   --sidebar-icon-color: #7d94b9;
   --sidebar-icon-hover-color: #92c83e;
   --sidebar-scrollbar-color: $fs-sidebar-scrollbar-color;
+  --page-heading-background-color: #212529;
 }
 
 :root {
@@ -296,6 +298,11 @@ img {
     margin-left: 270px;
   }
 }
+.page-heading {
+  background-color: var(--page-heading-background-color);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
 #footer.footer {
   margin-left: 70px;
   transition: all 0.2s;
