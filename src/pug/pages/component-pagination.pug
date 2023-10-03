@@ -1,8 +1,8 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Pagination";
-  - var pageSubtitle = "Pagination to indicate a series of related content exists across multiple pages";
+  - var pageTitle = 'Pagination';
+  - var pageSubtitle = 'Pagination to indicate a series of related content exists across multiple pages';
   - var skipMenu = true;
 
 block content
@@ -38,7 +38,7 @@ block content
           |   &lt;/ul&gt;
           | &lt;/nav&gt;
 
-      h4 Working with icons
+      h3 Working with icons
       p Looking to use an icon or symbol in place of text for some pagination links? Be sure to provide proper screen reader support with <code>aria</code> attributes.
 
       .bd-example
@@ -77,7 +77,7 @@ block content
           |   &lt;/ul&gt;
           | &lt;/nav&gt;
 
-      h4 Disabled and active states
+      h3 Disabled and active states
       p Pagination links are customizable for different circumstances. Use <code>.disabled</code> for links that appear un-clickable and <code>.active</code> to indicate the current page.
       p While the <code>.disabled</code> class uses <code>pointer-events: none</code> to try to disable the link functionality of <code>&lt;a&gt;</code>s, that CSS property is not yet standardized and doesn't account for keyboard navigation. As such, you should always add <code>tabindex="-1"</code> on disabled links and use custom JavaScript to fully disable their functionality.
 
@@ -147,7 +147,7 @@ block content
           |   &lt;/ul&gt;
           | &lt;/nav&gt;
 
-      h4 Sizing
+      h3 Sizing
       p Fancy larger or smaller pagination? Add <code>.pagination-lg</code> or <code>.pagination-sm</code> for additional sizes.
 
       .bd-example
@@ -194,7 +194,7 @@ block content
           |   &lt;/ul&gt;
           | &lt;/nav&gt;
 
-      h4 Alignment
+      h3 Alignment
       p Change the alignment of pagination components with flexbox utilities. For example, with <code>.justify-content-center</code>:
 
       .bd-example

@@ -1,27 +1,26 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Action Group";
+  - var pageTitle = 'Action Group';
+  - var pageSubtitle = 'Extension to Bootstrap <code>.btn-group</code>';
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      p Extension to Bootstrap <code>.btn-group</code>
-
-      h4 Small
+      h3 Small
       p Collapse a button group based on the size of the screen using <code>.btn-group-action-sm</code>
 
       .bd-example
         .btn-group.btn-group-action-sm(role='group' aria-label='Actions')
           a.btn.btn-info(href='#' role='button')
-            i.bi.bi-eye(aria-label='Show')
+            i.bi.bi-eye(role='link' aria-label='Show')
             span.label Show
           a.btn.btn-warning(href='#' role='button')
-            i.bi.bi-pencil(aria-label='Edit')
+            i.bi.bi-pencil(role='link' aria-label='Edit')
             span.label Edit
           a.btn.btn-danger(href='#' role='button')
-            i.bi.bi-trash(aria-label='Delete')
+            i.bi.bi-trash(role='link' aria-label='Delete')
             span.label Delete
 
       pre
@@ -41,19 +40,19 @@ block content
           |   &lt;/a&gt;
           | &lt;/div&gt;
 
-      h4 Medium
+      h3 Medium
       p Collapse a button group based on the size of the screen using <code>.btn-group-action-md</code>
 
       .bd-example
         .btn-group.btn-group-action-md(role='group' aria-label='Actions')
           a.btn.btn-info(href='#' role='button')
-            i.bi.bi-eye(aria-label='Show')
+            i.bi.bi-eye(role='link' aria-label='Show')
             span.label Show
           a.btn.btn-warning(href='#' role='button')
-            i.bi.bi-pencil(aria-label='Edit')
+            i.bi.bi-pencil(role='link' aria-label='Edit')
             span.label Edit
           a.btn.btn-danger(href='#' role='button')
-            i.bi.bi-trash(aria-label='Delete')
+            i.bi.bi-trash(role='link' aria-label='Delete')
             span.label Delete
 
       pre
@@ -62,19 +61,19 @@ block content
           |   ...
           | &lt;/div&gt;
 
-      h4 Large
+      h3 Large
       p Collapse a button group based on the size of the screen using <code>.btn-group-action-lg</code>
 
       .bd-example
         .btn-group.btn-group-action-lg(role='group' aria-label='Actions')
           a.btn.btn-info(href='#' role='button')
-            i.bi.bi-eye(aria-label='Show')
+            i.bi.bi-eye(role='link' aria-label='Show')
             span.label Show
           a.btn.btn-warning(href='#' role='button')
-            i.bi.bi-pencil(aria-label='Edit')
+            i.bi.bi-pencil(role='link' aria-label='Edit')
             span.label Edit
           a.btn.btn-danger(href='#' role='button')
-            i.bi.bi-trash(aria-label='Delete')
+            i.bi.bi-trash(role='link' aria-label='Delete')
             span.label Delete
 
       pre
@@ -83,19 +82,19 @@ block content
           |   ...
           | &lt;/div&gt;
 
-      h4 Extra Large
+      h3 Extra Large
       p Collapse a button group based on the size of the screen using <code>.btn-group-action-xl</code>
 
       .bd-example
         .btn-group.btn-group-action-xl(role='group' aria-label='Actions')
           a.btn.btn-info(href='#' role='button')
-            i.bi.bi-eye(aria-label='Show')
+            i.bi.bi-eye(role='link' aria-label='Show')
             span.label Show
           a.btn.btn-warning(href='#' role='button')
-            i.bi.bi-pencil(aria-label='Edit')
+            i.bi.bi-pencil(role='link' aria-label='Edit')
             span.label Edit
           a.btn.btn-danger(href='#' role='button')
-            i.bi.bi-trash(aria-label='Delete')
+            i.bi.bi-trash(role='link' aria-label='Delete')
             span.label Delete
 
       pre
@@ -104,19 +103,19 @@ block content
           |   ...
           | &lt;/div&gt;
 
-      h4 Extra Extra Large
+      h3 Extra Extra Large
       p Collapse a button group based on the size of the screen using <code>.btn-group-action-xxl</code>
 
       .bd-example
         .btn-group.btn-group-action-xxl(role='group' aria-label='Actions')
           a.btn.btn-info(href='#' role='button')
-            i.bi.bi-eye(aria-label='Show')
+            i.bi.bi-eye(role='link' aria-label='Show')
             span.label Show
           a.btn.btn-warning(href='#' role='button')
-            i.bi.bi-pencil(aria-label='Edit')
+            i.bi.bi-pencil(role='link' aria-label='Edit')
             span.label Edit
           a.btn.btn-danger(href='#' role='button')
-            i.bi.bi-trash(aria-label='Delete')
+            i.bi.bi-trash(role='link' aria-label='Delete')
             span.label Delete
 
       pre
@@ -125,18 +124,18 @@ block content
           |   ...
           | &lt;/div&gt;
 
-      h4 With Buttons
+      h3 With Buttons
 
       .bd-example
         .btn-group.btn-group-action-lg(role='group' aria-label='Actions')
           button.btn.btn-info(type='button')
-            i.bi.bi-eye(aria-label='Show')
+            i.bi.bi-eye(role='link' aria-label='Show')
             span.label Show
           button.btn.btn-warning(type='button')
-            i.bi.bi-pencil(aria-label='Edit')
+            i.bi.bi-pencil(role='link' aria-label='Edit')
             span.label Edit
           button.btn.btn-danger(type='button')
-            i.bi.bi-trash(aria-label='Delete')
+            i.bi.bi-trash(role='link' aria-label='Delete')
             span.label Delete
 
       pre

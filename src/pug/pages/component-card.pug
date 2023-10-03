@@ -1,17 +1,17 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Card";
-  - var pageSubtitle = "Cards provide a flexible and extensible content container with multiple variants and options";
+  - var pageTitle = 'Card';
+  - var pageSubtitle = 'Cards provide a flexible and extensible content container with multiple variants and options';
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      h4 About
+      h3 About
       p A <strong>card</strong> is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you're familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.
 
-      h4 Example
+      h3 Example
       p Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization. Built with flexbox, they offer easy alignment and mix well with other Bootstrap components. They have no <code>margin</code> by default, so use spacing utilities as needed.
       p Below is an example of a basic card with mixed content and a fixed width. Cards have no fixed width to start, so they'll naturally fill the full width of its parent element. This is easily customized with our various sizing options.
 
@@ -38,10 +38,10 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Content types
+      h3 Content types
       p Cards support a wide variety of content, including images, text, list groups, links, and more. Below are examples of what's supported.
 
-      h4 Body
+      h3 Body
       p The building block of a card is the .card-body. Use it whenever you need a padded section within a card.
 
       .bd-example
@@ -57,7 +57,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Titles, text, and links
+      h3 Titles, text, and links
       p Card titles are used by adding <code>.card-title</code> to a <code>%lt;h*%gt;</code> tag. In the same way, links are added and placed next to each other by adding <code>.card-link</code> to an <code>&lt;a&gt;</code> tag.
       p Subtitles are used by adding a <code>.card-subtitle</code> to a <code>%lt;h*%gt;</code> tag. If the <code>.card-title</code> and the <code>.card-subtitle</code> items are placed in a <code>.card-body</code> item, the card title and subtitle are aligned nicely.
 
@@ -83,7 +83,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Images
+      h3 Images
       p <code>.card-img-top</code> places an image to the top of the card. With <code>.card-text</code>, text can be added to the card. Text within <code>.card-text</code> can also be styled with the standard HTML tags.
 
       .bd-example
@@ -105,7 +105,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 List groups
+      h3 List groups
       p Create lists of content in a card with a flush list group.
 
       .bd-example
@@ -169,7 +169,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Kitchen sink
+      h3 Kitchen sink
       p Mix and match multiple content types to create the card you need, or throw everything in there. Shown below are image styles, blocks, text styles, and a list group - all wrapped in a fixed-width card.
 
       .bd-example
@@ -209,7 +209,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Header and footer
+      h3 Header and footer
       p Add an optional header and/or footer within a card.
 
       .bd-example
@@ -307,10 +307,10 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Sizing
+      h3 Sizing
       p Cards assume no specific <code>width</code> to start, so they'll be 100% wide unless otherwise stated. You can change this as needed with custom CSS, grid classes, grid Sass mixins, or utilities.
 
-      h4 Using grid markup
+      h3 Using grid markup
       p Using the grid, wrap cards in columns and rows as needed.
 
       .bd-example
@@ -351,7 +351,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Using utilities
+      h3 Using utilities
       p Use our handful of available sizing utilities to quickly set a card's width.
 
       .bd-example
@@ -384,7 +384,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Using custom CSS
+      h3 Using custom CSS
       p Use custom CSS in your stylesheets or as inline styles to set a width.
 
       .bd-example
@@ -404,7 +404,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Text alignment
+      h3 Text alignment
       p You can quickly change the text alignment of any card - in its entirety or specific parts - with our text align classes.
 
       .bd-example
@@ -450,7 +450,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Navigation
+      h3 Navigation
       p Add some navigation to a card's header (or block) with Bootstrap's nav components.
 
       .bd-example
@@ -529,10 +529,10 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Images
+      h3 Images
       p Cards include a few options for working with images. Choose from appending “image caps” at either end of a card, overlaying images with card content, or simply embedding the image in a card.
 
-      h4 Image caps
+      h3 Image caps
       p Similar to headers and footers, cards can include top and bottom “image caps” - images at the top or bottom of a card.
 
       .bd-example
@@ -578,7 +578,7 @@ block content
           |   &lt;img src="..." class="card-img-bottom" alt="..."&gt;
           | &lt;/div&gt;
 
-      h4 Image overlays
+      h3 Image overlays
       p Turn an image into a card background and overlay your card's text. Depending on the image, you may or may not need additional styles or utilities.
 
       .bd-example
@@ -605,7 +605,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Horizontal
+      h3 Horizontal
       p Using a combination of grid and utility classes, cards can be made horizontal in a mobile-friendly and responsive way. In the example below, we remove the grid gutters with <code>.g-0</code> and use <code>.col-md-*</code> classes to make the card horizontal at the <code>md</code> breakpoint. Further adjustments may be needed depending on your card content.
 
       .bd-example
@@ -641,10 +641,10 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Card styles
+      h3 Card styles
       p Cards include various options for customizing their backgrounds, borders, and color.
 
-      h4 Background and color
+      h3 Background and color
       p Set a <code>background-color</code> with contrasting foreground <code>color</code> with our <code>.text-bg-{color}</code> helpers. Previously it was required to manually pair your choice of <code>.text-{color}</code> and <code>.bg-{color}</code> utilities for styling, which you still may use if you prefer.
 
       .bd-example
@@ -756,7 +756,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Border
+      h3 Border
       p Use border utilities to change just the <code>border-color</code> of a card. Note that you can put <code>.text-{color}</code> classes on the parent <code>.card</code> or a subset of the card's contents as shown below.
 
       .bd-example
@@ -868,7 +868,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Mixins utilities
+      h3 Mixins utilities
       p You can also change the borders on the card header and footer as needed, and even remove their <code>background-color</code> with <code>.bg-transparent</code>.
 
       .bd-example
@@ -891,10 +891,10 @@ block content
           |   &lt;div class="card-footer bg-transparent border-success"&gt;Footer&lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Card layout
+      h3 Card layout
       p In addition to styling the content within cards, Bootstrap includes a few options for laying out series of cards. For the time being, <strong>these layout options are not yet responsive</strong>.
 
-      h4 Card groups
+      h3 Card groups
       p Use card groups to render cards as a single, attached element with equal width and height columns. Card groups start off stacked and use <code>display: flex;</code> to become attached with uniform dimensions starting at the <code>sm</code> breakpoint.
 
       .bd-example
@@ -1033,7 +1033,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Grid cards
+      h3 Grid cards
       p Use the Bootstrap grid system and its <code>.row-cols</code> classes to control how many grid columns (wrapped around your cards) you show per row. For example, here's <code>.row-cols-1</code> laying out the cards on one column, and <code>.row-cols-md-2</code> splitting four cards to equal width across multiple rows, from the medium breakpoint up.
 
       .bd-example

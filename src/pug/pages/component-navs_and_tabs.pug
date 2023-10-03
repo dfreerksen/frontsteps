@@ -1,13 +1,13 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Navs & tabs";
+  - var pageTitle = 'Navs & tabs';
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      h4 Base nav
+      h3 Base nav
       p Navigation available in Bootstrap share general markup and styles, from the base <code>.nav</code> class to the active and disabled states. Swap modifier classes to switch between each style.
       p The base <code>.nav</code> component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling.
 
@@ -57,10 +57,10 @@ block content
           |   &lt;a class="nav-link disabled" aria-disabled="true"&gt;Disabled&lt;/a&gt;
           | &lt;/nav&gt;
 
-      h4 Available styles
+      h3 Available styles
       p Change the style of <code>.nav</code>s component with modifiers and utilities. Mix and match as needed, or build your own.
 
-      h4 Horizontal alignment
+      h3 Horizontal alignment
       p Change the horizontal alignment of your nav with flexbox utilities. By default, navs are left-aligned, but you can easily change them to center or right-aligned.
       p Centered with <code>.justify-content-center</code>:
 
@@ -122,7 +122,7 @@ block content
           |   &lt;/li&gt;
           | &lt;/ul&gt;
 
-      h4 Vertical
+      h3 Vertical
       p Stack your navigation by changing the flex item direction with the <code>.flex-column</code> utility. Need to stack them on some viewports but not others? Use the responsive versions (e.g., <code>.flex-sm-column</code>).
 
       .bd-example
@@ -171,7 +171,7 @@ block content
           |   &lt;a class="nav-link disabled" aria-disabled="true"&gt;Disabled&lt;/a&gt;
           | &lt;/nav&gt;
 
-      h4 Tabs
+      h3 Tabs
       p Takes the basic nav from above and adds the <code>.nav-tabs</code> class to generate a tabbed interface. Use them to create tabbable regions with our tab JavaScript plugin.
 
       .bd-example
@@ -202,7 +202,7 @@ block content
           |   &lt;/li&gt;
           | &lt;/ul&gt;
 
-      h4 Pills
+      h3 Pills
       p Take that same HTML, but use <code>.nav-pills</code> instead:
 
       .bd-example
@@ -233,7 +233,7 @@ block content
           |   &lt;/li&gt;
           | &lt;/ul&gt;
 
-      h4 Underline
+      h3 Underline
       p Take that same HTML, but use <code>.nav-underline</code> instead:
 
       .bd-example
@@ -264,7 +264,7 @@ block content
           |   &lt;/li&gt;
           | &lt;/ul&gt;
 
-      h4 Fill and justify
+      h3 Fill and justify
       p Force your <code>.nav</code>'s contents to extend the full available width with one of two modifier classes. To proportionately fill all available space with your <code>.nav-item</code>s, use <code>.nav-fill</code>. Notice that all horizontal space is occupied, but not every nav item has the same width.
 
       .bd-example
@@ -361,7 +361,7 @@ block content
           |   &lt;a class="nav-link disabled" aria-disabled="true"&gt;Disabled&lt;/a&gt;
           | &lt;/nav&gt;
 
-      h4 Working with flex utilities
+      h3 Working with flex utilities
       p If you need responsive nav variations, consider using a series of flexbox utilities. While more verbose, these utilities offer greater customization across responsive breakpoints. In the example below, our nav will be stacked on the lowest breakpoint, then adapt to a horizontal layout that fills the available width starting from the small breakpoint.
 
       .bd-example
@@ -380,10 +380,10 @@ block content
           |   &lt;a class="flex-sm-fill text-sm-center nav-link disabled" aria-disabled="true"&gt;Disabled&lt;/a&gt;
           | &lt;/nav&gt;
 
-      h4 Using dropdowns
+      h3 Using dropdowns
       p Add dropdown menus with a little extra HTML and the dropdowns JavaScript plugin.
 
-      h4 Tabs with dropdowns
+      h3 Tabs with dropdowns
 
       .bd-example
         ul.nav.nav-tabs
@@ -431,7 +431,7 @@ block content
           |   &lt;/li&gt;
           | &lt;/ul&gt;
 
-      h4 Pills with dropdowns
+      h3 Pills with dropdowns
 
       .bd-example
         ul.nav.nav-pills

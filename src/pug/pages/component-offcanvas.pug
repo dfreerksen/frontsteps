@@ -1,14 +1,14 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Offcanvas";
-  - var pageSubtitle = "Hidden sidebars for navigation, shopping carts, and more with a few classes and Javascript";
+  - var pageTitle = 'Offcanvas';
+  - var pageSubtitle = 'Hidden sidebars for navigation, shopping carts, and more with a few classes and Javascript';
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      h4 How it works
+      h3 How it works
       p Offcanvas is a sidebar component that can be toggled via JavaScript to appear from the left, right, top, or bottom edge of the viewport. Buttons or anchors are used as triggers that are attached to specific elements you toggle, and <code>data</code> attributes are used to invoke our JavaScript.
       ul
         li Offcanvas shares some of the same JavaScript code as modals. Conceptually, they are quite similar, but they are separate plugins.
@@ -17,8 +17,8 @@ block content
         li Similar to modals, only one offcanvas can be shown at a time.
       p <strong>Heads up!</strong> Given how CSS handles animations, you cannot use <code>margin</code> or <code>translate</code> on an <code>.offcanvas</code> element. Instead, use the class as an independent wrapping element.
 
-      h4 Examples
-      h4 Live demo
+      h3 Examples
+      h3 Live demo
       p Use the buttons below to show and hide an offcanvas element via JavaScript that toggles the <code>.show</code> class on an element with the <code>.offcanvas</code> class.
 
       ul
@@ -81,7 +81,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Body scrolling
+      h3 Body scrolling
       p Scrolling the <code>&lt;body&gt;</code> element is disabled when an offcanvas and its backdrop are visible. Use the <code>data-bs-scroll</code> attribute to enable <code>&lt;body&gt;</code> scrolling.
 
       .bd-example
@@ -107,7 +107,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Body scrolling and backdrop
+      h3 Body scrolling and backdrop
       p You can also enable <code>&lt;body&gt;</code> scrolling with a visible backdrop.
 
       .bd-example
@@ -133,7 +133,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Static backdrop
+      h3 Static backdrop
       p When backdrop is set to static, the offcanvas will not close when clicking outside of it.
 
       .bd-example
@@ -165,7 +165,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Dark offcanvas
+      h3 Dark offcanvas
       p Change the appearance of offcanvases with utilities to better match them to different contexts like dark navbars. Here we add <code>.text-bg-dark</code> to the <code>.offcanvas</code> and <code>.btn-close-white</code> to <code>.btn-close</code> for proper styling with a dark offcanvas. If you have dropdowns within, consider also adding <code>.dropdown-menu-dark</code> to <code>.dropdown-menu</code>.
 
       .bd-example
@@ -194,7 +194,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Responsive
+      h3 Responsive
       p Responsive offcanvas classes hide content outside the viewport from a specified breakpoint and down. Above that breakpoint, the contents within will behave as usual. For example, <code>.offcanvas-lg</code> hides content in an offcanvas below the <code>lg</code> breakpoint, but shows the content above the <code>lg</code> breakpoint.
 
       .bd-example
@@ -236,7 +236,7 @@ block content
         li <code>.offcanvas-xl</code>
         li <code>.offcanvas-xxl</code>
 
-      h4 Placement
+      h3 Placement
       p There's no default placement for offcanvas components, so you must add one of the modifier classes below.
 
       ul

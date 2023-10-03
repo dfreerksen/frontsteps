@@ -1,8 +1,8 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Scrollspy";
-  - var pageSubtitle = "Automatically update navigation or list group components based on scroll position to indicate which link is currently active in the viewport";
+  - var pageTitle = 'Scrollspy';
+  - var pageSubtitle = 'Automatically update navigation or list group components based on scroll position to indicate which link is currently active in the viewport';
   - var skipMenu = true;
 
 append scripts
@@ -14,7 +14,7 @@ append scripts
 block content
   .card
     .card-body
-      h4 How it works
+      h3 How it works
       p Scrollspy toggles the <code>.active</code> class on anchor (<code>&lt;a&gt;</code>) elements when the element with the <code>id</code> referenced by the anchor's <code>href</code> is scrolled into view. Scrollspy is best used in conjunction with a Bootstrap nav component or list group, but it will also work with any anchor elements in the current page. Here's how it works.
 
       ul
@@ -23,8 +23,8 @@ block content
         li As you scroll the “spied” container, an <code>.active</code> class is added and removed from anchor links within the associated navigation. Links must have resolvable <code>id</code> targets, otherwise they're ignored. For example, a <code>&lt;a href="#home"&gt;home&lt;/a&gt;</code> must correspond to something in the DOM like <code>&lt;div id="home"&gt;&lt;/div&gt;</code>
         li Target elements that are not visible will be ignored. See the Non-visible elements section below.
 
-      h4 Examples
-      h4 Navbar
+      h3 Examples
+      h3 Navbar
       p Scroll the area below the navbar and watch the active class change. Open the dropdown menu and watch the dropdown items be highlighted as well
 
       .bd-example
@@ -98,7 +98,7 @@ block content
           |   &lt;p&gt;...&lt;/p&gt;
           | &lt;/div&gt;
 
-      h4 Nested nav
+      h3 Nested nav
       p Scrollspy also works with nested <code>.nav</code>s. If a nested <code>.nav</code> is <code>.active</code>, its parents will also be <code>.active</code>. Scroll the area next to the navbar and watch the active class change.
 
       .bd-example
@@ -215,7 +215,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 List group
+      h3 List group
       p Scrollspy also works with <code>.list-group</code>s. Scroll the area next to the list group and watch the active class change.
 
       .bd-example
@@ -266,7 +266,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Simple anchors
+      h3 Simple anchors
       p Scrollspy is not limited to nav components and list groups, so it will work on any <code>&lt;a&gt;</code> anchor elements in the current document. Scroll the area and watch the <code>.active</code> class change.
 
       .bd-example

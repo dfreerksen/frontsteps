@@ -1,7 +1,8 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Flash";
+  - var pageTitle = 'Flash';
+  - var pageSubtitle = 'Extension of Bootstrap <code>.alert</code> to add inline alerts with Javascript';
   - var skipMenu = true;
 
 append scripts
@@ -24,8 +25,6 @@ append scripts
 block content
   .card
     .card-body
-      p Extension of Bootstrap <code>.alert</code> to add inline alerts with Javascript.
-
       p Include the Javascript
 
       pre
@@ -49,7 +48,7 @@ block content
           | flash('Things are broken', 'error') // Sends message with info icon styled as error message
           | flash('Things are broken', 'error', { icon: 'bi-check-circle-fill' }) // Sends message with defined icon styled as error message
 
-      h4 Example
+      h3 Example
 
       form#exampleFlash.row.align-items-end
         .col-md-7

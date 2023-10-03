@@ -4,7 +4,7 @@ block menu
       .me-auto
         h1.h3.m-0.page-title= pageTitle
         if pageSubtitle
-          h2.h6.m-0.page-sub-title= pageSubtitle
+          h2.h6.m-0.page-sub-title !{pageSubtitle}
       if !skipMenu
         .btn-toolbar.ms-auto(role='toolbar' aria-label='Toolbar')
           .btn-group.me-2(role='group' aria-label='List')

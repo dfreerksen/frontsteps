@@ -1,14 +1,14 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Floating labels";
-  - var pageSubtitle = "Form labels that float over your input fields";
+  - var pageTitle = 'Floating labels';
+  - var pageSubtitle = 'Form labels that float over your input fields';
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      h4 Example
+      h3 Example
       p Wrap a pair of <code>&lt;input class="form-control"&gt;</code> and <code>&lt;label&gt;</code> elements in <code>.form-floating</code> to enable floating labels with Bootstrap's textual form fields. A <code>placeholder</code> is required on each <code>&lt;input&gt;</code> as our method of CSS-only floating labels uses the <code>:placeholder-shown</code> pseudo-element. Also note that the <code>&lt;input&gt;</code> must come first so we can utilize a sibling selector (e.g., <code>~</code>).
 
       .bd-example
@@ -58,7 +58,7 @@ block content
           |   &lt;label for="floatingInputInvalid"&gt;Invalid input&lt;/label&gt;
           | &lt;/form&gt;
 
-      h4 Textareas
+      h3 Textareas
       p By default, <code>&lt;textarea&gt;</code>s with <code>.form-control</code> will be the same height as <code>&lt;input&gt;</code>s.
 
       .bd-example
@@ -87,7 +87,7 @@ block content
           |   &lt;label for="floatingTextarea2"&gt;Comments&lt;/label&gt;
           | &lt;/div&gt;
 
-      h4 Selects
+      h3 Selects
       p Other than <code>.form-control</code>, floating labels are only available on <code>.form-select</code>s. They work in the same way, but unlike <code>&lt;input&gt;</code>s, they'll always show the <code>&lt;label&gt;</code> in its floated state. <strong>Selects with <code>size</code> and <code>multiple</code> are not supported.</strong>
 
       .bd-example
@@ -110,7 +110,7 @@ block content
           |   &lt;label for="floatingSelect"&gt;Works with selects&lt;/label&gt;
           | &lt;/div&gt;
 
-      h4 Disabled
+      h3 Disabled
       p Add the <code>disabled</code> boolean attribute on an input, a textarea or a select to give it a grayed out appearance, remove pointer events, and prevent focusing.
 
       .bd-example
@@ -155,7 +155,7 @@ block content
           |   &lt;label for="floatingSelectDisabled"&gt;Works with selects&lt;/label&gt;
           | &lt;/div&gt;
 
-      h4 Readonly plaintext
+      h3 Readonly plaintext
       p Floating labels also support <code>.form-control-plaintext</code>, which can be helpful for toggling from an editable <code>&lt;input&gt;</code> to a plaintext value without affecting the page layout.
 
       .bd-example
@@ -177,7 +177,7 @@ block content
           |   &lt;label for="floatingPlaintextInput"&gt;Input with value&lt;/label&gt;
           | &lt;/div&gt;
 
-      h4 Input groups
+      h3 Input groups
       p Floating labels also support <code>.input-group</code>.
 
       .bd-example
@@ -221,7 +221,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Layout
+      h3 Layout
       p When working with the Bootstrap grid system, be sure to place form elements within column classes.
 
       .bd-example

@@ -1,14 +1,14 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Tables";
-  - var pageSubtitle = "Opt-in styling of tables";
+  - var pageTitle = 'Tables';
+  - var pageSubtitle = 'Opt-in styling of tables';
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      h4 Overview
+      h3 Overview
       p Due to the widespread use of <code>&lt;table&gt;</code>. elements across third-party widgets like calendars and date pickers, Bootstrap's tables are <strong>opt-in</strong>. Add the base class <code>.table</code> to any <code>&lt;table&gt;</code>, then extend with our optional modifier classes or custom styles. All table styles are not inherited in Bootstrap, meaning any nested tables can be styled independent from the parent.
       p Using the most basic table markup, here's how <code>.table</code>-based tables look in Bootstrap.
 
@@ -68,7 +68,7 @@ block content
           |   &lt;/tbody&gt;
           | &lt;/table&gt;
 
-      h4 Variants
+      h3 Variants
       p Use contextual classes to color tables, table rows or individual cells.
 
       .bd-example
@@ -150,8 +150,8 @@ block content
           |   &lt;td class="table-dark"&gt;...&lt;/td&gt;
           | &lt;/tr&gt;
 
-      h4 Accented tables
-      h4 Striped rows
+      h3 Accented tables
+      h3 Striped rows
       p Use <code>.table-striped</code> to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.
 
       .bd-example
@@ -306,7 +306,7 @@ block content
           |   ...
           | &lt;/table&gt;
 
-      h4 Hoverable rows
+      h3 Hoverable rows
       p Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.
 
       .bd-example
@@ -401,7 +401,7 @@ block content
           |   ...
           | &lt;/table&gt;
 
-      h4 Active tables
+      h3 Active tables
       p Highlight a table row or cell by adding a <code>.table-active</code> class.
 
       .bd-example
@@ -494,8 +494,8 @@ block content
           |   &lt;/tbody&gt;
           | &lt;/table&gt;
 
-      h4 Table borders
-      h4 Bordered tables
+      h3 Table borders
+      h3 Bordered tables
       p Add <code>.table-bordered</code> for borders on all sides of the table and cells.
 
       .bd-example
@@ -560,7 +560,7 @@ block content
           |   ...
           | &lt;/table&gt;
 
-      h4 Tables without borders
+      h3 Tables without borders
       p Add <code>.table-borderless</code> for a table without borders.
 
       .bd-example
@@ -623,7 +623,7 @@ block content
           |   ...
           | &lt;/table&gt;
 
-      h4 Small tables
+      h3 Small tables
       p Add <code>.table-sm</code> to make any <code>.table</code> more compact by cutting all cell <code>padding</code> in half.
 
       .bd-example
@@ -686,7 +686,7 @@ block content
           |   ...
           | &lt;/table&gt;
 
-      h4 Table group dividers
+      h3 Table group dividers
       p Add a thicker border, darker between table groups-<code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code>-with <code>.table-group-divider</code>. Customize the color by changing the <code>border-top-color</code> (which we don't currently provide a utility class for at this time).
 
       .bd-example
@@ -745,7 +745,7 @@ block content
           |   &lt;/tbody&gt;
           | &lt;/table&gt;
 
-      h4 Vertical alignment
+      h3 Vertical alignment
       p Table cells of <code>&lt;thead&gt;</code> are always vertical aligned to the bottom. Table cells in <code>&lt;tbody&gt;</code> inherit their alignment from <code>&lt;table&gt;</code> and are aligned to the top by default. Use the vertical align classes to re-align where needed.
 
       .bd-example
@@ -827,7 +827,7 @@ block content
           |   &lt;/table&gt;
           | &lt;/div&gt;
 
-      h4 Nesting
+      h3 Nesting
       p Border styles, active styles, and table variants are not inherited by nested tables.
 
       .bd-example
@@ -890,7 +890,7 @@ block content
           |   &lt;/tbody&gt;
           | &lt;/table&gt;
 
-      h4 Table head
+      h3 Table head
       p Similar to tables and dark tables, use the modifier classes <code>.table-light</code> or <code>.table-dark</code> to make <code>&lt;thead&gt;</code>s appear light or dark gray.
 
       .bd-example
@@ -965,7 +965,7 @@ block content
           |   &lt;/tbody&gt;
           | &lt;/table&gt;
 
-      h4 Table foot
+      h3 Table foot
 
       .bd-example
         table.table
@@ -1012,7 +1012,7 @@ block content
           |   &lt;/tfoot&gt;
           | &lt;/table&gt;
 
-      h4 Captions
+      h3 Captions
       p A <code>&lt;caption&gt;</code> functions like a heading for a table. It helps users with screen readers to find a table and understand what it's about and decide if they want to read it.
 
       .bd-example
@@ -1091,10 +1091,10 @@ block content
           |   &lt;/tbody&gt;
           | &lt;/table&gt;
 
-      h4 Responsive tables
+      h3 Responsive tables
       p Responsive tables allow tables to be scrolled horizontally with ease. Make any table responsive across all viewports by wrapping a <code>.table</code> with <code>.table-responsive</code>. Or, pick a maximum breakpoint with which to have a responsive table up to by using <code>.table-responsive{-sm|-md|-lg|-xl|-xxl}</code>.
 
-      h4 Always responsive
+      h3 Always responsive
       p Across every breakpoint, use <code>.table-responsive</code> for horizontally scrolling tables.
 
       .bd-example
@@ -1155,7 +1155,7 @@ block content
           |   &lt;/table&gt;
           | &lt;/div&gt;
 
-      h4 Breakpoint specific
+      h3 Breakpoint specific
       p Use <code>.table-responsive{-sm|-md|-lg|-xl|-xxl}</code> as needed to create responsive tables up to a particular breakpoint. From that breakpoint and up, the table will behave normally and not scroll horizontally.
       p <strong>These tables may appear broken until their responsive styles apply at specific viewport widths.</strong>
 

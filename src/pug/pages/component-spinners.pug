@@ -1,18 +1,18 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Spinners";
-  - var pageSubtitle = "Indicate the loading state with spinners";
+  - var pageTitle = 'Spinners';
+  - var pageSubtitle = 'Indicate the loading state with spinners';
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      h4 About
+      h3 About
       p Bootstrap "spinners" can be used to show the loading state in your projects. They're built only with HTML and CSS, meaning you don't need any JavaScript to create them. You will, however, need some custom JavaScript to toggle their visibility. Their appearance, alignment, and sizing can be easily customized with our amazing utility classes.
       p For accessibility purposes, each loader here includes <code>role="status"</code> and a nested <code>&lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;</code>.
 
-      h4 Border spinner
+      h3 Border spinner
       p Use the border spinners for a lightweight loading indicator.
 
       .bd-example
@@ -25,7 +25,7 @@ block content
           |   &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
           | &lt;/div&gt;
 
-      h4 Colors
+      h3 Colors
       p The border spinner uses <code>currentColor</code> for its <code>border-color</code>, meaning you can customize the color with text color utilities. You can use any of our text color utilities on the standard spinner.
 
       .bd-example
@@ -73,7 +73,7 @@ block content
           |   &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
           | &lt;/div&gt;
 
-      h4 Growing spinner
+      h3 Growing spinner
       p If you don't fancy a border spinner, switch to the grow spinner. While it doesn't technically spin, it does repeatedly grow!
 
       .bd-example
@@ -133,10 +133,10 @@ block content
           |   &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
           | &lt;/div&gt;
 
-      h4 Alignment
+      h3 Alignment
       p Spinners in Bootstrap are built with <code>rem</code>s, <code>currentColor</code>, and <code>display: inline-flex</code>. This means they can easily be resized, recolored, and quickly aligned.
 
-      h4 Margin
+      h3 Margin
       p Use margin utilities like <code>.m-5</code> for easy spacing.
 
       .bd-example
@@ -149,10 +149,10 @@ block content
           |   &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
           | &lt;/div&gt;
 
-      h4 Placement
+      h3 Placement
       p Use flexbox utilities, float utilities, or text alignment utilities to place spinners exactly where you need them in any situation.
 
-      h4 Flex
+      h3 Flex
 
       .bd-example
         .d-flex.justify-content-center
@@ -179,7 +179,7 @@ block content
           |   &lt;div class="spinner-border ms-auto" aria-hidden="true"&gt;&lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Floats
+      h3 Floats
 
       .bd-example
         .clearfix
@@ -194,7 +194,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Text align
+      h3 Text align
 
       .bd-example
         .text-center
@@ -209,7 +209,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Size
+      h3 Size
       p Add <code>.spinner-border-sm</code> and <code>.spinner-grow-sm</code> to make a smaller spinner that can quickly be used within other components.
 
       .bd-example
@@ -244,7 +244,7 @@ block content
           |   &lt;span class="visually-hidden"&gt;Loading...&lt;/span&gt;
           | &lt;/div&gt;
 
-      h4 Buttons
+      h3 Buttons
       p Use spinners within buttons to indicate an action is currently processing or taking place. You may also swap the text out of the spinner element and utilize button text as needed.
 
       .bd-example

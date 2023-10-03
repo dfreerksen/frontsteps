@@ -1,14 +1,14 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Buttons";
-  - var pageSubtitle = "Custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more";
+  - var pageTitle = 'Buttons';
+  - var pageSubtitle = 'Custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more';
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      h4 Variants
+      h3 Variants
       p Bootstrap includes several button variants, each serving its own semantic purpose, with a few extras thrown in for more control.
 
       .bd-example
@@ -34,7 +34,7 @@ block content
           | &lt;button type="button" class="btn btn-dark"&gt;Dark&lt;/button&gt;
           | &lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;
 
-      h4 Button tags
+      h3 Button tags
       p The <code>.btn</code> classes are designed to be used with the <code>&lt;button&gt;</code> element. However, you can also use these classes on <code>&lt;a&gt;</code> or <code>&lt;input&gt;</code> elements (though some browsers may apply a slightly different rendering).
       p When using button classes on <code>&lt;a&gt;</code> elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a <code>role="button"</code> to appropriately convey their purpose to assistive technologies such as screen readers.
 
@@ -53,7 +53,7 @@ block content
           | &lt;input class="btn btn-primary" type="submit" value="Submit"&gt;
           | &lt;input class="btn btn-primary" type="reset" value="Reset"&gt;
 
-      h4 Sizes
+      h3 Sizes
       p Fancy larger or smaller buttons? Add <code>.btn-lg</code> or <code>.btn-sm</code> for additional sizes.
 
       .bd-example
@@ -74,7 +74,7 @@ block content
           | &lt;button type="button" class="btn btn-primary btn-sm"&gt;Small button&lt;/button&gt;
           | &lt;button type="button" class="btn btn-secondary btn-sm"&gt;Small button&lt;/button&gt;
 
-      h4 Disabled state
+      h3 Disabled state
       p Make buttons look inactive by adding the <code>disabled</code> boolean attribute to any <code>&lt;button&gt;</code> element. Disabled buttons have <code>pointer-events: none</code> applied to, preventing hover and active states from triggering.
 
       .bd-example
@@ -107,7 +107,7 @@ block content
           | &lt;a class="btn btn-primary disabled" role="button" aria-disabled="true"&gt;Primary link&lt;/a&gt;
           | &lt;a class="btn btn-secondary disabled" role="button" aria-disabled="true"&gt;Link&lt;/a&gt;
 
-      h4 Block buttons
+      h3 Block buttons
       p Create responsive stacks of full-width, “block buttons” like those in Bootstrap 4 with a mix of our display and gap utilities. By using utilities instead of button-specific classes, we have much greater control over spacing, alignment, and responsive behaviors.
 
       .bd-example
@@ -164,10 +164,10 @@ block content
           |   &lt;button class="btn btn-primary" type="button"&gt;Button&lt;/button&gt;
           | &lt;/div&gt;
 
-      h4 Button plugin
+      h3 Button plugin
       p The button plugin allows you to create simple on/off toggle buttons.
 
-      h4 Toggle states
+      h3 Toggle states
       p Add <code>data-bs-toggle="button"</code> to toggle a button's <code>active</code> state. If you're pre-toggling a button, you must manually add the <code>.active</code> class <b>and</b> <code>aria-pressed="true"</code> to ensure that it is conveyed appropriately to assistive technologies.
 
       .bd-example

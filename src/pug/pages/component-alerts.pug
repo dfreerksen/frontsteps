@@ -1,8 +1,8 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Alerts";
-  - var pageSubtitle = "Contextual feedback messages for user actions with alert messages";
+  - var pageTitle = 'Alerts';
+  - var pageSubtitle = 'Contextual feedback messages for user actions with alert messages';
   - var skipMenu = true;
 
 append scripts
@@ -30,7 +30,7 @@ append scripts
 block content
   .card
     .card-body
-      h4 Examples
+      h3 Examples
       p Alerts are available for any length of text, as well as an optional close button. For proper styling, use one of the eight <strong>required</strong> contextual classes (e.g., <code>.alert-success</code>). For inline dismissal, use the alerts JavaScript plugin.
 
       .bd-example
@@ -78,7 +78,7 @@ block content
           |   A simple dark alert - check it out!
           | &lt;/div&gt;
 
-      h4 Live example
+      h3 Live example
       p Click the button below to show an alert (hidden with inline styles to start), then dismiss (and destroy) it with the built-in close button.
 
       .bd-example
@@ -114,7 +114,7 @@ block content
           |   })
           | }
 
-      h4 Link color
+      h3 Link color
       p Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.
 
       .bd-example
@@ -178,7 +178,7 @@ block content
           |   A simple dark alert with &lt;a href="#" class="alert-link"&gt;an example link&lt;/a&gt;. Give it a click if you like.
           | &lt;/div&gt;
 
-      h4 Additional content
+      h3 Additional content
       p Alerts can also contain additional HTML elements like headings, paragraphs and dividers.
 
       .bd-example
@@ -199,7 +199,7 @@ block content
           |   &lt;p class="mb-0"&gt;Whenever you need to, be sure to use margin utilities to keep things nice and tidy.&lt;/p&gt;
           | &lt;/div&gt;
 
-      h4 Icons
+      h3 Icons
       p Similarly, you can use flexbox utilities and Bootstrap Icons to create alerts with icons. Depending on your icons and content, you may want to add more utilities or custom styles.
 
       .bd-example
@@ -264,7 +264,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Dismissing
+      h3 Dismissing
       p Using the alert JavaScript plugin, it's possible to dismiss any alert inline. Here's how:
 
       ul

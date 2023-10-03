@@ -1,8 +1,8 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Collapse";
-  - var pageSubtitle = "Toggle the visibility of content with a few classes and JavaScript plugins.";
+  - var pageTitle = 'Collapse';
+  - var pageSubtitle = 'Toggle the visibility of content with a few classes and JavaScript plugins';
   - var skipMenu = true;
 
 append scripts
@@ -14,10 +14,10 @@ append scripts
 block content
   .card
     .card-body
-      h4 How it works
+      h3 How it works
       p The collapse JavaScript plugin is used to show and hide content. Buttons or anchors are used as triggers that are mapped to specific elements you toggle. Collapsing an element will animate the <code>height</code> from its current value to <code>0</code>. Given how CSS handles animations, you cannot use <code>padding</code> on a <code>.collapse</code> element. Instead, use the class as an independent wrapping element.
 
-      h4 Example
+      h3 Example
       p Click the buttons below to show and hide another element via class changes:
 
       ul
@@ -53,7 +53,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Horizontal
+      h3 Horizontal
       p The collapse plugin supports horizontal collapsing. Add the <code>.collapse-horizontal</code> modifier class to transition the <code>width</code> instead of <code>height</code> and set a <code>width</code> on the immediate child element. Feel free to write your own custom Sass, use inline styles, or use our width utilities.
 
       .bd-example
@@ -80,7 +80,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Multiple toggles and targets
+      h3 Multiple toggles and targets
       p A <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> element can show and hide multiple elements by referencing them with a selector in its <code>data-bs-target</code> or <code>href</code> attribute. Conversely, multiple <code>&lt;button&gt;</code> or <code>&lt;a&gt;</code> elements can show and hide the same element if they each reference it with their <code>data-bs-target</code> or <code>href</code> attribute.
 
       .bd-example
@@ -106,7 +106,7 @@ block content
           |   &lt;button class="btn btn-primary collapsed" type='button' data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2"&gt;Toggle both elements&lt;/button&gt;
           | &lt;/p&gt;
 
-      h4 Via JavaScript
+      h3 Via JavaScript
       p Enable manually with:
 
       pre

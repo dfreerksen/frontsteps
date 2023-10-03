@@ -1,14 +1,14 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Progress";
-  - var pageSubtitle = "Custom progress bars featuring support for stacked bars, animated backgrounds, and text labels";
+  - var pageTitle = 'Progress';
+  - var pageSubtitle = 'Custom progress bars featuring support for stacked bars, animated backgrounds, and text labels';
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      h4 How it works
+      h3 How it works
       p Progress components are built with two HTML elements, some CSS to set the width, and a few attributes. We don't use the HTML5 <code>&lt;progress&gt;</code> element, ensuring you can stack progress bars, animate them, and place text labels over them.
       ul
         li We use the <code>.progress</code> as a wrapper to indicate the max value of the progress bar.
@@ -48,8 +48,8 @@ block content
           |   &lt;div class="progress-bar" style="width: 100%"&gt;&lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Bar sizing
-      h4 Width
+      h3 Bar sizing
+      h3 Width
       p Bootstrap provides a handful of utilities for setting width. Depending on your needs, these may help with quickly configuring the width of the <code>.progress-bar</code>.
 
       .bd-example
@@ -62,7 +62,7 @@ block content
           |   &lt;div class="progress-bar w-75"&gt;&lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Height
+      h3 Height
       p You only set a <code>height</code> value on the <code>.progress</code> container, so if you change that value, the inner <code>.progress-bar</code> will automatically resize accordingly.
 
       .bd-example
@@ -80,7 +80,7 @@ block content
           |   &lt;div class="progress-bar" style="width: 25%"&gt;&lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Labels
+      h3 Labels
       p Add labels to your progress bars by placing text within the <code>.progress-bar</code>.
 
       .bd-example
@@ -105,7 +105,7 @@ block content
           |   &lt;div class="progress-bar overflow-visible text-dark" style="width: 10%"&gt;Long label text for the progress bar, set to a dark color&lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Backgrounds
+      h3 Backgrounds
       p Use background utility classes to change the appearance of individual progress bars.
 
       .bd-example
@@ -172,7 +172,7 @@ block content
           |   &lt;div class="progress-bar text-bg-warning" style="width: 75%"&gt;75%&lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Multiple bars
+      h3 Multiple bars
       p You can include multiple progress components inside a container with <code>.progress-stacked</code> to create a single stacked progress bar. Note that in this case, the styling to set the visual width of the progress bar must be applied to the <code>.progress</code> elements, rather than the <code>.progress-bar</code>s.
 
       .bd-example
@@ -198,7 +198,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Striped
+      h3 Striped
       p Add <code>.progress-bar-striped</code> to any <code>.progress-bar</code> to apply a stripe via CSS gradient over the progress bar's background color.
 
       .bd-example
@@ -231,7 +231,7 @@ block content
           |   &lt;div class="progress-bar progress-bar-striped bg-danger" style="width: 100%"&gt;&lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Animated stripes
+      h3 Animated stripes
       p The striped gradient can also be animated. Add <code>.progress-bar-animated</code> to <code>.progress-bar</code> to animate the stripes right to left via CSS3 animations.
 
       .bd-example

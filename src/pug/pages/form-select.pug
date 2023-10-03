@@ -1,15 +1,14 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Select";
+  - var pageTitle = 'Select';
+  - var pageSubtitle = "Customize the native <code>&lt;select&gt;</code>s with custom CSS that changes the element's initial appearance";
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      p Customize the native <code>&lt;select&gt;</code>s with custom CSS that changes the element's initial appearance.
-
-      h4 Default
+      h3 Default
       p Custom <code>&lt;select&gt;</code> menus need only a custom class, <code>.form-select</code> to trigger the custom styles. Custom styles are limited to the <code>&lt;select&gt;</code>'s initial appearance and cannot modify the <code>&lt;option&gt;</code>s due to browser limitations.
 
       .bd-example
@@ -28,7 +27,7 @@ block content
           |   &lt;option value="3"&gt;Three&lt;/option&gt;
           | &lt;/select&gt;
 
-      h4 Sizing
+      h3 Sizing
       p You may also choose from small and large custom selects to match our similarly sized text inputs.
 
       .bd-example
@@ -95,7 +94,7 @@ block content
           |   &lt;option value="3"&gt;Three&lt;/option&gt;
           | &lt;/select&gt;
 
-      h4 Disabled
+      h3 Disabled
       p Add the <code>disabled</code> boolean attribute on a select to give it a grayed out appearance and remove pointer events.
 
       .bd-example

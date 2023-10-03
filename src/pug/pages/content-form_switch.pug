@@ -1,15 +1,14 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Form Switch";
+  - var pageTitle = 'Form Switch';
+  - var pageSubtitle = 'Extension to Bootstrap <code>.form-switch</code>';
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      p Extension to Bootstrap <code>.form-switch</code>
-
-      h4 Small
+      h3 Small
       p Use <code>.form-switch-sm</code>. Same as <code>.form-switch</code> with modifications for alignment.
 
       .bd-example
@@ -45,7 +44,7 @@ block content
           |   &lt;label class="form-check-label" for="switchCheckSmCheckedDisabled"&gt;Disabled small checked switch checkbox input&lt;/label&gt;
           | &lt;/div&gt;
 
-      h4 Medium
+      h3 Medium
       p Use <code>.form-switch-md</code>.
 
       .bd-example
@@ -81,7 +80,7 @@ block content
           |   &lt;label class="form-check-label" for="switchCheckMdCheckedDisabled"&gt;Disabled medium checked switch checkbox input&lt;/label&gt;
           | &lt;/div&gt;
 
-      h4 Large
+      h3 Large
       p Use <code>.form-switch-lg</code>.
 
       .bd-example

@@ -1,26 +1,26 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Dropdowns";
-  - var pageSubtitle = "Toggle contextual overlays for displaying lists of links and more";
+  - var pageTitle = 'Dropdowns';
+  - var pageSubtitle = 'Toggle contextual overlays for displaying lists of links and more';
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      h4 Overview
+      h3 Overview
       p Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They're made interactive with the included Bootstrap dropdown JavaScript plugin. They're toggled by clicking, not by hovering; this is an intentional design decision.
       p Dropdowns are built on a third party library, Popper, which provides dynamic positioning and viewport detection. Be sure to include <code>popper.min.js</code> before Bootstrap's JavaScript or use <code>bootstrap.bundle.min.js</code> / <code>bootstrap.bundle.js</code> which contains Popper. Popper isn't used to position dropdowns in navbars though as dynamic positioning isn't required.
 
-      h4 Accessibility
+      h3 Accessibility
       p The WAI ARIA standard defines an actual role="menu" widget, but this is specific to application-like menus which trigger actions or functions. ARIA menus can only contain menu items, checkbox menu items, radio button menu items, radio button groups, and sub-menus.
       p Bootstrap's dropdowns, on the other hand, are designed to be generic and applicable to a variety of situations and markup structures. For instance, it is possible to create dropdowns that contain additional inputs and form controls, such as search fields or login forms. For this reason, Bootstrap does not expect (nor automatically add) any of the <code>role</code> and <code>aria-</code> attributes required for true ARIA menus. Authors will have to include these more specific attributes themselves.
       p However, Bootstrap does add built-in support for most standard keyboard menu interactions, such as the ability to move through individual <code>.dropdown-item</code> elements using the cursor keys and close the menu with the <code>Esc</code> key.
 
-      h4 Examples
+      h3 Examples
       p Wrap the dropdown's toggle (your button or link) and the dropdown menu within <code>.dropdown</code>, or another element that declares <code>position: relative;</code>. Ideally, you should use a <code>&lt;button&gt;</code> element as the dropdown trigger, but the plugin will work with <code>&lt;a&gt;</code> elements as well. The examples shown here use semantic <code>&lt;ul&gt;</code> elements where appropriate, but custom markup is supported.
 
-      h4 Single button
+      h3 Single button
       p Any single <code>.btn</code> can be turned into a dropdown toggle with some markup changes. Here's how you can put them to work with <code>&lt;button&gt;</code> elements:
 
       .bd-example
@@ -110,7 +110,7 @@ block content
           |   &lt;/ul&gt;
           | &lt;/div&gt;
 
-      h4 Split button
+      h3 Split button
       p Similarly, create split button dropdowns with virtually the same markup as single button dropdowns, but with the addition of <code>.dropdown-toggle-split</code> for proper spacing around the dropdown caret.
       p We use this extra class to reduce the horizontal <code>padding</code> on either side of the caret by 25% and remove the <code>margin-left</code> that's added for regular button dropdowns. Those extra changes keep the caret centered in the split button and provide a more appropriately sized hit area next to the main button.
 
@@ -148,7 +148,7 @@ block content
           |   &lt;/ul&gt;
           | &lt;/div&gt;
 
-      h4 Sizing
+      h3 Sizing
       p Button dropdowns work with buttons of all sizes, including default and split dropdown buttons.
 
       .bd-example
@@ -259,9 +259,9 @@ block content
           |   &lt;/ul&gt;
           | &lt;/div&gt;
 
-      h4 Directions
+      h3 Directions
 
-      h4 Centered
+      h3 Centered
       p Make the dropdown menu centered below the toggle with <code>.dropdown-center</code> on the parent element.
 
       .bd-example
@@ -289,7 +289,7 @@ block content
           |   &lt;/ul&gt;
           | &lt;/div&gt;
 
-      h4 Dropup
+      h3 Dropup
       p Trigger dropdown menus above elements by adding <code>.dropup</code> to the parent element.
 
       .bd-example
@@ -349,7 +349,7 @@ block content
           |   &lt;/ul&gt;
           | &lt;/div&gt;
 
-      h4 Dropup centered
+      h3 Dropup centered
       p Make the dropup menu centered above the toggle with <code>.dropup-center</code> on the parent element.
 
       .bd-example
@@ -377,7 +377,7 @@ block content
           |   &lt;/ul&gt;
           | &lt;/div&gt;
 
-      h4 Dropend
+      h3 Dropend
       p Trigger dropdown menus at the right of the elements by adding <code>.dropend</code> to the parent element.
 
       .bd-example
@@ -437,7 +437,7 @@ block content
           |   &lt;/ul&gt;
           | &lt;/div&gt;
 
-      h4 Dropstart
+      h3 Dropstart
       p Trigger dropdown menus at the left of the elements by adding <code>.dropstart</code> to the parent element.
 
       .bd-example
@@ -497,7 +497,7 @@ block content
           |   &lt;/button&gt;
           | &lt;/div&gt;
 
-      h4 Menu items
+      h3 Menu items
       p You can use <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> elements as dropdown items.
 
       .bd-example
@@ -547,7 +547,7 @@ block content
           |   &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
           | &lt;/ul&gt;
 
-      h4 Active
+      h3 Active
       p Add <code>.active</code> to items in the dropdown to <strong>style them as active</strong>. To convey the active state to assistive technologies, use the <code>aria-current</code> attribute - using the <code>page</code> value for the current page, or <code>true</code> for the current item in a set.
 
       .bd-example
@@ -567,7 +567,7 @@ block content
           |   &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another link&lt;/a&gt;&lt;/li&gt;
           | &lt;/ul&gt;
 
-      h4 Disabled
+      h3 Disabled
       p Add <code>.disabled</code> to items in the dropdown to <strong>style them as disabled</strong>.
 
       .bd-example
@@ -587,7 +587,7 @@ block content
           |   &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another link&lt;/a&gt;&lt;/li&gt;
           | &lt;/ul&gt;
 
-      h4 Menu alignment
+      h3 Menu alignment
       p By default, a dropdown menu is automatically positioned 100% from the top and along the left side of its parent. You can change this with the directional <code>.drop*</code> classes, but you can also control them with additional modifier classes.
       p Add <code>.dropdown-menu-end</code> to a <code>.dropdown-menu</code> to right align the dropdown menu. Directions are mirrored when using Bootstrap in RTL, meaning <code>.dropdown-menu-end</code> will appear on the left side.
 
@@ -616,7 +616,7 @@ block content
           |   &lt;/ul&gt;
           | &lt;/div&gt;
 
-      h4 Responsive alignment
+      h3 Responsive alignment
       p If you want to use responsive alignment, disable dynamic positioning by adding the <code>data-bs-display="static"</code> attribute and use the responsive variation classes.
       p To align <strong>right</strong> the dropdown menu with the given breakpoint or larger, add <code>.dropdown-menu{-sm|-md|-lg|-xl|-xxl}-end</code>.
 
@@ -674,7 +674,7 @@ block content
 
       p Note that you don't need to add a <code>data-bs-display="static"</code> attribute to dropdown buttons in navbars, since Popper isn't used in navbars.
 
-      h4 Alignment options
+      h3 Alignment options
       p Taking most of the options shown above, here's a small kitchen sink demo of various dropdown alignment options in one place.
 
       .bd-example
@@ -828,8 +828,8 @@ block content
           |   &lt;/ul&gt;
           | &lt;/div&gt;
 
-      h4 Menu content
-      h4 Headers
+      h3 Menu content
+      h3 Headers
       p Add a header to label sections of actions in any dropdown menu.
 
       .bd-example
@@ -849,7 +849,7 @@ block content
           |   &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
           | &lt;/ul&gt;
 
-      h4 Dividers
+      h3 Dividers
       p Separate groups of related menu items with a divider.
 
       .bd-example
@@ -875,7 +875,7 @@ block content
           |   &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
           | &lt;/ul&gt;
 
-      h4 Text
+      h3 Text
       p Place any freeform text within a dropdown menu with text and use spacing utilities. Note that you'll likely need additional sizing styles to constrain the menu width.
 
       .bd-example
@@ -896,7 +896,7 @@ block content
           |   &lt;/p&gt;
           | &lt;/div&gt;
 
-      h4 Forms
+      h3 Forms
       p Put a form within a dropdown menu, or make it into a dropdown menu, and use margin or padding utilities to give it the negative space you require.
 
       .bd-example
@@ -990,7 +990,7 @@ block content
           |   &lt;/form&gt;
           | &lt;/div&gt;
 
-      h4 Dropdown options
+      h3 Dropdown options
       p Use <code>data-bs-offset</code> or <code>data-bs-reference</code> to change the location of the dropdown.
 
       .bd-example
@@ -1049,7 +1049,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Auto close behavior
+      h3 Auto close behavior
       p By default, the dropdown menu is closed when clicking inside or outside the dropdown menu. You can use the <code>autoClose</code> option to change this behavior of the dropdown.
 
       .bd-example

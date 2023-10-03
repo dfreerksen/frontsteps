@@ -1,15 +1,14 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Striped Column";
+  - var pageTitle = 'Striped Column';
+  - var pageSubtitle = 'Extension to Bootstrap <code>.table</code>';
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      p Extension to Bootstrap <code>.table</code>
-
-      h4 Striped first column
+      h3 Striped first column
       p Stripe the first column of a table.
 
       .bd-example
@@ -59,7 +58,7 @@ block content
           |   &lt;/tbody&gt;
           | &lt;/table&gt;
 
-      h4 Striped last column
+      h3 Striped last column
       p Stripe the last column of a table. Typically used for the table actions.
 
       .bd-example
@@ -109,7 +108,7 @@ block content
           |   &lt;/tbody&gt;
           | &lt;/table&gt;
 
-      h4 Both
+      h3 Both
       p Both with colored rows
 
       .bd-example

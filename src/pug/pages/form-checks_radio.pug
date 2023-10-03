@@ -1,19 +1,19 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Checks & radios";
-  - var pageSubtitle = "Consistent cross-browser and cross-device checkboxes and radios";
+  - var pageTitle = 'Checks & radios';
+  - var pageSubtitle = 'Consistent cross-browser and cross-device checkboxes and radios';
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      h4 Approach
+      h3 Approach
       p Browser default checkboxes and radios are replaced with the help of <code>.form-check</code>, a series of classes for both input types that improves the layout and behavior of their HTML elements, that provide greater customization and cross browser consistency. Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.
       p Structurally, our <code>&lt;input&gt;</code>s and <code>&lt;label&gt;</code>s are sibling elements as opposed to an <code>&lt;input&gt;</code> within a <code>&lt;label&gt;</code>. This is slightly more verbose as you must specify id and for attributes to relate the <code>&lt;input&gt;</code> and <code>&lt;label&gt;</code>. We use the sibling selector (<code>~</code>) for all our <code>&lt;input&gt;</code> states, like <code>:checked</code> or <code>:disabled</code>. When combined with the <code>.form-check-label</code> class, we can easily style the text for each item based on the <code>&lt;input&gt;</code>'s state.
       p Our checks use custom Bootstrap icons to indicate checked or indeterminate states.
 
-      h4 Checks
+      h3 Checks
 
       .bd-example
         .form-check
@@ -40,7 +40,7 @@ block content
           |   &lt;/label&gt;
           | &lt;/div&gt;
 
-      h4 Indeterminate
+      h3 Indeterminate
       p Checkboxes can utilize the <code>:indeterminate</code> pseudo class when manually set via JavaScript (there is no available HTML attribute for specifying it).
 
       .bd-example
@@ -58,7 +58,7 @@ block content
           |   &lt;/label&gt;
           | &lt;/div&gt;
 
-      h4 Disabled
+      h3 Disabled
       p Add the <code>disabled</code> attribute and the associated <code>&lt;label&gt;</code>s are automatically styled to match with a lighter color to help indicate the input's state.
 
       .bd-example
@@ -96,7 +96,7 @@ block content
           |   &lt;/label&gt;
           | &lt;/div&gt;
 
-      h4 Radios
+      h3 Radios
 
       .bd-example
         .form-check
@@ -123,7 +123,7 @@ block content
           |   &lt;/label&gt;
           | &lt;/div&gt;
 
-      h4 Disabled
+      h3 Disabled
       p Add the <code>disabled</code> attribute and the associated <code>&lt;label&gt;</code>s are automatically styled to match with a lighter color to help indicate the input's state.
 
       .bd-example
@@ -151,7 +151,7 @@ block content
           |   &lt;/label&gt;
           | &lt;/div&gt;
 
-      h4 Switches
+      h3 Switches
       p A switch has the markup of a custom checkbox but uses the <code>.form-switch</code> class to render a toggle switch. Consider using <code>role="switch"</code> to more accurately convey the nature of the control to assistive technologies that support this role. In older assistive technologies, it will simply be announced as a regular checkbox as a fallback. Switches also support the <code>disabled</code> attribute.
 
       .bd-example
@@ -187,7 +187,7 @@ block content
           |   &lt;label class="form-check-label" for="flexSwitchCheckCheckedDisabled"&gt;Disabled checked switch checkbox input&lt;/label&gt;
           | &lt;/div&gt;
 
-      h4 Default (stacked)
+      h3 Default (stacked)
       p By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with <code>.form-check</code>.
 
       .bd-example
@@ -250,7 +250,7 @@ block content
           |   &lt;/label&gt;
           | &lt;/div&gt;
 
-      h4 Inline
+      h3 Inline
       p Group checkboxes or radios on the same horizontal row by adding <code>.form-check-inline</code> to any <code>.form-check</code>.
 
       .bd-example
@@ -305,7 +305,7 @@ block content
           |   &lt;label class="form-check-label" for="inlineRadio3"&gt;3 (disabled)&lt;/label&gt;
           | &lt;/div&gt;
 
-      h4 Reverse
+      h3 Reverse
       p Put your checkboxes, radios, and switches on the opposite side with the <code>.form-check-reverse</code> modifier class.
 
       .bd-example
@@ -341,7 +341,7 @@ block content
           |   &lt;label class="form-check-label" for="flexSwitchCheckReverse"&gt;Reverse switch checkbox input&lt;/label&gt;
           | &lt;/div&gt;
 
-      h4 Without labels
+      h3 Without labels
       p Omit the wrapping <code>.form-check</code> for checkboxes and radios that have no label text. Remember to still provide some form of accessible name for assistive technologies (for instance, using <code>aria-label</code>).
 
       .bd-example
@@ -360,10 +360,10 @@ block content
           |   &lt;input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="..."&gt;
           | &lt;/div&gt;
 
-      h4 Toggle buttons
+      h3 Toggle buttons
       p Create button-like checkboxes and radio buttons by using <code>.btn</code> styles rather than <code>.form-check-label</code> on the <code>&lt;label&gt;</code> elements. These toggle buttons can further be grouped in a button group if needed.
 
-      h4 Checkbox toggle buttons
+      h3 Checkbox toggle buttons
 
       .bd-example
         input#btn-check.btn-check(type='checkbox' autocomplete='off')
@@ -403,7 +403,7 @@ block content
           | &lt;input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off" disabled&gt;
           | &lt;label class="btn" for="btn-check-6"&gt;Disabled&lt;/label&gt;
 
-      h4 Radio toggle buttons
+      h3 Radio toggle buttons
 
       .bd-example
         input#option1.btn-check(type='radio' name='options' autocomplete='off' checked='')
@@ -453,7 +453,7 @@ block content
           | &lt;input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off"&gt;
           | &lt;label class="btn" for="option8"&gt;Radio&lt;/label&gt;
 
-      h4 Outlined styles
+      h3 Outlined styles
       p Different variants of <code>.btn</code>, such at the various outlined styles, are supported.
 
       .bd-example

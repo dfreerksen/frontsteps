@@ -1,15 +1,14 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Color Switching";
+  - var pageTitle = 'Color Switching';
+  - var pageSubtitle = 'This theme provides a light and a dark mode theme. The light mode being the default.';
   - var skipMenu = true;
 
 block content
   .card
     .card-body
-      p This theme provides a light and a dark mode theme. The light mode being the default.
-
-      h4 Overview
+      h3 Overview
       p Theme switching is done with Javascript. It is important to add this Javascript into the <code>&lt;head&gt;</code> tag. If it is added to the bottom of the page, you will see a flash of the light color mode before switching to the dark color mode.
 
       pre
@@ -25,7 +24,7 @@ block content
           |   &lt;label class="form-check-label" for="switcher"&gt;Dark mode&lt;/label&gt;
           | &lt;/div&gt;
 
-      h4 Example
+      h3 Example
 
       .form-check.form-switch.form-switch-lg
         input#switcher.form-check-input(type='checkbox' role='switch')

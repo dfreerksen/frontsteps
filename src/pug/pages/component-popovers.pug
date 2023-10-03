@@ -1,8 +1,8 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Popovers";
-  - var pageSubtitle = "Add popovers, like those found in iOS, to any element";
+  - var pageTitle = 'Popovers';
+  - var pageSubtitle = 'Add popovers, like those found in iOS, to any element';
   - var skipMenu = true;
 
 append scripts
@@ -14,7 +14,7 @@ append scripts
 block content
   .card
     .card-body
-      h4 Overview
+      h3 Overview
       p Things to know when using the popover plugin:
       ul
         li Popovers rely on the third party library Popper for positioning. You must include popper.min.js before <code>bootstrap.js</code>, or use one <code>bootstrap.bundle.min.js</code> which contains Popper.
@@ -29,8 +29,8 @@ block content
         li Popovers can be triggered thanks to an element inside a shadow DOM.
       p Keep reading to see how popovers work with some examples.
 
-      h4 Example
-      h4 Enable popovers
+      h3 Example
+      h3 Enable popovers
       p As mentioned above, you must initialize popovers before they can be used. One way to initialize all popovers on a page would be to select them by their <code>data-bs-toggle</code> attribute, like so:
 
       pre
@@ -38,7 +38,7 @@ block content
           | const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
           | const popoverList = [...popoverTriggerList].map(popoverTriggerEl =&gt; new bootstrap.Popover(popoverTriggerEl))
 
-      h4 Live demo
+      h3 Live demo
       p We use JavaScript similar to the snippet above to render the following live popover. Titles are set via <code>data-bs-title</code> and body content is set via <code>data-bs-content</code>.
 
       .bd-example
@@ -48,7 +48,7 @@ block content
         code.language-html
           | &lt;button type='button' class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?"&gt;Click to toggle popover&lt;/button&gt;
 
-      h4 Four directions
+      h3 Four directions
       p Four options are available: top, right, bottom, and left. Directions are mirrored when using Bootstrap in RTL. Set <code>data-bs-placement</code> to change the direction.
 
       .bd-example
@@ -76,7 +76,7 @@ block content
           |   Popover on left
           | &lt;/button&gt;
 
-      h4 Custom container
+      h3 Custom container
       p When you have some styles on a parent element that interfere with a popover, you'll want to specify a custom <code>container</code> so that the popover's HTML appears within that element instead. This is common in responsive tables, input groups, and the like.
 
       pre
@@ -93,7 +93,7 @@ block content
           |   container: '.modal-body'
           | })
 
-      h4 Dismiss on next click
+      h3 Dismiss on next click
       p Use the <code>focus</code> trigger to dismiss popovers on the user's next click of an element other than the toggle element.
 
       .bd-example

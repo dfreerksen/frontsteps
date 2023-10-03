@@ -1,8 +1,8 @@
 extends ../layouts/2col.pug
 
 block append config
-  - var pageTitle = "Modal";
-  - var pageSubtitle = "Javascript modal plugin to add dialogs for lightboxes, user notifications, or custom content";
+  - var pageTitle = 'Modal';
+  - var pageSubtitle = 'Javascript modal plugin to add dialogs for lightboxes, user notifications, or custom content';
   - var skipMenu = true;
 
 append scripts
@@ -29,7 +29,7 @@ append scripts
 block content
   .card
     .card-body
-      h4 How it works
+      h3 How it works
       p Before getting started with Bootstrap's modal component, be sure to read the following as our menu options have recently changed.
 
       ul
@@ -51,8 +51,8 @@ block content
 
       p Keep reading for demos and usage guidelines.
 
-      h4 Examples
-      h4 Modal components
+      h3 Examples
+      h3 Modal components
       p Below is a static modal example (meaning its <code>position</code> and <code>display</code> have been overridden). Included are the modal header, modal body (required for <code>padding</code>), and modal footer (optional). We ask that you include modal headers with dismiss actions whenever possible, or provide another explicit dismiss action.
 
       .bd-example
@@ -88,7 +88,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Live demo
+      h3 Live demo
       p Toggle a working modal demo by clicking the button below. It will slide down and fade in from the top of the page.
 
       .bd-example
@@ -132,7 +132,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Static backdrop
+      h3 Static backdrop
       p When backdrop is set to static, the modal will not close when clicking outside of it. Click the button below to try it.
 
       .bd-example
@@ -176,7 +176,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Scrolling long content
+      h3 Scrolling long content
       p When modals become too long for the user's viewport or device, they scroll independent of the page itself. Try the demo below to see what we mean.
 
       .bd-example
@@ -261,7 +261,7 @@ block content
           |   ...
           | &lt;/div&gt;
 
-      h4 Vertically centered
+      h3 Vertically centered
       p Add <code>.modal-dialog-centered</code> to <code>.modal-dialog</code> to vertically center the modal.
 
       .bd-example
@@ -316,7 +316,7 @@ block content
           |   ...
           | &lt;/div&gt;
 
-      h4 Tooltips and popovers
+      h3 Tooltips and popovers
       p Tooltips and popovers can be placed within modals as needed. When modals are closed, any tooltips and popovers within are also automatically dismissed.
 
       .bd-example
@@ -355,7 +355,7 @@ block content
           |   &lt;p&gt;&lt;a href="#" data-bs-toggle="tooltip" title="Tooltip"&gt;This link&lt;/a&gt; and &lt;a href="#" data-bs-toggle="tooltip" title="Tooltip"&gt;that link&lt;/a&gt; have tooltips on hover.&lt;/p&gt;
           | &lt;/div&gt;
 
-      h4 Using the grid
+      h3 Using the grid
       p Utilize the Bootstrap grid system within a modal by nesting <code>.container-fluid</code> within the <code>.modal-body</code>. Then, use the normal grid system classes as you would anywhere else.
 
       .bd-example
@@ -420,7 +420,7 @@ block content
           |   &lt;/div&gt;
           | &lt;/div&gt;
 
-      h4 Varying modal content
+      h3 Varying modal content
       p Have a bunch of buttons that all trigger the same modal with slightly different contents? Use <code>event.relatedTarget</code>. and HTML <code>data-bs-*</code> attributes to vary the contents of the modal depending on which button was clicked.
       p Below is a live demo followed by example HTML and JavaScript. For more information, read the modal events docs for details on <code>relatedTarget</code>.
 
@@ -500,7 +500,7 @@ block content
           |   })
           | }
 
-      h4 Toggle between modals
+      h3 Toggle between modals
       p Toggle between multiple modals with some clever placement of the <code>data-bs-target</code> and <code>data-bs-toggle</code> attributes. For example, you could toggle a password reset modal from within an already open sign in modal. <strong>Please note multiple modals cannot be open at the same time</strong> - this method simply toggles between two separate modals.
 
       .bd-example
@@ -562,11 +562,11 @@ block content
           | &lt;/div&gt;
           | &lt;button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"&gt;Open first modal&lt;/button&gt;
 
-      h4 Change animation
+      h3 Change animation
       p The <code>$modal-fade-transform</code> variable determines the transform state of <code>.modal-dialog</code> before the modal fade-in animation, the <code>$modal-show-transform</code> variable determines the transform of <code>.modal-dialog</code> at the end of the modal fade-in animation.
       p If you want for example a zoom-in animation, you can set <code>$modal-fade-transform: scale(.8)</code>.
 
-      h4 Remove animation
+      h3 Remove animation
       p For modals that simply appear rather than fade in to view, remove the <code>.fade</code> class from your modal markup.
 
       pre
@@ -575,13 +575,13 @@ block content
           |   ...
           | &lt;/div&gt;
 
-      h4 Dynamic heights
+      h3 Dynamic heights
       p If the height of a modal changes while it is open, you should call <code>myModal.handleUpdate()</code> to readjust the modal's position in case a scrollbar appears.
 
-      h4 Accessibility
+      h3 Accessibility
       p Be sure to add <code>aria-labelledby="..."</code>, referencing the modal title, to <code>.modal</code>. Additionally, you may give a description of your modal dialog with <code>aria-describedby</code> on <code>.modal</code>. Note that you don't need to add <code>role="dialog"</code> since we already add it via JavaScript.
 
-      h4 Optional sizes
+      h3 Optional sizes
       p Modals have three optional sizes, available via modifier classes to be placed on a <code>.modal-dialog</code>. These sizes kick in at certain breakpoints to avoid horizontal scrollbars on narrower viewports.
 
       .table-responsive
@@ -654,7 +654,7 @@ block content
           | &lt;div class="modal-dialog modal-lg"&gt;...&lt;/div&gt;
           | &lt;div class="modal-dialog modal-sm"&gt;...&lt;/div&gt;
 
-      h4 Fullscreen Modal
+      h3 Fullscreen Modal
       p Another override is the option to pop up a modal that covers the user viewport, available via modifier classes that are placed on a <code>.modal-dialog</code>.
 
       .table-responsive
