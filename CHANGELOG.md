@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.5
+
+_Released 10/03/2023_
+
+### Changed
+
+* Change flash message position to `fixed`
+
 ## 1.0.4
 
 _Released 10/02/2023_
